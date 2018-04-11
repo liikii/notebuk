@@ -1,0 +1,6 @@
+git init
+git add filename
+git commit -am 'msg'
+git remote add origin git@github.com:liikii/notebuk.git
+# git remote set-url origin git@github.com:liikii/notebuk.git
+git push -u origin master

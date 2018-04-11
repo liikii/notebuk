@@ -1,0 +1,64 @@
+-------------------------
+sudo apt-get install vsftpd
+sudo apt install inotify-tools
+sudo apt install lftp
+
+sudo apt-get install vsftpd
+
+netstat -aultpn | grep 22
+service vsftpd status
+
+sudo vim /etc/vsftpd.conf
+*************
+anonymous_enable=NO
+local_enable=YES
+chroot_local_user=YES
+chroot_list_enable=YES
+chroot_list_file=/etc/vsftpd.chroot_list
+secure_chroot_dir=/var/run/vsftpd/empty
+pam_service_name=ftp
+userlist_file=/etc/vsftpd.userlist
+userlist_enable=YES
+userlist_deny=NO
+write_enable=YES
+
+pasv_enable=YES
+pasv_min_port=13000
+pasv_max_port=13100
+*************
+
+
+sudo useradd test
+sudo passwd test
+sudo usermod -s /sbin/nologin test
+sudo echo test > /etc/vsftpd.userlist
+sudo touch /etc/vsftpd.chroot_list
+sudo chmod -R 777 /home/test/
+chown -R test:test /var/www/test/public_html
+allow_writeable_chroot=YES
+
+sudo service vsftpd restart
+
+
+# login test
+ftp localhost
+
+
+
+-------------------------
+
+mkdir -p /var/ftpbuk
+cd /tmp
+dd if=/dev/zero of=haha.txt count=40960
+
+usermod -m -d /newhome/username username
+
+$ dd if=/dev/zero of=/tmp/tmpdisk bs=1073741824 count=10
+$ mke2fs /tmp/tmpdisk
+$ sudo mount -o loop /tmp/tmpdisk /apptmp
+ftpbuk
+
+/usr/disk-img/disk-quota.ext3    /quota ext3    rw,loop,usrquota,grpquota  0 0
+chmod a-w /home/user
+
+
