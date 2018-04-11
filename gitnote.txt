@@ -4,3 +4,13 @@ git commit -am 'msg'
 git remote add origin git@github.com:liikii/notebuk.git
 # git remote set-url origin git@github.com:liikii/notebuk.git
 git push -u origin master
+
+
+
+git checkout --orphan latest_branch
+git add -A
+git commit -am "commit message"
+git branch -D master
+git branch -m master
+git push -f origin master
+
