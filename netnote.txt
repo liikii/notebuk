@@ -14,3 +14,8 @@
 　　报告接口接收状态从Include 状态切换到Exclude 状态，或从Exclude 状态切换到Include 状态。
 　　源地址列表改变记录
 　　报告新源地址加入，或删除某源地址。
+
+
+ospf rfc2328
+dr bdr
+DR（Designated Router）和（Backup Designated Router）BDR
