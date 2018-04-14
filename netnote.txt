@@ -19,3 +19,7 @@
 ospf rfc2328
 dr bdr
 DR（Designated Router）和（Backup Designated Router）BDR
+
+
+
+eigrp
