@@ -1,0 +1,56 @@
+The documentation lacks newcomer-friendly tutorial on how to install PyNaCl. Popular GNU/Linux distros do not have all necessary dependencies and they're not listed or downloaded by pip.
+
+So, I wrote these instructions that work on fresh installation of Ubuntu 16.10. If you have e.g. removed packages or run a different (version of the) distro, you might need more or less dependencies.
+
+I'm too busy to write a pull request so I'm putting this under issues where it is hopefully useful to other people, and to ask something like this to be added by the developers.
+
+Python 3.6 installation instructions can be found here
+
+To install from pip:
+Python 2.7:
+
+sudo apt install python-pip libffi-dev
+pip install pynacl
+Python 3.5:
+
+sudo apt install python3-pip libffi-dev
+pip3 install pynacl
+Python 3.6:
+
+sudo apt install python3-pip libffi-dev python3-setuptools python3.6-dev
+python3.6 -m pip install pynacl
+To install from source:
+Install dependencies
+
+sudo apt install libffi-dev python-setuptools python-dev #Python 2.7
+sudo apt install libffi-dev python3-setuptools python3-dev #Python 3.5
+sudo apt install libffi-dev python3-setuptools python3.6-dev #Python 3.6
+Download source
+
+wget https://github.com/pyca/pynacl/archive/master.zip
+If you want, move master.zip to desired location and navigate to it in terminal.
+
+Navigate to setup file
+
+unzip master.zip
+cd pynacl-master/
+Run the setup as root
+
+sudo python setup.py install #Python 2.7
+sudo python3 setup.py install #Python 3.5
+sudo python3.6 setup.py install #Python 3.6
+The installer throws error with each version of python when run without sudo so if it's not the intention, please let me know what's missing.
+
+Note
+If you after installation change the directory of pynacl-master/ and try e.g.
+
+import nacl.secret
+at least 2.7 and 3.6 throw something like
+
+ImportError: No module named _cffi_backend
+To fix this, you must edit the file related to your version as root and alter the directories for the cffi and pycparser egg-files:
+
+sudo gedit /usr/local/lib/python2.7/dist-packages/easy-install.pth
+sudo gedit /usr/local/lib/python3.5/dist-packages/easy-install.pth
+sudo gedit /usr/local/lib/python3.6/dist-packages/easy-install.pth
+EDIT: Added pip instructions for python3.6
