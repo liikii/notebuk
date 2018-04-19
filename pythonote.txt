@@ -1,3 +1,7 @@
+https://www.python.org/ftp/python/
+https://www.python.org/ftp/python/3.6.2/Python-3.6.2.tar.xz
+
+
 sudo apt install python3.6-dev
 apt-get install python3.6-gdbm
 
