@@ -1,3 +1,24 @@
 https://en.wikipedia.org/wiki/Transmission_Control_Protocol#cite_note-1
 https://tools.ietf.org/html/rfc791#section-2.1
 baidu: Computer network development to achieve resource sharing
+
+ The 6-byte Ethernet address is unique for each interface on an Ethernet and is located at the lower interface of the Ethernet driver.
+
+
+
+
+                           TCP      UDP
+                             \      /
+                              \    /
+                          --------------
+                          |     IP     |
+                          |            |
+                          |    ---     |
+                          |   /   \    |
+                          |  /     v   |
+                          --------------
+                           /         \
+                          /           \
+                       data           data
+                      comes in         goes out
+                     here               here
