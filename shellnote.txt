@@ -9,3 +9,7 @@ sudo apt-get dist-upgrade  # Installs updates (new ones)
 systemctl disable supervisor.service 
 
 cat tmp.txt | sed -E '/^[^>]/ d' | cut -d ' ' -f2-
+
+
+
+sed -e 's/a/\x0A/g' 
