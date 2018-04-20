@@ -1,0 +1,37 @@
+
+  +--------+                                           +---------------+
+  |        |--(A)------- Authorization Grant --------->|               |
+  |        |                                           |               |
+  |        |<-(B)----------- Access Token -------------|               |
+  |        |               & Refresh Token             |               |
+  |        |                                           |               |
+  |        |                            +----------+   |               |
+  |        |--(C)---- Access Token ---->|          |   |               |
+  |        |                            |          |   |               |
+  |        |<-(D)- Protected Resource --| Resource |   | Authorization |
+  | Client |                            |  Server  |   |     Server    |
+  |        |--(E)---- Access Token ---->|          |   |               |
+  |        |                            |          |   |               |
+  |        |<-(F)- Invalid Token Error -|          |   |               |
+  |        |                            +----------+   |               |
+  |        |                                           |               |
+  |        |--(G)----------- Refresh Token ----------->|               |
+  |        |                                           |               |
+  |        |<-(H)----------- Access Token -------------|               |
+  +--------+           & Optional Refresh Token        +---------------+
+
+               Figure 2: Refreshing an Expired Access Token
+
+
+
+  token
+         A unique identifier issued by the server and used by the client
+         to associate authenticated requests with the resource owner
+         whose authorization is requested or has been obtained by the
+         client.  Tokens have a matching shared-secret that is used by
+         the client to establish its ownership of the token, and its
+         authority to represent the resource owner.
+
+
+https://tools.ietf.org/html/rfc5849
+https://tools.ietf.org/html/rfc6749
