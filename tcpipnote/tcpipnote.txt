@@ -22,3 +22,31 @@ baidu: Computer network development to achieve resource sharing
                        data           data
                       comes in         goes out
                      here               here
+
+
+wild-card destination address of "FF-FF-FF-FF-FF-FF" (in hexadecimal),   called a "broadcast" address.
+
+
+ Ethernet uses CSMA/CD (Carrier Sense and Multiple Access with
+   Collision Detection).  CSMA/CD means that all devices communicate on
+   a single medium, that only one can transmit at a time, and that they
+   can all receive simultaneously.  If 2 devices try to transmit at the
+   same instant, the transmit collision is detected, and both devices
+   wait a random (but short) period before trying to transmit again.
+
+
+ The translation is done only for outgoing IP
+   packets, because this is when the IP header and the Ethernet header
+   are created.
+
+
+
+
+
+     One part of a 4-
+   byte IP address is the IP network number, the other part is the IP
+   computer number (or host number). 
+
+
+NIC (Network Information
+   Center)
