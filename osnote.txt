@@ -1,0 +1,27 @@
+initial program
+bootstrap program
+read-only memory (ROM
+ bootstrap program locate the operating-system kernel and load it into memory.
+system prcess system daemon
+hardware interrupt   software interrupt, system call.
+
+
+When the CPU is interrupted, it stops what it is doing and immediately transfers execution to a fixed location. The fixed location usually contains the starting address where the service routine for the interrupt is located.
+
+More recent architectures store the return address on the system stack. 
+ small computer-systems interface (SCSI) controller
+ A device controller maintains some local buffer storage and a set of special-purpose registers. 
+ device driver  device controller 
+
+
+ To start an I/O operation, the device driver loads the appropriate registers within the device controller. The device controller, in turn, examines the contents of these registers to determine what action to take (such as “read a character from the keyboard”). The controller starts the transfer of data from the device to its local buffer. Once the transfer of data is complete, the device controller informs the device driver via an interrupt that it has finished its operation. The device driver then returns control to the operating system, possibly returning the data or a pointer to the data if the operation was a read. For other operations, the device driver returns status information.
+
+
+ multiprocessor systems (also known as parallel systems or multicore systems) 
+
+ The set of jobs in memory can be a subset of the jobs kept in the job pool. 
+
+
+  job scheduling, if several jobs are ready to be brought into memory, and if there is not enough room for all of them, 
+
+swapping, virtual memory
