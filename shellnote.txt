@@ -13,3 +13,21 @@ cat tmp.txt | sed -E '/^[^>]/ d' | cut -d ' ' -f2-
 
 
 sed -e 's/a/\x0A/g' 
+
+
+
+
+grub reset 
+
+
+fdisk -l
+mount /dev/sdb1bootsdb /mnt
+cd /boot/grub2/
+vim grub.cfg
+:/passw
+#grub2-mkpasswd-pbkd2
+:newpass
+# sync; sync
+# cd /
+# umount /mnt
+# reboot
