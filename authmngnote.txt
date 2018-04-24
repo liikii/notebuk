@@ -24,3 +24,31 @@ Abstract
    described elsewhere [1,2], is presently in production use at MIT's
    Project Athena, and at other Internet sites.
 https://tools.ietf.org/html/rfc1510#ref-1
+
+
+RFC 1510 The Kerberos Network Authentication Service (V5) [Obsolete]
+RFC 1964 The Kerberos Version 5 GSS-API Mechanism
+RFC 3961 Encryption and Checksum Specifications for Kerberos 5
+RFC 3962 Advanced Encryption Standard (AES) Encryption for Kerberos 5
+RFC 4120 The Kerberos Network Authentication Service (V5) [Current]
+RFC 4121 The Kerberos Version 5 Generic Security Service Application Program Interface (GSS-API) Mechanism: Version 2
+RFC 4537 Kerberos Cryptosystem Negotiation Extension
+RFC 4556 Public Key Cryptography for Initial Authentication in Kerberos (PKINIT)
+RFC 4557 Online Certificate Status Protocol (OCSP) Support for Public Key Cryptography for Initial Authentication in Kerberos (PKINIT)
+RFC 4757 The RC4-HMAC Kerberos Encryption Types Used by Microsoft Windows [Obsolete]
+RFC 5021 Extended Kerberos Version 5 Key Distribution Center (KDC) Exchanges over TCP
+RFC 5349 Elliptic Curve Cryptography (ECC) Support for Public Key Cryptography for Initial Authentication in Kerberos (PKINIT)
+RFC 5868 Problem Statement on the Cross-Realm Operation of Kerberos
+RFC 5896 Generic Security Service Application Program Interface (GSS-API): Delegate if Approved by Policy
+RFC 6111 Additional Kerberos Naming Constraints
+RFC 6112 Anonymity Support for Kerberos
+RFC 6113 A Generalized Framework for Kerberos Pre-Authentication
+RFC 6251 Using Kerberos Version 5 over the Transport Layer Security (TLS) Protocol
+RFC 6448 The Unencrypted Form of Kerberos 5 KRB-CRED Message
+RFC 6542 Kerberos Version 5 Generic Security Service Application Program Interface (GSS-API) Channel Binding Hash Agility
+RFC 6560 One-Time Password (OTP) Pre-Authentication
+RFC 6649 Deprecate DES, RC4-HMAC-EXP, and Other Weak Cryptographic Algorithms in Kerberos
+RFC 6784 Kerberos Options for DHCPv6
+RFC 6803 Camellia Encryption for Kerberos 5
+RFC 6806 Kerberos Principal Name Canonicalization and Cross-Realm Referrals
+RFC 6880 An Information Model for Kerberos Version 
