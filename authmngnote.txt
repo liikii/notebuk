@@ -1,0 +1,26 @@
+   This document describes the protocol elements, along with their
+   semantics and encodings, of the Lightweight Directory Access Protocol
+   (LDAP).  LDAP provides access to distributed directory services that
+   act in accordance with X.500 data and service models.  These protocol
+   elements are based on those described in the X.500 Directory Access
+   Protocol (DAP).
+https://tools.ietf.org/html/rfc4511
+
+
+ The Kerberos Network Authentication Service (V5)
+
+Status of this Memo
+
+   This RFC specifies an Internet standards track protocol for the
+   Internet community, and requests discussion and suggestions for
+   improvements.  Please refer to the current edition of the "Internet
+   Official Protocol Standards" for the standardization state and status
+   of this protocol.  Distribution of this memo is unlimited.
+
+Abstract
+
+   This document gives an overview and specification of Version 5 of the
+   protocol for the Kerberos network authentication system. Version 4,
+   described elsewhere [1,2], is presently in production use at MIT's
+   Project Athena, and at other Internet sites.
+https://tools.ietf.org/html/rfc1510#ref-1
