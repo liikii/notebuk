@@ -38,3 +38,42 @@ lvm
 pvs
 vgs
 lvs
+
+
+lv1 lv3 lv3
+volumne group (vg)
+pv pv pv
+sda1 sdb1 
+
+
+resize vmbox linux
+# mac 
+VBoxManage modifyhd '/Users/lbadvisor/VirtualBox VMs/ubun/ubun.vdi' --resize 20480
+
+
+# vm linux:
+fdisk /dev/dba999
+    n: new primary partition
+    p: primary
+    number
+    t: change partition type.
+    number: change which
+    8e: linux lvm
+    w: white.
+run:
+The kernel still uses the old table. The new table will be used at the next reboot or after you run partprobe(8) or kpartx(8).
+reboot##
+pvcreate /dev/dba999
+vgdisplay
+pvdisplay
+
+vgextend extend_which_vgroup /dev/dba999
+vgdisplay liikii-vg | grep -i free   # show vg free space.
+lvdisplay  # logical volume show.
+man lvextend
+lvextend -L+10G /dev/liikii-vg/root   # logical valume extend.
+resize2fs /dev/liikii-vg/root 
+# # ext2online /dev/VolGroup00/LogVol00
+#Use resize2fs instead of ext2online if it is not a Red Hat virtual machine.
+#By default, Red Hat and CentOS 7 use the XFS file system you can grow the file system by running the xfs_growfs command.
+df -h
