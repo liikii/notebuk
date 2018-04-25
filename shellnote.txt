@@ -31,3 +31,10 @@ vim grub.cfg
 # cd /
 # umount /mnt
 # reboot
+
+
+
+lvm
+pvs
+vgs
+lvs
