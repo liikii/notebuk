@@ -1,0 +1,11 @@
+
+CREATE TABLE `d` (
+  `nm` varchar(256) DEFAULT NULL,
+  `ul` varchar(2048) DEFAULT NULL,
+  `dt` date DEFAULT NULL,
+  `tm` time DEFAULT NULL,
+  `ev` int(11) DEFAULT NULL,
+  `fl` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+ALTER TABLE `d` ADD `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY;
