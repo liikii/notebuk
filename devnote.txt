@@ -1,2 +1,4 @@
 https://en.wikipedia.org/wiki/Role-based_access_control
 Access-Control-List
+# mysql mysql-connector
+pip install mysql-connector 

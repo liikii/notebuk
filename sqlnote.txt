@@ -9,3 +9,21 @@ CREATE TABLE `d` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 ALTER TABLE `d` ADD `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY;
+
+
+select SUBSTRING_INDEX(ul, '?', 1) from d;
+UPDATE d SET uls = SUBSTRING_INDEX(ul, '?', 1);
+
+
+select  DATE_ADD(TIMESTAMP(dt, tm), INTERVAL -8 HOUR) h from d order by h;
+UPDATE d SET uls = SUBSTRING_INDEX(ul, '?', 1);
+DATE_ADD(TIMESTAMP(dt, tm), INTERVAL -8 HOUR)
+UPDATE d SET nt = DATE_ADD(TIMESTAMP(dt, tm), INTERVAL -8 HOUR);
+
+
+https://ap.yzb315.com/sm03bb/index.html?c-2&amp;uc_sr=sm&amp;uc_keywordid=11204351871&amp;uc_creative=50000000223978164&amp;uc_deviceid=D437506B-1D5B-42C6-B347-CA3C64FD874F
+
+
+https://ap.yzb315.com/AmSm01_11A172/index.html?A1_SSC0_ty00_0129&amp;uc_sr=sm&amp;uc_keywordid=15880952534&amp;uc_creative=2498182641&amp;uc_deviceid=8C0BDA02-E0D1-4023-91D7-56552AF35E07
+
+

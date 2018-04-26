@@ -77,3 +77,8 @@ resize2fs /dev/liikii-vg/root
 #Use resize2fs instead of ext2online if it is not a Red Hat virtual machine.
 #By default, Red Hat and CentOS 7 use the XFS file system you can grow the file system by running the xfs_growfs command.
 df -h
+
+
+
+
+linux grep single quote double quote probrom
