@@ -82,3 +82,36 @@ df -h
 
 
 linux grep single quote double quote probrom
+
+
+
+
+Generating a new SSH key
+
+https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#generating-a-new-ssh-key
+
+
+Open Terminal.
+
+Paste the text below, substituting in your GitHub email address.
+
+1.ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+This creates a new ssh key, using the provided email as a label.
+
+Generating public/private rsa key pair.
+When you're prompted to "Enter a file in which to save the key," press Enter. This accepts the default file location.
+
+ Enter a file in which to save the key (/Users/you/.ssh/id_rsa): [Press enter]
+At the prompt, type a secure passphrase. For more information, see "Working with SSH key passphrases".
+Enter passphrase (empty for no passphrase): [Type a passphrase]
+Enter same passphrase again: [Type passphrase again]
+
+
+
+
+2. ssh-keygen -f ~/.ssh/id_rsa.pub -e -m PKCS8 > id_rsa.pem.pub
+
+3. openssl rsautl -encrypt -pubin -inkey id_rsa.pem.pub -ssl -in myMessage.txt -out myEncryptedMessage.txt
+
+
+4. openssl rsautl -decrypt -inkey ~/.ssh/id_rsa -in myEncryptedMessage.txt -out myDecryptedMessage.txt
