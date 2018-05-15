@@ -115,3 +115,9 @@ Enter same passphrase again: [Type passphrase again]
 
 
 4. openssl rsautl -decrypt -inkey ~/.ssh/id_rsa -in myEncryptedMessage.txt -out myDecryptedMessage.txt
+
+
+----
+curl -X POST -H "Content-Type: text/plain" --data "this is raw data" http://78.41.xx.xx:7778/
+
+
