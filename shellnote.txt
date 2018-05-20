@@ -121,3 +121,18 @@ Enter same passphrase again: [Type passphrase again]
 curl -X POST -H "Content-Type: text/plain" --data "this is raw data" http://78.41.xx.xx:7778/
 
 
+
+
+
+down vote
+Specify which lines to comment in vim:
+
+Reveal the line numbers:
+
+:set number
+then
+
+:5,17s/^/#/     this will comment out line 5-17
+or this:
+
+:%s/^/#/        will comment out all lines in file
