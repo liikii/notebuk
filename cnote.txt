@@ -1,0 +1,18 @@
+Shell> apt-get install libmysqlclient-dev
+ 
+
+On Fedora-based distributions (CentOS, …), the package name is mysql-devel:
+
+Shell> yum install mysql-devel
+
+
+
+Example: Build a MySQL client C program
+To build a 'c_client.c' program, the following gcc command may be used:
+
+Shell> gcc -o c_client c_client.c -I/usr/include/mysql/  -lmysqlclient
+ 
+
+An alternative way is to generate the necessary gcc options using the mysql_config command:
+
+Shell> gcc -o c_client c_client.c `mysql_config  --libs --cflags`
