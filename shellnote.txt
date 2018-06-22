@@ -120,7 +120,13 @@ Enter same passphrase again: [Type passphrase again]
 ----
 curl -X POST -H "Content-Type: text/plain" --data "this is raw data" http://78.41.xx.xx:7778/
 
-
+ 1720  ./mongod
+ 1721  ./mongod --fork --logpath /var/log/mongodb/mongodb.log
+ 1726  cd /usr/local/bin/mongodb/
+ 1729  ./mongod --repair
+ 1730  sudo ./mongod --repair
+ 1731  history | grep mongo
+ 1732  sudo ./mongod --fork --logpath /var/log/mongodb/mongodb.log
 
 
 
@@ -136,3 +142,11 @@ then
 or this:
 
 :%s/^/#/        will comment out all lines in file
+
+
+
+
+http://www.techpaste.com/2016/04/limit-mongodb-memory-usage/
+
+
+
