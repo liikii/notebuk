@@ -22,5 +22,12 @@ git checkout branch
 git checkout -b newbranch oldbranch
 
 
+:get file from other branch.
+git checkout otherbranch -- filename
+
+
+
+
+
 
 
