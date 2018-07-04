@@ -96,3 +96,112 @@ set shiftwidth=4
 set expandtab
 
 
+
+## get host info.
+sudo nmap -v -sS -A -T4 192.168.1.25
+
+## get live host
+nmap -sP 192.168.1.1/24
+
+
+
+
+
+1. Nmap Network Scanning: The Official Nmap Project Guide to Network Discovery and Security Scanning
+           https://nmap.org/book/
+
+2. RFC 1122
+   http://www.rfc-editor.org/rfc/rfc1122.txt
+
+3. RFC 792
+   http://www.rfc-editor.org/rfc/rfc792.txt
+
+4. RFC 950
+   http://www.rfc-editor.org/rfc/rfc950.txt
+
+5. RFC 1918
+   http://www.rfc-editor.org/rfc/rfc1918.txt
+
+6. UDP
+   http://www.rfc-editor.org/rfc/rfc768.txt
+
+7. SCTP
+   http://www.rfc-editor.org/rfc/rfc4960.txt
+
+8. TCP RFC
+   http://www.rfc-editor.org/rfc/rfc793.txt
+
+9. RFC 959
+   http://www.rfc-editor.org/rfc/rfc959.txt
+
+10. RFC 1323
+   http://www.rfc-editor.org/rfc/rfc1323.txt
+
+11. Lua programming language
+   http://lua.org
+
+12. precedence
+   http://www.lua.org/manual/5.1/manual.html#2.5.3
+
+13. IP protocol
+   http://www.rfc-editor.org/rfc/rfc791.txt
+
+14. RFC 2960
+   http://www.rfc-editor.org/rfc/rfc2960.txt
+
+15. Nmap::Scanner
+   http://sourceforge.net/projects/nmap-scanner/
+
+16. Nmap::Parser
+   http://nmapparser.wordpress.com/
+
+17. xsltproc
+   http://xmlsoft.org/XSLT/
+
+18. listed at Wikipedia
+   http://en.wikipedia.org/wiki/List_of_IPv6_tunnel_brokers
+
+19. Creative Commons Attribution License
+   http://creativecommons.org/licenses/by/3.0/
+
+20. Apache Software Foundation
+   http://www.apache.org
+
+21. Libpcap portable packet capture library
+   http://www.tcpdump.org
+
+22. WinPcap library
+   http://www.winpcap.org
+
+23. PCRE library
+   http://www.pcre.org
+
+24. Libdnet
+   http://libdnet.sourceforge.net
+
+25. OpenSSL cryptography toolkit
+   http://www.openssl.org
+
+26. Lua programming language
+   http://www.lua.org
+
+27. Liblinear linear classification library
+   http://www.csie.ntu.edu.tw/~cjlin/liblinear/
+
+28. IPv6 OS detection machine learning techniques
+   https://nmap.org/book/osdetect-guess.html#osdetect-guess-ipv6
+
+29. Google Summer of Code
+   https://nmap.org/soc/
+
+30. DARPA CINDER program
+   https://www.fbo.gov/index?s=opportunity&mode=form&id=585e02a51f77af5cb3c9e06b9cc82c48&tab=core&_cview=1
+
+31. Export Administration Regulations (EAR)
+   http://www.access.gpo.gov/bis/ear/ear_data.html
+
+32. 5D002
+   http://www.access.gpo.gov/bis/ear/pdf/ccl5-pt2.pdf
+
+33. EAR 740.13(e)
+   http://www.access.gpo.gov/bis/ear/pdf/740.pdf
