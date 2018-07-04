@@ -1,0 +1,83 @@
+sudo apt-get install php7.0 php7.0-curl php7.0-gd php7.0-cli mysql-server php7.0-mysql php-xml php7.0-mbstring
+
+
+apt install nginx
+
+locate php.ini
+set::
+cgi.fix_pathinfo=0
+
+service php7.0-fpm restart 
+
+
+comment:::
+file: /etc/nginx/nginx.conf
+# include /etc/nginx/sites-enabled/*;
+
+
+modify:::
+file: /etc/nginx/nginx.conf
+
+server {
+        listen 80 default_server;
+        server_name _;
+        root /var/www/html;
+        location / {
+            index index.php index.html;
+        }
+        location ~ [^/]\.php(/|$) {
+            fastcgi_index index.php;
+            # fastcgi_pass 127.0.0.1:9000;
+            fastcgi_pass unix:/run/php/php7.0-fpm.sock;
+            fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
+            include fastcgi_params;
+        }
+    }
+
+
+add:::
+file: /var/www/html/index.php
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+echo "My first PHP script!";
+?>
+
+</body>
+</html>
+
+add:::
+file /var/www/html/haha.php
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+echo "My first PHP script!";
+?>
+
+</body>
+</html>
+
+add:::
+file /var/www/html/index.html
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+echo "My first PHP script!";
+?>
+
+</body>
+</html>
+
+
+service nginx restart
+
+
+
+
