@@ -717,3 +717,11 @@ zone_sync_ssl_trusted_certificate
 zone_sync_ssl_verify
 zone_sync_ssl_verify_depth
 zone_sync_timeout
+
+
+
+
+
+
+
+sudo nginx -c /etc/nginx/nginx.conf -t
