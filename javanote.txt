@@ -3,4 +3,24 @@ output: byte, file, pipe, filter,
 
 
 rational algebra.
-cartesian product.
+cartesian product. 
+
+pip3.5 install pymongo -i https://pypi.tuna.tsinghua.edu.cn/simple/
+
+
+aws configure list 
+aws configure --profile dyrs
+
+[default]
+aws_access_key_id = AKIAPK4G46KQYCP5PHJA 
+aws_secret_access_key = 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
+[dyrs]
+aws_access_key_id = AKIAOBR64VKOCDP4TWPA
+aws_secret_access_key = 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
+output = json
+region = cn-north-1
+
+
+aws --profile dyrs s3 ls s3://data.dyrs-lbadvsior.com/credentials/secret_keys/
+
+
