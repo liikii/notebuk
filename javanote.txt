@@ -1,0 +1,6 @@
+input:  bytearray, string, file, pipe, join_multi_input, filter,
+output: byte, file, pipe, filter, 
+
+
+rational algebra.
+cartesian product.

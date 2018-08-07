@@ -149,4 +149,5 @@ or this:
 http://www.techpaste.com/2016/04/limit-mongodb-memory-usage/
 
 
+ddjvu -format=pdf -quality=85 -verbose abstract_algebra_dummit.djvu abstract_algebra_dummit.pdf
 

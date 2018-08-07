@@ -1,0 +1,1 @@
+E-R Diagrams: entities-relation diagrams.
