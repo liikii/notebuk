@@ -68,3 +68,22 @@ sudo gedit /usr/local/lib/python2.7/dist-packages/easy-install.pth
 sudo gedit /usr/local/lib/python3.5/dist-packages/easy-install.pth
 sudo gedit /usr/local/lib/python3.6/dist-packages/easy-install.pth
 EDIT: Added pip instructions for python3.6
+
+-----------------------------------------------------------------------------------
+The current syntax for function decorators as implemented in Python 2.4a2 is:
+
+@dec2
+@dec1
+def func(arg1, arg2, ...):
+    pass
+This is equivalent to:
+
+def func(arg1, arg2, ...):
+    pass
+func = dec2(dec1(func))
+-----------------------------------------------------------------------------------
+
+
+
+
+
