@@ -725,3 +725,28 @@ zone_sync_timeout
 
 
 sudo nginx -c /etc/nginx/nginx.conf -t
+
+nginx -v 2>&1
+
+add dynanmic module:
+
+
+wget -P /tmp http://nginx.org/download/nginx-1.6.2.tar.gz
+tar -zxvf /tmp/nginx-1.6.2.tar.gz -C /tmp
+
+wget -P /tmp https://github.com/vkholodkov/nginx-upload-module/archive/2.2.0.tar.gz
+tar -zxvf /tmp/2.2.0.tar.gz -C /tmp
+
+cd /tmp/nginx-1.6.2
+
+./configure --add-module=/tmp/nginx-upload-module-2.2.0
+make
+make install
+
+
+sudo nano /etc/nginx/nginx.conf
+add add below in the main context:
+
+load_module "modules/ngx_http_geoip_module.so";
+
+

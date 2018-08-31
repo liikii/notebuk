@@ -7,7 +7,9 @@ def g(a, b):
     # wrapper
     def wf(f):
         # replace
-        def rf(p):
+        def rf(*args):
+            print('len', len(args))
+            p = args[0]
             if a < p < b:
                 print('a < p < b')
             else:

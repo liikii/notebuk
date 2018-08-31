@@ -319,3 +319,24 @@ echo 'a b c' | awk '1 {print $1}; 2 {print $2}; 0 {print $3}'
 
 
 cat tmp.txt | awk 'NR%3{printf "%s", $0;next;}1{print}'
+
+
+sudo vim /etc/default/locale 
+LANG="en_US.UTF-8"
+LC_ALL="en_US.UTF-8"
+
+
+.bashrc
+export LC_ALL="en_US.UTF-8"
+export LANG="en_US.UTF-8"
+
+
+show nginx compiling info:
+nginx -V 2>&1
+
+
+
+
+
+
+
