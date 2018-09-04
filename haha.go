@@ -27,16 +27,7 @@ func main() {
     flag.StringVar(&dr, "mulu", ".", "a direction path shared")
     flag.UintVar(&pt, "port", 9999, "an listened tcp v4 port")
 
-    // Once all flags are declared, call `flag.Parse()`
-    // to execute the command-line parsing.
     flag.Parse()
-    // flag.Usage()
-    // Here we'll just dump out the parsed options and
-    // any trailing positional arguments. Note that we
-    // need to dereference the pointers with e.g. `*wordPtr`
-    // to get the actual option values.
-    // fmt.Println("dir:", dr)
-    // fmt.Println("port:", pt)
 
     fi, err := os.Stat(dr)
     if err != nil {
