@@ -41,3 +41,16 @@ https://www.digitalocean.com/community/tutorials/how-to-build-go-executables-for
 go get golang.org/x/tour/gotour
 package golang.org/x/tour/gotour: unrecognized import path "golang.org/x/tour/gotour" (https fetch: Get https://golang.org/x/tour/gotour?go-get=1: dial tcp 216.239.37.1:443: i/o timeout)
 go tool tour
+
+
+
+implicit assignment :=
+
+
+Short variable declarations
+Inside a function, the := short assignment statement can be used in place of a var declaration with implicit type.
+
+Outside a function, every statement begins with a keyword (var, func, and so on) and so the := construct is not available.
+
+
+The int, uint, and uintptr types are usually 32 bits wide on 32-bit systems and 64 bits wide on 64-bit systems. When you need an integer value you should use int unless you have a specific reason to use a sized or unsigned integer type.
