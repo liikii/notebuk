@@ -1,0 +1,36 @@
+Elastic Load Balancing (ELB)—AWS offers a load balancer as a service. The Elastic Load Balancer (ELB) distributes traffic to a bunch of servers behind it. It’s highly available by default.
+
+
+ Amazon Machine Image (AMI)
+
+ Xen Project (pronounced /ˈzɛn/) is a hypervisor using a microkernel design, providing services that allow multiple computer operating systems to execute on the same computer hardware concurrently.
+
+
+ AWS uses Xen, an open source hypervisor, as the underlying technology for the EC2 service. The current generations of virtual servers on AWS use hardware-assisted vir- tualization. The technology is called Hardware Virtual Machine (HVM) and uses the Intel VT-x platform. A virtual server run by an AMI based on HVM uses a fully virtual- ized set of hardware and can take advantage of hardware extensions that provide fast access to the underlying hardware.
+
+
+IAM:Access control for server accessing other AWS services
+
+Elastic IP addresses for allocating fixed public IP addresses.
+
+
+ Elastic IPs 
+
+
+ The infrastructure consists of the following:
+■ Load balancer (LB)
+■ Virtual servers
+■ Database (DB)
+■ DNS entry
+■ Content delivery network (CDN)
+■ Bucket for static files
+
+
+blueprint
+
+ AWS Elastic Beanstalk.
+
+
+ 
+
+
