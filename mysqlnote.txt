@@ -1,0 +1,69 @@
+show charset;
+SELECT SCHEMA_NAME 'database', default_character_set_name 'charset', DEFAULT_COLLATION_NAME 'collation' FROM information_schema.SCHEMATA;
+
+
+SELECT default_character_set_name FROM information_schema.SCHEMATA S WHERE schema_name = "DBNAME";
+
+
+SELECT CCSA.character_set_name FROM information_schema.`TABLES` T,information_schema.`COLLATION_CHARACTER_SET_APPLICABILITY` CCSA WHERE CCSA.collation_name = T.table_collation AND T.table_schema = "DBNAME" AND T.table_name = "TABLENAME";
+
+
+ALTER TABLE tbl_name CONVERT TO CHARACTER SET charset_name;
+
+
+ALTER TABLE etape_prospection
+  CHARACTER SET utf8,
+  COLLATE utf8_general_ci;
+
+
+  | ADD [COLUMN] col_name column_definition
+
+
+// ALTER DATABASE DBNAME CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+
+ALTER DATABASE test CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+
+SHOW VARIABLES WHERE Variable_name LIKE 'character\_set\_%' OR Variable_name LIKE 'collation%'
+
+
+java
+sudo dpkg -i mysql-connector-java_8.0.12-1debian9_all.deb
+/usr/share/java/mysql-connector-java-8.0.12.jar:/usr/share/java/mysql-connector-java-8.0.12.jar:
+export CLASSPATH=/path/mysql-connector-java-ver.jar:$CLASSPATH
+
+Never use utf8 in MySQL — always use utf8mb4 instead.
+
+
+
+ALTER DATABASE test CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci;
+SHOW VARIABLES WHERE Variable_name LIKE 'character\_set\_%' OR Variable_name LIKE 'collation%';
+/etc/mysql/my.cnf
+
+!includedir /etc/mysql/conf.d/
+!includedir /etc/mysql/mysql.conf.d/
+
+[client]
+default-character-set = utf8mb4
+
+[mysql]
+default-character-set = utf8mb4
+
+[mysqld]
+character-set-client-handshake = FALSE
+character-set-server = utf8mb4
+collation-server = utf8mb4_general_ci
+
+
+restart mysql.
+
+
+# For each database:
+ALTER DATABASE database_name CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
+# For each table:
+ALTER TABLE table_name CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+# For each column:
+ALTER TABLE table_name CHANGE column_name column_name VARCHAR(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+# (Don’t blindly copy-paste this! The exact statement depends on the column type, maximum length, and other properties. The above line is just an example for a `VARCHAR` column.)
+
+
