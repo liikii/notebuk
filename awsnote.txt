@@ -30,9 +30,73 @@ blueprint
 
  AWS Elastic Beanstalk.
 
-3296
-
-
  
+ Every request you make to the AWS API goes through IAM to check whether the request is allowed.
 
 
+                    Root user           IAM user        IAM role
+password            always                 yes          no
+access key          yes(not recommended)   yes          no
+belong to group     no                     yes          no
+associated with EC2 no                     no           yes
+
+
+$ aws iam create-group --group-name "admin"
+$ aws iam attach-group-policy --group-name "admin" \
+--policy-arn "arn:aws:iam::aws:policy/AdministratorAccess"
+$ aws iam create-user --user-name "myuser"
+$ aws iam add-user-to-group --group-name "admin" --user-name "myuser"
+$ aws iam create-login-profile --user-name "myuser" --password "$Password"
+
+
+
+aws s3 mb s3://awsinaction-$YourName make bucket
+
+
+If you want to reduce the cost of backup storage, you should consider another AWS service: Amazon Glacier.
+
+
+
+Elastic Block Store (EBS) provides network-attached, block-level storage with 99.999% availability. 
+
+
+sudo fdisk -l
+sudo mkfs -t ext4 /dev/xvdf
+sudo mkdir /mnt/volume/
+sudo mount /dev/xvdf /mnt/volume/
+
+df -h
+
+testing of hard disks:
+sudo dd if=/dev/zero of=/mnt/volume/tempfile bs=1M count=1024 conv=fdatasync,notrunc
+sudo dd if=/mnt/volume/tempfile of=/dev/null bs=1M count=1024
+
+
+
+create 
+
+Amazon Relational Database Service (Amazon RDS
+
+
+aws rds copy-db-snapshot --source-db-snapshot-identifier \
+arn:aws:rds:us-east-1:$AccountId:snapshot:\
+wordpress-manual-snapshot --target-db-snapshot-identifier \
+wordpress-manual-snapshot --region eu-west-1
+
+
+AWS offers tools for building highly available systems based on EC2 instances:
+■ Monitoring the health of virtual servers with CloudWatch and triggering recov- ery automatically if needed
+■ Building a highly available infrastructure by using multiple isolated data cen- ters, called availability zones, within a region
+
+
+Recovering from server failure with CloudWatch
+
+
+1 The physical server’s hardware fails and causes the virtual server to fail as well.
+2 The EC2 service detects the outage and reports the failure to CloudWatch metrics.
+3 Recovery of the virtual server is triggered by the CloudWatch alarm.
+4 The virtual server is launched on another physical host.
+5 The EBS volume and Elastic IP stay the same and are linked to the new virtual
+server.
+
+The new virtual server is assigned the same ID and public/private IP addresses as the old virtual server and linked to the same EBS volume.

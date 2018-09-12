@@ -335,8 +335,7 @@ show nginx compiling info:
 nginx -V 2>&1
 
 
-
-
-
+ls -1 | xargs -I {}
+ls -1 | xargs -I {} echo aws s3 cp {} s3://static.lbadvisor.com/xiangjia/better/ --acl public-read --content-type 'image/png'\; 
 
 
