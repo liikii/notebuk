@@ -54,3 +54,42 @@ Outside a function, every statement begins with a keyword (var, func, and so on)
 
 
 The int, uint, and uintptr types are usually 32 bits wide on 32-bit systems and 64 bits wide on 64-bit systems. When you need an integer value you should use int unless you have a specific reason to use a sized or unsigned integer type.
+
+
+The Little Go Book
+An Introduction to Programming in Go
+Go Bootcamp
+Learning Go
+Go for Javascript Developers
+Go in Action
+Go Programming Blueprints - 2nd Ed.
+Programming in Go: Creating Applications for the 21st Century
+The Go Programming Language
+Introducing Go: Build Reliable, Scalable Programs
+Get Programming with Go
+Go Programming by Example
+Go Recipes
+Learning Go programming
+Test-driven development with Go 
+Network Programming with Go
+Mastering Concurrency in Go
+Go in Practice
+A Go Developer's Notebook
+The Go Programming Language Phrasebook
+Go Design Patterns
+Go Reactive Programming
+Building Web Apps with Go
+Build Web Application with Golang
+Mastering Go Web Services 
+Level Up Your Web Apps With Go
+Go Web Programming
+Webapps in Go the anti textbook
+Cloud Native Go: Building Web Applications and Microservices for the Cloud with Go and React
+Web Development with Go: Learn to Create Real World Web Applications using Go
+Go: Building Web Applications
+A tour of Go
+Video: Learn Go Syntax in one video
+Tutorials: Go by Example
+Go Fundamentals Video Training
+More Books on the Go Wiki
+
