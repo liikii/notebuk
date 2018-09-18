@@ -8,11 +8,16 @@ class ArgumentTypeError(BaseException):
         pass
 
 
+class CheckTypeLengthError(BaseException):
+    def __init__(self, *args, **kwargs):
+        pass
+
+
 def check_type(*tps):
     def real_decorator(y):
         def wrap_func(*args):
             if len(tps) != len(args):
-                raise Exception('check type list length not matched.')
+                raise CheckTypeLengthError('check type list length not matched.')
             for i in range(len(args)):
                 if not isinstance(args[i], tps[i]):
                     raise ArgumentTypeError('argument type error. argument %s need type %s ' % (i, tps[i]))
