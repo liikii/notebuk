@@ -1,0 +1,12 @@
+ class android.app.Activity
+    void onCreate(Bundle savedInstanceState) 
+    void onStart()
+    void onResume()
+    void onRestart()
+    void onPause() 
+    void onStop() 
+    void onDestroy()
+
+    setContentView() 
+
+TextView
