@@ -1,11 +1,10 @@
 """
-argument type check.
+desc: args type checker.
 """
 
 
 class ArgumentTypeError(BaseException):
-    """ Inappropriate argument value (of correct type). """
-    def __init__(self, *args, **kwargs):  # real signature unknown
+    def __init__(self, *args, **kwargs):
         pass
 
 
@@ -27,10 +26,10 @@ def add_int(a, b):
     return a+b
 
 
-@check_type(int, str)
-def bad_add_int(a, b):
-    return a+b
+@check_type(str, str)
+def add_str(a, b):
+    return a + ' + ' + b
 
 
-print(add_int(3, 4))
-print(bad_add_int(3, 4))
+# print(add_int(3, 'aaa'))
+print(add_str('3', '4'))
