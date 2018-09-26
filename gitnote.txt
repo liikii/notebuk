@@ -25,9 +25,10 @@ git checkout -b newbranch oldbranch
 :get file from other branch.
 git checkout otherbranch -- filename
 
-
-
-
-
+git config -l
+git config --global user.name "lii"
+git config --global user.email "333@qq.com"
+git remote set-url origin git@github.com:liikii/goexample.git
+git remote rm origin
 
 
