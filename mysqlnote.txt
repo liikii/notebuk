@@ -67,3 +67,4 @@ ALTER TABLE table_name CHANGE column_name column_name VARCHAR(191) CHARACTER SET
 # (Don’t blindly copy-paste this! The exact statement depends on the column type, maximum length, and other properties. The above line is just an example for a `VARCHAR` column.)
 
 
+show variables like "max_connections";
