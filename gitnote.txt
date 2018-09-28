@@ -32,3 +32,6 @@ git remote set-url origin git@github.com:liikii/goexample.git
 git remote rm origin
 
 
+git config --global --unset remote.origin.url
+
+
