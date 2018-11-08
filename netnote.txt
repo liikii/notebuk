@@ -23,3 +23,9 @@ DR（Designated Router）和（Backup Designated Router）BDR
 
 
 eigrp
+
+
+netstat -nr
+/sbin/route add -net 0.0.0.0 gw 192.168.1.1 enp0s3
+
+

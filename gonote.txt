@@ -3,6 +3,10 @@ go build
 env GOOS=windows GOARCH=amd64 go build
 env GOOS=windows GOARCH=amd64 go build github.com/mholt/caddy/caddy
 
+
+env GOOS=windows GOARCH=amd64 go build -o hulu.exe hulu.go
+go build -o hulu4mac hulu.go
+
 GOOS - Target Operating System  GOARCH - Target Platform
 android arm
 darwin  386
