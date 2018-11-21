@@ -46,7 +46,4 @@ http://cim.lbadvisor.com:7211/set_order
 
 select set_id, a.`count`, `desc`, CONVERT(order_id, char) order_id, user_id, a.price, a.order_status, order_time, qc_count, lead_count, b.price set_price, b.placement, a.`count`*b.`lead_count` lead_total_count, a.`count`*b.`qc_count` qc_total_count from xj_order a left join xj_set b using(set_id) where a.user_id = 106
 
-
-token: 14,301318016,5,6d0437639f4cb186821c4b5609f1da1a8b18a49340cca886ea6c0876e604cc29
-
-
+git clone -b a1.1 --single-branch https://github.com/c/d.git
