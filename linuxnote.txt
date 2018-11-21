@@ -339,3 +339,346 @@ ls -1 | xargs -I {}
 ls -1 | xargs -I {} echo aws s3 cp {} s3://static.lbadvisor.com/xiangjia/better/ --acl public-read --content-type 'image/png'\; 
 
 
+
+
+install php
+
+
+sudo apt-get install php7.0 php7.0-curl php7.0-gd php7.0-cli php7.0-mysql php-xml php7.0-mbstring
+
+
+
+locate php.ini
+set::
+cgi.fix_pathinfo=0
+
+service php7.0-fpm restart 
+
+
+comment:::
+file: /etc/nginx/nginx.conf
+# include /etc/nginx/sites-enabled/*;
+
+
+modify:::
+file: /etc/nginx/nginx.conf
+
+server {
+        listen 80 default_server;
+        server_name _;
+        root /var/www/html;
+        location / {
+            index index.php index.html;
+        }
+        location ~ [^/]\.php(/|$) {
+            fastcgi_index index.php;
+            # fastcgi_pass 127.0.0.1:9000;
+            fastcgi_pass unix:/run/php/php7.0-fpm.sock;
+            fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
+            include fastcgi_params;
+        }
+    }
+
+
+add:::
+file: /var/www/html/index.php
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+echo "My first PHP script!";
+?>
+
+</body>
+</html>
+
+add:::
+file /var/www/html/haha.php
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+echo "My first PHP script!";
+?>
+
+</body>
+</html>
+
+add:::
+file /var/www/html/index.html
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+echo "My first PHP script!";
+?>
+
+</body>
+</html>
+
+
+service nginx restart
+
+
+
+
+
+vim tab to 4 space
+
+
+filetype plugin indent on
+" show existing tab with 4 spaces width
+set tabstop=4
+" when indenting with '>', use 4 spaces width
+set shiftwidth=4
+" On pressing tab, insert 4 spaces
+set expandtab
+
+
+
+## get host info.
+sudo nmap -v -sS -A -T4 192.168.1.25
+
+## get live host
+nmap -sP 192.168.1.1/24
+
+
+
+
+
+1. Nmap Network Scanning: The Official Nmap Project Guide to Network Discovery and Security Scanning
+           https://nmap.org/book/
+
+2. RFC 1122
+   http://www.rfc-editor.org/rfc/rfc1122.txt
+
+3. RFC 792
+   http://www.rfc-editor.org/rfc/rfc792.txt
+
+4. RFC 950
+   http://www.rfc-editor.org/rfc/rfc950.txt
+
+5. RFC 1918
+   http://www.rfc-editor.org/rfc/rfc1918.txt
+
+6. UDP
+   http://www.rfc-editor.org/rfc/rfc768.txt
+
+7. SCTP
+   http://www.rfc-editor.org/rfc/rfc4960.txt
+
+8. TCP RFC
+   http://www.rfc-editor.org/rfc/rfc793.txt
+
+9. RFC 959
+   http://www.rfc-editor.org/rfc/rfc959.txt
+
+10. RFC 1323
+   http://www.rfc-editor.org/rfc/rfc1323.txt
+
+11. Lua programming language
+   http://lua.org
+
+12. precedence
+   http://www.lua.org/manual/5.1/manual.html#2.5.3
+
+13. IP protocol
+   http://www.rfc-editor.org/rfc/rfc791.txt
+
+14. RFC 2960
+   http://www.rfc-editor.org/rfc/rfc2960.txt
+
+15. Nmap::Scanner
+   http://sourceforge.net/projects/nmap-scanner/
+
+16. Nmap::Parser
+   http://nmapparser.wordpress.com/
+
+17. xsltproc
+   http://xmlsoft.org/XSLT/
+
+18. listed at Wikipedia
+   http://en.wikipedia.org/wiki/List_of_IPv6_tunnel_brokers
+
+19. Creative Commons Attribution License
+   http://creativecommons.org/licenses/by/3.0/
+
+20. Apache Software Foundation
+   http://www.apache.org
+
+21. Libpcap portable packet capture library
+   http://www.tcpdump.org
+
+22. WinPcap library
+   http://www.winpcap.org
+
+23. PCRE library
+   http://www.pcre.org
+
+24. Libdnet
+   http://libdnet.sourceforge.net
+
+25. OpenSSL cryptography toolkit
+   http://www.openssl.org
+
+26. Lua programming language
+   http://www.lua.org
+
+27. Liblinear linear classification library
+   http://www.csie.ntu.edu.tw/~cjlin/liblinear/
+
+28. IPv6 OS detection machine learning techniques
+   https://nmap.org/book/osdetect-guess.html#osdetect-guess-ipv6
+
+29. Google Summer of Code
+   https://nmap.org/soc/
+
+30. DARPA CINDER program
+   https://www.fbo.gov/index?s=opportunity&mode=form&id=585e02a51f77af5cb3c9e06b9cc82c48&tab=core&_cview=1
+
+31. Export Administration Regulations (EAR)
+   http://www.access.gpo.gov/bis/ear/ear_data.html
+
+32. 5D002
+   http://www.access.gpo.gov/bis/ear/pdf/ccl5-pt2.pdf
+
+33. EAR 740.13(e)
+   http://www.access.gpo.gov/bis/ear/pdf/740.pdf
+
+
+
+mysql query log:
+
+
+
+106
+down vote
+accepted
+Here is a simple way to enable them. In mysql we need to see often 3 logs which are mostly needed during any project development.
+
+The Error Log. It contains information about errors that occur while the server is running (also server start and stop)
+
+The General Query Log. This is a general record of what mysqld is doing (connect, disconnect, queries)
+
+The Slow Query Log. Ιt consists of "slow" SQL statements (as indicated by its name).
+
+By default no log files are enabled in MYSQL. All errors will be shown in the syslog.(/var/log/syslog)
+
+To Enable them just follow below steps
+
+step1: Go to this file(/etc/mysql/conf.d/mysqld_safe_syslog.cnf) and remove or comment those line.
+
+step2: Go to mysql conf file(/etc/mysql/my.cnf ) and add following lines
+
+To enable error log add following
+
+[mysqld_safe]
+log_error=/var/log/mysql/mysql_error.log
+
+[mysqld]
+log_error=/var/log/mysql/mysql_error.log
+To enable general query log add following
+
+general_log_file        = /var/log/mysql/mysql.log
+general_log             = 1
+To enable Slow Query Log add following
+
+log_slow_queries       = /var/log/mysql/mysql-slow.log
+long_query_time = 2
+log-queries-not-using-indexes
+step3: save the file and restart mysql using following commands
+
+service mysql restart
+To enable logs at runtime, login to mysql client (mysql -u root -p ) and give:
+
+SET GLOBAL general_log = 'ON';
+SET GLOBAL slow_query_log = 'ON';
+Finally one thing I would like to mention here is I read this from a blog. Thanks. It works for me.
+
+Click here to visit the blog
+
+
+/etc/mysql/mysql.conf.d/mysqld.cnf
+
+
+service mysql restart
+
+
+
+
+
+ grep 'log' mysqld.cnf 
+# Be aware that this log type is a performance killer.
+# As of 5.1 you can enable the log at runtime!
+general_log_file        = /var/log/mysql/mysql.log
+general_log             = 1
+# Error log - should be very few entries.
+log_error = /var/log/mysql/error.log
+#log_slow_queries = /var/log/mysql/mysql-slow.log
+#log-queries-not-using-indexes
+# The following can be used as easy to replay backup logs or for replication.
+#log_bin      = /var/log/mysql/mysql-bin.log
+expire_logs_days  = 10
+max_binlog_size   = 100M
+#binlog_do_db   = include_database_name
+#binlog_ignore_db = include_database_name
+
+select idsite, idvisit, visitor_count_visits from piwik_log_visit order by visitor_count_visits desc
+
+
+
+SELECT sub.* FROM (
+
+  SELECT
+      log_visit.*
+  FROM
+      piwik_log_visit AS log_visit
+  WHERE
+      log_visit.idsite in ('1')
+      AND log_visit.visit_last_action_time >= '2018-07-03 16:00:00'
+  ORDER BY
+      idsite DESC, visit_last_action_time DESC LIMIT 0, 10
+  ) AS sub
+  GROUP BY sub.idvisit
+  ORDER BY sub.visit_last_action_time DESC
+LIMIT 10
+
+
+
+::varbinary to ip.
+select INET6_NTOA(location_ip) from ta_log_visit;
+select INET6_NTOA(location_ip) from ta_log_visit;
+::binary to hex.
+select hex(idvisitor) from ta_log_visit limit 10;
+
+
+echo 'a b c' | awk '1 {print $1}; 2 {print $2}; 0 {print $3}'
+
+echo 'a b c' | awk '1 {print $1}; 2 {print $2}; 0 {print $3}'
+
+
+cat tmp.txt | awk 'NR%3{printf "%s", $0;next;}1{print}'
+
+
+sudo vim /etc/default/locale 
+LANG="en_US.UTF-8"
+LC_ALL="en_US.UTF-8"
+
+
+.bashrc
+export LC_ALL="en_US.UTF-8"
+export LANG="en_US.UTF-8"
+
+
+show nginx compiling info:
+nginx -V 2>&1
+
+
+ls -1 | xargs -I {}
+ls -1 | xargs -I {} echo aws s3 cp {} s3://static.lbadvisor.com/xiangjia/better/ --acl public-read --content-type 'image/png'\; 
+
+
