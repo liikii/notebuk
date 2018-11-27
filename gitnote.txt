@@ -49,3 +49,10 @@ git clone -b jike_v2.2 --single-branch https://github.com/chen206/cim.git
 select set_id, a.`count`, `desc`, CONVERT(order_id, char) order_id, user_id, a.price, a.order_status, order_time, qc_count, lead_count, b.price set_price, b.placement, a.`count`*b.`lead_count` lead_total_count, a.`count`*b.`qc_count` qc_total_count from xj_order a left join xj_set b using(set_id) where a.user_id = 106
 
 git clone -b a1.1 --single-branch https://github.com/c/d.git
+
+
+Add these lines to your ~/.bashrc or ~/.bash_profile to force git to display all messages in English:
+
+# Set Git language to English
+#alias git='LANG=en_US git'
+alias git='LANG=en_GB git'
