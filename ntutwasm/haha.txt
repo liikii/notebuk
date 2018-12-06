@@ -1,0 +1,528 @@
+<table>
+<tbody><tr>
+	<td>
+	<span class="textnormal">	
+		<p>
+		Chapter 1
+		</p>
+	</span>
+	</td>
+	<td>
+	<span class="textnormal">	
+		<p>
+		<a href="slides/chapt_01.pdf">彩色版</a>
+		</p>
+	</span>
+	</td>
+	<td>
+	<span class="textnormal">	
+		<p>
+		<a href="slides/chapt_01bw.pdf">黑白版</a>
+		</p>
+	</span>
+	</td>
+</tr>
+<tr>
+	<td>
+	<span class="textnormal">	
+		<p>
+		Chapter 2
+		</p>
+	</span>
+	</td>
+	<td>
+	<span class="textnormal">	
+		<p>
+		<a href="slides/chapt_02.pdf">彩色版</a>
+		</p>
+	</span>
+	</td>
+	<td>
+	<span class="textnormal">	
+		<p>
+		<a href="slides/chapt_02bw.pdf">黑白版</a>
+		</p>
+	</span>
+	</td>
+</tr>
+<tr>
+	<td>
+	<span class="textnormal">	
+		<p>
+		Chapter 3
+		</p>
+	</span>
+	</td>
+	<td>
+	<span class="textnormal">	
+		<p>
+		<a href="slides/chapt_03.pdf">彩色版</a>
+		</p>
+	</span>
+	</td>
+	<td>
+	<span class="textnormal">	
+		<p>
+		<a href="slides/chapt_03bw.pdf">黑白版</a>
+		</p>
+	</span>
+	</td>
+</tr>
+<tr>
+	<td>
+	<span class="textnormal">	
+		<p>
+		Chapter 4 Part I
+		</p>
+	</span>
+	</td>
+	<td>
+	<span class="textnormal">	
+		<p>
+		<a href="slides/chapt_04_PartI.pdf">彩色版</a>
+		</p>
+	</span>
+	</td>
+	<td>
+	<span class="textnormal">	
+		<p>
+		<a href="slides/chapt_04_PartIbw.pdf">黑白版</a>
+		</p>
+	</span>
+	</td>
+</tr>
+<tr>
+	<td>
+	<span class="textnormal">	
+		<p>
+		Chapter 4 Part II
+		</p>
+	</span>
+	</td>
+	<td>
+	<span class="textnormal">	
+		<p>
+		<a href="slides/chapt_04_PartII.pdf">彩色版</a>
+		</p>
+	</span>
+	</td>
+	<td>
+	<span class="textnormal">	
+		<p>
+		<a href="slides/chapt_04_PartIIbw.pdf">黑白版</a>
+		</p>
+	</span>
+	</td>
+</tr>
+<tr>
+	<td>
+	<span class="textnormal">	
+		<p>
+		Chapter 5 Part I
+		</p>
+	</span>
+	</td>
+	<td>
+	<span class="textnormal">	
+		<p>
+		<a href="slides/chapt_05_PartI.pdf">彩色版</a>
+		</p>
+	</span>
+	</td>
+	<td>
+	<span class="textnormal">	
+		<p>
+		<a href="slides/chapt_05_PartIbw.pdf">黑白版</a>
+		</p>
+	</span>
+	</td>
+	<td>
+	<span class="textnormal">	
+		<p>
+		
+		</p>
+	</span>
+	</td>
+</tr>
+<tr>
+	<td>
+	<span class="textnormal">	
+		<p>
+		Chapter 5 Part II
+		</p>
+	</span>
+	</td>
+	<td>
+	<span class="textnormal">	
+		<p>
+		<a href="slides/chapt_05_PartII.pdf">彩色版</a>
+		</p>
+	</span>
+	</td>
+	<td>
+	<span class="textnormal">	
+		<p>
+		<a href="slides/chapt_05_PartIIbw.pdf">黑白版</a>
+		</p>
+	</span>
+	</td>
+</tr>
+<tr>
+	<td>
+	<span class="textnormal">	
+		<p>
+		Chapter 6 Part I
+		</p>
+	</span>
+	</td>
+	<td>
+	<span class="textnormal">	
+		<p>
+		<a href="slides/chapt_06_PartI.pdf">彩色版</a>
+		</p>
+	</span>
+	</td>
+	<td>
+	<span class="textnormal">	
+		<p>
+		<a href="slides/chapt_06_PartIbw.pdf">黑白版</a>
+		</p>
+	</span>
+	</td>
+	<td>
+	<span class="textnormal">	
+		<p>
+		
+		</p>
+	</span>
+	</td>
+</tr>
+<tr>
+	<td>
+	<span class="textnormal">	
+		<p>
+		Chapter 6 Part II
+		</p>
+	</span>
+	</td>
+	<td>
+	<span class="textnormal">	
+		<p>
+		<a href="slides/chapt_06_PartII.pdf">彩色版</a>
+		</p>
+	</span>
+	</td>
+	<td>
+	<span class="textnormal">	
+		<p>
+		<a href="slides/chapt_06_PartIIbw.pdf">黑白版</a>
+		</p>
+	</span>
+	</td>
+	<td>
+	<span class="textnormal">	
+		<p>
+		
+		</p>
+	</span>
+	</td>
+</tr>
+<tr>
+	<td>
+	<span class="textnormal">	
+		<p>
+		Chapter 7 Part I
+		</p>
+	</span>
+	</td>
+	<td>
+	<span class="textnormal">	
+		<p>
+		<a href="slides/chapt_07_PartI.pdf">彩色版</a>
+		</p>
+	</span>
+	</td>
+	<td>
+	<span class="textnormal">	
+		<p>
+		<a href="slides/chapt_07_PartIbw.pdf">黑白版</a>
+		</p>
+	</span>
+	</td>
+	<td>
+	<span class="textnormal">	
+		<p>
+		<a href="slides/chapt_07_PartISolve.pdf">  解答彩色版</a>
+		</p>
+	</span>
+	</td>
+	<td>
+	<span class="textnormal">	
+		<p>
+		<a href="slides/chapt_07_PartISolvebw.pdf">  解答黑白版</a>
+		</p>
+	</span>
+	</td>
+	<td>
+	<span class="textnormal">	
+		<p>
+		
+		</p>
+	</span>
+	</td>
+</tr>
+<tr>
+	<td>
+	<span class="textnormal">
+		<p>
+		Chapter 7 Part II
+		</p>
+	</span>
+	</td>
+	<td>
+	<span class="textnormal">
+		<p>
+		<a href="slides/chapt_07_PartII.pdf">彩色版</a>
+		</p>
+	</span>
+	</td>
+	<td>
+	<span class="textnormal">
+		<p>
+		<a href="slides/chapt_07_PartIIbw.pdf">黑白版</a>
+		</p>
+	</span>
+	</td>
+	<td>
+	<span class="textnormal">
+		<p>
+		<a href="slides/chapt_07_PartIISolve.pdf">  解答彩色版</a>
+		</p>
+	</span>
+	</td>
+	<td>
+	<span class="textnormal">
+		<p>
+		<a href="slides/chapt_07_PartIISolvebw.pdf">  解答黑白版</a>
+		</p>
+	</span>
+	</td>
+	<td>
+	<span class="textnormal">
+		<p>
+
+		</p>
+	</span>
+	</td>
+</tr>
+<tr> 
+	<td> 
+	<span class="textnormal">
+		<p>  
+		Chapter 8
+		</p> 
+	</span>
+	</td>
+	<td> 
+	<span class="textnormal">
+		<p>  
+		<a href="slides/chapt_08.pdf">彩色版</a>
+		</p> 
+	</span>
+	</td>
+	<td> 
+	<span class="textnormal">
+		<p>  
+		<a href="slides/chapt_08bw.pdf">黑白版</a>
+		</p> 
+	</span>
+	</td>
+	<td> 
+	<span class="textnormal">
+		<p>  
+		<a href="slides/chapt_08Solve.pdf">  解答彩色版</a>
+		</p> 
+	</span>
+	</td>
+	<td> 
+	<span class="textnormal">
+		<p>  
+		<a href="slides/chapt_08Solvebw.pdf">  解答黑白版</a>
+		</p> 
+	</span>
+	</td>
+	<td> 
+	<span class="textnormal">
+		<p>     
+        
+		</p>    
+	</span> 
+	</td>   
+</tr>   
+<tr> 
+	<td> 
+	<span class="textnormal">
+		<p>  
+		Chapter 9
+		</p> 
+	</span>
+	</td>
+	<td> 
+	<span class="textnormal">
+		<p>  
+		<a href="slides/chapt_09.pdf">彩色版</a>
+		</p> 
+	</span>
+	</td>
+	<td> 
+	<span class="textnormal">
+		<p>  
+		<a href="slides/chapt_09bw.pdf">黑白版</a>
+		</p> 
+	</span>
+	</td>
+	<td> 
+	<span class="textnormal">
+		<p>     
+        
+		</p>    
+	</span> 
+	</td>   
+</tr>   
+<tr> 
+	<td> 
+	<span class="textnormal">
+		<p>  
+		Chapter 10 Part I
+		</p> 
+	</span>
+	</td>
+	<td> 
+	<span class="textnormal">
+		<p>  
+		<a href="slides/chapt_10_PartI.pdf">彩色版</a>
+		</p> 
+	</span>
+	</td>
+	<td> 
+	<span class="textnormal">
+		<p>  
+		<a href="slides/chapt_10_PartIbw.pdf">黑白版</a>
+		</p> 
+	</span>
+	</td>
+	<td> 
+	<span class="textnormal">
+		<p>     
+        
+		</p>    
+	</span> 
+	</td>   
+</tr>   
+<tr>
+	<td>
+	<span class="textnormal">
+	<p>
+	Chapter 10 Part II
+	</p>
+	</span>
+	</td>
+	<td>
+	<span class="textnormal">
+	<p>
+	<a href="slides/chapt_10_PartII.pdf">彩色版</a>
+	</p>
+	</span>
+	</td>
+	<td>
+	<span class="textnormal">
+	<p>
+	<a href="slides/chapt_10_PartIIbw.pdf">黑白版</a>
+	</p>
+	</span>
+	</td>
+</tr>
+<tr> 
+	<td> 
+	<span class="textnormal">
+		<p>  
+		Chapter 12
+		</p> 
+	</span>
+	</td>
+	<td> 
+	<span class="textnormal">
+		<p>  
+		<a href="slides/chapt_12.pdf">彩色版</a>
+		</p> 
+	</span>
+	</td>
+	<td> 
+	<span class="textnormal">
+		<p>  
+		<a href="slides/chapt_12bw.pdf">黑白版</a>
+		</p> 
+	</span>
+	</td>
+	<td> 
+	<span class="textnormal">
+		<p>     
+        
+		</p>    
+	</span> 
+	</td>   
+</tr>   	
+<tr> 
+	<td> 
+	<span class="textnormal">
+		<p>  
+		Chapter 13
+		</p> 
+	</span>
+	</td>
+	<td> 
+	<span class="textnormal">
+		<p>  
+		<a href="slides/chapt_13.pdf">彩色版</a>
+		</p> 
+	</span>
+	</td>
+	<td> 
+	<span class="textnormal">
+		<p>  
+		<a href="slides/chapt_13bw.pdf">黑白版</a>
+		</p> 
+	</span>
+	</td>
+	<td> 
+	<span class="textnormal">
+		<p>     
+        
+		</p>    
+	</span> 
+	</td>   
+</tr>   	
+<tr>
+	<td>
+	<span class="textnormal">	
+		<p>
+		IEEE Standard 754
+		</p>
+	</span>
+	</td>
+	<td>
+	<span class="textnormal">	
+		<p>
+		<a href="slides/IEEE754.pdf">按此下載</a>
+		</p>
+	</span>
+	</td>
+	<td>
+	<span class="textnormal">	
+		<p>
+		
+		</p>
+	</span>
+	</td>
+</tr>
+</tbody></table>
