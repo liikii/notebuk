@@ -25,3 +25,7 @@ More recent architectures store the return address on the system stack.
   job scheduling, if several jobs are ready to be brought into memory, and if there is not enough room for all of them, 
 
 swapping, virtual memory
+
+
+
+al ax eax disp8 disp32  cl cx ecx dl dx edx bl bx ebx SIB Mode ah sp esp ch bp ebp esi dh si esi edi bh di edi
