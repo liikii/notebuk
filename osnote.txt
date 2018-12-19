@@ -25,3 +25,7 @@ More recent architectures store the return address on the system stack.
   job scheduling, if several jobs are ready to be brought into memory, and if there is not enough room for all of them, 
 
 swapping, virtual memory
+
+https://www.byclb.com/TR/Tutorials/microprocessors/ch3_1.htm
+SIP: scaled index address mode: just for index array.
+
