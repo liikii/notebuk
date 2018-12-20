@@ -30,3 +30,7 @@ al ax eax disp8 disp32  cl cx ecx dl dx edx bl bx ebx SIB Mode ah sp esp ch bp e
 
 https://www.byclb.com/TR/Tutorials/microprocessors/ch3_1.htm
 SIP: scaled index address mode: just for index array.
+
+
+
+https://www.ragestorm.net/downloads/286intel.txt
