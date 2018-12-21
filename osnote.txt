@@ -34,3 +34,15 @@ SIP: scaled index address mode: just for index array.
 
 
 https://www.ragestorm.net/downloads/286intel.txt
+
+
+●  A displacement element in the instruction.
+●  A base register.
+●  An index register. The index register may be automatically multiplied by a scaling factor of 2, 4, or 8.
+查数组， 一个基地址， 一个
+
+ MOD-REG-R/M: mode: 8 bit, reg: 8 big, r/m: regist or memory. 
+
+
+
+

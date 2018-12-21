@@ -703,3 +703,10 @@ cat /proc/sys/fs/file-max
 *       soft    nofile           2048
 *       hard    nofile           2048
 
+
+
+
+
+shut down mongo
+> use admin
+> db.shutdownServer();
