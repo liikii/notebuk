@@ -32,7 +32,12 @@ https://www.byclb.com/TR/Tutorials/microprocessors/ch3_1.htm
 SIP: scaled index address mode: just for index array.
 
 
+http://52.80.126.45:8081/
 
+
+ curl -vX GET http://52.80.126.45:8081/api/aikfs/v1/huxing/user/history/list
+jia-test.lbadvisor.com/
+ curl -vX GET http://jia-test.lbadvisor.com/api/aikfs/v1/huxing/user/history/list
 https://www.ragestorm.net/downloads/286intel.txt
 
 
@@ -43,6 +48,9 @@ https://www.ragestorm.net/downloads/286intel.txt
 
  MOD-REG-R/M: mode: 8 bit, reg: 8 big, r/m: regist or memory. 
 
+
+
+https://github.com/QSCTech/zju-icicles
 
 
 
