@@ -53,4 +53,7 @@ https://www.ragestorm.net/downloads/286intel.txt
 https://github.com/QSCTech/zju-icicles
 
 
+ret: 
+return save previous EIP on stack.
+
 
