@@ -97,3 +97,6 @@ Tutorials: Go by Example
 Go Fundamentals Video Training
 More Books on the Go Wiki
 
+
+type assertion::
+ The notation x.(T) is called a type assertion.
