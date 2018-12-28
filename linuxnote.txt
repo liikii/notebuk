@@ -710,3 +710,23 @@ cat /proc/sys/fs/file-max
 shut down mongo
 > use admin
 > db.shutdownServer();
+
+
+
+ openssl genrsa -out rsa_1024_priv.pem 1024
+openssl rsa -pubout -in rsa_1024_priv.pem -out rsa_1024_pub.pem
+
+'genrsa' generates just an RSA key.
+
+'req' then uses that key to make a x509 style request.
+
+If you just need a rsa key pair - use genrsa.
+
+If you need a keypair and a signed x509 request you use 'genrsa' and then 'req'.
+
+Optionally 'req' can also generate that key for you (i.e. it encapsulates the 'genrsa' command (and the gendh).
+
+So:
+
+ openssl genrsa -aes128 -out privkey.pem 2048
+ openssl req -new -x509 -key privkey.pem 
