@@ -136,3 +136,14 @@ For example, a code fetch always uses the current CS. A protected mode fetch sta
 A data access behaves the same way. A load from location DS:1000 makes the processor read a descriptor by shifting DS left 3 bits (i.e., times 8), adding the table's base address (stored in the 386's on-board descriptor table register), and reading the 8 byte descriptor at this address. The descriptor contains the segment's start address, which is added to the offset in the instruction (in this case 1000). Offsets, and segment start addresses, are 32 bit numbers - it's really easy to reference any location in memory.
 
 Every memory access works through these 8 byte descriptors. If they were stored only in user RAM the 386's throughput would be pathetic, since each memory reference needs the information. Can you imagine waiting for an 8 byte read before every memory access? Actually, the processor caches a descriptor for each selector (one for CS, one for DS, etc) on-chip, so the segment translation requires no overhead. However, every load of a selector (like MOV DS,AX or POP ES) will make the 386 stop and read all 8 bytes to it's internal cache, slowing things down just a bit.
+
+descriptor created by:::
+The segment descriptor provides the processor with the data it needs to map a logical address into a linear address. Descriptors are created by compilers, linkers, loaders, or the operating system, not by applications programmers.
+
+
+
+
+
+segment register:
+visible portion, invisible portion.
+invisible portion: segment base, segmnet limit, access rights.
