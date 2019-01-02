@@ -129,3 +129,5 @@ Segment register (segment selector) -> segment descriptor -> physical memory
 Understanding segments is an essential part of programming in assembly language.
 
 --------------------------
+protected mode:::
+For example, a code fetch always uses the current CS. A protected mode fetch starts by multiplying CS by 8 and then adding the descriptor base register. 
