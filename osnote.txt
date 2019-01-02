@@ -119,3 +119,13 @@ IDT - interrupt descriptor table.
 
 
 --------------------------
+
+
+protected mode architecture:
+Segment register (segment selector) -> segment descriptor -> physical memory
+
+--------------------------
+
+Understanding segments is an essential part of programming in assembly language.
+
+--------------------------
