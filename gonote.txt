@@ -100,3 +100,29 @@ More Books on the Go Wiki
 
 type assertion::
  The notation x.(T) is called a type assertion.
+
+
+
+go get -u -v github.com/ianthehat/godef
+go get -u -v github.com/stamblerre/gocode
+
+# and in $GOPATH/bin use the first folder of the gopath, if there are several.....
+cp godef godef-gomod
+cp gocode gocode-gomod
+
+
+
+
+go visual studio code:
+https://codeload.github.com/mdempsky/gocode/zip/master
+https://codeload.github.com/golang/lint/zip/master
+https://codeload.github.com/sqs/goreturns/zip/master
+https://codeload.github.com/ianthehat/godef/zip/master
+git clone https://github.com/golang/tools.git --config "http.proxy=socks:
+https://codeload.github.com/newhook/go-symbols/zip/master
+https://codeload.github.com/lukehoban/go-outline/zip/master
+
+10719  cp godef godef-gomod
+10720  cp gocode gocode-gomod
+
+
