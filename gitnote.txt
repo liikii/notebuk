@@ -62,3 +62,6 @@ alias git='LANG=en_GB git'
 
 git branch -d delete_branch
 git push --delete <remote_name> <branch_name>
+
+
+git clone https://github.com/golang/tools.git --config "http.proxy=ssssockkkkksssss5://127.0.0.1:0000"

@@ -147,3 +147,7 @@ The segment descriptor provides the processor with the data it needs to map a lo
 segment register:
 visible portion, invisible portion.
 invisible portion: segment base, segmnet limit, access rights.
+
+
+page register in ther cr3 register.
+The physical address of the current page directory is stored in the CPU register CR3, also called the page directory base register (PDBR)
