@@ -102,6 +102,13 @@ type assertion::
  The notation x.(T) is called a type assertion.
 
 
+##  type assertion
+dimg, ok := img.(draw.Image)
+    if !ok {
+        return nil, fmt.Errorf("%T is not a drawable image type", img)
+    }
+
+    
 
 go get -u -v github.com/ianthehat/godef
 go get -u -v github.com/stamblerre/gocode
