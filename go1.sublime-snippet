@@ -1,0 +1,12 @@
+<snippet>
+	<!-- save it in: /Users/lbadvisor/Library/Application Support/Sublime Text 3/Packages/User/go1.sublime-snippet -->
+	<content><![CDATA[
+package main
+
+${1:}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>mpk</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.go</scope>
+</snippet>

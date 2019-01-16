@@ -151,3 +151,75 @@ invisible portion: segment base, segmnet limit, access rights.
 
 page register in ther cr3 register.
 The physical address of the current page directory is stored in the CPU register CR3, also called the page directory base register (PDBR)
+
+
+
+why protection::
+
+Protection in the 80386 has five aspects:
+  1.  Type checking
+  2.  Limit checking
+  3.  Restriction of addressable domain
+  4.  Restriction of procedure entry points
+  5.  Restriction of instruction set
+
+
+
+segment-level protection:
+Segment-Level Protection
+All five aspects of protection apply to segment translation:
+  1.  Type checking
+  2.  Limit checking
+  3.  Restriction of addressable domain
+  4.  Restriction of procedure entry points
+  5.  Restriction of instruction set
+The segment is the unit of protection, and segment descriptors store protection parameters. Protection checks are performed automatically by the CPU when the selector of a segment descriptor is loaded into a segment register and with every segment access. Segment registers hold the protection parameters of the currently addressable segments.
+
+
+descriptor:::
+Descriptors Store Protection Parameters
+Figure 6-1 highlights the protection-related fields of segment descriptors.
+The protection parameters are placed in the descriptor by systems software at the time a descriptor is created. In general, applications programmers do not need to be concerned about protection parameters.
+When a program loads a selector into a segment register, the processor loads not only the base address of the segment but also protection information. Each segment register has bits in the invisible portion for storing base, limit, type, and privilege level; therefore, subsequent protection checks on the same segment do not consume additional clock cycles.
+
+
+data segment descriptor,executable segment descriptor, system segment descriptor.
+A   - ACCESSED
+AVL - AVAILABLE FOR PROGRAMMERS USE
+B - BIG
+C   - CONFORMING
+D - DEFAULT
+DPL - DESCRIPTOR PRIVILEGE LEVEL
+E   - EXPAND-DOWN
+G   - GRANULARITY
+P   - SEGMENT PRESENT
+R   - READABLE
+W   - WRITABLE
+
+
+
+
+descriptor type::
+
+Table 6-1. System and Gate Descriptor Types
+Code      Type of Segment or Gate
+0 -reserved
+1       Available 286 TSS
+2 LDT
+3 Busy 286 TSS
+4 Call Gate
+5 Task Gate
+6       286 Interrupt Gate
+7       286 Trap Gate
+8 -reserved
+9       Available 386 TSS
+A -reserved
+B Busy 386 TSS
+C       386 Call Gate
+D -reserved
+E       386 Interrupt Gate
+F       386 Trap Gate
+
+
+TSS::
+Task state segment
