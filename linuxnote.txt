@@ -730,3 +730,14 @@ So:
 
  openssl genrsa -aes128 -out privkey.pem 2048
  openssl req -new -x509 -key privkey.pem 
+
+
+
+
+
+sublime add shortcut for inserting text
+Select the Key Bindings - User item under Sublime's Preferences, then add the following example line:
+{"keys": ["ctrl+shift+c"], "command": "insert_snippet", "args": {"contents": "hello!"}}
+This will add a CTRL+SHIFT+C shortcut to insert the hello! snippet.
+
+
