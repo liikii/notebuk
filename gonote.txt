@@ -3,7 +3,7 @@ go build
 env GOOS=windows GOARCH=amd64 go build
 env GOOS=windows GOARCH=amd64 go build github.com/mholt/caddy/caddy
 
-
+env GOOS=linux GOARCH=amd64 go build -o haha hulu.go
 env GOOS=windows GOARCH=amd64 go build -o hulu.exe hulu.go
 go build -o hulu4mac hulu.go
 

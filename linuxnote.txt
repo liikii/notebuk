@@ -741,3 +741,9 @@ Select the Key Bindings - User item under Sublime's Preferences, then add the fo
 This will add a CTRL+SHIFT+C shortcut to insert the hello! snippet.
 
 
+crontab 
+https://crontab.guru/#*/1_*_*_*_*
+
+
+
+
