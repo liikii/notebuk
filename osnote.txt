@@ -329,3 +329,90 @@ Inter-privilege-level far return
 A far return to a different privilege level than that of the currently executing program or procedure.
 
 
+Store Local Descriptor Table Register (sldt)
+Load Segment Limit (lsl)
+Store Task Register (str)
+Load Local Descriptor Table Register (lldt)
+Load Task Register (ltr)
+Verify a Segment for Reading or Writing (verr, verw)
+Store Global/Interrupt Descriptor Table Register (sgdt, sidt)
+Load Global/Interrupt Descriptor Table (lgdt, lidt)
+Store Machine Status Word (smsw)
+Load Machine Status Word (lmsw)
+Load Access Rights (lar)
+Load Segment Limit (lsl)
+Clear Task-Switched (clts)
+Adjust RPL Field of Selector (arpl)
+
+
+
+
+
+The Requestor's Privilege Level (RPL) feature can prevent inappropriate use of pointers that could corrupt the operation of more privileged code or data from a less privileged level.
+
+
+
+
+
+6.4  Page-Level Protection
+Two kinds of protection are related to pages:
+  1.  Restriction of addressable domain.
+  2.  Type checking.
+
+
+
+
+
+For example, it is possible to define a large data segment which has some subunits that are read-only and other subunits that are read-write. In this case, the page directory (or page table) entries for the read-only subunits would have the U/S and R/W bits set to x0, indicating no write rights for all the pages described by that directory entry (or for individual pages). This technique might be used, for example, in a UNIX-like system to define
+a large data segment, part of which is read only (for shared data or ROMmed constants). This enables UNIX-like systems to define a "flat" data space as one large segment, use "flat" pointers to address within this "flat" space, yet be able to protect shared data, shared files mapped into the virtual space, and supervisor areas.
+
+
+
+
+multitasking:
+
+To provide efficient, protected multitasking, the 80386 employs several special data structures. It does not, however, use special instructions to control multitasking; instead, it interprets ordinary control-transfer instructions differently when they refer to the special data structures. The registers and data structures that support multitasking are:
+  ●  Task state segment
+  ●  Task state segment descriptor
+  ●  Task register
+  ●  Task gate descriptor
+With these structures the 80386 can rapidly switch execution from one task to another, saving the context of the original task so that the task can be restarted later. In addition to the simple task switch, the 80386 offers two other task-management features:
+1. Interrupts and exceptions can cause task switches (if needed in the system design). The processor not only switches automatically to the task that handles the interrupt or exception, but it automatically switches back to the interrupted task when the interrupt or exception has been serviced. Interrupt tasks may interrupt lower-priority interrupt tasks to any depth.
+2. With each switch to another task, the 80386 can also switch to
+another LDT and to another page directory. Thus each task can have a different logical-to-linear mapping and a different linear-to-physical mapping. This is yet another protection feature, because tasks can be isolated and prevented from interfering with one another.
+
+
+
+
+32-bit task state segment
+
+26.io map base
+25.ldt
+24.gs
+23.fs
+22.ds
+21.ss
+20.cs
+19.es
+18.edi
+17.esi 
+16.ebp
+15.esp
+14.ebx
+13.edx
+12.ecs
+11.eax
+10.eflags
+9.eip
+8.cr3(pdpr)
+7.ss2
+6.esp2
+5.ss1
+4.esp1
+3.ss0
+2.esp0
+1.back link to previous tss
+
+
+
+
