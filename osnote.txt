@@ -223,3 +223,50 @@ F       386 Trap Gate
 
 TSS::
 Task state segment
+
+
+
+flat model
+When the 80386 is used to execute software designed for architectures that don't have segments, it may be expedient to effectively "turn off" the segmentation features of the 80386. The 80386 does not have a mode that disables segmentation, but the same effect can be achieved by initially loading the segment registers with selectors for descriptors that encompass the entire 32-bit linear address space. Once loaded, the segment registers don't need to be changed. The 32-bit offsets used by 80386 instructions are adequate to address the entire linear-address space.
+
+
+
+：：：segments spanning serveral pages.:
+The structure is divided into 33 pages, any number of which may not be present. The applications programmer does not need to be aware that the virtual memory subsystem is paging the structure in this manner.
+
+
+
+
+：：：5.3.3  Pages Spanning Several Segments
+semaphore
+it may be useful to cluster many related segments within a page.
+
+
+
+
+::: non aligned  (page  segment ) boundaries
+::: aligned (page segment ) boundaries
+
+
+
+
+memory management :
+segmentation, paging:
+segmentation: for isolating code, data and statck  modeules .
+paging: mapped into physical memory when needed.
+
+
+
+memory mapging::
+when accessing memory page that is not in physical memory, an exception is generated.the exception allows the supervisor software to load required page transparently to the user program.
+
+
+
+page directory address: cr3 (32-12)+ directory part(31-21) of linear address.
+
+cr3 define the page directory address. 
+linear directory part define the permission bit.
+
+
+
+
