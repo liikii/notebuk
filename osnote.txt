@@ -279,3 +279,53 @@ Each reference to memory is checked by the hardware to verify that it satisfies 
 
 :: expand-down feature.
 The expand-down feature makes it possible to expand the size of a stack by copying it to a larger segment without needing also to update intrastack pointers.
+
+
+
+::::A call gate has two primary functions:
+1. To define an entry point of a procedure.
+2. To specify the privilege level of the entry point.
+
+
+To maintain system integrity, each privilege level has a separate stack. These stacks assure sufficient stack space to process calls from less privileged levels. Without them, a trusted procedure would not work correctly if the calling procedure did not provide sufficient space on the caller's stack.
+
+
+
+When a call gate is used to change privilege levels, a new stack is
+selected by loading a pointer value from the Task State Segment (TSS). The processor uses the DPL of the target code segment (the new CPL) to index the initial stack pointer for PL 0, PL 1, or PL 2.
+
+
+:::copy to new stack.
+As with intralevel calls, parameters for the subroutine are placed on the stack. To make privilege transitions transparent to the called procedure, the processor copies the parameters to the new stack. The count field of a call gate tells the processor how many doublewords (up to 31) to copy from the caller's stack to the new stack. If the count is zero, no parameters are copied.
+
+
+The TSS does not have a stack pointer for a privilege level 3 stack, because privilege level 3 cannot be called by any procedure at any other privilege level.
+Procedures that may be called from another privilege level and that require more than the 31 doublewords for parameters must use the saved SS:ESP link to access all parameters beyond the last doubleword copied.
+A call via a call gate does not check the values of the words copied onto the new stack. The called procedure should check each parameter for validity. A later section discusses how the ARPL, VERR, VERW, LSL, and LAR instructions can be used to check pointer values.
+
+
+TSS 全称task state segment,
+
+
+
+
+NEW STACK:
+OLD SS
+OLD ESP
+PARM 3
+PARM 2
+PARM 1
+OLD CS
+OLD EIP < ----- NEW SS:ESP
+
+
+::::Near return
+A return to a calling procedure within the current code segment (the segment currently pointed to by the CS register), sometimes referred to as an intrasegment return.
+::::Far return
+A return to a calling procedure located in a different segment than the current code segment, sometimes referred to as an intersegment return.
+The RPL of the CS selector popped off the stack by the return instruction identifies the privilege level of the calling procedure.
+
+Inter-privilege-level far return
+A far return to a different privilege level than that of the currently executing program or procedure.
+
+
