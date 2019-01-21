@@ -269,4 +269,13 @@ linear directory part define the permission bit.
 
 
 
+:::load descriptor, also load protection information.
+When a program loads a selector into a segment register, the processor loads not only the base address of the segment but also protection information. Each segment register has bits in the invisible portion for storing base, limit, type, and privilege level; therefore, subsequent protection checks on the same segment do not consume additional clock cycles.
 
+
+::: check by hardware.
+Each reference to memory is checked by the hardware to verify that it satisfies the protection criteria. 
+
+
+:: expand-down feature.
+The expand-down feature makes it possible to expand the size of a stack by copying it to a larger segment without needing also to update intrastack pointers.
