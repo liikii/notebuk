@@ -414,5 +414,11 @@ another LDT and to another page directory. Thus each task can have a different l
 1.back link to previous tss
 
 
+structure of page table:
+
+directory
+
+
+
 
 
