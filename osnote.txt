@@ -529,5 +529,11 @@ ID flag
 
 The Linux Standard Base (LSB) is a joint project by several Linux distributions under the organizational structure of the Linux Foundation to standardize the software system structure, including the filesystem hierarchy used in the Linux operating system.
 https://refspecs.linuxfoundation.org/lsb.shtml
+System V Application Binary Interface pdf
+System V Application Binary Interface pdf
+System V Application Binary Interface pdf
+
+
+
 
 
