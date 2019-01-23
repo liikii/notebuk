@@ -421,4 +421,113 @@ directory
 
 
 
+ELF 文件中包含了程序（代码）以及如何运行该程序的相关信息（元数据）。
+
+C 语言的代码首先由预处理器（preprocessor）对 #include 和 #define 进行处理。具体来说，读入头文件，将所有的宏展开，这就是预处理（preprocess）。
+
+
+接着，编译器对预处理器的输出进行编译，生成汇编语言（assemble language）的代码
+
+
+，汇编语言的代码由汇编器（assembler）转换为机器语言，这个处理过程称为汇编
+（assemble）。
+汇编器的输出称为目标文件（object file）。一般来说，目标文件的扩展名是“.o”。
+
+
+这里的解析（parse）也称为语法分析（syntax analyzing）。解析代码的程序模块称为解析器（parser）或语法分析器（syntax analyzer）。
+
+
+
+语法分析只是对代码的表象进行分析，语义分析则是对表象之外的部分进行分析。举例来说，语义分析包括以下这些处理。
+●● 区分变量为局部变量还是全局变量
+●● 解析变量的声明和引用
+●● 变量和表达式的类型检查
+●● 检查在引用变量之前是否进行了初始化
+●● 检查函数是否按照定义返回了结果
+
+
+语法分析只是对代码的表象进行分析，语义分析则是对表象之外的部分进行分析。举例来
+说，语义分析包括以下这些处理。
+●● 区分变量为局部变量还是全局变量
+●● 解析变量的声明和引用
+●● 变量和表达式的类型检查
+●● 检查在引用变量之前是否进行了初始化
+●● 检查函数是否按照定义返回了结果
+
+
+生 成 抽 象 语 法 树 后， 接 着 将 抽 象 语 法 树 转 化 为 只 在 编 译 器 内 部 使 用 的 中间代码（Intermediate Representation，IR）。
+
+GCC 使用的是一种名为 RTL（Register Transfer Languange）的中间代码。
+
+
+最后把中间代码转换为汇编语言，这个阶段称为代码生成（code generation）。负责代码生成的程序模块称为代码生成器（code generator）。
+
+
+
+MMX 是MultiMedia eXtensions
+MMX 和 SSE(Streaming SIMD Extensions)
+
+
+,还有写 OS 内核时使用的系统寄存器(system register)、debug 时 使用的 debug 寄存器(debug register)以及 32 位环境下用不到的段寄存器(segment register)。
+
+
+
+CF
+status
+carry flag
+PF
+status
+parity flag
+AF
+status
+auxiliary carry flag
+ZF
+status
+zero flag
+SF
+status
+sign flag
+OF
+status
+overflow flag
+DF
+control
+direction flag
+TF
+system
+trap flag
+IF
+system
+interrupt flag
+IOPL
+system
+I/O privilege level
+NT
+system
+nested task
+RF
+system
+resume flag
+VM
+system
+virtual 8086 mode
+AC
+system
+alignment check
+VIF
+system
+virtual interrupt flag
+VIP
+system
+virtual interrupt pending
+ID
+system
+ID flag
+
+
+
+
+The Linux Standard Base (LSB) is a joint project by several Linux distributions under the organizational structure of the Linux Foundation to standardize the software system structure, including the filesystem hierarchy used in the Linux operating system.
+https://refspecs.linuxfoundation.org/lsb.shtml
+
 
