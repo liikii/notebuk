@@ -541,5 +541,238 @@ System V Application Binary Interface pdf
 OS provides a standard library to applications.
 
 
+three piece code:::
+http://pages.cs.wisc.edu/~remzi/OSTEP/Code/
+http://pages.cs.wisc.edu/~remzi/OSTEP/Code/
 
 
+
+Time sharing is one of the most basic techniques used by an OS to share a resource.
+
+
+
+context switch, which gives the OS the ability to stop running one program and start running another on a given CPU; this time-sharing mechanism is employed by all modern OSes.
+
+
+
+To understand what constitutes a process, we thus have to understand its machine state:
+
+
+
+ By loading the code and static data into memory, by creating and ini- tializing a stack, and by doing other work as related to I/O setup, the OS has now (finally) set the stage for program execution. It thus has one last task: to start the program running at the entry point, namely main(). By jumping to the main() routine (through a specialized mechanism that we will discuss next chapter), the OS transfers control of the CPU to the newly-created process, and thus the program begins its execution.
+
+
+process context:::;
+The register context will hold, for a stopped process, the contents of its registers. 
+
+context  switch::::
+The register context will hold, for a stopped process, the contents of its registers. When a process is stopped, its registers will be saved to this memory location; by restoring these reg- isters (i.e., placing their values back into the actual physical registers), the OS can resume running the process. We’ll learn more about this technique known as a context switch in future chapters.
+
+
+A process must be able to perform I/O and some other restricted oper- ations, but without giving the process complete control over the system. How can the OS and hardware work together to do so?
+
+
+trap::::
+To execute a system call, a program must execute a special trap instruc- tion. This instruction simultaneously jumps into the kernel and raises the privilege level to kernel mode; once in the kernel, the system can now per- form whatever privileged operations are needed (if allowed), and thus do the required work for the calling process. When finished, the OS calls a special return-from-trap instruction, which, as you might expect, returns into the calling user program while simultaneously reducing the privi- lege level back to user mode.
+
+
+
+Limited Direct Execution Protocol
+
+
+In the second (when running a process), the kernel sets up a few things (e.g., allocating a node on the process list, allocating memory) before us- ing a return-from-trap instruction to start the execution of the process; this switches the CPU to user mode and begins running the process. When the process wishes to issue a system call, it traps back into the OS, which handles it and once again returns control via a return-from-trap to the process. The process then completes its work, and returns from main(); this usually will return into some stub code which will properly exit the program (say, by calling the exit() system call, which traps into the OS). At this point, the OS cleans up and we are done
+
+
+
+:::: how to switch out the running process;
+The next problem with direct execution is achieving a switch between processes. Switching between processes should be simple, right? The OS should just decide to stop one process and start another. What’s the big deal? But it actually is a little bit tricky: specifically, if a process is running on the CPU, this by definition means the OS is not running. If the OS is not running, how can it do anything at all? (hint: it can’t) While this sounds almost philosophical, it is a real problem: there is clearly no way for the OS to take an action if it is not running on the CPU. Thus we arrive at the crux of the problem.
+
+HOW TO GAIN CONTROL WITHOUT COOPERATION
+A Non-Cooperative Approach
+
+::: virtualize memory
+there is a big monster waiting in the closet: memory. Virtualizing memory is complicated and requires us to understand many more intricate details about how the hardware and OS interact.
+
+
+
+Understanding this fundamental OS ab- straction of memory is key to understanding how memory is virtualized.
+
+
+
+In running a C program, there are two types of memory that are allo- cated. The first is called stack memory, and allocations and deallocations of it are managed implicitly by the compiler for you, the programmer; for this reason it is sometimes called automatic memory.
+
+
+:::: segment error.
+char *src = "hello";
+char *dst;        // oops! unallocated
+strcpy(dst, src); // segfault and die
+
+:::: buffer overflow
+    char *src = "hello";
+    char *dst = (char *) malloc(strlen(src)); // too small!
+    strcpy(dst, src); // work properly
+
+
+IT COMPILED OR IT RAN ̸= IT IS CORRECT
+
+
+
+In developing the virtualization of the CPU, we focused on a general mechanism known as limited direct execution (or LDE).
+
+
+
+physical address = virtual address + base
+
+
+TIP: HARDWARE-BASED DYNAMIC RELOCATION
+With dynamic relocation, a little hardware goes a long way. Namely, a base register is used to transform virtual addresses (generated by the pro- gram) into physical addresses. A bounds (or limit) register ensures that such addresses are within the confines of the address space. Together they provide a simple and efficient virtualization of memory.
+
+
+
+ASIDE: DATA STRUCTURE — THE FREE LIST
+The OS must track which parts of free memory are not in use, so as to be able to allocate memory to processes. Many different data structures can of course be used for such a task; the simplest (which we will assume here) is a free list, which simply is a list of the ranges of the physical memory which are not currently in use.
+
+
+
+Hardware Requirements
+Privileged mode
+Base/bounds registers
+Ability to translate virtual addresses and check if within bounds
+Privileged instruction(s) to update base/bounds
+Privileged instruction(s) to register exception handlers
+Ability to raise exceptions
+Notes
+Needed to prevent user-mode processes from executing privileged operations Need pair of registers per CPU to support address translation and bounds checks Circuitry to do translations and check limits; in this case, quite simple
+OS must be able to set these values before letting a user program run
+OS must be able to tell hardware what code to run if exception occurs
+When processes try to access privileged instructions or out-of-bounds memory
+
+
+
+segment voilation::::
+What if we tried to refer to an illegal address, such as 7KB which is be- yond the end of the heap? You can imagine what will happen: the hard- ware detects that the address is out of bounds, traps into the OS, likely leading to the termination of the offending process. And now you know the origin of the famous term that all C programmers learn to dread: the segmentation violation or segmentation fault.
+
+
+
+
+// get top 2 bits of 14-bit VA
+Segment = (VirtualAddress & SEG_MASK) >> SEG_SHIFT
+// now get offset
+Offset  = VirtualAddress & OFFSET_MASK
+if (Offset >= Bounds[Segment])
+    RaiseException(PROTECTION_FAULT)
+else
+    PhysAddr = Base[Segment] + Offset
+    Register = AccessMemory(PhysAddr)
+
+
+:::::in some system: only have two segments.::::
+some systems put code in the same segment as the heap and thus use only one bit to select which segment to use
+
+
+::::::direction bit::::
+The first thing we need is a little extra hardware support. Instead of just base and bounds values, the hardware also needs to know which way the segment grows.
+
+
+::::code sharing register::::
+support for segmentation grew, system designers soon realized that they could realize new types of efficiencies with a little more hardware support. Specifically, to save memory, sometimes it is useful to share certain memory segments between address spaces. In particular, code sharing is common and still in use in systems today.
+To support sharing, we need a little extra support from the hardware, in the form of protection bits. Basic support adds a few bits per segment, indicating whether or not a program can read or write a segment, or per- haps execute code that lies within the segment. By setting a code segment to read-only, the same code can be shared across multiple processes, with- out worry of harming isolation; while each process still thinks that it is ac- cessing its own private memory, the OS is secretly sharing memory which cannot be modified by the process, and thus the illusion is preserved.
+
+::::code segment::::
+read && execute 
+
+细粒度  粗粒度  段:::
+::::Fine-grained vs. Coarse-grained Segmentation::::
+
+paging 是为了 解决  memory fragmentation 问题。
+::::external fragmentation:::
+:::::Non-compacted and Compacted Memory::::
+
+
+
+
+::::::segment have two problems:::::
+1.external fragmentation
+2.The second and perhaps more important problem is that segmentation still isn’t flexible enough to support our fully generalized, sparse address space. For example, if we have a large but sparsely-used heap all in one logical segment, the entire heap must still reside in memory in order to be accessed. In other words, if our model of how the address space is being used doesn’t exactly match how the underlying segmentation has been designed to support it, segmentation doesn’t work very well. We thus need to find some new solutions. Ready to find them?
+
+
+
+::::context switch::::
+what should the OS do on a context switch? You should have a good guess by now: the segment registers must be saved and restored. 
+
+
+
+:::::CRUX: HOW TO MANAGE FREE SPACE:::::
+How should free space be managed, when satisfying variable-sized re- quests? What strategies can be used to minimize fragmentation? What are the time and space overheads of alternate approaches?
+
+
+
+
+free list::::manage free memory.
+generic data structure used to manage free space in the heap is some kind of free list. 
+
+
+::::internal fragmentation    external fragmentation::::
+
+
+:::Correspondingly, we view physical memory as an array of fixed-sized slots called page frames:::
+
+::::HOW TO VIRTUALIZE MEMORY WITH PAGES::::
+How can we virtualize memory with pages, so as to avoid the prob- lems of segmentation? What are the basic techniques? How do we make those techniques work well, with minimal space and time overheads?
+
+
+THE CRUX:
+HOW TO VIRTUALIZE MEMORY WITH PAGES
+How can we virtualize memory with pages, so as to avoid the prob- lems of segmentation? What are the basic techniques? How do we make those techniques work well, with minimal space and time overheads?
+
+
+---------------------------------------------------------------------------
+
+VPN     = (VirtualAddress & VPN_MASK) >> SHIFT
+PTEAddr = PageTableBaseRegister + (VPN * sizeof(PTE))
+
+offset   = VirtualAddress & OFFSET_MASK
+PhysAddr = (PFN << SHIFT) | offset
+
+---------------------------------------------------------------------------
+
+// Extract the VPN from the virtual address
+VPN = (VirtualAddress & VPN_MASK) >> SHIFT
+
+
+// Form the address of the page-table entry (PTE)
+PTEAddr = PTBR + (VPN * sizeof(PTE))
+
+// Fetch the PTE
+PTE = AccessMemory(PTEAddr)
+
+// Check if process can access the page
+if (PTE.Valid == False)
+  RaiseException(SEGMENTATION_FAULT)
+else if (CanAccess(PTE.ProtectBits) == False)
+  RaiseException(PROTECTION_FAULT)
+else
+  // Access is OK: form physical address and fetch it
+  offset   = VirtualAddress & OFFSET_MASK
+  PhysAddr = (PTE.PFN << PFN_SHIFT) | offset
+  Register = AccessMemory(PhysAddr)
+
+---------------------------------------------------------------------------
+
+
+HOW TO SPEED UP ADDRESS TRANSLATION
+How can we speed up address translation, and generally avoid the extra memory reference that paging seems to require? What hardware support is required? What OS involvement is needed?
+
+
+OS’s old friend: the hardware
+
+
+translation-lookaside buffer, or TLB 
+a better name would be an address-translation cache.
+
+
+
+who handles a TLB miss? 
+
+
+TLB VALID BIT ̸= PAGE TABLE VALID BIT

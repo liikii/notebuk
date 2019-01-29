@@ -65,3 +65,7 @@ git push --delete <remote_name> <branch_name>
 
 
 git clone https://github.com/golang/tools.git --config "http.proxy=ssssockkkkksssss5://127.0.0.1:0000"
+
+
+git check out another remote branch not in local. 
+git fetch origin jike_v2.7:jike_v2.7
