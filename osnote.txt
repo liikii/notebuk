@@ -776,3 +776,29 @@ who handles a TLB miss?
 
 
 TLB VALID BIT ̸= PAGE TABLE VALID BIT
+
+
+::::replacement policy.
+THE CRUX: HOW TO DESIGN TLB REPLACEMENT POLICY Which TLB entry should be replaced when we add a new TLB entry? The goal, of course, being to minimize the miss rate (or increase hit rate)
+and thus improve performance.
+
+
+
+::::CRUX: HOW TO MAKE PAGE TABLES SMALLER?::::
+Simple array-based page tables (usually called linear page tables) are too big, taking up far too much memory on typical systems. How can we make page tables smaller? What are the key ideas? What inefficiencies
+arise as a result of these new data structures?
+
+
+::::4kb page; 4MB page table size.::::
+32-bit address space (2^32 bytes), with 4KB (2^12 byte) pages and a 4-byte page-table entry.
+(2^32) / (2^12) 
+2^(32-12)
+
+
+make pages bigger::::
+1. 2^(32-14)*4 = 1048576 1MB
+
+
+
+
+
