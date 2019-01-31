@@ -800,5 +800,29 @@ make pages bigger::::
 
 
 
+multi-level page tables:::::
+The basic idea behind a multi-level page table is simple. First, chop up the page table into page-sized units; then, if an entire page of page-table entries (PTEs) is invalid, don’t allocate that page of the page table at all. To track whether a page of the page table is valid (and if valid, where it is in memory), use a new structure, called the page directory. The page directory thus either can be used to tell you where a page of the page table is, or that the entire page of the page table contains no valid pages.
 
 
+
+
+1.In singlelevel pagetable you need the whole table to access even a small amount of data(less memory references). i.e 2^20 pages each PTE occupying 4bytes as you assumed.
+Space required to access any data is 2^20 * 4bytes = 4MB
+
+2.Paging pages is multi-level paging.In multilevel paging it is more specific, you can with the help of multi-level organization decide which specific page among the 2^20 pages your data exists, and select it . So here you need only that specific page to be in the memory while you run the process.
+In the 2 level case that you discussed you need 1st level pagetable and then 1 of the 2^10 pagetables in second level. So, 1st level size = 2^10 * 4bytes = 4KB 2nd level we need only 1 among the 2^10 pagetables = so size is 2^10 * 4bytes = 4KB
+
+Total size required is now : 4KB + 4KB = 8KB.
+
+Final comparision is 4MB vs 8KB .
+
+
+
+
+
+:::::THE CRUX: HOW TO GO BEYOND PHYSICAL MEMORY
+How can the OS make use of a larger, slower device to transparently pro- vide the illusion of a large virtual address space?
+
+
+
+how will the OS know where to find the desired page? In many systems, the page table is a natural place to store such information. Thus, the OS could use the bits in the PTE normally used for data such as the PFN of the page for a disk address. When the OS receives a page fault for a page, it looks in the PTE to find the address, and issues the request to disk to fetch the page into memory.
