@@ -826,3 +826,27 @@ How can the OS make use of a larger, slower device to transparently pro- vide th
 
 
 how will the OS know where to find the desired page? In many systems, the page table is a natural place to store such information. Thus, the OS could use the bits in the PTE normally used for data such as the PFN of the page for a disk address. When the OS receives a page fault for a page, it looks in the PTE to find the address, and issues the request to disk to fetch the page into memory.
+
+
+
+
+● Descriptors contain a field called the descriptor privilege level (DPL).
+● Selectors contain a field called the requestor's privilege level (RPL). The RPL is intended to represent the privilege level of the procedure that originates a selector.
+● An internal processor register records the current privilege level (CPL). Normally the CPL is equal to the DPL of the segment that the processor is currently executing. CPL changes as control is transferred to segments with differing DPLs.
+
+
+
+
+Normally the CPL is equal to the DPL of the segment that the processor is currently executing. CPL may, however, be greater than DPL if the conforming bit is set in the descriptor of the current executable segment. The processor keeps a record of the CPL cached in the CS register; this value can be different from the DPL in the descriptor of the code segment.
+
+::: the only case:::
+the only case when CPL may be unequal to the DPL of the current executable segment.
+
+An executable segment whose descriptor has the conforming bit set is called a conforming segment. The conforming-segment mechanism permits sharing of procedures that may be called from various privilege levels but should execute at the privilege level of the calling procedure. Examples of such procedures include math libraries and some exception handlers. When control is transferred to a conforming segment, the CPL does not change.
+
+
+
+TSS在任务切换过程中起着重要作用，通过它实现任务的挂起和恢复。所谓任务切换是指，挂起当前正在执行的任务，恢复或启动另一任务的执行。在任务切换过程中，首先，处理器中各寄存器的当前值被自动保存到TR（任务寄存器）所指定的TSS中；然后，下一任务的TSS的选择子被装入TR；最后，从TR所指定的TSS中取出各寄存器的值送到处理器的各寄存器中。由此可见，通过在TSS中保存任务现场各寄存器状态的完整映象，实现任务的切换。   
+
+
+
