@@ -850,3 +850,52 @@ TSS在任务切换过程中起着重要作用，通过它实现任务的挂起�
 
 
 
+glabal , local
+descriptor table::::
+
+
+
+The logical address is a pair (selector, offset), where the selector is a 16-bit number:
+
+
+selector: 16bit , 13 bit segment number, 1bit flag(IS GDT LDT) 2bit (p deals with protection)
+
+
+
+GDT LDT是用来保护 地址空间的。 段隔离。
+
+selector: select the segment descriptor.
+
+
+descriptor是用来做检查转换用的。
+
+
+TSS descriptors may reside only in the GDT.
+TR: TASK REGISTER point to the task state segment. 
+task gate 约等于  TSS descriptor
+
+
+
+The 80386 switches execution to another task in any of four cases:
+1. The current task executes a JMP or CALL that refers to a TSS descriptor. 调用。
+2. The current task executes a JMP or CALL that refers to a task gate. 调用。
+3. An interrupt or exception vectors to a task gate in the IDT. 异常。
+4. The current task executes an IRET when the NT flag is set.  完成。
+
+
+A task switching operation involves these steps:
+
+1.Checking that the current task is allowed to switch to the designated task. Data-access privilege rules apply in the case of JMP or CALL instructions. The DPL of the TSS descriptor or task gate must be numerically greater (e.g., lower privilege level) than or equal to the maximum of CPL and the RPL of the gate selector. Exceptions, interrupts, and IRET are permitted to switch tasks regardless of the DPL of the target task gate or TSS descriptor.
+
+2.Checking that the TSS descriptor of the new task is marked present and has a valid limit. Any errors up to this point occur in the context of the outgoing task. Errors are restartable and can be handled in a way that is transparent to applications procedures.
+
+3.Saving the state of the current task. The processor finds the base address of the current TSS cached in the task register. It copies the registers into the current TSS (EAX, ECX, EDX, EBX, ESP, EBP, ESI, EDI, ES, CS, SS, DS, FS, GS, and the flag register). The EIP field of the TSS points to the instruction after the one that caused the task switch.
+
+4.Loading the task register with the selector of the incoming task's TSS descriptor, marking the incoming task's TSS descriptor as busy, and setting the TS (task switched) bit of the MSW. The selector is either the operand of a control transfer instruction or is taken from a task gate.
+
+5.Loading the incoming task's state from its TSS and resuming execution. The registers loaded are the LDT register; the flag register; the general registers EIP, EAX, ECX, EDX, EBX, ESP, EBP, ESI, EDI; the segment registers ES, CS, SS, DS, FS, and GS; and PDBR. Any errors detected in this step occur in the context of the incoming task. To an exception handler, it appears that the first instruction of the new task has not yet executed.
+
+
+
+
+
