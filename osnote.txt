@@ -895,7 +895,41 @@ A task switching operation involves these steps:
 
 5.Loading the incoming task's state from its TSS and resuming execution. The registers loaded are the LDT register; the flag register; the general registers EIP, EAX, ECX, EDX, EBX, ESP, EBP, ESI, EDI; the segment registers ES, CS, SS, DS, FS, and GS; and PDBR. Any errors detected in this step occur in the context of the incoming task. To an exception handler, it appears that the first instruction of the new task has not yet executed.
 
+--------------------------
+
+NT (nested task) bit
+ sets the NT bit in the new task's flag register. The NT flag indicates whether the back-link field is valid. 
+
+--------------------------
+
+Interrupts::::
+  Maskable interrupts
+  NMI (Non-Maskable Interrupt) 
+
+--------------------------
+
+
+CLI (Clear Interrupt-Enable Flag) and STI (Set Interrupt-Enable Flag)
 
 
 
+
+Interrupt Descriptor Table:::
+Like the GDT and LDTs, the IDT is an array of 8-byte descriptors. Unlike the GDT and LDTs, the first entry of the IDT may contain a descriptor. 
+
+
+https://github.com/Wind4/vlmcsd/tree/gh-pages
+Microsoft KMS Activation
+Usage
+Start a Command Prompt as an Administrator.
+
+Windows
+slmgr.vbs -ipk W269N-WFGWX-YVC9B-4J6C9-T83GX
+slmgr.vbs -skms kms.srv.crsoo.com
+slmgr.vbs -ato
+Office
+cd C:\Program Files\Microsoft Office\Office15
+cscript ospp.vbs /inpkey:YC7DK-G2NP3-2QQC3-J6H88-GVGXT
+cscript ospp.vbs /sethst:kms.srv.crsoo.com
+cscript ospp.vbs /act
 
