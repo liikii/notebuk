@@ -745,5 +745,28 @@ crontab
 https://crontab.guru/#*/1_*_*_*_*
 
 
+crontab
+写脚本的时候
+#!/bin/bash
+export PATH=xxxxx
+echo aaaa
 
 
+I used /etc/crontab. I used vi and entered in the PATHs I needed into this file and ran it as root. The normal crontab overwrites PATHs that you have set up. A good tutorial on how to do this.
+
+The systemwide cron file looks like this:
+
+This has the username field, as used by /etc/crontab.
+# /etc/crontab: system-wide crontab
+# Unlike any other crontab you don't have to run the `crontab'
+# command to install the new version when you edit this file.
+# This file also has a username field, that none of the other crontabs do.
+
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+# m h dom mon dow user   command
+42 6 * * *   root    run-parts --report /etc/cron.daily
+47 6 * * 7   root    run-parts --report /etc/cron.weekly
+52 6 1 * *   root    run-parts --report /etc/cron.monthly
+01 01 * * 1-5 root python /path/to/file.py
