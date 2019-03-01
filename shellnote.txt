@@ -158,3 +158,42 @@ Example use: lets say you want to grep a file for the string -v - normally -v wi
 
 grep -- -v file
 
+
+
+
+
+
+String Length
+${#string}
+
+Substring Extraction
+${string:position}
+
+
+${string:position:length}
+
+Substring Removal
+
+${string#substring}
+	Deletes shortest match of $substring from front of $string.
+
+${string##substring}
+	Deletes longest match of $substring from front of $string.
+
+${string%substring}
+	Deletes shortest match of $substring from back of $string.
+
+${string%%substring}
+	Deletes longest match of $substring from back of $string.
+Substring Replacement
+	${string/substring/replacement}
+	Replace first match of $substring with $replacement. [2]
+
+${string//substring/replacement}
+	Replace all matches of $substring with $replacement.
+
+${string/#substring/replacement}
+If $substring matches front end of $string, substitute $replacement for $substring.
+
+${string/%substring/replacement}
+If $substring matches back end of $string, substitute $replacement for $substring.
