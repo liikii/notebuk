@@ -27,3 +27,8 @@ https://ap.yzb315.com/sm03bb/index.html?c-2&amp;uc_sr=sm&amp;uc_keywordid=112043
 https://ap.yzb315.com/AmSm01_11A172/index.html?A1_SSC0_ty00_0129&amp;uc_sr=sm&amp;uc_keywordid=15880952534&amp;uc_creative=2498182641&amp;uc_deviceid=8C0BDA02-E0D1-4023-91D7-56552AF35E07
 
 
+
+ALTER TABLE xxx DROP INDEX user_mui_uniq;
+alter table xxx ADD COLUMN `placement` tinyint(4) NOT NULL DEFAULT '0' COMMENT '放置位置：0—草稿，1—线上， 2—交换态';
+ALTER TABLE xx ADD CONSTRAINT user_mui_uniq UNIQUE (user_id, management_unit_id, placement);
+
