@@ -933,8 +933,8 @@ cscript ospp.vbs /inpkey:YC7DK-G2NP3-2QQC3-J6H88-GVGXT
 cscript ospp.vbs /sethst:kms.srv.crsoo.com
 cscript ospp.vbs /act
 
-
-
+win10 jihuo激活
+https://github.com/Wind4/vlmcsd/tree/gh-pages
 
 Writing an OS in Rust
 https://os.phil-opp.com/
