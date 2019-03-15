@@ -938,3 +938,12 @@ https://github.com/Wind4/vlmcsd/tree/gh-pages
 
 Writing an OS in Rust
 https://os.phil-opp.com/
+
+
+
+碰到开机很长时间黑屏的问题，大部分都是显卡作祟，请到官网下载兼容Win10的最新稳定显卡驱动。显卡驱动下载：世界两大显卡提供商官网：NVIDIA http://www.nvidia.cn/page/home.htmlAMD http://www.amd.com/zh-cn选Windows10的、符合自己系统位数的驱动。查看自己的显卡型号：右键开始菜单图标或Win+X，点击“设备管理器”，找到“显示适配器”，这个就是你的显卡型号。如图：查看自己的系统位数：右键开始菜单图标或Win+X，点击“系统”，找到“系统类型”，就可以看到自己是64位系统还是32位系统。
+
+作者：唐堂汉子
+链接：https://www.zhihu.com/question/34026161/answer/90775981
+来源：知乎
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。

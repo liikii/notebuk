@@ -85,4 +85,11 @@ func = dec2(dec1(func))
 
 python list是个动态数组     这个数组每个元素是个*ob_item是个指向pythonobject的指针
 
+
+
+multiply A backreference 
+((?<=varchar\(127\))|(?<=varchar\(45\))|(?<=varchar\(255\))|(?<=varchar\(2048\))) DEFAULT ''
+
+
+
 -----------------------------------------------------------------------------------
