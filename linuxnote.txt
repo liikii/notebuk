@@ -1,3 +1,3143 @@
+gcc option index:::
+(for search)
+https://gcc.gnu.org/onlinedocs/gcc/Option-Index.html
+Next: Keyword Index, Previous: Contributors, Up: Top   [Contents][Index]
+
+Option Index
+GCC’s command line options are indexed here without any initial ‘-’ or ‘--’. Where an option has both positive and negative forms (such as -foption and -fno-option), relevant entries in the manual are indexed under the most appropriate form; it may sometimes be useful to look up both forms.
+
+Jump to:    #   -   8   
+A   B   C   D   E   F   G   H   I   K   L   M   N   O   P   Q   R   S   T   U   V   W   X   Y   Z  
+Index Entry     Section
+#       
+###:        Overall Options
+-       
+-Wattribute-alias:      Warning Options
+-Wno-attribute-alias:       Warning Options
+8       
+80387:      x86 Options
+A       
+A:      Preprocessor Options
+allowable_client:       Darwin Options
+all_load:       Darwin Options
+ansi:       Standards
+ansi:       C Dialect Options
+ansi:       Other Builtins
+ansi:       Non-bugs
+arch_errors_fatal:      Darwin Options
+aux-info:       C Dialect Options
+B       
+B:      Directory Options
+Bdynamic:       VxWorks Options
+bind_at_load:       Darwin Options
+Bstatic:        VxWorks Options
+bundle:     Darwin Options
+bundle_loader:      Darwin Options
+C       
+c:      Overall Options
+C:      Preprocessor Options
+c:      Link Options
+CC:     Preprocessor Options
+client_name:        Darwin Options
+compatibility_version:      Darwin Options
+coverage:       Instrumentation Options
+current_version:        Darwin Options
+D       
+D:      Preprocessor Options
+d:      Preprocessor Options
+d:      Developer Options
+da:     Developer Options
+dA:     Developer Options
+dD:     Preprocessor Options
+dD:     Developer Options
+dead_strip:     Darwin Options
+dependency-file:        Darwin Options
+dH:     Developer Options
+dI:     Preprocessor Options
+dM:     Preprocessor Options
+dN:     Preprocessor Options
+dp:     Developer Options
+dP:     Developer Options
+dU:     Preprocessor Options
+dumpfullversion:        Developer Options
+dumpmachine:        Developer Options
+dumpspecs:      Developer Options
+dumpversion:        Developer Options
+dx:     Developer Options
+dylib_file:     Darwin Options
+dylinker_install_name:      Darwin Options
+dynamic:        Darwin Options
+dynamiclib:     Darwin Options
+E       
+E:      Overall Options
+E:      Link Options
+e:      Link Options
+EB:     ARC Options
+EB:     C-SKY Options
+EB:     MIPS Options
+EL:     ARC Options
+EL:     C-SKY Options
+EL:     MIPS Options
+entry:      Link Options
+exported_symbols_list:      Darwin Options
+F       
+F:      Darwin Options
+fabi-compat-version:        C++ Dialect Options
+fabi-version:       C++ Dialect Options
+faccess-control:        C++ Dialect Options
+fada-spec-parent:       Overall Options
+faggressive-loop-optimizations:     Optimize Options
+falign-functions:       Optimize Options
+falign-jumps:       Optimize Options
+falign-labels:      Optimize Options
+falign-loops:       Optimize Options
+faligned-new:       C++ Dialect Options
+fallow-parameterless-variadic-functions:        C Dialect Options
+fasan-shadow-offset:        Instrumentation Options
+fasm:       C Dialect Options
+fassociative-math:      Optimize Options
+fasynchronous-unwind-tables:        Code Gen Options
+fauto-inc-dec:      Optimize Options
+fauto-profile:      Optimize Options
+fbranch-count-reg:      Optimize Options
+fbranch-probabilities:      Optimize Options
+fbranch-target-load-optimize:       Optimize Options
+fbranch-target-load-optimize2:      Optimize Options
+fbtr-bb-exclusive:      Optimize Options
+fbuiltin:       C Dialect Options
+fcall-saved:        Code Gen Options
+fcall-used:     Code Gen Options
+fcaller-saves:      Optimize Options
+fcf-protection:     Instrumentation Options
+fchar8_t:       C++ Dialect Options
+fcheck-new:     C++ Dialect Options
+fchecking:      Developer Options
+fcode-hoisting:     Optimize Options
+fcombine-stack-adjustments:     Optimize Options
+fcommon:        Code Gen Options
+fcommon:        Common Variable Attributes
+fcompare-debug:     Developer Options
+fcompare-debug-second:      Developer Options
+fcompare-elim:      Optimize Options
+fconcepts:      C++ Dialect Options
+fcond-mismatch:     C Dialect Options
+fconserve-stack:        Optimize Options
+fconstant-string-class:     Objective-C and Objective-C++ Dialect Options
+fconstexpr-depth:       C++ Dialect Options
+fconstexpr-loop-limit:      C++ Dialect Options
+fconstexpr-ops-limit:       C++ Dialect Options
+fcprop-registers:       Optimize Options
+fcrossjumping:      Optimize Options
+fcse-follow-jumps:      Optimize Options
+fcse-skip-blocks:       Optimize Options
+fcx-fortran-rules:      Optimize Options
+fcx-limited-range:      Optimize Options
+fdata-sections:     Optimize Options
+fdbg-cnt:       Developer Options
+fdbg-cnt-list:      Developer Options
+fdce:       Optimize Options
+fdebug-cpp:     Preprocessor Options
+fdebug-prefix-map:      Debugging Options
+fdebug-types-section:       Debugging Options
+fdeclone-ctor-dtor:     Optimize Options
+fdeduce-init-list:      C++ Dialect Options
+fdefer-pop:     Optimize Options
+fdelayed-branch:        Optimize Options
+fdelete-dead-exceptions:        Code Gen Options
+fdelete-null-pointer-checks:        Optimize Options
+fdevirtualize:      Optimize Options
+fdevirtualize-at-ltrans:        Optimize Options
+fdevirtualize-speculatively:        Optimize Options
+fdiagnostics-color:     Diagnostic Message Formatting Options
+fdiagnostics-format:        Diagnostic Message Formatting Options
+fdiagnostics-generate-patch:        Diagnostic Message Formatting Options
+fdiagnostics-minimum-margin-width:      Diagnostic Message Formatting Options
+fdiagnostics-parseable-fixits:      Diagnostic Message Formatting Options
+fdiagnostics-show-caret:        Diagnostic Message Formatting Options
+fdiagnostics-show-labels:       Diagnostic Message Formatting Options
+fdiagnostics-show-line-numbers:     Diagnostic Message Formatting Options
+fdiagnostics-show-location:     Diagnostic Message Formatting Options
+fdiagnostics-show-option:       Diagnostic Message Formatting Options
+fdiagnostics-show-template-tree:        Diagnostic Message Formatting Options
+fdirectives-only:       Preprocessor Options
+fdisable-:      Developer Options
+fdollars-in-identifiers:        Preprocessor Options
+fdollars-in-identifiers:        Interoperation
+fdpic:      SH Options
+fdse:       Optimize Options
+fdump-ada-spec:     Overall Options
+fdump-debug:        Developer Options
+fdump-earlydebug:       Developer Options
+fdump-final-insns:      Developer Options
+fdump-go-spec:      Overall Options
+fdump-ipa:      Developer Options
+fdump-lang:     Developer Options
+fdump-lang-all:     Developer Options
+fdump-noaddr:       Developer Options
+fdump-passes:       Developer Options
+fdump-rtl-alignments:       Developer Options
+fdump-rtl-all:      Developer Options
+fdump-rtl-asmcons:      Developer Options
+fdump-rtl-auto_inc_dec:     Developer Options
+fdump-rtl-barriers:     Developer Options
+fdump-rtl-bbpart:       Developer Options
+fdump-rtl-bbro:     Developer Options
+fdump-rtl-btl2:     Developer Options
+fdump-rtl-btl2:     Developer Options
+fdump-rtl-bypass:       Developer Options
+fdump-rtl-ce1:      Developer Options
+fdump-rtl-ce2:      Developer Options
+fdump-rtl-ce3:      Developer Options
+fdump-rtl-combine:      Developer Options
+fdump-rtl-compgotos:        Developer Options
+fdump-rtl-cprop_hardreg:        Developer Options
+fdump-rtl-csa:      Developer Options
+fdump-rtl-cse1:     Developer Options
+fdump-rtl-cse2:     Developer Options
+fdump-rtl-dbr:      Developer Options
+fdump-rtl-dce:      Developer Options
+fdump-rtl-dce1:     Developer Options
+fdump-rtl-dce2:     Developer Options
+fdump-rtl-dfinish:      Developer Options
+fdump-rtl-dfinit:       Developer Options
+fdump-rtl-eh:       Developer Options
+fdump-rtl-eh_ranges:        Developer Options
+fdump-rtl-expand:       Developer Options
+fdump-rtl-fwprop1:      Developer Options
+fdump-rtl-fwprop2:      Developer Options
+fdump-rtl-gcse1:        Developer Options
+fdump-rtl-gcse2:        Developer Options
+fdump-rtl-init-regs:        Developer Options
+fdump-rtl-initvals:     Developer Options
+fdump-rtl-into_cfglayout:       Developer Options
+fdump-rtl-ira:      Developer Options
+fdump-rtl-jump:     Developer Options
+fdump-rtl-loop2:        Developer Options
+fdump-rtl-mach:     Developer Options
+fdump-rtl-mode_sw:      Developer Options
+fdump-rtl-outof_cfglayout:      Developer Options
+fdump-rtl-pass:     Developer Options
+fdump-rtl-peephole2:        Developer Options
+fdump-rtl-postreload:       Developer Options
+fdump-rtl-pro_and_epilogue:     Developer Options
+fdump-rtl-ree:      Developer Options
+fdump-rtl-regclass:     Developer Options
+fdump-rtl-rnreg:        Developer Options
+fdump-rtl-sched1:       Developer Options
+fdump-rtl-sched2:       Developer Options
+fdump-rtl-seqabstr:     Developer Options
+fdump-rtl-shorten:      Developer Options
+fdump-rtl-sibling:      Developer Options
+fdump-rtl-sms:      Developer Options
+fdump-rtl-split1:       Developer Options
+fdump-rtl-split2:       Developer Options
+fdump-rtl-split3:       Developer Options
+fdump-rtl-split4:       Developer Options
+fdump-rtl-split5:       Developer Options
+fdump-rtl-stack:        Developer Options
+fdump-rtl-subreg1:      Developer Options
+fdump-rtl-subreg2:      Developer Options
+fdump-rtl-subregs_of_mode_finish:       Developer Options
+fdump-rtl-subregs_of_mode_init:     Developer Options
+fdump-rtl-unshare:      Developer Options
+fdump-rtl-vartrack:     Developer Options
+fdump-rtl-vregs:        Developer Options
+fdump-rtl-web:      Developer Options
+fdump-statistics:       Developer Options
+fdump-tree:     Developer Options
+fdump-tree-all:     Developer Options
+fdump-unnumbered:       Developer Options
+fdump-unnumbered-links:     Developer Options
+fdwarf2-cfi-asm:        Debugging Options
+fearly-inlining:        Optimize Options
+felide-constructors:        C++ Dialect Options
+felide-type:        Diagnostic Message Formatting Options
+feliminate-unused-debug-symbols:        Debugging Options
+feliminate-unused-debug-types:      Debugging Options
+femit-class-debug-always:       Debugging Options
+femit-struct-debug-baseonly:        Debugging Options
+femit-struct-debug-detailed:        Debugging Options
+femit-struct-debug-reduced:     Debugging Options
+fenable-:       Developer Options
+fenforce-eh-specs:      C++ Dialect Options
+fexceptions:        Code Gen Options
+fexcess-precision:      Optimize Options
+fexec-charset:      Preprocessor Options
+fexpensive-optimizations:       Optimize Options
+fext-numeric-literals:      C++ Dialect Options
+fextended-identifiers:      Preprocessor Options
+fextern-tls-init:       C++ Dialect Options
+ffast-math:     Optimize Options
+ffat-lto-objects:       Optimize Options
+ffile-prefix-map:       Overall Options
+ffinite-math-only:      Optimize Options
+ffix-and-continue:      Darwin Options
+ffixed:     Code Gen Options
+ffloat-store:       Optimize Options
+ffloat-store:       Disappointments
+fforward-propagate:     Optimize Options
+ffp-contract:       Optimize Options
+ffp-int-builtin-inexact:        Optimize Options
+ffreestanding:      Standards
+ffreestanding:      C Dialect Options
+ffreestanding:      Warning Options
+ffreestanding:      Common Function Attributes
+ffunction-cse:      Optimize Options
+ffunction-sections:     Optimize Options
+fgcse:      Optimize Options
+fgcse-after-reload:     Optimize Options
+fgcse-las:      Optimize Options
+fgcse-lm:       Optimize Options
+fgcse-sm:       Optimize Options
+fgimple:        C Dialect Options
+fgnu-keywords:      C++ Dialect Options
+fgnu-runtime:       Objective-C and Objective-C++ Dialect Options
+fgnu-tm:        C Dialect Options
+fgnu-unique:        Code Gen Options
+fgnu89-inline:      C Dialect Options
+fgraphite-identity:     Optimize Options
+fguess-branch-probability:      Optimize Options
+fhoist-adjacent-loads:      Optimize Options
+fhosted:        C Dialect Options
+fident:     Code Gen Options
+fif-conversion:     Optimize Options
+fif-conversion2:        Optimize Options
+fiji:       AMD GCN Options
+filelist:       Darwin Options
+fimplement-inlines:     C++ Dialect Options
+fimplicit-inline-templates:     C++ Dialect Options
+fimplicit-templates:        C++ Dialect Options
+findirect-data:     Darwin Options
+findirect-inlining:     Optimize Options
+finhibit-size-directive:        Code Gen Options
+finline:        Optimize Options
+finline-functions:      Optimize Options
+finline-functions-called-once:      Optimize Options
+finline-limit:      Optimize Options
+finline-small-functions:        Optimize Options
+finput-charset:     Preprocessor Options
+finstrument-functions:      Instrumentation Options
+finstrument-functions:      Common Function Attributes
+finstrument-functions-exclude-file-list:        Instrumentation Options
+finstrument-functions-exclude-function-list:        Instrumentation Options
+fipa-bit-cp:        Optimize Options
+fipa-cp:        Optimize Options
+fipa-cp-clone:      Optimize Options
+fipa-icf:       Optimize Options
+fipa-profile:       Optimize Options
+fipa-pta:       Optimize Options
+fipa-pure-const:        Optimize Options
+fipa-ra:        Optimize Options
+fipa-reference:     Optimize Options
+fipa-reference-addressable:     Optimize Options
+fipa-sra:       Optimize Options
+fipa-stack-alignment:       Optimize Options
+fipa-vrp:       Optimize Options
+fira-algorithm:     Optimize Options
+fira-hoist-pressure:        Optimize Options
+fira-loop-pressure:     Optimize Options
+fira-region:        Optimize Options
+fira-share-save-slots:      Optimize Options
+fira-share-spill-slots:     Optimize Options
+fira-verbose:       Developer Options
+fisolate-erroneous-paths-attribute:     Optimize Options
+fisolate-erroneous-paths-dereference:       Optimize Options
+fivar-visibility:       Objective-C and Objective-C++ Dialect Options
+fivopts:        Optimize Options
+fjump-tables:       Code Gen Options
+fkeep-inline-dllexport:     Optimize Options
+fkeep-inline-functions:     Optimize Options
+fkeep-inline-functions:     Inline
+fkeep-static-consts:        Optimize Options
+fkeep-static-functions:     Optimize Options
+flat_namespace:     Darwin Options
+flax-vector-conversions:        C Dialect Options
+fleading-underscore:        Code Gen Options
+flifetime-dse:      Optimize Options
+flinker-output:     Link Options
+flive-patching:     Optimize Options
+flive-range-shrinkage:      Optimize Options
+flocal-ivars:       Objective-C and Objective-C++ Dialect Options
+floop-block:        Optimize Options
+floop-interchange:      Optimize Options
+floop-nest-optimize:        Optimize Options
+floop-parallelize-all:      Optimize Options
+floop-strip-mine:       Optimize Options
+floop-unroll-and-jam:       Optimize Options
+flra-remat:     Optimize Options
+flto:       Optimize Options
+flto-compression-level:     Optimize Options
+flto-odr-type-merging:      Optimize Options
+flto-partition:     Optimize Options
+flto-report:        Developer Options
+flto-report-wpa:        Developer Options
+fmacro-prefix-map:      Preprocessor Options
+fmath-errno:        Optimize Options
+fmax-errors:        Warning Options
+fmem-report:        Developer Options
+fmem-report-wpa:        Developer Options
+fmerge-all-constants:       Optimize Options
+fmerge-constants:       Optimize Options
+fmerge-debug-strings:       Debugging Options
+fmessage-length:        Diagnostic Message Formatting Options
+fmodulo-sched:      Optimize Options
+fmodulo-sched-allow-regmoves:       Optimize Options
+fmove-loop-invariants:      Optimize Options
+fms-extensions:     C Dialect Options
+fms-extensions:     C++ Dialect Options
+fms-extensions:     Unnamed Fields
+fnew-inheriting-ctors:      C++ Dialect Options
+fnew-ttp-matching:      C++ Dialect Options
+fnext-runtime:      Objective-C and Objective-C++ Dialect Options
+fnil-receivers:     Objective-C and Objective-C++ Dialect Options
+fno-access-control:     C++ Dialect Options
+fno-asm:        C Dialect Options
+fno-branch-count-reg:       Optimize Options
+fno-builtin:        C Dialect Options
+fno-builtin:        Warning Options
+fno-builtin:        Common Function Attributes
+fno-builtin:        Other Builtins
+fno-canonical-system-headers:       Preprocessor Options
+fno-char8_t:        C++ Dialect Options
+fno-checking:       Developer Options
+fno-common:     Code Gen Options
+fno-common:     Common Variable Attributes
+fno-compare-debug:      Developer Options
+fno-debug-types-section:        Debugging Options
+fno-default-inline:     Inline
+fno-defer-pop:      Optimize Options
+fno-diagnostics-show-caret:     Diagnostic Message Formatting Options
+fno-diagnostics-show-labels:        Diagnostic Message Formatting Options
+fno-diagnostics-show-line-numbers:      Diagnostic Message Formatting Options
+fno-diagnostics-show-option:        Diagnostic Message Formatting Options
+fno-dwarf2-cfi-asm:     Debugging Options
+fno-elide-constructors:     C++ Dialect Options
+fno-elide-type:     Diagnostic Message Formatting Options
+fno-eliminate-unused-debug-types:       Debugging Options
+fno-enforce-eh-specs:       C++ Dialect Options
+fno-ext-numeric-literals:       C++ Dialect Options
+fno-extern-tls-init:        C++ Dialect Options
+fno-fp-int-builtin-inexact:     Optimize Options
+fno-function-cse:       Optimize Options
+fno-gnu-keywords:       C++ Dialect Options
+fno-gnu-unique:     Code Gen Options
+fno-guess-branch-probability:       Optimize Options
+fno-ident:      Code Gen Options
+fno-implement-inlines:      C++ Dialect Options
+fno-implement-inlines:      C++ Interface
+fno-implicit-inline-templates:      C++ Dialect Options
+fno-implicit-templates:     C++ Dialect Options
+fno-implicit-templates:     Template Instantiation
+fno-inline:     Optimize Options
+fno-ira-share-save-slots:       Optimize Options
+fno-ira-share-spill-slots:      Optimize Options
+fno-jump-tables:        Code Gen Options
+fno-keep-inline-dllexport:      Optimize Options
+fno-lifetime-dse:       Optimize Options
+fno-local-ivars:        Objective-C and Objective-C++ Dialect Options
+fno-math-errno:     Optimize Options
+fno-merge-debug-strings:        Debugging Options
+fno-nil-receivers:      Objective-C and Objective-C++ Dialect Options
+fno-nonansi-builtins:       C++ Dialect Options
+fno-operator-names:     C++ Dialect Options
+fno-optional-diags:     C++ Dialect Options
+fno-peephole:       Optimize Options
+fno-peephole2:      Optimize Options
+fno-plt:        Code Gen Options
+fno-pretty-templates:       C++ Dialect Options
+fno-printf-return-value:        Optimize Options
+fno-rtti:       C++ Dialect Options
+fno-sanitize-recover:       Instrumentation Options
+fno-sanitize=all:       Instrumentation Options
+fno-sched-interblock:       Optimize Options
+fno-sched-spec:     Optimize Options
+fno-set-stack-executable:       x86 Windows Options
+fno-show-column:        Diagnostic Message Formatting Options
+fno-signed-bitfields:       C Dialect Options
+fno-signed-zeros:       Optimize Options
+fno-stack-limit:        Instrumentation Options
+fno-threadsafe-statics:     C++ Dialect Options
+fno-toplevel-reorder:       Optimize Options
+fno-trapping-math:      Optimize Options
+fno-unsigned-bitfields:     C Dialect Options
+fno-use-cxa-get-exception-ptr:      C++ Dialect Options
+fno-var-tracking-assignments:       Debugging Options
+fno-var-tracking-assignments-toggle:        Developer Options
+fno-weak:       C++ Dialect Options
+fno-working-directory:      Preprocessor Options
+fno-writable-relocated-rdata:       x86 Windows Options
+fno-zero-initialized-in-bss:        Optimize Options
+fnon-call-exceptions:       Code Gen Options
+fnonansi-builtins:      C++ Dialect Options
+fnothrow-opt:       C++ Dialect Options
+fobjc-abi-version:      Objective-C and Objective-C++ Dialect Options
+fobjc-call-cxx-cdtors:      Objective-C and Objective-C++ Dialect Options
+fobjc-direct-dispatch:      Objective-C and Objective-C++ Dialect Options
+fobjc-exceptions:       Objective-C and Objective-C++ Dialect Options
+fobjc-gc:       Objective-C and Objective-C++ Dialect Options
+fobjc-nilcheck:     Objective-C and Objective-C++ Dialect Options
+fobjc-std:      Objective-C and Objective-C++ Dialect Options
+fomit-frame-pointer:        Optimize Options
+fopenacc:       C Dialect Options
+fopenacc-dim:       C Dialect Options
+fopenmp:        C Dialect Options
+fopenmp-simd:       C Dialect Options
+foperator-names:        C++ Dialect Options
+fopt-info:      Developer Options
+foptimize-sibling-calls:        Optimize Options
+foptimize-strlen:       Optimize Options
+foptional-diags:        C++ Dialect Options
+force_cpusubtype_ALL:       Darwin Options
+force_flat_namespace:       Darwin Options
+fpack-struct:       Code Gen Options
+fpartial-inlining:      Optimize Options
+fpatchable-function-entry:      Instrumentation Options
+fpcc-struct-return:     Code Gen Options
+fpcc-struct-return:     Incompatibilities
+fpch-deps:      Preprocessor Options
+fpch-preprocess:        Preprocessor Options
+fpeel-loops:        Optimize Options
+fpeephole:      Optimize Options
+fpeephole2:     Optimize Options
+fpermissive:        C++ Dialect Options
+fpermitted-flt-eval-methods:        C Dialect Options
+fpermitted-flt-eval-methods=c11:        C Dialect Options
+fpermitted-flt-eval-methods=ts-18661-3:     C Dialect Options
+fpic:       Code Gen Options
+fPIC:       Code Gen Options
+fpie:       Code Gen Options
+fPIE:       Code Gen Options
+fplan9-extensions:      C Dialect Options
+fplan9-extensions:      Unnamed Fields
+fplt:       Code Gen Options
+fplugin:        Overall Options
+fplugin-arg:        Overall Options
+fpost-ipa-mem-report:       Developer Options
+fpre-ipa-mem-report:        Developer Options
+fpredictive-commoning:      Optimize Options
+fprefetch-loop-arrays:      Optimize Options
+fpreprocessed:      Preprocessor Options
+fpretty-templates:      C++ Dialect Options
+fprintf-return-value:       Optimize Options
+fprofile-abs-path:      Instrumentation Options
+fprofile-arcs:      Instrumentation Options
+fprofile-arcs:      Other Builtins
+fprofile-correction:        Optimize Options
+fprofile-dir:       Instrumentation Options
+fprofile-exclude-files:     Instrumentation Options
+fprofile-filter-files:      Instrumentation Options
+fprofile-generate:      Instrumentation Options
+fprofile-reorder-functions:     Optimize Options
+fprofile-report:        Developer Options
+fprofile-update:        Instrumentation Options
+fprofile-use:       Optimize Options
+fprofile-values:        Optimize Options
+fpu:        RX Options
+frandom-seed:       Developer Options
+freciprocal-math:       Optimize Options
+frecord-gcc-switches:       Code Gen Options
+free:       Optimize Options
+freg-struct-return:     Code Gen Options
+frename-registers:      Optimize Options
+freorder-blocks:        Optimize Options
+freorder-blocks-algorithm:      Optimize Options
+freorder-blocks-and-partition:      Optimize Options
+freorder-functions:     Optimize Options
+freplace-objc-classes:      Objective-C and Objective-C++ Dialect Options
+frepo:      C++ Dialect Options
+frepo:      Template Instantiation
+freport-bug:        Developer Options
+frerun-cse-after-loop:      Optimize Options
+freschedule-modulo-scheduled-loops:     Optimize Options
+frounding-math:     Optimize Options
+frtti:      C++ Dialect Options
+fsanitize-address-use-after-scope:      Instrumentation Options
+fsanitize-coverage=trace-cmp:       Instrumentation Options
+fsanitize-coverage=trace-pc:        Instrumentation Options
+fsanitize-recover:      Instrumentation Options
+fsanitize-sections:     Instrumentation Options
+fsanitize-undefined-trap-on-error:      Instrumentation Options
+fsanitize=address:      Instrumentation Options
+fsanitize=alignment:        Instrumentation Options
+fsanitize=bool:     Instrumentation Options
+fsanitize=bounds:       Instrumentation Options
+fsanitize=bounds-strict:        Instrumentation Options
+fsanitize=builtin:      Instrumentation Options
+fsanitize=enum:     Instrumentation Options
+fsanitize=float-cast-overflow:      Instrumentation Options
+fsanitize=float-divide-by-zero:     Instrumentation Options
+fsanitize=integer-divide-by-zero:       Instrumentation Options
+fsanitize=kernel-address:       Instrumentation Options
+fsanitize=leak:     Instrumentation Options
+fsanitize=nonnull-attribute:        Instrumentation Options
+fsanitize=null:     Instrumentation Options
+fsanitize=object-size:      Instrumentation Options
+fsanitize=pointer-compare:      Instrumentation Options
+fsanitize=pointer-overflow:     Instrumentation Options
+fsanitize=pointer-subtract:     Instrumentation Options
+fsanitize=return:       Instrumentation Options
+fsanitize=returns-nonnull-attribute:        Instrumentation Options
+fsanitize=shift:        Instrumentation Options
+fsanitize=shift-base:       Instrumentation Options
+fsanitize=shift-exponent:       Instrumentation Options
+fsanitize=signed-integer-overflow:      Instrumentation Options
+fsanitize=thread:       Instrumentation Options
+fsanitize=undefined:        Instrumentation Options
+fsanitize=unreachable:      Instrumentation Options
+fsanitize=vla-bound:        Instrumentation Options
+fsanitize=vptr:     Instrumentation Options
+fsave-optimization-record:      Developer Options
+fsched-critical-path-heuristic:     Optimize Options
+fsched-dep-count-heuristic:     Optimize Options
+fsched-group-heuristic:     Optimize Options
+fsched-interblock:      Optimize Options
+fsched-last-insn-heuristic:     Optimize Options
+fsched-pressure:        Optimize Options
+fsched-rank-heuristic:      Optimize Options
+fsched-spec:        Optimize Options
+fsched-spec-insn-heuristic:     Optimize Options
+fsched-spec-load:       Optimize Options
+fsched-spec-load-dangerous:     Optimize Options
+fsched-stalled-insns:       Optimize Options
+fsched-stalled-insns-dep:       Optimize Options
+fsched-verbose:     Developer Options
+fsched2-use-superblocks:        Optimize Options
+fschedule-fusion:       Optimize Options
+fschedule-insns:        Optimize Options
+fschedule-insns2:       Optimize Options
+fsection-anchors:       Optimize Options
+fsel-sched-pipelining:      Optimize Options
+fsel-sched-pipelining-outer-loops:      Optimize Options
+fselective-scheduling:      Optimize Options
+fselective-scheduling2:     Optimize Options
+fsemantic-interposition:        Optimize Options
+fset-stack-executable:      x86 Windows Options
+fshort-enums:       Code Gen Options
+fshort-enums:       Structures unions enumerations and bit-fields implementation
+fshort-enums:       Common Type Attributes
+fshort-enums:       Non-bugs
+fshort-wchar:       Code Gen Options
+fshow-column:       Diagnostic Message Formatting Options
+fshrink-wrap:       Optimize Options
+fshrink-wrap-separate:      Optimize Options
+fsignaling-nans:        Optimize Options
+fsigned-bitfields:      C Dialect Options
+fsigned-bitfields:      Non-bugs
+fsigned-char:       C Dialect Options
+fsigned-char:       Characters implementation
+fsigned-zeros:      Optimize Options
+fsimd-cost-model:       Optimize Options
+fsingle-precision-constant:     Optimize Options
+fsized-deallocation:        C++ Dialect Options
+fsplit-ivs-in-unroller:     Optimize Options
+fsplit-loops:       Optimize Options
+fsplit-paths:       Optimize Options
+fsplit-stack:       Instrumentation Options
+fsplit-stack:       Common Function Attributes
+fsplit-wide-types:      Optimize Options
+fssa-backprop:      Optimize Options
+fssa-phiopt:        Optimize Options
+fsso-struct:        C Dialect Options
+fstack-check:       Instrumentation Options
+fstack-clash-protection:        Instrumentation Options
+fstack-limit-register:      Instrumentation Options
+fstack-limit-symbol:        Instrumentation Options
+fstack-protector:       Instrumentation Options
+fstack-protector-all:       Instrumentation Options
+fstack-protector-explicit:      Instrumentation Options
+fstack-protector-strong:        Instrumentation Options
+fstack-usage:       Developer Options
+fstack_reuse:       Code Gen Options
+fstats:     Developer Options
+fstdarg-opt:        Optimize Options
+fstore-merging:     Optimize Options
+fstrict-aliasing:       Optimize Options
+fstrict-enums:      C++ Dialect Options
+fstrict-overflow:       Code Gen Options
+fstrict-volatile-bitfields:     Code Gen Options
+fstrong-eval-order:     C++ Dialect Options
+fsync-libcalls:     Code Gen Options
+fsyntax-only:       Warning Options
+ftabstop:       Preprocessor Options
+ftemplate-backtrace-limit:      C++ Dialect Options
+ftemplate-depth:        C++ Dialect Options
+ftest-coverage:     Instrumentation Options
+fthread-jumps:      Optimize Options
+fthreadsafe-statics:        C++ Dialect Options
+ftime-report:       Developer Options
+ftime-report-details:       Developer Options
+ftls-model:     Code Gen Options
+ftoplevel-reorder:      Optimize Options
+ftracer:        Optimize Options
+ftrack-macro-expansion:     Preprocessor Options
+ftrampolines:       Code Gen Options
+ftrapping-math:     Optimize Options
+ftrapv:     Code Gen Options
+ftree-bit-ccp:      Optimize Options
+ftree-builtin-call-dce:     Optimize Options
+ftree-ccp:      Optimize Options
+ftree-ch:       Optimize Options
+ftree-coalesce-vars:        Optimize Options
+ftree-copy-prop:        Optimize Options
+ftree-dce:      Optimize Options
+ftree-dominator-opts:       Optimize Options
+ftree-dse:      Optimize Options
+ftree-forwprop:     Optimize Options
+ftree-fre:      Optimize Options
+ftree-loop-distribute-patterns:     Optimize Options
+ftree-loop-distribution:        Optimize Options
+ftree-loop-if-convert:      Optimize Options
+ftree-loop-im:      Optimize Options
+ftree-loop-ivcanon:     Optimize Options
+ftree-loop-linear:      Optimize Options
+ftree-loop-optimize:        Optimize Options
+ftree-loop-vectorize:       Optimize Options
+ftree-parallelize-loops:        Optimize Options
+ftree-partial-pre:      Optimize Options
+ftree-phiprop:      Optimize Options
+ftree-pre:      Optimize Options
+ftree-pta:      Optimize Options
+ftree-reassoc:      Optimize Options
+ftree-scev-cprop:       Optimize Options
+ftree-sink:     Optimize Options
+ftree-slp-vectorize:        Optimize Options
+ftree-slsr:     Optimize Options
+ftree-sra:      Optimize Options
+ftree-switch-conversion:        Optimize Options
+ftree-tail-merge:       Optimize Options
+ftree-ter:      Optimize Options
+ftree-vectorize:        Optimize Options
+ftree-vrp:      Optimize Options
+funconstrained-commons:     Optimize Options
+funit-at-a-time:        Optimize Options
+funroll-all-loops:      Optimize Options
+funroll-loops:      Optimize Options
+funsafe-math-optimizations:     Optimize Options
+funsigned-bitfields:        C Dialect Options
+funsigned-bitfields:        Structures unions enumerations and bit-fields implementation
+funsigned-bitfields:        Non-bugs
+funsigned-char:     C Dialect Options
+funsigned-char:     Characters implementation
+funswitch-loops:        Optimize Options
+funwind-tables:     Code Gen Options
+fuse-cxa-atexit:        C++ Dialect Options
+fuse-cxa-get-exception-ptr:     C++ Dialect Options
+fuse-ld=bfd:        Link Options
+fuse-ld=gold:       Link Options
+fuse-ld=lld:        Link Options
+fuse-linker-plugin:     Optimize Options
+fvar-tracking:      Debugging Options
+fvar-tracking-assignments:      Debugging Options
+fvar-tracking-assignments-toggle:       Developer Options
+fvariable-expansion-in-unroller:        Optimize Options
+fvect-cost-model:       Optimize Options
+fverbose-asm:       Code Gen Options
+fversion-loops-for-strides:     Optimize Options
+fvisibility:        Code Gen Options
+fvisibility-inlines-hidden:     C++ Dialect Options
+fvisibility-ms-compat:      C++ Dialect Options
+fvpt:       Optimize Options
+fvtable-verify:     Instrumentation Options
+fvtv-counts:        Instrumentation Options
+fvtv-debug:     Instrumentation Options
+fweak:      C++ Dialect Options
+fweb:       Optimize Options
+fwhole-program:     Optimize Options
+fwide-exec-charset:     Preprocessor Options
+fworking-directory:     Preprocessor Options
+fwrapv:     Code Gen Options
+fwrapv-pointer:     Code Gen Options
+fwritable-relocated-rdata:      x86 Windows Options
+fzero-initialized-in-bss:       Optimize Options
+fzero-link:     Objective-C and Objective-C++ Dialect Options
+G       
+g:      Debugging Options
+G:      ARC Options
+G:      M32R/D Options
+G:      MIPS Options
+G:      Nios II Options
+G:      RS/6000 and PowerPC Options
+G:      System V Options
+gas-loc-support:        Debugging Options
+gas-locview-support:        Debugging Options
+gcolumn-info:       Debugging Options
+gdescribe-dies:     Debugging Options
+gdwarf:     Debugging Options
+gen-decls:      Objective-C and Objective-C++ Dialect Options
+gfull:      Darwin Options
+ggdb:       Debugging Options
+ggnu-pubnames:      Debugging Options
+ginline-points:     Debugging Options
+ginternal-reset-location-views:     Debugging Options
+gno-as-loc-support:     Debugging Options
+gno-column-info:        Debugging Options
+gno-inline-points:      Debugging Options
+gno-internal-reset-location-views:      Debugging Options
+gno-record-gcc-switches:        Debugging Options
+gno-statement-frontiers:        Debugging Options
+gno-strict-dwarf:       Debugging Options
+gno-variable-location-views:        Debugging Options
+gpubnames:      Debugging Options
+grecord-gcc-switches:       Debugging Options
+gsplit-dwarf:       Debugging Options
+gstabs:     Debugging Options
+gstabs+:        Debugging Options
+gstatement-frontiers:       Debugging Options
+gstrict-dwarf:      Debugging Options
+gtoggle:        Developer Options
+gused:      Darwin Options
+gvariable-location-views:       Debugging Options
+gvariable-location-views=incompat5:     Debugging Options
+gvms:       Debugging Options
+gxcoff:     Debugging Options
+gxcoff+:        Debugging Options
+gz:     Debugging Options
+H       
+H:      Preprocessor Options
+headerpad_max_install_names:        Darwin Options
+help:       Overall Options
+I       
+I:      Directory Options
+I-:     Directory Options
+idirafter:      Directory Options
+iframework:     Darwin Options
+imacros:        Preprocessor Options
+image_base:     Darwin Options
+imultilib:      Directory Options
+include:        Preprocessor Options
+init:       Darwin Options
+install_name:       Darwin Options
+iplugindir=:        Directory Options
+iprefix:        Directory Options
+iquote:     Directory Options
+isysroot:       Directory Options
+isystem:        Directory Options
+iwithprefix:        Directory Options
+iwithprefixbefore:      Directory Options
+K       
+keep_private_externs:       Darwin Options
+L       
+l:      Link Options
+L:      Directory Options
+lobjc:      Link Options
+M       
+M:      Preprocessor Options
+m:      RS/6000 and PowerPC Options
+m1:     SH Options
+m10:        PDP-11 Options
+m128bit-long-double:        x86 Options
+m16:        x86 Options
+m16-bit:        CRIS Options
+m16-bit:        NDS32 Options
+m1reg-:     Adapteva Epiphany Options
+m2:     SH Options
+m210:       MCore Options
+m2a:        SH Options
+m2a-nofpu:      SH Options
+m2a-single:     SH Options
+m2a-single-only:        SH Options
+m3:     SH Options
+m31:        S/390 and zSeries Options
+m32:        Nvidia PTX Options
+m32:        RS/6000 and PowerPC Options
+m32:        SPARC Options
+m32:        TILE-Gx Options
+m32:        TILEPro Options
+m32:        x86 Options
+m32-bit:        CRIS Options
+m32bit-doubles:     RL78 Options
+m32bit-doubles:     RX Options
+m32r:       M32R/D Options
+m32r2:      M32R/D Options
+m32rx:      M32R/D Options
+m340:       MCore Options
+m3dnow:     x86 Options
+m3dnowa:        x86 Options
+m3e:        SH Options
+m4:     SH Options
+m4-100:     SH Options
+m4-100-nofpu:       SH Options
+m4-100-single:      SH Options
+m4-100-single-only:     SH Options
+m4-200:     SH Options
+m4-200-nofpu:       SH Options
+m4-200-single:      SH Options
+m4-200-single-only:     SH Options
+m4-300:     SH Options
+m4-300-nofpu:       SH Options
+m4-300-single:      SH Options
+m4-300-single-only:     SH Options
+m4-340:     SH Options
+m4-500:     SH Options
+m4-nofpu:       SH Options
+m4-single:      SH Options
+m4-single-only:     SH Options
+m40:        PDP-11 Options
+m45:        PDP-11 Options
+m4a:        SH Options
+m4a-nofpu:      SH Options
+m4a-single:     SH Options
+m4a-single-only:        SH Options
+m4al:       SH Options
+m4byte-functions:       MCore Options
+m5200:      M680x0 Options
+m5206e:     M680x0 Options
+m528x:      M680x0 Options
+m5307:      M680x0 Options
+m5407:      M680x0 Options
+m64:        Nvidia PTX Options
+m64:        RS/6000 and PowerPC Options
+m64:        S/390 and zSeries Options
+m64:        SPARC Options
+m64:        TILE-Gx Options
+m64:        x86 Options
+m64bit-doubles:     RL78 Options
+m64bit-doubles:     RX Options
+m68000:     M680x0 Options
+m68010:     M680x0 Options
+m68020:     M680x0 Options
+m68020-40:      M680x0 Options
+m68020-60:      M680x0 Options
+m68030:     M680x0 Options
+m68040:     M680x0 Options
+m68060:     M680x0 Options
+m68881:     M680x0 Options
+m8-bit:     CRIS Options
+m8bit-idiv:     x86 Options
+m8byte-align:       V850 Options
+m96bit-long-double:     x86 Options
+mA6:        ARC Options
+mA7:        ARC Options
+mabi:       AArch64 Options
+mabi:       ARM Options
+mabi:       RISC-V Options
+mabi:       RS/6000 and PowerPC Options
+mabi:       x86 Options
+mabi=32:        MIPS Options
+mabi=64:        MIPS Options
+mabi=eabi:      MIPS Options
+mabi=elfv1:     RS/6000 and PowerPC Options
+mabi=elfv2:     RS/6000 and PowerPC Options
+mabi=gnu:       MMIX Options
+mabi=ibmlongdouble:     RS/6000 and PowerPC Options
+mabi=ieeelongdouble:        RS/6000 and PowerPC Options
+mabi=mmixware:      MMIX Options
+mabi=n32:       MIPS Options
+mabi=o64:       MIPS Options
+mabicalls:      MIPS Options
+mabm:       x86 Options
+mabort-on-noreturn:     ARM Options
+mabs=2008:      MIPS Options
+mabs=legacy:        MIPS Options
+mabsdata:       AVR Options
+mabsdiff:       MeP Options
+mac0:       PDP-11 Options
+macc-4:     FRV Options
+macc-8:     FRV Options
+maccumulate-args:       AVR Options
+maccumulate-outgoing-args:      SH Options
+maccumulate-outgoing-args:      x86 Options
+maddress-mode=long:     x86 Options
+maddress-mode=short:        x86 Options
+maddress-space-conversion:      SPU Options
+mads:       RS/6000 and PowerPC Options
+madx:       x86 Options
+maes:       x86 Options
+maix-struct-return:     RS/6000 and PowerPC Options
+maix32:     RS/6000 and PowerPC Options
+maix64:     RS/6000 and PowerPC Options
+malign-300:     H8/300 Options
+malign-call:        ARC Options
+malign-data:        x86 Options
+malign-double:      x86 Options
+malign-int:     M680x0 Options
+malign-labels:      FRV Options
+malign-loops:       M32R/D Options
+malign-natural:     RS/6000 and PowerPC Options
+malign-power:       RS/6000 and PowerPC Options
+malign-stringops:       x86 Options
+mall-opts:      MeP Options
+malloc-cc:      FRV Options
+mallow-string-insns:        RX Options
+mallregs:       RL78 Options
+maltivec:       RS/6000 and PowerPC Options
+mam33:      MN10300 Options
+mam33-2:        MN10300 Options
+mam34:      MN10300 Options
+manchor:        C-SKY Options
+mandroid:       GNU/Linux Options
+mannotate-align:        ARC Options
+mapcs:      ARM Options
+mapcs-frame:        ARM Options
+mapp-regs:      SPARC Options
+mapp-regs:      V850 Options
+mARC600:        ARC Options
+mARC601:        ARC Options
+mARC700:        ARC Options
+march:      AArch64 Options
+march:      AMD GCN Options
+march:      ARM Options
+march:      C6X Options
+march:      CRIS Options
+march:      HPPA Options
+march:      HPPA Options
+march:      M680x0 Options
+march:      MIPS Options
+march:      NDS32 Options
+march:      Nios II Options
+march:      Nvidia PTX Options
+march:      RISC-V Options
+march:      S/390 and zSeries Options
+march:      x86 Options
+march=:     C-SKY Options
+marclinux:      ARC Options
+marclinux_prof:     ARC Options
+margonaut:      ARC Options
+marm:       ARM Options
+mas100-syntax:      RX Options
+masm-hex:       MSP430 Options
+masm-syntax-unified:        ARM Options
+masm=dialect:       x86 Options
+matomic:        ARC Options
+matomic-model=model:        SH Options
+matomic-updates:        SPU Options
+mauto-litpools:     Xtensa Options
+mauto-modify-reg:       ARC Options
+mauto-pic:      IA-64 Options
+maverage:       MeP Options
+mavoid-indexed-addresses:       RS/6000 and PowerPC Options
+mavx:       x86 Options
+mavx2:      x86 Options
+mavx256-split-unaligned-load:       x86 Options
+mavx256-split-unaligned-store:      x86 Options
+mavx5124fmaps:      x86 Options
+mavx5124vnniw:      x86 Options
+mavx512bitalg:      x86 Options
+mavx512bw:      x86 Options
+mavx512cd:      x86 Options
+mavx512dq:      x86 Options
+mavx512er:      x86 Options
+mavx512f:       x86 Options
+mavx512ifma:        x86 Options
+mavx512pf:      x86 Options
+mavx512vbmi:        x86 Options
+mavx512vbmi2:       x86 Options
+mavx512vl:      x86 Options
+mavx512vnni:        x86 Options
+mavx512vpopcntdq:       x86 Options
+max-vect-align:     Adapteva Epiphany Options
+mb:     SH Options
+mbackchain:     S/390 and zSeries Options
+mbarrel-shift-enabled:      LM32 Options
+mbarrel-shifter:        ARC Options
+mbarrel_shifter:        ARC Options
+mbase-addresses:        MMIX Options
+mbased=:        MeP Options
+mbbit-peephole:     ARC Options
+mbe8:       ARM Options
+mbig:       RS/6000 and PowerPC Options
+mbig-endian:        AArch64 Options
+mbig-endian:        ARC Options
+mbig-endian:        ARM Options
+mbig-endian:        C6X Options
+mbig-endian:        C-SKY Options
+mbig-endian:        IA-64 Options
+mbig-endian:        MCore Options
+mbig-endian:        MicroBlaze Options
+mbig-endian:        NDS32 Options
+mbig-endian:        RS/6000 and PowerPC Options
+mbig-endian:        TILE-Gx Options
+mbig-endian-data:       RX Options
+mbig-switch:        V850 Options
+mbigtable:      SH Options
+mbionic:        GNU/Linux Options
+mbit-align:     RS/6000 and PowerPC Options
+mbit-ops:       CR16 Options
+mbitfield:      M680x0 Options
+mbitops:        MeP Options
+mbitops:        SH Options
+mblock-compare-inline-limit:        RS/6000 and PowerPC Options
+mblock-compare-inline-loop-limit:       RS/6000 and PowerPC Options
+mblock-move-inline-limit:       RS/6000 and PowerPC Options
+mbmi:       x86 Options
+mbmi2:      x86 Options
+mboard:     OpenRISC Options
+mbranch-cost:       Adapteva Epiphany Options
+mbranch-cost:       AVR Options
+mbranch-cost:       MIPS Options
+mbranch-cost:       RISC-V Options
+mbranch-cost=:      C-SKY Options
+mbranch-cost=num:       SH Options
+mbranch-cost=number:        M32R/D Options
+mbranch-hints:      SPU Options
+mbranch-index:      ARC Options
+mbranch-likely:     MIPS Options
+mbranch-predict:        MMIX Options
+mbranch-protection:     AArch64 Options
+mbss-plt:       RS/6000 and PowerPC Options
+mbuild-constants:       DEC Alpha Options
+mbwx:       DEC Alpha Options
+mbypass-cache:      Nios II Options
+mc68000:        M680x0 Options
+mc68020:        M680x0 Options
+mc=:        MeP Options
+mcache:     C-SKY Options
+mcache-block-size:      NDS32 Options
+mcache-size:        SPU Options
+mcache-volatile:        Nios II Options
+mcall-eabi:     RS/6000 and PowerPC Options
+mcall-freebsd:      RS/6000 and PowerPC Options
+mcall-linux:        RS/6000 and PowerPC Options
+mcall-ms2sysv-xlogues:      x86 Options
+mcall-netbsd:       RS/6000 and PowerPC Options
+mcall-netbsd:       RS/6000 and PowerPC Options
+mcall-prologues:        AVR Options
+mcall-sysv:     RS/6000 and PowerPC Options
+mcall-sysv-eabi:        RS/6000 and PowerPC Options
+mcall-sysv-noeabi:      RS/6000 and PowerPC Options
+mcallee-super-interworking:     ARM Options
+mcaller-copies:     HPPA Options
+mcaller-super-interworking:     ARM Options
+mcallgraph-data:        MCore Options
+mcase-vector-pcrel:     ARC Options
+mcbcond:        SPARC Options
+mcbranch-force-delay-slot:      SH Options
+mcc-init:       CRIS Options
+mccrt:      C-SKY Options
+mcfv4e:     M680x0 Options
+mcheck-zero-division:       MIPS Options
+mcix:       DEC Alpha Options
+mcld:       x86 Options
+mcldemote:      x86 Options
+mclear-hwcap:       Solaris 2 Options
+mclflushopt:        x86 Options
+mclip:      MeP Options
+mclwb:      x86 Options
+mclzero:        x86 Options
+mcmodel:        NDS32 Options
+mcmodel:        SPARC Options
+mcmodel=kernel:     x86 Options
+mcmodel=large:      AArch64 Options
+mcmodel=large:      RS/6000 and PowerPC Options
+mcmodel=large:      TILE-Gx Options
+mcmodel=large:      x86 Options
+mcmodel=medany:     RISC-V Options
+mcmodel=medium:     RS/6000 and PowerPC Options
+mcmodel=medium:     x86 Options
+mcmodel=medlow:     RISC-V Options
+mcmodel=small:      AArch64 Options
+mcmodel=small:      RS/6000 and PowerPC Options
+mcmodel=small:      TILE-Gx Options
+mcmodel=small:      x86 Options
+mcmodel=tiny:       AArch64 Options
+mcmov:      NDS32 Options
+mcmov:      OpenRISC Options
+mcmove:     Adapteva Epiphany Options
+mcmpb:      RS/6000 and PowerPC Options
+mcmse:      ARM Options
+mcode-density:      ARC Options
+mcode-density-frame:        ARC Options
+mcode-readable:     MIPS Options
+mcode-region:       MSP430 Options
+mcompact-branches=always:       MIPS Options
+mcompact-branches=never:        MIPS Options
+mcompact-branches=optimal:      MIPS Options
+mcompact-casesi:        ARC Options
+mcompat-align-parm:     RS/6000 and PowerPC Options
+mcompress:      FT32 Options
+mcond-exec:     FRV Options
+mcond-move:     FRV Options
+mconfig=:       MeP Options
+mconsole:       x86 Windows Options
+mconst-align:       CRIS Options
+mconst16:       Xtensa Options
+mconstant-gp:       IA-64 Options
+mconstpool:     C-SKY Options
+mcop:       MeP Options
+mcop32:     MeP Options
+mcop64:     MeP Options
+mcorea:     Blackfin Options
+mcoreb:     Blackfin Options
+mcp:        C-SKY Options
+mcpu:       AArch64 Options
+mcpu:       ARC Options
+mcpu:       ARM Options
+mcpu:       CRIS Options
+mcpu:       DEC Alpha Options
+mcpu:       FRV Options
+mcpu:       M680x0 Options
+mcpu:       picoChip Options
+mcpu:       RL78 Options
+mcpu:       RS/6000 and PowerPC Options
+mcpu:       RX Options
+mcpu:       SPARC Options
+mcpu:       TILE-Gx Options
+mcpu:       TILEPro Options
+mcpu:       Visium Options
+mcpu:       x86 Options
+mcpu32:     M680x0 Options
+mcpu=:      Blackfin Options
+mcpu=:      C-SKY Options
+mcpu=:      M32C Options
+mcpu=:      MicroBlaze Options
+mcpu=:      MSP430 Options
+mcr16c:     CR16 Options
+mcr16cplus:     CR16 Options
+mcrc:       MIPS Options
+mcrc32:     x86 Options
+mcrypto:        RS/6000 and PowerPC Options
+mcsync-anomaly:     Blackfin Options
+mcsync-anomaly:     Blackfin Options
+mctor-dtor:     NDS32 Options
+mcustom-fpu-cfg:        Nios II Options
+mcustom-insn:       Nios II Options
+mcx16:      x86 Options
+MD:     Preprocessor Options
+mdalign:        SH Options
+mdata-align:        CRIS Options
+mdata-model:        CR16 Options
+mdata-region:       MSP430 Options
+mdc:        MeP Options
+mdebug:     M32R/D Options
+mdebug:     S/390 and zSeries Options
+mdebug:     Visium Options
+mdebug-main=prefix:     VMS Options
+mdec-asm:       PDP-11 Options
+mdisable-callt:     V850 Options
+mdisable-fpregs:        HPPA Options
+mdisable-indexing:      HPPA Options
+mdiv:       C-SKY Options
+mdiv:       M680x0 Options
+mdiv:       MCore Options
+mdiv:       MeP Options
+mdiv:       RISC-V Options
+mdiv-rem:       ARC Options
+mdiv=strategy:      SH Options
+mdivide-breaks:     MIPS Options
+mdivide-enabled:        LM32 Options
+mdivide-traps:      MIPS Options
+mdivsi3_libfunc=name:       SH Options
+mdll:       x86 Windows Options
+mdlmzb:     RS/6000 and PowerPC Options
+mdmx:       MIPS Options
+mdouble:        FRV Options
+mdouble-float:      C-SKY Options
+mdouble-float:      MIPS Options
+mdpfp:      ARC Options
+mdpfp-compact:      ARC Options
+mdpfp-fast:     ARC Options
+mdpfp_compact:      ARC Options
+mdpfp_fast:     ARC Options
+mdsp:       C-SKY Options
+mdsp:       MIPS Options
+mdsp-packa:     ARC Options
+mdspr2:     MIPS Options
+mdsp_packa:     ARC Options
+mdual-nops:     SPU Options
+mdump-tune-features:        x86 Options
+mdvbf:      ARC Options
+mdwarf2-asm:        IA-64 Options
+mdword:     FRV Options
+mdword:     FRV Options
+mdynamic-no-pic:        RS/6000 and PowerPC Options
+mea:        ARC Options
+mEA:        ARC Options
+mea32:      SPU Options
+mea64:      SPU Options
+meabi:      RS/6000 and PowerPC Options
+mearly-cbranchsi:       ARC Options
+mearly-stop-bits:       IA-64 Options
+meb:        MeP Options
+meb:        Moxie Options
+meb:        Nios II Options
+meb:        Score Options
+medsp:      C-SKY Options
+mel:        MeP Options
+mel:        Moxie Options
+mel:        Nios II Options
+mel:        Score Options
+melf:       CRIS Options
+melf:       MMIX Options
+melrw:      C-SKY Options
+memb:       RS/6000 and PowerPC Options
+membedded-data:     MIPS Options
+memregs=:       M32C Options
+mep:        V850 Options
+mepsilon:       MMIX Options
+merror-reloc:       SPU Options
+mesa:       S/390 and zSeries Options
+metrax100:      CRIS Options
+metrax4:        CRIS Options
+meva:       MIPS Options
+mexpand-adddi:      ARC Options
+mexplicit-relocs:       DEC Alpha Options
+mexplicit-relocs:       MIPS Options
+mexr:       H8/300 Options
+mexr:       H8/300 Options
+mext-perf:      NDS32 Options
+mext-perf2:     NDS32 Options
+mext-string:        NDS32 Options
+mextern-sdata:      MIPS Options
+MF:     Preprocessor Options
+mf16c:      x86 Options
+mfancy-math-387:        x86 Options
+mfast-fp:       Blackfin Options
+mfast-indirect-calls:       HPPA Options
+mfast-sw-div:       Nios II Options
+mfaster-structs:        SPARC Options
+mfdiv:      RISC-V Options
+mfdivdu:        C-SKY Options
+mfdpic:     FRV Options
+mfentry:        x86 Options
+mfentry-name:       x86 Options
+mfentry-section:        x86 Options
+mfix:       DEC Alpha Options
+mfix-24k:       MIPS Options
+mfix-and-continue:      Darwin Options
+mfix-at697f:        SPARC Options
+mfix-cortex-a53-835769:     AArch64 Options
+mfix-cortex-a53-843419:     AArch64 Options
+mfix-cortex-m3-ldrd:        ARM Options
+mfix-gr712rc:       SPARC Options
+mfix-r10000:        MIPS Options
+mfix-r4000:     MIPS Options
+mfix-r4400:     MIPS Options
+mfix-r5900:     MIPS Options
+mfix-rm7000:        MIPS Options
+mfix-sb1:       MIPS Options
+mfix-ut699:     SPARC Options
+mfix-ut700:     SPARC Options
+mfix-vr4120:        MIPS Options
+mfix-vr4130:        MIPS Options
+mfixed-cc:      FRV Options
+mfixed-range:       HPPA Options
+mfixed-range:       IA-64 Options
+mfixed-range:       SH Options
+mfixed-range:       SPU Options
+mflat:      SPARC Options
+mflip-mips16:       MIPS Options
+mflip-thumb:        ARM Options
+mfloat-abi:     ARM Options
+mfloat-ieee:        DEC Alpha Options
+mfloat-vax:     DEC Alpha Options
+mfloat128:      RS/6000 and PowerPC Options
+mfloat128-hardware:     RS/6000 and PowerPC Options
+mflush-func:        MIPS Options
+mflush-func=name:       M32R/D Options
+mflush-trap=number:     M32R/D Options
+mfma:       x86 Options
+mfma4:      x86 Options
+mfmaf:      SPARC Options
+mfmovd:     SH Options
+mforce-indirect-call:       x86 Options
+mforce-no-pic:      Xtensa Options
+mfp-exceptions:     MIPS Options
+mfp-mode:       Adapteva Epiphany Options
+mfp-reg:        DEC Alpha Options
+mfp-ret-in-387:     x86 Options
+mfp-rounding-mode:      DEC Alpha Options
+mfp-trap-mode:      DEC Alpha Options
+mfp16-format:       ARM Options
+mfp32:      MIPS Options
+mfp64:      MIPS Options
+mfpmath:        Optimize Options
+mfpmath:        x86 Options
+mfpr-32:        FRV Options
+mfpr-64:        FRV Options
+mfprnd:     RS/6000 and PowerPC Options
+mfpu:       ARC Options
+mfpu:       ARM Options
+mfpu:       PDP-11 Options
+mfpu:       SPARC Options
+mfpu:       Visium Options
+mfpu=:      C-SKY Options
+mfpxx:      MIPS Options
+mfract-convert-truncate:        AVR Options
+mframe-header-opt:      MIPS Options
+mfriz:      RS/6000 and PowerPC Options
+mfsca:      SH Options
+mfsgsbase:      x86 Options
+mfsmuld:        SPARC Options
+mfsrra:     SH Options
+mft32b:     FT32 Options
+mfull-regs:     NDS32 Options
+mfull-toc:      RS/6000 and PowerPC Options
+mfunction-return:       x86 Options
+mfused-madd:        IA-64 Options
+mfused-madd:        MIPS Options
+mfused-madd:        RS/6000 and PowerPC Options
+mfused-madd:        S/390 and zSeries Options
+mfused-madd:        SH Options
+mfused-madd:        Xtensa Options
+mfxsr:      x86 Options
+MG:     Preprocessor Options
+mg:     VAX Options
+mg10:       RL78 Options
+mg13:       RL78 Options
+mg14:       RL78 Options
+mgas:       HPPA Options
+mgas-isr-prologues:     AVR Options
+mgcc-abi:       V850 Options
+mgeneral-regs-only:     AArch64 Options
+mgeneral-regs-only:     x86 Options
+mgfni:      x86 Options
+mghs:       V850 Options
+mginv:      MIPS Options
+mglibc:     GNU/Linux Options
+mgnu:       VAX Options
+mgnu-as:        IA-64 Options
+mgnu-asm:       PDP-11 Options
+mgnu-attribute:     RS/6000 and PowerPC Options
+mgnu-ld:        HPPA Options
+mgnu-ld:        IA-64 Options
+mgomp:      Nvidia PTX Options
+mgotplt:        CRIS Options
+mgp32:      MIPS Options
+mgp64:      MIPS Options
+mgpopt:     MIPS Options
+mgpopt:     Nios II Options
+mgpr-32:        FRV Options
+mgpr-64:        FRV Options
+mgprel-ro:      FRV Options
+mgprel-sec:     Nios II Options
+mh:     H8/300 Options
+mhal:       Nios II Options
+mhalf-reg-file:     Adapteva Epiphany Options
+mhard-dfp:      RS/6000 and PowerPC Options
+mhard-dfp:      S/390 and zSeries Options
+mhard-div:      OpenRISC Options
+mhard-float:        C-SKY Options
+mhard-float:        FRV Options
+mhard-float:        M680x0 Options
+mhard-float:        MicroBlaze Options
+mhard-float:        MIPS Options
+mhard-float:        RS/6000 and PowerPC Options
+mhard-float:        S/390 and zSeries Options
+mhard-float:        SPARC Options
+mhard-float:        V850 Options
+mhard-float:        Visium Options
+mhard-float:        x86 Options
+mhard-mul:      OpenRISC Options
+mhard-quad-float:       SPARC Options
+mhardlit:       MCore Options
+mhigh-registers:        C-SKY Options
+mhint-max-distance:     SPU Options
+mhint-max-nops:     SPU Options
+mhle:       x86 Options
+mhotpatch:      S/390 and zSeries Options
+mhp-ld:     HPPA Options
+mhtm:       RS/6000 and PowerPC Options
+mhtm:       S/390 and zSeries Options
+mhw-div:        Nios II Options
+mhw-mul:        Nios II Options
+mhw-mulx:       Nios II Options
+mhwmult=:       MSP430 Options
+miamcu:     x86 Options
+micplb:     Blackfin Options
+mid-shared-library:     Blackfin Options
+mid-shared-library:     Blackfin Options
+mieee:      DEC Alpha Options
+mieee:      SH Options
+mieee-conformant:       DEC Alpha Options
+mieee-fp:       x86 Options
+mieee-with-inexact:     DEC Alpha Options
+milp32:     IA-64 Options
+mimadd:     MIPS Options
+mimpure-text:       Solaris 2 Options
+mincoming-stack-boundary:       x86 Options
+mindexed-loads:     ARC Options
+mindirect-branch:       x86 Options
+mindirect-branch-register:      x86 Options
+minline-all-stringops:      x86 Options
+minline-float-divide-max-throughput:        IA-64 Options
+minline-float-divide-min-latency:       IA-64 Options
+minline-ic_invalidate:      SH Options
+minline-int-divide:     IA-64 Options
+minline-int-divide-max-throughput:      IA-64 Options
+minline-int-divide-min-latency:     IA-64 Options
+minline-plt:        Blackfin Options
+minline-plt:        FRV Options
+minline-sqrt-max-throughput:        IA-64 Options
+minline-sqrt-min-latency:       IA-64 Options
+minline-stringops-dynamically:      x86 Options
+minrt:      MSP430 Options
+minsert-sched-nops:     RS/6000 and PowerPC Options
+minstrument-return:     x86 Options
+mint-register:      RX Options
+mint16:     PDP-11 Options
+mint32:     CR16 Options
+mint32:     H8/300 Options
+mint32:     PDP-11 Options
+mint8:      AVR Options
+minterlink-compressed:      MIPS Options
+minterlink-mips16:      MIPS Options
+mio-volatile:       MeP Options
+mips1:      MIPS Options
+mips16:     MIPS Options
+mips2:      MIPS Options
+mips3:      MIPS Options
+mips32:     MIPS Options
+mips32r3:       MIPS Options
+mips32r5:       MIPS Options
+mips32r6:       MIPS Options
+mips3d:     MIPS Options
+mips4:      MIPS Options
+mips64:     MIPS Options
+mips64r2:       MIPS Options
+mips64r3:       MIPS Options
+mips64r5:       MIPS Options
+mips64r6:       MIPS Options
+mirq-ctrl-saved:        ARC Options
+misel:      RS/6000 and PowerPC Options
+misize:     ARC Options
+misize:     SH Options
+misr-vector-size:       NDS32 Options
+missue-rate=number:     M32R/D Options
+mistack:        C-SKY Options
+mivc2:      MeP Options
+mjli-alawys:        ARC Options
+mjsr:       RX Options
+mjump-in-delay:     HPPA Options
+mkernel:        Darwin Options
+mknuthdiv:      MMIX Options
+ml:     MeP Options
+ml:     SH Options
+mlarge:     MSP430 Options
+mlarge-data:        DEC Alpha Options
+mlarge-data-threshold:      x86 Options
+mlarge-mem:     SPU Options
+mlarge-text:        DEC Alpha Options
+mleadz:     MeP Options
+mleaf-id-shared-library:        Blackfin Options
+mleaf-id-shared-library:        Blackfin Options
+mlibfuncs:      MMIX Options
+mlibrary-pic:       FRV Options
+mlinked-fp:     FRV Options
+mlinker-opt:        HPPA Options
+mlinux:     CRIS Options
+mlittle:        RS/6000 and PowerPC Options
+mlittle-endian:     AArch64 Options
+mlittle-endian:     ARC Options
+mlittle-endian:     ARM Options
+mlittle-endian:     C6X Options
+mlittle-endian:     C-SKY Options
+mlittle-endian:     IA-64 Options
+mlittle-endian:     MCore Options
+mlittle-endian:     MicroBlaze Options
+mlittle-endian:     NDS32 Options
+mlittle-endian:     RS/6000 and PowerPC Options
+mlittle-endian:     TILE-Gx Options
+mlittle-endian-data:        RX Options
+mliw:       MN10300 Options
+mll64:      ARC Options
+mllsc:      MIPS Options
+mload-store-pairs:      MIPS Options
+mlocal-sdata:       MIPS Options
+mlock:      ARC Options
+mlong-calls:        Adapteva Epiphany Options
+mlong-calls:        ARC Options
+mlong-calls:        ARM Options
+mlong-calls:        Blackfin Options
+mlong-calls:        FRV Options
+mlong-calls:        HPPA Options
+mlong-calls:        MIPS Options
+mlong-calls:        V850 Options
+mlong-double-128:       S/390 and zSeries Options
+mlong-double-128:       x86 Options
+mlong-double-64:        S/390 and zSeries Options
+mlong-double-64:        x86 Options
+mlong-double-80:        x86 Options
+mlong-jump-table-offsets:       M680x0 Options
+mlong-jumps:        V850 Options
+mlong-load-store:       HPPA Options
+mlong32:        MIPS Options
+mlong64:        MIPS Options
+mlongcall:      RS/6000 and PowerPC Options
+mlongcalls:     Xtensa Options
+mloongson-ext:      MIPS Options
+mloongson-ext2:     MIPS Options
+mloongson-mmi:      MIPS Options
+mloop:      V850 Options
+mlow-precision-div:     AArch64 Options
+mlow-precision-recip-sqrt:      AArch64 Options
+mlow-precision-sqrt:        AArch64 Options
+mlow64k:        Blackfin Options
+mlp64:      IA-64 Options
+mlpc-width:     ARC Options
+mlra:       ARC Options
+mlra:       FT32 Options
+mlra:       PDP-11 Options
+mlra:       SPARC Options
+mlra-priority-compact:      ARC Options
+mlra-priority-noncompact:       ARC Options
+mlra-priority-none:     ARC Options
+mlwp:       x86 Options
+mlxc1-sxc1:     MIPS Options
+mlzcnt:     x86 Options
+MM:     Preprocessor Options
+mm:     MeP Options
+mmac:       CR16 Options
+mmac:       Score Options
+mmac-24:        ARC Options
+mmac-d16:       ARC Options
+mmac_24:        ARC Options
+mmac_d16:       ARC Options
+mmad:       MIPS Options
+mmadd4:     MIPS Options
+mmain-is-OS_task:       AVR Options
+mmainkernel:        Nvidia PTX Options
+mmalloc64:      VMS Options
+mmanual-endbr:      x86 Options
+mmax:       DEC Alpha Options
+mmax-constant-size:     RX Options
+mmax-stack-frame:       CRIS Options
+mmcount-ra-address:     MIPS Options
+mmcu:       AVR Options
+mmcu:       MIPS Options
+mmcu=:      MSP430 Options
+MMD:        Preprocessor Options
+mmedia:     FRV Options
+mmedium-calls:      ARC Options
+mmemcpy:        MicroBlaze Options
+mmemcpy:        MIPS Options
+mmemcpy-strategy=strategy:      x86 Options
+mmemory-latency:        DEC Alpha Options
+mmemory-model:      SPARC Options
+mmemset-strategy=strategy:      x86 Options
+mmfcrf:     RS/6000 and PowerPC Options
+mmfpgpr:        RS/6000 and PowerPC Options
+mmicromips:     MIPS Options
+mmillicode:     ARC Options
+mminimal-toc:       RS/6000 and PowerPC Options
+mminmax:        MeP Options
+mmixed-code:        ARC Options
+mmmx:       x86 Options
+mmodel=large:       M32R/D Options
+mmodel=medium:      M32R/D Options
+mmodel=small:       M32R/D Options
+mmovbe:     x86 Options
+mmovdir64b:     x86 Options
+mmovdiri:       x86 Options
+mmp:        C-SKY Options
+mmpy:       ARC Options
+mmpy-option:        ARC Options
+mms-bitfields:      x86 Options
+mmt:        MIPS Options
+mmul:       RL78 Options
+mmul-bug-workaround:        CRIS Options
+mmul.x:     Moxie Options
+mmul32x16:      ARC Options
+mmul64:     ARC Options
+mmuladd:        FRV Options
+mmulhw:     RS/6000 and PowerPC Options
+mmult:      MeP Options
+mmult-bug:      MN10300 Options
+mmultcost:      ARC Options
+mmulti-cond-exec:       FRV Options
+mmulticore:     Blackfin Options
+mmultiple:      RS/6000 and PowerPC Options
+mmultiple-stld:     C-SKY Options
+mmusl:      GNU/Linux Options
+mmvcle:     S/390 and zSeries Options
+mmvme:      RS/6000 and PowerPC Options
+mmwaitx:        x86 Options
+mn:     H8/300 Options
+mn-flash:       AVR Options
+mnan=2008:      MIPS Options
+mnan=legacy:        MIPS Options
+mneon-for-64bits:       ARM Options
+mnested-cond-exec:      FRV Options
+mnewlib:        OpenRISC Options
+mnhwloop:       Score Options
+mno-16-bit:     NDS32 Options
+mno-4byte-functions:        MCore Options
+mno-8byte-align:        V850 Options
+mno-abicalls:       MIPS Options
+mno-ac0:        PDP-11 Options
+mno-address-space-conversion:       SPU Options
+mno-align-double:       x86 Options
+mno-align-int:      M680x0 Options
+mno-align-loops:        M32R/D Options
+mno-align-stringops:        x86 Options
+mno-allow-string-insns:     RX Options
+mno-altivec:        RS/6000 and PowerPC Options
+mno-am33:       MN10300 Options
+mno-app-regs:       SPARC Options
+mno-app-regs:       V850 Options
+mno-as100-syntax:       RX Options
+mno-atomic-updates:     SPU Options
+mno-auto-litpools:      Xtensa Options
+mno-avoid-indexed-addresses:        RS/6000 and PowerPC Options
+mno-backchain:      S/390 and zSeries Options
+mno-base-addresses:     MMIX Options
+mno-bit-align:      RS/6000 and PowerPC Options
+mno-bitfield:       M680x0 Options
+mno-branch-likely:      MIPS Options
+mno-branch-predict:     MMIX Options
+mno-brcc:       ARC Options
+mno-bwx:        DEC Alpha Options
+mno-bypass-cache:       Nios II Options
+mno-cache-volatile:     Nios II Options
+mno-call-ms2sysv-xlogues:       x86 Options
+mno-callgraph-data:     MCore Options
+mno-cbcond:     SPARC Options
+mno-check-zero-division:        MIPS Options
+mno-cix:        DEC Alpha Options
+mno-clearbss:       MicroBlaze Options
+mno-cmov:       NDS32 Options
+mno-cmpb:       RS/6000 and PowerPC Options
+mno-cond-exec:      ARC Options
+mno-cond-exec:      FRV Options
+mno-cond-move:      FRV Options
+mno-const-align:        CRIS Options
+mno-const16:        Xtensa Options
+mno-crc:        MIPS Options
+mno-crt0:       MN10300 Options
+mno-crt0:       Moxie Options
+mno-crypto:     RS/6000 and PowerPC Options
+mno-csync-anomaly:      Blackfin Options
+mno-custom-insn:        Nios II Options
+mno-data-align:     CRIS Options
+mno-debug:      S/390 and zSeries Options
+mno-default:        x86 Options
+mno-disable-callt:      V850 Options
+mno-div:        M680x0 Options
+mno-div:        MCore Options
+mno-dlmzb:      RS/6000 and PowerPC Options
+mno-double:     FRV Options
+mno-dpfp-lrsr:      ARC Options
+mno-dsp:        MIPS Options
+mno-dspr2:      MIPS Options
+mno-dwarf2-asm:     IA-64 Options
+mno-dword:      FRV Options
+mno-eabi:       RS/6000 and PowerPC Options
+mno-early-stop-bits:        IA-64 Options
+mno-eflags:     FRV Options
+mno-embedded-data:      MIPS Options
+mno-ep:     V850 Options
+mno-epsilon:        MMIX Options
+mno-eva:        MIPS Options
+mno-explicit-relocs:        DEC Alpha Options
+mno-explicit-relocs:        MIPS Options
+mno-exr:        H8/300 Options
+mno-ext-perf:       NDS32 Options
+mno-ext-perf2:      NDS32 Options
+mno-ext-string:     NDS32 Options
+mno-extern-sdata:       MIPS Options
+mno-fancy-math-387:     x86 Options
+mno-fast-sw-div:        Nios II Options
+mno-faster-structs:     SPARC Options
+mno-fix:        DEC Alpha Options
+mno-fix-24k:        MIPS Options
+mno-fix-cortex-a53-835769:      AArch64 Options
+mno-fix-cortex-a53-843419:      AArch64 Options
+mno-fix-r10000:     MIPS Options
+mno-fix-r4000:      MIPS Options
+mno-fix-r4400:      MIPS Options
+mno-flat:       SPARC Options
+mno-float:      MIPS Options
+mno-float128:       RS/6000 and PowerPC Options
+mno-float128-hardware:      RS/6000 and PowerPC Options
+mno-flush-func:     M32R/D Options
+mno-flush-trap:     M32R/D Options
+mno-fmaf:       SPARC Options
+mno-fp-in-toc:      RS/6000 and PowerPC Options
+mno-fp-regs:        DEC Alpha Options
+mno-fp-ret-in-387:      x86 Options
+mno-fprnd:      RS/6000 and PowerPC Options
+mno-fpu:        SPARC Options
+mno-fpu:        Visium Options
+mno-fsca:       SH Options
+mno-fsmuld:     SPARC Options
+mno-fsrra:      SH Options
+mno-fused-madd:     IA-64 Options
+mno-fused-madd:     MIPS Options
+mno-fused-madd:     RS/6000 and PowerPC Options
+mno-fused-madd:     S/390 and zSeries Options
+mno-fused-madd:     SH Options
+mno-fused-madd:     Xtensa Options
+mno-ginv:       MIPS Options
+mno-gnu-as:     IA-64 Options
+mno-gnu-attribute:      RS/6000 and PowerPC Options
+mno-gnu-ld:     IA-64 Options
+mno-gotplt:     CRIS Options
+mno-gpopt:      MIPS Options
+mno-gpopt:      Nios II Options
+mno-hard-dfp:       RS/6000 and PowerPC Options
+mno-hard-dfp:       S/390 and zSeries Options
+mno-hardlit:        MCore Options
+mno-htm:        RS/6000 and PowerPC Options
+mno-htm:        S/390 and zSeries Options
+mno-hw-div:     Nios II Options
+mno-hw-mul:     Nios II Options
+mno-hw-mulx:        Nios II Options
+mno-id-shared-library:      Blackfin Options
+mno-ieee:       SH Options
+mno-ieee-fp:        x86 Options
+mno-imadd:      MIPS Options
+mno-inline-float-divide:        IA-64 Options
+mno-inline-int-divide:      IA-64 Options
+mno-inline-sqrt:        IA-64 Options
+mno-int16:      PDP-11 Options
+mno-int32:      PDP-11 Options
+mno-interlink-compressed:       MIPS Options
+mno-interlink-mips16:       MIPS Options
+mno-interrupts:     AVR Options
+mno-isel:       RS/6000 and PowerPC Options
+mno-jsr:        RX Options
+mno-knuthdiv:       MMIX Options
+mno-leaf-id-shared-library:     Blackfin Options
+mno-libfuncs:       MMIX Options
+mno-liw:        MN10300 Options
+mno-llsc:       MIPS Options
+mno-load-store-pairs:       MIPS Options
+mno-local-sdata:        MIPS Options
+mno-long-calls:     ARM Options
+mno-long-calls:     Blackfin Options
+mno-long-calls:     HPPA Options
+mno-long-calls:     MIPS Options
+mno-long-calls:     V850 Options
+mno-long-jumps:     V850 Options
+mno-longcall:       RS/6000 and PowerPC Options
+mno-longcalls:      Xtensa Options
+mno-loongson-ext:       MIPS Options
+mno-loongson-ext2:      MIPS Options
+mno-loongson-mmi:       MIPS Options
+mno-low-precision-div:      AArch64 Options
+mno-low-precision-recip-sqrt:       AArch64 Options
+mno-low-precision-sqrt:     AArch64 Options
+mno-low64k:     Blackfin Options
+mno-lra:        SPARC Options
+mno-lsim:       FR30 Options
+mno-lsim:       MCore Options
+mno-mad:        MIPS Options
+mno-max:        DEC Alpha Options
+mno-mcount-ra-address:      MIPS Options
+mno-mcu:        MIPS Options
+mno-mdmx:       MIPS Options
+mno-media:      FRV Options
+mno-memcpy:     MIPS Options
+mno-mfcrf:      RS/6000 and PowerPC Options
+mno-mfpgpr:     RS/6000 and PowerPC Options
+mno-mips16:     MIPS Options
+mno-mips3d:     MIPS Options
+mno-mmicromips:     MIPS Options
+mno-mpy:        ARC Options
+mno-ms-bitfields:       x86 Options
+mno-mt:     MIPS Options
+mno-mul-bug-workaround:     CRIS Options
+mno-muladd:     FRV Options
+mno-mulhw:      RS/6000 and PowerPC Options
+mno-mult-bug:       MN10300 Options
+mno-multi-cond-exec:        FRV Options
+mno-multiple:       RS/6000 and PowerPC Options
+mno-mvcle:      S/390 and zSeries Options
+mno-nested-cond-exec:       FRV Options
+mno-odd-spreg:      MIPS Options
+mno-omit-leaf-frame-pointer:        AArch64 Options
+mno-optimize-membar:        FRV Options
+mno-opts:       MeP Options
+mno-pack:       FRV Options
+mno-packed-stack:       S/390 and zSeries Options
+mno-paired-single:      MIPS Options
+mno-pc-relative-literal-loads:      AArch64 Options
+mno-pic:        IA-64 Options
+mno-pid:        RX Options
+mno-plt:        MIPS Options
+mno-pltseq:     RS/6000 and PowerPC Options
+mno-popc:       SPARC Options
+mno-popcntb:        RS/6000 and PowerPC Options
+mno-popcntd:        RS/6000 and PowerPC Options
+mno-postinc:        Adapteva Epiphany Options
+mno-postmodify:     Adapteva Epiphany Options
+mno-power8-fusion:      RS/6000 and PowerPC Options
+mno-power8-vector:      RS/6000 and PowerPC Options
+mno-powerpc-gfxopt:     RS/6000 and PowerPC Options
+mno-powerpc-gpopt:      RS/6000 and PowerPC Options
+mno-powerpc64:      RS/6000 and PowerPC Options
+mno-prolog-function:        V850 Options
+mno-prologue-epilogue:      CRIS Options
+mno-prototype:      RS/6000 and PowerPC Options
+mno-push-args:      x86 Options
+mno-quad-memory:        RS/6000 and PowerPC Options
+mno-quad-memory-atomic:     RS/6000 and PowerPC Options
+mno-readonly-in-sdata:      RS/6000 and PowerPC Options
+mno-red-zone:       x86 Options
+mno-register-names:     IA-64 Options
+mno-regnames:       RS/6000 and PowerPC Options
+mno-relax:      V850 Options
+mno-relax-immediate:        MCore Options
+mno-relocatable:        RS/6000 and PowerPC Options
+mno-relocatable-lib:        RS/6000 and PowerPC Options
+mno-renesas:        SH Options
+mno-round-nearest:      Adapteva Epiphany Options
+mno-save-mduc-in-interrupts:        RL78 Options
+mno-scc:        FRV Options
+mno-sched-ar-data-spec:     IA-64 Options
+mno-sched-ar-in-data-spec:      IA-64 Options
+mno-sched-br-data-spec:     IA-64 Options
+mno-sched-br-in-data-spec:      IA-64 Options
+mno-sched-control-spec:     IA-64 Options
+mno-sched-count-spec-in-critical-path:      IA-64 Options
+mno-sched-in-control-spec:      IA-64 Options
+mno-sched-prefer-non-control-spec-insns:        IA-64 Options
+mno-sched-prefer-non-data-spec-insns:       IA-64 Options
+mno-sched-prolog:       ARM Options
+mno-sdata:      ARC Options
+mno-sdata:      IA-64 Options
+mno-sdata:      RS/6000 and PowerPC Options
+mno-sep-data:       Blackfin Options
+mno-serialize-volatile:     Xtensa Options
+mno-setlb:      MN10300 Options
+mno-short:      M680x0 Options
+mno-side-effects:       CRIS Options
+mno-sim:        RX Options
+mno-single-exit:        MMIX Options
+mno-slow-bytes:     MCore Options
+mno-small-exec:     S/390 and zSeries Options
+mno-smartmips:      MIPS Options
+mno-soft-cmpsf:     Adapteva Epiphany Options
+mno-soft-float:     DEC Alpha Options
+mno-space-regs:     HPPA Options
+mno-specld-anomaly:     Blackfin Options
+mno-split-addresses:        MIPS Options
+mno-split-lohi:     Adapteva Epiphany Options
+mno-stack-align:        CRIS Options
+mno-stack-bias:     SPARC Options
+mno-std-struct-return:      SPARC Options
+mno-strict-align:       AArch64 Options
+mno-strict-align:       M680x0 Options
+mno-strict-align:       RS/6000 and PowerPC Options
+mno-subxc:      SPARC Options
+mno-sum-in-toc:     RS/6000 and PowerPC Options
+mno-sym32:      MIPS Options
+mno-target-align:       Xtensa Options
+mno-text-section-literals:      Xtensa Options
+mno-tls-markers:        RS/6000 and PowerPC Options
+mno-toc:        RS/6000 and PowerPC Options
+mno-toplevel-symbols:       MMIX Options
+mno-tpf-trace:      S/390 and zSeries Options
+mno-unaligned-access:       ARM Options
+mno-unaligned-doubles:      SPARC Options
+mno-uninit-const-in-rodata:     MIPS Options
+mno-update:     RS/6000 and PowerPC Options
+mno-user-mode:      SPARC Options
+mno-usermode:       SH Options
+mno-v3push:     NDS32 Options
+mno-v8plus:     SPARC Options
+mno-vect-double:        Adapteva Epiphany Options
+mno-virt:       MIPS Options
+mno-vis:        SPARC Options
+mno-vis2:       SPARC Options
+mno-vis3:       SPARC Options
+mno-vis4:       SPARC Options
+mno-vis4b:      SPARC Options
+mno-vliw-branch:        FRV Options
+mno-volatile-asm-stop:      IA-64 Options
+mno-volatile-cache:     ARC Options
+mno-vrsave:     RS/6000 and PowerPC Options
+mno-vsx:        RS/6000 and PowerPC Options
+mno-vx:     S/390 and zSeries Options
+mno-warn-mcu:       MSP430 Options
+mno-warn-multiple-fast-interrupts:      RX Options
+mno-wide-bitfields:     MCore Options
+mno-xgot:       M680x0 Options
+mno-xgot:       MIPS Options
+mno-xl-compat:      RS/6000 and PowerPC Options
+mno-xpa:        MIPS Options
+mno-zdcbranch:      SH Options
+mno-zero-extend:        MMIX Options
+mno-zvector:        S/390 and zSeries Options
+mnobitfield:        M680x0 Options
+mnodiv:     FT32 Options
+mnomacsave:     SH Options
+mnop-fun-dllimport:     x86 Windows Options
+mnop-mcount:        x86 Options
+mnopm:      FT32 Options
+mnops:      Adapteva Epiphany Options
+mnorm:      ARC Options
+modd-spreg:     MIPS Options
+momit-leaf-frame-pointer:       AArch64 Options
+momit-leaf-frame-pointer:       Blackfin Options
+momit-leaf-frame-pointer:       x86 Options
+mone-byte-bool:     Darwin Options
+moptimize:      Nvidia PTX Options
+moptimize-membar:       FRV Options
+moptimize-membar:       FRV Options
+moverride:      AArch64 Options
+MP:     Preprocessor Options
+mpa-risc-1-0:       HPPA Options
+mpa-risc-1-1:       HPPA Options
+mpa-risc-2-0:       HPPA Options
+mpack:      FRV Options
+mpacked-stack:      S/390 and zSeries Options
+mpadstruct:     SH Options
+mpaired-single:     MIPS Options
+mpc-relative-literal-loads:     AArch64 Options
+mpc32:      x86 Options
+mpc64:      x86 Options
+mpc80:      x86 Options
+mpclmul:        x86 Options
+mpconfig:       x86 Options
+mpcrel:     M680x0 Options
+mpdebug:        CRIS Options
+mpe:        RS/6000 and PowerPC Options
+mpe-aligned-commons:        x86 Windows Options
+mpic-data-is-text-relative:     ARM Options
+mpic-data-is-text-relative:     MicroBlaze Options
+mpic-register:      ARM Options
+mpid:       RX Options
+mpku:       x86 Options
+mplt:       MIPS Options
+mpltseq:        RS/6000 and PowerPC Options
+mpointer-size=size:     VMS Options
+mpointers-to-nested-functions:      RS/6000 and PowerPC Options
+mpoke-function-name:        ARM Options
+mpopc:      SPARC Options
+mpopcnt:        x86 Options
+mpopcntb:       RS/6000 and PowerPC Options
+mpopcntd:       RS/6000 and PowerPC Options
+mportable-runtime:      HPPA Options
+mpostinc:       Adapteva Epiphany Options
+mpostmodify:        Adapteva Epiphany Options
+mpower8-fusion:     RS/6000 and PowerPC Options
+mpower8-vector:     RS/6000 and PowerPC Options
+mpowerpc-gfxopt:        RS/6000 and PowerPC Options
+mpowerpc-gpopt:     RS/6000 and PowerPC Options
+mpowerpc64:     RS/6000 and PowerPC Options
+mprefer-avx128:     x86 Options
+mprefer-short-insn-regs:        Adapteva Epiphany Options
+mprefer-vector-width:       x86 Options
+mprefergot:     SH Options
+mpreferred-stack-boundary:      RISC-V Options
+mpreferred-stack-boundary:      x86 Options
+mprefetchwt1:       x86 Options
+mpretend-cmove:     SH Options
+mprfchw:        x86 Options
+mprint-tune-info:       ARM Options
+mprioritize-restricted-insns:       RS/6000 and PowerPC Options
+mprolog-function:       V850 Options
+mprologue-epilogue:     CRIS Options
+mprototype:     RS/6000 and PowerPC Options
+mptwrite:       x86 Options
+mpure-code:     ARM Options
+mpush-args:     x86 Options
+mpushpop:       C-SKY Options
+MQ:     Preprocessor Options
+mq-class:       ARC Options
+mquad-memory:       RS/6000 and PowerPC Options
+mquad-memory-atomic:        RS/6000 and PowerPC Options
+mr0rel-sec:     Nios II Options
+mr10k-cache-barrier:        MIPS Options
+mRcq:       ARC Options
+mRcw:       ARC Options
+mrdpid:     x86 Options
+mrdrnd:     x86 Options
+mrdseed:        x86 Options
+mreadonly-in-sdata:     RS/6000 and PowerPC Options
+mrecip:     RS/6000 and PowerPC Options
+mrecip:     x86 Options
+mrecip-precision:       RS/6000 and PowerPC Options
+mrecip=opt:     RS/6000 and PowerPC Options
+mrecip=opt:     x86 Options
+mrecord-mcount:     x86 Options
+mrecord-return:     x86 Options
+mred-zone:      x86 Options
+mreduced-regs:      NDS32 Options
+mregister-names:        IA-64 Options
+mregnames:      RS/6000 and PowerPC Options
+mregparm:       x86 Options
+mrelax:     AVR Options
+mrelax:     H8/300 Options
+mrelax:     MN10300 Options
+mrelax:     MSP430 Options
+mrelax:     NDS32 Options
+mrelax:     RX Options
+mrelax:     SH Options
+mrelax:     V850 Options
+mrelax-immediate:       MCore Options
+mrelax-pic-calls:       MIPS Options
+mrelocatable:       RS/6000 and PowerPC Options
+mrelocatable-lib:       RS/6000 and PowerPC Options
+mrenesas:       SH Options
+mrepeat:        MeP Options
+mrestrict-it:       ARM Options
+mreturn-pointer-on-d0:      MN10300 Options
+mrf16:      ARC Options
+mrgf-banked-regs:       ARC Options
+mrh850-abi:     V850 Options
+mrl78:      RL78 Options
+mrmw:       AVR Options
+mror:       OpenRISC Options
+mround-nearest:     Adapteva Epiphany Options
+mrtd:       M680x0 Options
+mrtd:       x86 Options
+mrtd:       x86 Function Attributes
+mrtm:       x86 Options
+mrtp:       VxWorks Options
+mrtsc:      ARC Options
+ms:     H8/300 Options
+ms:     MeP Options
+ms2600:     H8/300 Options
+msafe-dma:      SPU Options
+msafe-hints:        SPU Options
+msahf:      x86 Options
+msatur:     MeP Options
+msave-acc-in-interrupts:        RX Options
+msave-mduc-in-interrupts:       RL78 Options
+msave-restore:      RISC-V Options
+msave-toc-indirect:     RS/6000 and PowerPC Options
+mscc:       FRV Options
+msched-ar-data-spec:        IA-64 Options
+msched-ar-in-data-spec:     IA-64 Options
+msched-br-data-spec:        IA-64 Options
+msched-br-in-data-spec:     IA-64 Options
+msched-control-spec:        IA-64 Options
+msched-costly-dep:      RS/6000 and PowerPC Options
+msched-count-spec-in-critical-path:     IA-64 Options
+msched-fp-mem-deps-zero-cost:       IA-64 Options
+msched-in-control-spec:     IA-64 Options
+msched-max-memory-insns:        IA-64 Options
+msched-max-memory-insns-hard-limit:     IA-64 Options
+msched-prefer-non-control-spec-insns:       IA-64 Options
+msched-prefer-non-data-spec-insns:      IA-64 Options
+msched-prolog:      ARM Options
+msched-prolog:      C-SKY Options
+msched-spec-ldc:        IA-64 Options
+msched-spec-ldc:        IA-64 Options
+msched-stop-bits-after-every-cycle:     IA-64 Options
+mschedule:      HPPA Options
+mscore5:        Score Options
+mscore5u:       Score Options
+mscore7:        Score Options
+mscore7d:       Score Options
+msda:       V850 Options
+msdata:     ARC Options
+msdata:     IA-64 Options
+msdata:     RS/6000 and PowerPC Options
+msdata=all:     C6X Options
+msdata=data:        RS/6000 and PowerPC Options
+msdata=default:     C6X Options
+msdata=default:     RS/6000 and PowerPC Options
+msdata=eabi:        RS/6000 and PowerPC Options
+msdata=none:        C6X Options
+msdata=none:        M32R/D Options
+msdata=none:        RS/6000 and PowerPC Options
+msdata=sdata:       M32R/D Options
+msdata=sysv:        RS/6000 and PowerPC Options
+msdata=use:     M32R/D Options
+msdram:     Blackfin Options
+msdram:     MeP Options
+msecure-plt:        RS/6000 and PowerPC Options
+msecurity:      C-SKY Options
+msel-sched-dont-check-control-spec:     IA-64 Options
+msep-data:      Blackfin Options
+msep-data:      Blackfin Options
+mserialize-volatile:        Xtensa Options
+msetlb:     MN10300 Options
+msext:      OpenRISC Options
+msfimm:     OpenRISC Options
+msgx:       x86 Options
+msha:       x86 Options
+mshared-library-id:     Blackfin Options
+mshftimm:       OpenRISC Options
+mshort:     M680x0 Options
+mshort-calls:       AVR Options
+mshstk:     x86 Options
+mside-effects:      CRIS Options
+msign-extend-enabled:       LM32 Options
+msign-return-address:       AArch64 Options
+msilicon-errata:        MSP430 Options
+msilicon-errata-warn:       MSP430 Options
+msim:       Blackfin Options
+msim:       C6X Options
+msim:       CR16 Options
+msim:       FT32 Options
+msim:       M32C Options
+msim:       MeP Options
+msim:       MSP430 Options
+msim:       RL78 Options
+msim:       RS/6000 and PowerPC Options
+msim:       RX Options
+msim:       Visium Options
+msim:       Xstormy16 Options
+msimd:      ARC Options
+msimnovec:      MeP Options
+msingle-exit:       MMIX Options
+msingle-float:      MIPS Options
+msingle-pic-base:       ARM Options
+msingle-pic-base:       RS/6000 and PowerPC Options
+msio:       HPPA Options
+msize-level:        ARC Options
+mskip-rax-setup:        x86 Options
+mslow-bytes:        MCore Options
+mslow-flash-data:       ARM Options
+msmall:     MSP430 Options
+msmall-data:        DEC Alpha Options
+msmall-data-limit:      RISC-V Options
+msmall-data-limit:      RX Options
+msmall-divides:     MicroBlaze Options
+msmall-exec:        S/390 and zSeries Options
+msmall-mem:     SPU Options
+msmall-model:       FR30 Options
+msmall-text:        DEC Alpha Options
+msmall16:       Adapteva Epiphany Options
+msmallc:        Nios II Options
+msmart:     C-SKY Options
+msmartmips:     MIPS Options
+msoft-cmpsf:        Adapteva Epiphany Options
+msoft-div:      OpenRISC Options
+msoft-float:        ARC Options
+msoft-float:        C-SKY Options
+msoft-float:        DEC Alpha Options
+msoft-float:        FRV Options
+msoft-float:        HPPA Options
+msoft-float:        M680x0 Options
+msoft-float:        MicroBlaze Options
+msoft-float:        MIPS Options
+msoft-float:        PDP-11 Options
+msoft-float:        RS/6000 and PowerPC Options
+msoft-float:        S/390 and zSeries Options
+msoft-float:        SPARC Options
+msoft-float:        V850 Options
+msoft-float:        Visium Options
+msoft-float:        x86 Options
+msoft-mul:      OpenRISC Options
+msoft-quad-float:       SPARC Options
+msoft-stack:        Nvidia PTX Options
+msp8:       AVR Options
+mspace:     V850 Options
+mspace-regs:        HPPA Options
+mspecld-anomaly:        Blackfin Options
+mspecld-anomaly:        Blackfin Options
+mspfp:      ARC Options
+mspfp-compact:      ARC Options
+mspfp-fast:     ARC Options
+mspfp_compact:      ARC Options
+mspfp_fast:     ARC Options
+msplit:     PDP-11 Options
+msplit-addresses:       MIPS Options
+msplit-lohi:        Adapteva Epiphany Options
+msplit-vecmove-early:       Adapteva Epiphany Options
+msse:       x86 Options
+msse2:      x86 Options
+msse2avx:       x86 Options
+msse3:      x86 Options
+msse4:      x86 Options
+msse4.1:        x86 Options
+msse4.2:        x86 Options
+msse4a:     x86 Options
+msseregparm:        x86 Options
+mssse3:     x86 Options
+mstack-align:       CRIS Options
+mstack-bias:        SPARC Options
+mstack-check-l1:        Blackfin Options
+mstack-guard:       S/390 and zSeries Options
+mstack-increment:       MCore Options
+mstack-offset:      Adapteva Epiphany Options
+mstack-protector-guard:     AArch64 Options
+mstack-protector-guard:     AArch64 Options
+mstack-protector-guard:     RS/6000 and PowerPC Options
+mstack-protector-guard:     x86 Options
+mstack-protector-guard-offset:      AArch64 Options
+mstack-protector-guard-offset:      AArch64 Options
+mstack-protector-guard-offset:      RS/6000 and PowerPC Options
+mstack-protector-guard-offset:      x86 Options
+mstack-protector-guard-reg:     AArch64 Options
+mstack-protector-guard-reg:     AArch64 Options
+mstack-protector-guard-reg:     RS/6000 and PowerPC Options
+mstack-protector-guard-reg:     x86 Options
+mstack-protector-guard-symbol:      RS/6000 and PowerPC Options
+mstack-size:        AMD GCN Options
+mstack-size:        C-SKY Options
+mstack-size:        S/390 and zSeries Options
+mstackrealign:      x86 Options
+mstd-struct-return:     SPARC Options
+mstdmain:       SPU Options
+mstrict-align:      AArch64 Options
+mstrict-align:      M680x0 Options
+mstrict-align:      RISC-V Options
+mstrict-align:      RS/6000 and PowerPC Options
+mstrict-X:      AVR Options
+mstring-compare-inline-limit:       RS/6000 and PowerPC Options
+mstringop-strategy=alg:     x86 Options
+mstructure-size-boundary:       ARM Options
+msubxc:     SPARC Options
+msv-mode:       Visium Options
+msve-vector-bits:       AArch64 Options
+msvr4-struct-return:        RS/6000 and PowerPC Options
+mswap:      ARC Options
+mswape:     ARC Options
+msym32:     MIPS Options
+msynci:     MIPS Options
+msys-crt0:      Nios II Options
+msys-lib:       Nios II Options
+MT:     Preprocessor Options
+mtarget-align:      Xtensa Options
+mtas:       SH Options
+mtbm:       x86 Options
+mtda:       V850 Options
+mtelephony:     ARC Options
+mtext-section-literals:     Xtensa Options
+mtf:        MeP Options
+mthread:        x86 Windows Options
+mthreads:       x86 Options
+mthumb:     ARM Options
+mthumb-interwork:       ARM Options
+mtiny-stack:        AVR Options
+mtiny=:     MeP Options
+mTLS:       FRV Options
+mtls:       FRV Options
+mtls-dialect:       ARM Options
+mtls-dialect:       x86 Options
+mtls-dialect=desc:      AArch64 Options
+mtls-dialect=traditional:       AArch64 Options
+mtls-direct-seg-refs:       x86 Options
+mtls-markers:       RS/6000 and PowerPC Options
+mtls-size:      AArch64 Options
+mtls-size:      IA-64 Options
+mtoc:       RS/6000 and PowerPC Options
+mtomcat-stats:      FRV Options
+mtoplevel-symbols:      MMIX Options
+mtp:        ARM Options
+mtp-regno:      ARC Options
+mtpcs-frame:        ARM Options
+mtpcs-leaf-frame:       ARM Options
+mtpf-trace:     S/390 and zSeries Options
+mtraceback:     RS/6000 and PowerPC Options
+mtrap-precision:        DEC Alpha Options
+mtrust:     C-SKY Options
+mtune:      AArch64 Options
+mtune:      AMD GCN Options
+mtune:      ARC Options
+mtune:      ARC Options
+mtune:      ARM Options
+mtune:      CRIS Options
+mtune:      DEC Alpha Options
+mtune:      IA-64 Options
+mtune:      M680x0 Options
+mtune:      MIPS Options
+mtune:      MN10300 Options
+mtune:      RISC-V Options
+mtune:      RS/6000 and PowerPC Options
+mtune:      S/390 and zSeries Options
+mtune:      SPARC Options
+mtune:      Visium Options
+mtune:      x86 Options
+mtune-ctrl=feature-list:        x86 Options
+muclibc:        GNU/Linux Options
+muls:       Score Options
+multcost:       ARC Options
+multcost=number:        SH Options
+multilib-library-pic:       FRV Options
+multiply-enabled:       LM32 Options
+multiply_defined:       Darwin Options
+multiply_defined_unused:        Darwin Options
+multi_module:       Darwin Options
+munalign-prob-threshold:        ARC Options
+munaligned-access:      ARM Options
+munaligned-doubles:     SPARC Options
+municode:       x86 Windows Options
+muniform-simt:      Nvidia PTX Options
+muninit-const-in-rodata:        MIPS Options
+munix:      VAX Options
+munix-asm:      PDP-11 Options
+munsafe-dma:        SPU Options
+mupdate:        RS/6000 and PowerPC Options
+muser-enabled:      LM32 Options
+muser-mode:     SPARC Options
+muser-mode:     Visium Options
+musermode:      SH Options
+mv3push:        NDS32 Options
+mv850:      V850 Options
+mv850e:     V850 Options
+mv850e1:        V850 Options
+mv850e2:        V850 Options
+mv850e2v3:      V850 Options
+mv850e2v4:      V850 Options
+mv850e3v5:      V850 Options
+mv850es:        V850 Options
+mv8plus:        SPARC Options
+mvaes:      x86 Options
+mvdsp:      C-SKY Options
+mveclibabi:     RS/6000 and PowerPC Options
+mveclibabi:     x86 Options
+mvect-double:       Adapteva Epiphany Options
+mvect8-ret-in-mem:      x86 Options
+mverbose-cost-dump:     AArch64 Options
+mverbose-cost-dump:     ARM Options
+mvirt:      MIPS Options
+mvis:       SPARC Options
+mvis2:      SPARC Options
+mvis3:      SPARC Options
+mvis4:      SPARC Options
+mvis4b:     SPARC Options
+mvliw-branch:       FRV Options
+mvms-return-codes:      VMS Options
+mvolatile-asm-stop:     IA-64 Options
+mvolatile-cache:        ARC Options
+mvolatile-cache:        ARC Options
+mvpclmulqdq:        x86 Options
+mvr4130-align:      MIPS Options
+mvrsave:        RS/6000 and PowerPC Options
+mvsx:       RS/6000 and PowerPC Options
+mvx:        S/390 and zSeries Options
+mvxworks:       RS/6000 and PowerPC Options
+mvzeroupper:        x86 Options
+mwaitpkg:       x86 Options
+mwarn-dynamicstack:     S/390 and zSeries Options
+mwarn-framesize:        S/390 and zSeries Options
+mwarn-mcu:      MSP430 Options
+mwarn-multiple-fast-interrupts:     RX Options
+mwarn-reloc:        SPU Options
+mwbnoinvd:      x86 Options
+mwide-bitfields:        MCore Options
+mwin32:     x86 Windows Options
+mwindows:       x86 Windows Options
+mword-relocations:      ARM Options
+mx32:       x86 Options
+mxgot:      M680x0 Options
+mxgot:      MIPS Options
+mxl-barrel-shift:       MicroBlaze Options
+mxl-compat:     RS/6000 and PowerPC Options
+mxl-float-convert:      MicroBlaze Options
+mxl-float-sqrt:     MicroBlaze Options
+mxl-gp-opt:     MicroBlaze Options
+mxl-multiply-high:      MicroBlaze Options
+mxl-pattern-compare:        MicroBlaze Options
+mxl-reorder:        MicroBlaze Options
+mxl-soft-div:       MicroBlaze Options
+mxl-soft-mul:       MicroBlaze Options
+mxl-stack-check:        MicroBlaze Options
+mxop:       x86 Options
+mxpa:       MIPS Options
+mxsave:     x86 Options
+mxsavec:        x86 Options
+mxsaveopt:      x86 Options
+mxsaves:        x86 Options
+mxy:        ARC Options
+myellowknife:       RS/6000 and PowerPC Options
+mzarch:     S/390 and zSeries Options
+mzda:       V850 Options
+mzdcbranch:     SH Options
+mzero-extend:       MMIX Options
+mzvector:       S/390 and zSeries Options
+N       
+no-80387:       x86 Options
+no-canonical-prefixes:      Directory Options
+no-integrated-cpp:      Preprocessor Options
+no-pie:     Link Options
+no-sysroot-suffix:      Directory Options
+noall_load:     Darwin Options
+nocpp:      MIPS Options
+nodefaultlibs:      Link Options
+nodevicelib:        AVR Options
+nofixprebinding:        Darwin Options
+nofpu:      RX Options
+nolibc:     Link Options
+nolibdld:       HPPA Options
+nomultidefs:        Darwin Options
+non-static:     VxWorks Options
+noprebind:      Darwin Options
+noseglinkedit:      Darwin Options
+nostartfiles:       Link Options
+nostdinc:       Directory Options
+nostdinc++:     C++ Dialect Options
+nostdinc++:     Directory Options
+nostdlib:       Link Options
+no_dead_strip_inits_and_terms:      Darwin Options
+O       
+o:      Overall Options
+O:      Optimize Options
+O0:     Optimize Options
+O1:     Optimize Options
+O2:     Optimize Options
+O3:     Optimize Options
+Ofast:      Optimize Options
+Og:     Optimize Options
+Os:     Optimize Options
+P       
+p:      Instrumentation Options
+P:      Preprocessor Options
+p:      Common Function Attributes
+pagezero_size:      Darwin Options
+param:      Optimize Options
+pass-exit-codes:        Overall Options
+pedantic:       Standards
+pedantic:       Warning Options
+pedantic:       C Extensions
+pedantic:       Alternate Keywords
+pedantic:       Warnings and Errors
+pedantic-errors:        Standards
+pedantic-errors:        Warning Options
+pedantic-errors:        Non-bugs
+pedantic-errors:        Warnings and Errors
+pg:     Instrumentation Options
+pg:     Common Function Attributes
+pie:        Link Options
+pipe:       Overall Options
+plt:        RISC-V Options
+prebind:        Darwin Options
+prebind_all_twolevel_modules:       Darwin Options
+print-file-name:        Developer Options
+print-libgcc-file-name:     Developer Options
+print-multi-directory:      Developer Options
+print-multi-lib:        Developer Options
+print-multi-os-directory:       Developer Options
+print-multiarch:        Developer Options
+print-objc-runtime-info:        Objective-C and Objective-C++ Dialect Options
+print-prog-name:        Developer Options
+print-search-dirs:      Developer Options
+print-sysroot:      Developer Options
+print-sysroot-headers-suffix:       Developer Options
+private_bundle:     Darwin Options
+pthread:        Preprocessor Options
+pthread:        Link Options
+pthreads:       Solaris 2 Options
+Q       
+Q:      Developer Options
+Qn:     System V Options
+Qy:     System V Options
+R       
+r:      Link Options
+rdynamic:       Link Options
+read_only_relocs:       Darwin Options
+remap:      Preprocessor Options
+S       
+S:      Overall Options
+S:      Link Options
+s:      Link Options
+save-temps:     Developer Options
+save-temps=obj:     Developer Options
+sectalign:      Darwin Options
+sectcreate:     Darwin Options
+sectobjectsymbols:      Darwin Options
+sectobjectsymbols:      Darwin Options
+sectorder:      Darwin Options
+seg1addr:       Darwin Options
+segaddr:        Darwin Options
+seglinkedit:        Darwin Options
+segprot:        Darwin Options
+segs_read_only_addr:        Darwin Options
+segs_read_only_addr:        Darwin Options
+segs_read_write_addr:       Darwin Options
+segs_read_write_addr:       Darwin Options
+seg_addr_table:     Darwin Options
+seg_addr_table_filename:        Darwin Options
+shared:     Link Options
+shared-libgcc:      Link Options
+short-calls:        Adapteva Epiphany Options
+sim:        CRIS Options
+sim2:       CRIS Options
+single_module:      Darwin Options
+specs:      Overall Options
+static:     Link Options
+static:     Darwin Options
+static:     HPPA Options
+static-libasan:     Link Options
+static-libgcc:      Link Options
+static-liblsan:     Link Options
+static-libstdc++:       Link Options
+static-libtsan:     Link Options
+static-libubsan:        Link Options
+static-pie:     Link Options
+std:        Standards
+std:        C Dialect Options
+std:        Other Builtins
+std:        Non-bugs
+sub_library:        Darwin Options
+sub_umbrella:       Darwin Options
+symbolic:       Link Options
+sysroot:        Directory Options
+T       
+T:      Link Options
+target-help:        Overall Options
+threads:        HPPA Options
+time:       Developer Options
+tno-android-cc:     GNU/Linux Options
+tno-android-ld:     GNU/Linux Options
+traditional:        Preprocessor Options
+traditional:        Incompatibilities
+traditional-cpp:        Preprocessor Options
+trigraphs:      Preprocessor Options
+twolevel_namespace:     Darwin Options
+U       
+U:      Preprocessor Options
+u:      Link Options
+umbrella:       Darwin Options
+undef:      Preprocessor Options
+undefined:      Darwin Options
+unexported_symbols_list:        Darwin Options
+V       
+v:      Overall Options
+version:        Overall Options
+W       
+w:      Warning Options
+W:      Warning Options
+W:      Warning Options
+W:      Warning Options
+W:      Incompatibilities
+Wa:     Assembler Options
+Wabi:       C++ Dialect Options
+Wabi-tag:       C++ Dialect Options
+Wabi-tag:       C++ Dialect Options
+Wabsolute-value:        Warning Options
+Waddr-space-convert:        AVR Options
+Waddress:       Warning Options
+Waddress-of-packed-member:      Warning Options
+Waggregate-return:      Warning Options
+Waggressive-loop-optimizations:     Warning Options
+Waligned-new:       Warning Options
+Wall:       Warning Options
+Wall:       Standard Libraries
+Walloc-size-larger-than=:       Warning Options
+Walloc-zero:        Warning Options
+Walloca:        Warning Options
+Walloca-larger-than=:       Warning Options
+Warray-bounds:      Warning Options
+Wassign-intercept:      Objective-C and Objective-C++ Dialect Options
+Wattribute-warning:     Warning Options
+Wattributes:        Warning Options
+Wbad-function-cast:     Warning Options
+Wbool-compare:      Warning Options
+Wbool-operation:        Warning Options
+Wbuiltin-declaration-mismatch:      Warning Options
+Wbuiltin-macro-redefined:       Warning Options
+Wc++-compat:        Warning Options
+Wc++11-compat:      Warning Options
+Wc++14-compat:      Warning Options
+Wc++17-compat:      Warning Options
+Wc90-c99-compat:        Warning Options
+Wc99-c11-compat:        Warning Options
+Wcast-align:        Warning Options
+Wcast-align=strict:     Warning Options
+Wcast-function-type:        Warning Options
+Wcast-qual:     Warning Options
+Wcatch-value:       Warning Options
+Wchar-subscripts:       Warning Options
+Wclass-conversion:      C++ Dialect Options
+Wclass-memaccess:       C++ Dialect Options
+Wclobbered:     Warning Options
+Wcomment:       Warning Options
+Wcomments:      Warning Options
+Wconditionally-supported:       Warning Options
+Wconversion:        Warning Options
+Wconversion-null:       Warning Options
+Wcoverage-mismatch:     Warning Options
+Wctor-dtor-privacy:     C++ Dialect Options
+Wdangling-else:     Warning Options
+Wdate-time:     Warning Options
+Wdeclaration-after-statement:       Warning Options
+Wdelete-incomplete:     Warning Options
+Wdelete-non-virtual-dtor:       C++ Dialect Options
+Wdeprecated:        Warning Options
+Wdeprecated-copy:       C++ Dialect Options
+Wdeprecated-declarations:       Warning Options
+Wdisabled-optimization:     Warning Options
+Wdiscarded-array-qualifiers:        Warning Options
+Wdiscarded-qualifiers:      Warning Options
+Wdiv-by-zero:       Warning Options
+Wdouble-promotion:      Warning Options
+Wduplicate-decl-specifier:      Warning Options
+Wduplicated-branches:       Warning Options
+Wduplicated-cond:       Warning Options
+weak_reference_mismatches:      Darwin Options
+Weffc++:        C++ Dialect Options
+Wempty-body:        Warning Options
+Wendif-labels:      Warning Options
+Wenum-compare:      Warning Options
+Werror:     Warning Options
+Werror=:        Warning Options
+Wexpansion-to-defined:      Warning Options
+Wextra:     Warning Options
+Wextra:     Warning Options
+Wextra:     Warning Options
+Wextra-semi:        Warning Options
+Wfatal-errors:      Warning Options
+Wfloat-conversion:      Warning Options
+Wfloat-equal:       Warning Options
+Wformat:        Warning Options
+Wformat:        Warning Options
+Wformat:        Warning Options
+Wformat:        Common Function Attributes
+Wformat-contains-nul:       Warning Options
+Wformat-extra-args:     Warning Options
+Wformat-nonliteral:     Warning Options
+Wformat-nonliteral:     Common Function Attributes
+Wformat-overflow:       Warning Options
+Wformat-overflow:       Warning Options
+Wformat-security:       Warning Options
+Wformat-signedness:     Warning Options
+Wformat-truncation:     Warning Options
+Wformat-truncation:     Warning Options
+Wformat-y2k:        Warning Options
+Wformat-zero-length:        Warning Options
+Wformat=:       Warning Options
+Wformat=1:      Warning Options
+Wformat=2:      Warning Options
+Wframe-address:     Warning Options
+Wframe-larger-than=:        Warning Options
+Wfree-nonheap-object:       Warning Options
+whatsloaded:        Darwin Options
+whyload:        Darwin Options
+Wif-not-aligned:        Warning Options
+Wignored-attributes:        Warning Options
+Wignored-qualifiers:        Warning Options
+Wimplicit:      Warning Options
+Wimplicit-fallthrough:      Warning Options
+Wimplicit-fallthrough=:     Warning Options
+Wimplicit-function-declaration:     Warning Options
+Wimplicit-int:      Warning Options
+Wincompatible-pointer-types:        Warning Options
+Winherited-variadic-ctor:       Warning Options
+Winit-list-lifetime:        C++ Dialect Options
+Winit-self:     Warning Options
+Winline:        Warning Options
+Winline:        Inline
+Wint-conversion:        Warning Options
+Wint-in-bool-context:       Warning Options
+Wint-to-pointer-cast:       Warning Options
+Winvalid-memory-model:      Warning Options
+Winvalid-offsetof:      Warning Options
+Winvalid-pch:       Warning Options
+Wjump-misses-init:      Warning Options
+Wl:     Link Options
+Wlarger-than-byte-size:     Warning Options
+Wlarger-than=:      Warning Options
+Wliteral-suffix:        C++ Dialect Options
+Wlogical-not-parentheses:       Warning Options
+Wlogical-op:        Warning Options
+Wlong-long:     Warning Options
+Wlto-type-mismatch:     C++ Dialect Options
+Wmain:      Warning Options
+Wmaybe-uninitialized:       Warning Options
+Wmemset-elt-size:       Warning Options
+Wmemset-transposed-args:        Warning Options
+Wmisleading-indentation:        Warning Options
+Wmissing-attributes:        Warning Options
+Wmissing-braces:        Warning Options
+Wmissing-declarations:      Warning Options
+Wmissing-field-initializers:        Warning Options
+Wmissing-format-attribute:      Warning Options
+Wmissing-include-dirs:      Warning Options
+Wmissing-noreturn:      Warning Options
+Wmissing-parameter-type:        Warning Options
+Wmissing-profile:       Warning Options
+Wmissing-prototypes:        Warning Options
+Wmisspelled-isr:        AVR Options
+Wmultichar:     Warning Options
+Wmultiple-inheritance:      C++ Dialect Options
+Wmultistatement-macros:     Warning Options
+Wnamespaces:        C++ Dialect Options
+Wnarrowing:     C++ Dialect Options
+Wnested-externs:        Warning Options
+Wno-abi:        C++ Dialect Options
+Wno-absolute-value:     Warning Options
+Wno-addr-space-convert:     AVR Options
+Wno-address:        Warning Options
+Wno-address-of-packed-member:       Warning Options
+Wno-aggregate-return:       Warning Options
+Wno-aggressive-loop-optimizations:      Warning Options
+Wno-aligned-new:        Warning Options
+Wno-all:        Warning Options
+Wno-alloc-size-larger-than:     Warning Options
+Wno-alloc-size-larger-than:     Warning Options
+Wno-alloc-zero:     Warning Options
+Wno-alloca:     Warning Options
+Wno-alloca-larger-than:     Warning Options
+Wno-alloca-larger-than:     Warning Options
+Wno-array-bounds:       Warning Options
+Wno-assign-intercept:       Objective-C and Objective-C++ Dialect Options
+Wno-attribute-warning:      Warning Options
+Wno-attributes:     Warning Options
+Wno-bad-function-cast:      Warning Options
+Wno-bool-compare:       Warning Options
+Wno-bool-operation:     Warning Options
+Wno-builtin-declaration-mismatch:       Warning Options
+Wno-builtin-macro-redefined:        Warning Options
+Wno-c++-compat:     Warning Options
+Wno-c++11-compat:       Warning Options
+Wno-c++14-compat:       Warning Options
+Wno-c++17-compat:       Warning Options
+Wno-c90-c99-compat:     Warning Options
+Wno-c99-c11-compat:     Warning Options
+Wno-cast-align:     Warning Options
+Wno-cast-function-type:     Warning Options
+Wno-cast-qual:      Warning Options
+Wno-catch-value:        Warning Options
+Wno-char-subscripts:        Warning Options
+Wno-class-conversion:       C++ Dialect Options
+Wno-class-memaccess:        C++ Dialect Options
+Wno-clobbered:      Warning Options
+Wno-conditionally-supported:        Warning Options
+Wno-conversion:     Warning Options
+Wno-conversion-null:        Warning Options
+Wno-coverage-mismatch:      Warning Options
+Wno-ctor-dtor-privacy:      C++ Dialect Options
+Wno-dangling-else:      Warning Options
+Wno-date-time:      Warning Options
+Wno-declaration-after-statement:        Warning Options
+Wno-delete-incomplete:      Warning Options
+Wno-delete-non-virtual-dtor:        C++ Dialect Options
+Wno-deprecated:     Warning Options
+Wno-deprecated-copy:        C++ Dialect Options
+Wno-deprecated-declarations:        Warning Options
+Wno-disabled-optimization:      Warning Options
+Wno-discarded-array-qualifiers:     Warning Options
+Wno-discarded-qualifiers:       Warning Options
+Wno-div-by-zero:        Warning Options
+Wno-double-promotion:       Warning Options
+Wno-duplicate-decl-specifier:       Warning Options
+Wno-duplicated-branches:        Warning Options
+Wno-duplicated-cond:        Warning Options
+Wno-effc++:     C++ Dialect Options
+Wno-empty-body:     Warning Options
+Wno-endif-labels:       Warning Options
+Wno-enum-compare:       Warning Options
+Wno-error:      Warning Options
+Wno-error=:     Warning Options
+Wno-extra:      Warning Options
+Wno-extra:      Warning Options
+Wno-extra:      Warning Options
+Wno-extra-semi:     Warning Options
+Wno-fatal-errors:       Warning Options
+Wno-float-conversion:       Warning Options
+Wno-float-equal:        Warning Options
+Wno-format:     Warning Options
+Wno-format:     Warning Options
+Wno-format-contains-nul:        Warning Options
+Wno-format-extra-args:      Warning Options
+Wno-format-nonliteral:      Warning Options
+Wno-format-overflow:        Warning Options
+Wno-format-overflow:        Warning Options
+Wno-format-security:        Warning Options
+Wno-format-signedness:      Warning Options
+Wno-format-truncation:      Warning Options
+Wno-format-truncation:      Warning Options
+Wno-format-y2k:     Warning Options
+Wno-format-zero-length:     Warning Options
+Wno-frame-address:      Warning Options
+Wno-frame-larger-than:      Warning Options
+Wno-frame-larger-than:      Warning Options
+Wno-free-nonheap-object:        Warning Options
+Wno-if-not-aligned:     Warning Options
+Wno-ignored-attributes:     Warning Options
+Wno-ignored-qualifiers:     Warning Options
+Wno-implicit:       Warning Options
+Wno-implicit-fallthrough:       Warning Options
+Wno-implicit-function-declaration:      Warning Options
+Wno-implicit-int:       Warning Options
+Wno-incompatible-pointer-types:     Warning Options
+Wno-inherited-variadic-ctor:        Warning Options
+Wno-init-list-lifetime:     C++ Dialect Options
+Wno-init-self:      Warning Options
+Wno-inline:     Warning Options
+Wno-int-conversion:     Warning Options
+Wno-int-in-bool-context:        Warning Options
+Wno-int-to-pointer-cast:        Warning Options
+Wno-invalid-memory-model:       Warning Options
+Wno-invalid-offsetof:       Warning Options
+Wno-invalid-pch:        Warning Options
+Wno-jump-misses-init:       Warning Options
+Wno-larger-than:        Warning Options
+Wno-literal-suffix:     C++ Dialect Options
+Wno-logical-not-parentheses:        Warning Options
+Wno-logical-op:     Warning Options
+Wno-long-long:      Warning Options
+Wno-lto-type-mismatch:      C++ Dialect Options
+Wno-main:       Warning Options
+Wno-maybe-uninitialized:        Warning Options
+Wno-memset-elt-size:        Warning Options
+Wno-memset-transposed-args:     Warning Options
+Wno-misleading-indentation:     Warning Options
+Wno-missing-attributes:     Warning Options
+Wno-missing-braces:     Warning Options
+Wno-missing-declarations:       Warning Options
+Wno-missing-field-initializers:     Warning Options
+Wno-missing-format-attribute:       Warning Options
+Wno-missing-include-dirs:       Warning Options
+Wno-missing-noreturn:       Warning Options
+Wno-missing-parameter-type:     Warning Options
+Wno-missing-profile:        Warning Options
+Wno-missing-prototypes:     Warning Options
+Wno-misspelled-isr:     AVR Options
+Wno-multichar:      Warning Options
+Wno-multiple-inheritance:       C++ Dialect Options
+Wno-multistatement-macros:      Warning Options
+Wno-namespaces:     C++ Dialect Options
+Wno-narrowing:      C++ Dialect Options
+Wno-nested-externs:     Warning Options
+Wno-noexcept:       C++ Dialect Options
+Wno-noexcept-type:      C++ Dialect Options
+Wno-non-template-friend:        C++ Dialect Options
+Wno-non-virtual-dtor:       C++ Dialect Options
+Wno-nonnull:        Warning Options
+Wno-nonnull-compare:        Warning Options
+Wno-normalized:     Warning Options
+Wno-null-dereference:       Warning Options
+Wno-odr:        Warning Options
+Wno-old-style-cast:     C++ Dialect Options
+Wno-old-style-declaration:      Warning Options
+Wno-old-style-definition:       Warning Options
+Wno-openmp-simd:        Warning Options
+Wno-overflow:       Warning Options
+Wno-overlength-strings:     Warning Options
+Wno-overloaded-virtual:     C++ Dialect Options
+Wno-override-init:      Warning Options
+Wno-override-init-side-effects:     Warning Options
+Wno-packed:     Warning Options
+Wno-packed-bitfield-compat:     Warning Options
+Wno-packed-not-aligned:     Warning Options
+Wno-padded:     Warning Options
+Wno-parentheses:        Warning Options
+Wno-pedantic:       Warning Options
+Wno-pedantic-ms-format:     Warning Options
+Wno-pessimizing-move:       C++ Dialect Options
+Wno-placement-new:      Warning Options
+Wno-pmf-conversions:        C++ Dialect Options
+Wno-pmf-conversions:        Bound member functions
+Wno-pointer-arith:      Warning Options
+Wno-pointer-compare:        Warning Options
+Wno-pointer-sign:       Warning Options
+Wno-pointer-to-int-cast:        Warning Options
+Wno-pragmas:        Warning Options
+Wno-prio-ctor-dtor:     Warning Options
+Wno-protocol:       Objective-C and Objective-C++ Dialect Options
+Wno-redundant-decls:        Warning Options
+Wno-redundant-move:     C++ Dialect Options
+Wno-register:       C++ Dialect Options
+Wno-reorder:        C++ Dialect Options
+Wno-restrict:       Warning Options
+Wno-return-local-addr:      Warning Options
+Wno-return-type:        Warning Options
+Wno-scalar-storage-order:       Warning Options
+Wno-selector:       Objective-C and Objective-C++ Dialect Options
+Wno-sequence-point:     Warning Options
+Wno-shadow:     Warning Options
+Wno-shadow-ivar:        Warning Options
+Wno-shift-count-negative:       Warning Options
+Wno-shift-count-overflow:       Warning Options
+Wno-shift-negative-value:       Warning Options
+Wno-shift-overflow:     Warning Options
+Wno-sign-compare:       Warning Options
+Wno-sign-conversion:        Warning Options
+Wno-sign-promo:     C++ Dialect Options
+Wno-sized-deallocation:     Warning Options
+Wno-sizeof-array-argument:      Warning Options
+Wno-sizeof-pointer-div:     Warning Options
+Wno-sizeof-pointer-memaccess:       Warning Options
+Wno-stack-protector:        Warning Options
+Wno-stack-usage:        Warning Options
+Wno-stack-usage:        Warning Options
+Wno-strict-aliasing:        Warning Options
+Wno-strict-null-sentinel:       C++ Dialect Options
+Wno-strict-overflow:        Warning Options
+Wno-strict-prototypes:      Warning Options
+Wno-strict-selector-match:      Objective-C and Objective-C++ Dialect Options
+Wno-stringop-overflow:      Warning Options
+Wno-stringop-overflow:      Warning Options
+Wno-stringop-truncation:        Warning Options
+Wno-subobject-linkage:      Warning Options
+Wno-suggest-attribute=:     Warning Options
+Wno-suggest-attribute=cold:     Warning Options
+Wno-suggest-attribute=const:        Warning Options
+Wno-suggest-attribute=format:       Warning Options
+Wno-suggest-attribute=malloc:       Warning Options
+Wno-suggest-attribute=noreturn:     Warning Options
+Wno-suggest-attribute=pure:     Warning Options
+Wno-suggest-final-methods:      Warning Options
+Wno-suggest-final-types:        Warning Options
+Wno-switch:     Warning Options
+Wno-switch-bool:        Warning Options
+Wno-switch-default:     Warning Options
+Wno-switch-enum:        Warning Options
+Wno-switch-unreachable:     Warning Options
+Wno-sync-nand:      Warning Options
+Wno-system-headers:     Warning Options
+Wno-tautological-compare:       Warning Options
+Wno-templates:      C++ Dialect Options
+Wno-terminate:      C++ Dialect Options
+Wno-traditional:        Warning Options
+Wno-traditional-conversion:     Warning Options
+Wno-trampolines:        Warning Options
+Wno-type-limits:        Warning Options
+Wno-undeclared-selector:        Objective-C and Objective-C++ Dialect Options
+Wno-undef:      Warning Options
+Wno-uninitialized:      Warning Options
+Wno-unknown-pragmas:        Warning Options
+Wno-unsafe-loop-optimizations:      Warning Options
+Wno-unsuffixed-float-constants:     Warning Options
+Wno-unused:     Warning Options
+Wno-unused-but-set-parameter:       Warning Options
+Wno-unused-but-set-variable:        Warning Options
+Wno-unused-const-variable:      Warning Options
+Wno-unused-function:        Warning Options
+Wno-unused-label:       Warning Options
+Wno-unused-local-typedefs:      Warning Options
+Wno-unused-parameter:       Warning Options
+Wno-unused-result:      Warning Options
+Wno-unused-value:       Warning Options
+Wno-unused-variable:        Warning Options
+Wno-useless-cast:       Warning Options
+Wno-varargs:        Warning Options
+Wno-variadic-macros:        Warning Options
+Wno-vector-operation-performance:       Warning Options
+Wno-virtual-inheritance:        C++ Dialect Options
+Wno-virtual-move-assign:        Warning Options
+Wno-vla:        Warning Options
+Wno-vla-larger-than:        Warning Options
+Wno-vla-larger-than:        Warning Options
+Wno-volatile-register-var:      Warning Options
+Wno-write-strings:      Warning Options
+Wno-zero-as-null-pointer-constant:      Warning Options
+Wnoexcept:      C++ Dialect Options
+Wnoexcept-type:     C++ Dialect Options
+Wnon-template-friend:       C++ Dialect Options
+Wnon-virtual-dtor:      C++ Dialect Options
+Wnonnull:       Warning Options
+Wnonnull-compare:       Warning Options
+Wnormalized:        Warning Options
+Wnormalized=:       Warning Options
+Wnull-dereference:      Warning Options
+Wodr:       Warning Options
+Wold-style-cast:        C++ Dialect Options
+Wold-style-declaration:     Warning Options
+Wold-style-definition:      Warning Options
+Wopenmp-simd:       Warning Options
+Woverflow:      Warning Options
+Woverlength-strings:        Warning Options
+Woverloaded-virtual:        C++ Dialect Options
+Woverride-init:     Warning Options
+Woverride-init-side-effects:        Warning Options
+Wp:     Preprocessor Options
+Wpacked:        Warning Options
+Wpacked-bitfield-compat:        Warning Options
+Wpacked-not-aligned:        Warning Options
+Wpadded:        Warning Options
+Wparentheses:       Warning Options
+Wpedantic:      Warning Options
+Wpedantic-ms-format:        Warning Options
+Wpessimizing-move:      C++ Dialect Options
+Wplacement-new:     Warning Options
+Wpmf-conversions:       C++ Dialect Options
+Wpointer-arith:     Warning Options
+Wpointer-arith:     Pointer Arith
+Wpointer-compare:       Warning Options
+Wpointer-sign:      Warning Options
+Wpointer-to-int-cast:       Warning Options
+Wpragmas:       Warning Options
+Wprio-ctor-dtor:        Warning Options
+Wprotocol:      Objective-C and Objective-C++ Dialect Options
+wrapper:        Overall Options
+Wredundant-decls:       Warning Options
+Wredundant-move:        C++ Dialect Options
+Wregister:      C++ Dialect Options
+Wreorder:       C++ Dialect Options
+Wrestrict:      Warning Options
+Wreturn-local-addr:     Warning Options
+Wreturn-type:       Warning Options
+Wscalar-storage-order:      Warning Options
+Wselector:      Objective-C and Objective-C++ Dialect Options
+Wsequence-point:        Warning Options
+Wshadow:        Warning Options
+Wshadow-ivar:       Warning Options
+Wshadow=compatible-local:       Warning Options
+Wshadow=local:      Warning Options
+Wshadow=local:      Warning Options
+Wshift-count-negative:      Warning Options
+Wshift-count-overflow:      Warning Options
+Wshift-negative-value:      Warning Options
+Wshift-overflow:        Warning Options
+Wsign-compare:      Warning Options
+Wsign-conversion:       Warning Options
+Wsign-promo:        C++ Dialect Options
+Wsized-deallocation:        Warning Options
+Wsizeof-array-argument:     Warning Options
+Wsizeof-pointer-div:        Warning Options
+Wsizeof-pointer-memaccess:      Warning Options
+Wstack-protector:       Warning Options
+Wstack-usage:       Warning Options
+Wstrict-aliasing:       Warning Options
+Wstrict-aliasing=n:     Warning Options
+Wstrict-null-sentinel:      C++ Dialect Options
+Wstrict-overflow:       Warning Options
+Wstrict-prototypes:     Warning Options
+Wstrict-selector-match:     Objective-C and Objective-C++ Dialect Options
+Wstringop-overflow:     Warning Options
+Wstringop-overflow:     Warning Options
+Wstringop-truncation:       Warning Options
+Wsubobject-linkage:     Warning Options
+Wsuggest-attribute=:        Warning Options
+Wsuggest-attribute=cold:        Warning Options
+Wsuggest-attribute=const:       Warning Options
+Wsuggest-attribute=format:      Warning Options
+Wsuggest-attribute=malloc:      Warning Options
+Wsuggest-attribute=noreturn:        Warning Options
+Wsuggest-attribute=pure:        Warning Options
+Wsuggest-final-methods:     Warning Options
+Wsuggest-final-types:       Warning Options
+Wswitch:        Warning Options
+Wswitch-bool:       Warning Options
+Wswitch-default:        Warning Options
+Wswitch-enum:       Warning Options
+Wswitch-unreachable:        Warning Options
+Wsync-nand:     Warning Options
+Wsystem-headers:        Warning Options
+Wtautological-compare:      Warning Options
+Wtemplates:     C++ Dialect Options
+Wterminate:     C++ Dialect Options
+Wtraditional:       Warning Options
+Wtraditional-conversion:        Warning Options
+Wtrampolines:       Warning Options
+Wtrigraphs:     Warning Options
+Wtype-limits:       Warning Options
+Wundeclared-selector:       Objective-C and Objective-C++ Dialect Options
+Wundef:     Warning Options
+Wuninitialized:     Warning Options
+Wunknown-pragmas:       Warning Options
+Wunsafe-loop-optimizations:     Warning Options
+Wunsuffixed-float-constants:        Warning Options
+Wunused:        Warning Options
+Wunused-but-set-parameter:      Warning Options
+Wunused-but-set-variable:       Warning Options
+Wunused-const-variable:     Warning Options
+Wunused-function:       Warning Options
+Wunused-label:      Warning Options
+Wunused-local-typedefs:     Warning Options
+Wunused-macros:     Warning Options
+Wunused-parameter:      Warning Options
+Wunused-result:     Warning Options
+Wunused-value:      Warning Options
+Wunused-variable:       Warning Options
+Wuseless-cast:      Warning Options
+Wvarargs:       Warning Options
+Wvariadic-macros:       Warning Options
+Wvector-operation-performance:      Warning Options
+Wvirtual-inheritance:       C++ Dialect Options
+Wvirtual-move-assign:       Warning Options
+Wvla:       Warning Options
+Wvla-larger-than=:      Warning Options
+Wvolatile-register-var:     Warning Options
+Wwrite-strings:     Warning Options
+Wzero-as-null-pointer-constant:     Warning Options
+X       
+x:      Overall Options
+Xassembler:     Assembler Options
+Xbind-lazy:     VxWorks Options
+Xbind-now:      VxWorks Options
+Xlinker:        Link Options
+Xpreprocessor:      Preprocessor Options
+Y       
+Ym:     System V Options
+YP:     System V Options
+Z       
+z:      Link Options
+Jump to:    #   -   8   
+A   B   C   D   E   F   G   H   I   K   L   M   N   O   P   Q   R   S   T   U   V   W   X   Y   Z  
+Next: Keyword Index, Previous: Contributors, Up: Top   [Contents][Index]
+
+
+
 gcc  options:::
  Option Summary
 Here is a summary of all the options, grouped by type. Explanations are in the following sections.
