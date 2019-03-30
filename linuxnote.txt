@@ -1,3 +1,1148 @@
+gcc  options:::
+ Option Summary
+Here is a summary of all the options, grouped by type. Explanations are in the following sections.
+
+Overall Options
+See Options Controlling the Kind of Output.
+
+-c  -S  -E  -o file  -x language  
+-v  -###  --help[=class[,…]]  --target-help  --version 
+-pass-exit-codes  -pipe  -specs=file  -wrapper  
+@file  -ffile-prefix-map=old=new  
+-fplugin=file  -fplugin-arg-name=arg  
+-fdump-ada-spec[-slim]  -fada-spec-parent=unit  -fdump-go-spec=file
+C Language Options
+See Options Controlling C Dialect.
+
+-ansi  -std=standard  -fgnu89-inline 
+-fpermitted-flt-eval-methods=standard 
+-aux-info filename  -fallow-parameterless-variadic-functions 
+-fno-asm  -fno-builtin  -fno-builtin-function  -fgimple
+-fhosted  -ffreestanding  -fopenacc  -fopenmp  -fopenmp-simd 
+-fms-extensions  -fplan9-extensions  -fsso-struct=endianness 
+-fallow-single-precision  -fcond-mismatch  -flax-vector-conversions 
+-fsigned-bitfields  -fsigned-char 
+-funsigned-bitfields  -funsigned-char
+C++ Language Options
+See Options Controlling C++ Dialect.
+
+-fabi-version=n  -fno-access-control 
+-faligned-new=n  -fargs-in-order=n  -fcheck-new 
+-fconstexpr-depth=n  -fconstexpr-loop-limit=n 
+-ffriend-injection 
+-fno-elide-constructors 
+-fno-enforce-eh-specs 
+-ffor-scope  -fno-for-scope  -fno-gnu-keywords 
+-fno-implicit-templates 
+-fno-implicit-inline-templates 
+-fno-implement-inlines  -fms-extensions 
+-fnew-inheriting-ctors 
+-fnew-ttp-matching 
+-fno-nonansi-builtins  -fnothrow-opt  -fno-operator-names 
+-fno-optional-diags  -fpermissive 
+-fno-pretty-templates 
+-frepo  -fno-rtti  -fsized-deallocation 
+-ftemplate-backtrace-limit=n 
+-ftemplate-depth=n 
+-fno-threadsafe-statics  -fuse-cxa-atexit 
+-fno-weak  -nostdinc++ 
+-fvisibility-inlines-hidden 
+-fvisibility-ms-compat 
+-fext-numeric-literals 
+-Wabi=n  -Wabi-tag  -Wconversion-null  -Wctor-dtor-privacy 
+-Wdelete-non-virtual-dtor  -Wliteral-suffix  -Wmultiple-inheritance 
+-Wnamespaces  -Wnarrowing 
+-Wnoexcept  -Wnoexcept-type  -Wclass-memaccess 
+-Wnon-virtual-dtor  -Wreorder  -Wregister 
+-Weffc++  -Wstrict-null-sentinel  -Wtemplates 
+-Wno-non-template-friend  -Wold-style-cast 
+-Woverloaded-virtual  -Wno-pmf-conversions 
+-Wsign-promo  -Wvirtual-inheritance
+Objective-C and Objective-C++ Language Options
+See Options Controlling Objective-C and Objective-C++ Dialects.
+
+-fconstant-string-class=class-name 
+-fgnu-runtime  -fnext-runtime 
+-fno-nil-receivers 
+-fobjc-abi-version=n 
+-fobjc-call-cxx-cdtors 
+-fobjc-direct-dispatch 
+-fobjc-exceptions 
+-fobjc-gc 
+-fobjc-nilcheck 
+-fobjc-std=objc1 
+-fno-local-ivars 
+-fivar-visibility=[public|protected|private|package] 
+-freplace-objc-classes 
+-fzero-link 
+-gen-decls 
+-Wassign-intercept 
+-Wno-protocol  -Wselector 
+-Wstrict-selector-match 
+-Wundeclared-selector
+Diagnostic Message Formatting Options
+See Options to Control Diagnostic Messages Formatting.
+
+-fmessage-length=n  
+-fdiagnostics-show-location=[once|every-line]  
+-fdiagnostics-color=[auto|never|always]  
+-fno-diagnostics-show-option  -fno-diagnostics-show-caret 
+-fdiagnostics-parseable-fixits  -fdiagnostics-generate-patch 
+-fdiagnostics-show-template-tree -fno-elide-type 
+-fno-show-column
+Warning Options
+See Options to Request or Suppress Warnings.
+
+-fsyntax-only  -fmax-errors=n  -Wpedantic 
+-pedantic-errors 
+-w  -Wextra  -Wall  -Waddress  -Waggregate-return  -Waligned-new 
+-Walloc-zero  -Walloc-size-larger-than=n
+-Walloca  -Walloca-larger-than=n 
+-Wno-aggressive-loop-optimizations  -Warray-bounds  -Warray-bounds=n 
+-Wno-attributes  -Wbool-compare  -Wbool-operation 
+-Wno-builtin-declaration-mismatch 
+-Wno-builtin-macro-redefined  -Wc90-c99-compat  -Wc99-c11-compat 
+-Wc++-compat  -Wc++11-compat  -Wc++14-compat  
+-Wcast-align  -Wcast-align=strict  -Wcast-function-type  -Wcast-qual  
+-Wchar-subscripts  -Wchkp  -Wcatch-value  -Wcatch-value=n 
+-Wclobbered  -Wcomment  -Wconditionally-supported 
+-Wconversion  -Wcoverage-mismatch  -Wno-cpp  -Wdangling-else  -Wdate-time 
+-Wdelete-incomplete 
+-Wno-deprecated  -Wno-deprecated-declarations  -Wno-designated-init 
+-Wdisabled-optimization 
+-Wno-discarded-qualifiers  -Wno-discarded-array-qualifiers 
+-Wno-div-by-zero  -Wdouble-promotion 
+-Wduplicated-branches  -Wduplicated-cond 
+-Wempty-body  -Wenum-compare  -Wno-endif-labels  -Wexpansion-to-defined 
+-Werror  -Werror=*  -Wextra-semi  -Wfatal-errors 
+-Wfloat-equal  -Wformat  -Wformat=2 
+-Wno-format-contains-nul  -Wno-format-extra-args  
+-Wformat-nonliteral -Wformat-overflow=n 
+-Wformat-security  -Wformat-signedness  -Wformat-truncation=n 
+-Wformat-y2k  -Wframe-address 
+-Wframe-larger-than=len  -Wno-free-nonheap-object  -Wjump-misses-init 
+-Wif-not-aligned 
+-Wignored-qualifiers  -Wignored-attributes  -Wincompatible-pointer-types 
+-Wimplicit  -Wimplicit-fallthrough  -Wimplicit-fallthrough=n 
+-Wimplicit-function-declaration  -Wimplicit-int 
+-Winit-self  -Winline  -Wno-int-conversion  -Wint-in-bool-context 
+-Wno-int-to-pointer-cast  -Winvalid-memory-model  -Wno-invalid-offsetof 
+-Winvalid-pch  -Wlarger-than=len 
+-Wlogical-op  -Wlogical-not-parentheses  -Wlong-long 
+-Wmain  -Wmaybe-uninitialized  -Wmemset-elt-size  -Wmemset-transposed-args 
+-Wmisleading-indentation  -Wmissing-attributes -Wmissing-braces 
+-Wmissing-field-initializers  -Wmissing-include-dirs 
+-Wno-multichar  -Wmultistatement-macros  -Wnonnull  -Wnonnull-compare 
+-Wnormalized=[none|id|nfc|nfkc] 
+-Wnull-dereference  -Wodr  -Wno-overflow  -Wopenmp-simd  
+-Woverride-init-side-effects  -Woverlength-strings 
+-Wpacked  -Wpacked-bitfield-compat -Wpacked-not-aligned -Wpadded 
+-Wparentheses  -Wno-pedantic-ms-format 
+-Wplacement-new  -Wplacement-new=n 
+-Wpointer-arith  -Wpointer-compare  -Wno-pointer-to-int-cast 
+-Wno-pragmas  -Wredundant-decls  -Wrestrict  -Wno-return-local-addr 
+-Wreturn-type  -Wsequence-point  -Wshadow  -Wno-shadow-ivar 
+-Wshadow=global,  -Wshadow=local,  -Wshadow=compatible-local 
+-Wshift-overflow  -Wshift-overflow=n 
+-Wshift-count-negative  -Wshift-count-overflow  -Wshift-negative-value 
+-Wsign-compare  -Wsign-conversion  -Wfloat-conversion 
+-Wno-scalar-storage-order  -Wsizeof-pointer-div 
+-Wsizeof-pointer-memaccess  -Wsizeof-array-argument 
+-Wstack-protector  -Wstack-usage=len  -Wstrict-aliasing 
+-Wstrict-aliasing=n  -Wstrict-overflow  -Wstrict-overflow=n 
+-Wstringop-overflow=n -Wstringop-truncation 
+-Wsuggest-attribute=[pure|const|noreturn|format|malloc] 
+-Wsuggest-final-types   -Wsuggest-final-methods  -Wsuggest-override 
+-Wmissing-format-attribute  -Wsubobject-linkage 
+-Wswitch  -Wswitch-bool  -Wswitch-default  -Wswitch-enum 
+-Wswitch-unreachable  -Wsync-nand 
+-Wsystem-headers  -Wtautological-compare  -Wtrampolines  -Wtrigraphs 
+-Wtype-limits  -Wundef 
+-Wuninitialized  -Wunknown-pragmas 
+-Wunsuffixed-float-constants  -Wunused  -Wunused-function 
+-Wunused-label  -Wunused-local-typedefs  -Wunused-macros 
+-Wunused-parameter  -Wno-unused-result 
+-Wunused-value  -Wunused-variable 
+-Wunused-const-variable  -Wunused-const-variable=n 
+-Wunused-but-set-parameter  -Wunused-but-set-variable 
+-Wuseless-cast  -Wvariadic-macros  -Wvector-operation-performance 
+-Wvla  -Wvla-larger-than=n  -Wvolatile-register-var  -Wwrite-strings 
+-Wzero-as-null-pointer-constant  -Whsa
+C and Objective-C-only Warning Options
+-Wbad-function-cast  -Wmissing-declarations 
+-Wmissing-parameter-type  -Wmissing-prototypes  -Wnested-externs 
+-Wold-style-declaration  -Wold-style-definition 
+-Wstrict-prototypes  -Wtraditional  -Wtraditional-conversion 
+-Wdeclaration-after-statement  -Wpointer-sign
+Debugging Options
+See Options for Debugging Your Program.
+
+-g  -glevel  -gdwarf  -gdwarf-version 
+-ggdb  -grecord-gcc-switches  -gno-record-gcc-switches 
+-gstabs  -gstabs+  -gstrict-dwarf  -gno-strict-dwarf 
+-gas-loc-support  -gno-as-loc-support 
+-gas-locview-support  -gno-as-locview-support 
+-gcolumn-info  -gno-column-info 
+-gstatement-frontiers  -gno-statement-frontiers 
+-gvariable-location-views  -gno-variable-location-views 
+-ginternal-reset-location-views  -gno-internal-reset-location-views 
+-ginline-points  -gno-inline-points 
+-gvms  -gxcoff  -gxcoff+  -gz[=type] 
+-fdebug-prefix-map=old=new  -fdebug-types-section 
+-fno-eliminate-unused-debug-types 
+-femit-struct-debug-baseonly  -femit-struct-debug-reduced 
+-femit-struct-debug-detailed[=spec-list] 
+-feliminate-unused-debug-symbols  -femit-class-debug-always 
+-fno-merge-debug-strings  -fno-dwarf2-cfi-asm 
+-fvar-tracking  -fvar-tracking-assignments
+Optimization Options
+See Options that Control Optimization.
+
+-faggressive-loop-optimizations  -falign-functions[=n] 
+-falign-jumps[=n] 
+-falign-labels[=n]  -falign-loops[=n] 
+-fassociative-math  -fauto-profile  -fauto-profile[=path] 
+-fauto-inc-dec  -fbranch-probabilities 
+-fbranch-target-load-optimize  -fbranch-target-load-optimize2 
+-fbtr-bb-exclusive  -fcaller-saves 
+-fcombine-stack-adjustments  -fconserve-stack 
+-fcompare-elim  -fcprop-registers  -fcrossjumping 
+-fcse-follow-jumps  -fcse-skip-blocks  -fcx-fortran-rules 
+-fcx-limited-range 
+-fdata-sections  -fdce  -fdelayed-branch 
+-fdelete-null-pointer-checks  -fdevirtualize  -fdevirtualize-speculatively 
+-fdevirtualize-at-ltrans  -fdse 
+-fearly-inlining  -fipa-sra  -fexpensive-optimizations  -ffat-lto-objects 
+-ffast-math  -ffinite-math-only  -ffloat-store  -fexcess-precision=style 
+-fforward-propagate  -ffp-contract=style  -ffunction-sections 
+-fgcse  -fgcse-after-reload  -fgcse-las  -fgcse-lm  -fgraphite-identity 
+-fgcse-sm  -fhoist-adjacent-loads  -fif-conversion 
+-fif-conversion2  -findirect-inlining 
+-finline-functions  -finline-functions-called-once  -finline-limit=n 
+-finline-small-functions  -fipa-cp  -fipa-cp-clone 
+-fipa-bit-cp -fipa-vrp 
+-fipa-pta  -fipa-profile  -fipa-pure-const  -fipa-reference  -fipa-icf 
+-fira-algorithm=algorithm 
+-fira-region=region  -fira-hoist-pressure 
+-fira-loop-pressure  -fno-ira-share-save-slots 
+-fno-ira-share-spill-slots 
+-fisolate-erroneous-paths-dereference  -fisolate-erroneous-paths-attribute 
+-fivopts  -fkeep-inline-functions  -fkeep-static-functions 
+-fkeep-static-consts  -flimit-function-alignment  -flive-range-shrinkage 
+-floop-block  -floop-interchange  -floop-strip-mine 
+-floop-unroll-and-jam  -floop-nest-optimize 
+-floop-parallelize-all  -flra-remat  -flto  -flto-compression-level 
+-flto-partition=alg  -fmerge-all-constants 
+-fmerge-constants  -fmodulo-sched  -fmodulo-sched-allow-regmoves 
+-fmove-loop-invariants  -fno-branch-count-reg 
+-fno-defer-pop  -fno-fp-int-builtin-inexact  -fno-function-cse 
+-fno-guess-branch-probability  -fno-inline  -fno-math-errno  -fno-peephole 
+-fno-peephole2  -fno-printf-return-value  -fno-sched-interblock 
+-fno-sched-spec  -fno-signed-zeros 
+-fno-toplevel-reorder  -fno-trapping-math  -fno-zero-initialized-in-bss 
+-fomit-frame-pointer  -foptimize-sibling-calls 
+-fpartial-inlining  -fpeel-loops  -fpredictive-commoning 
+-fprefetch-loop-arrays 
+-fprofile-correction 
+-fprofile-use  -fprofile-use=path  -fprofile-values 
+-fprofile-reorder-functions 
+-freciprocal-math  -free  -frename-registers  -freorder-blocks 
+-freorder-blocks-algorithm=algorithm 
+-freorder-blocks-and-partition  -freorder-functions 
+-frerun-cse-after-loop  -freschedule-modulo-scheduled-loops 
+-frounding-math  -fsched2-use-superblocks  -fsched-pressure 
+-fsched-spec-load  -fsched-spec-load-dangerous 
+-fsched-stalled-insns-dep[=n]  -fsched-stalled-insns[=n] 
+-fsched-group-heuristic  -fsched-critical-path-heuristic 
+-fsched-spec-insn-heuristic  -fsched-rank-heuristic 
+-fsched-last-insn-heuristic  -fsched-dep-count-heuristic 
+-fschedule-fusion 
+-fschedule-insns  -fschedule-insns2  -fsection-anchors 
+-fselective-scheduling  -fselective-scheduling2 
+-fsel-sched-pipelining  -fsel-sched-pipelining-outer-loops 
+-fsemantic-interposition  -fshrink-wrap  -fshrink-wrap-separate 
+-fsignaling-nans 
+-fsingle-precision-constant  -fsplit-ivs-in-unroller  -fsplit-loops
+-fsplit-paths 
+-fsplit-wide-types  -fssa-backprop  -fssa-phiopt 
+-fstdarg-opt  -fstore-merging  -fstrict-aliasing 
+-fthread-jumps  -ftracer  -ftree-bit-ccp 
+-ftree-builtin-call-dce  -ftree-ccp  -ftree-ch 
+-ftree-coalesce-vars  -ftree-copy-prop  -ftree-dce  -ftree-dominator-opts 
+-ftree-dse  -ftree-forwprop  -ftree-fre  -fcode-hoisting 
+-ftree-loop-if-convert  -ftree-loop-im 
+-ftree-phiprop  -ftree-loop-distribution  -ftree-loop-distribute-patterns 
+-ftree-loop-ivcanon  -ftree-loop-linear  -ftree-loop-optimize 
+-ftree-loop-vectorize 
+-ftree-parallelize-loops=n  -ftree-pre  -ftree-partial-pre  -ftree-pta 
+-ftree-reassoc  -ftree-sink  -ftree-slsr  -ftree-sra 
+-ftree-switch-conversion  -ftree-tail-merge 
+-ftree-ter  -ftree-vectorize  -ftree-vrp  -funconstrained-commons 
+-funit-at-a-time  -funroll-all-loops  -funroll-loops 
+-funsafe-math-optimizations  -funswitch-loops 
+-fipa-ra  -fvariable-expansion-in-unroller  -fvect-cost-model  -fvpt 
+-fweb  -fwhole-program  -fwpa  -fuse-linker-plugin 
+--param name=value
+-O  -O0  -O1  -O2  -O3  -Os  -Ofast  -Og
+Program Instrumentation Options
+See Program Instrumentation Options.
+
+-p  -pg  -fprofile-arcs  --coverage  -ftest-coverage 
+-fprofile-abs-path 
+-fprofile-dir=path  -fprofile-generate  -fprofile-generate=path 
+-fsanitize=style  -fsanitize-recover  -fsanitize-recover=style 
+-fasan-shadow-offset=number  -fsanitize-sections=s1,s2,... 
+-fsanitize-undefined-trap-on-error  -fbounds-check 
+-fcheck-pointer-bounds  -fchkp-check-incomplete-type 
+-fchkp-first-field-has-own-bounds  -fchkp-narrow-bounds 
+-fchkp-narrow-to-innermost-array  -fchkp-optimize 
+-fchkp-use-fast-string-functions  -fchkp-use-nochk-string-functions 
+-fchkp-use-static-bounds  -fchkp-use-static-const-bounds 
+-fchkp-treat-zero-dynamic-size-as-infinite  -fchkp-check-read 
+-fchkp-check-read  -fchkp-check-write  -fchkp-store-bounds 
+-fchkp-instrument-calls  -fchkp-instrument-marked-only 
+-fchkp-use-wrappers  -fchkp-flexible-struct-trailing-arrays
+-fcf-protection=[full|branch|return|none] 
+-fstack-protector  -fstack-protector-all  -fstack-protector-strong 
+-fstack-protector-explicit  -fstack-check 
+-fstack-limit-register=reg  -fstack-limit-symbol=sym 
+-fno-stack-limit  -fsplit-stack 
+-fvtable-verify=[std|preinit|none] 
+-fvtv-counts  -fvtv-debug 
+-finstrument-functions 
+-finstrument-functions-exclude-function-list=sym,sym,… 
+-finstrument-functions-exclude-file-list=file,file,…
+Preprocessor Options
+See Options Controlling the Preprocessor.
+
+-Aquestion=answer 
+-A-question[=answer] 
+-C  -CC  -Dmacro[=defn] 
+-dD  -dI  -dM  -dN  -dU 
+-fdebug-cpp  -fdirectives-only  -fdollars-in-identifiers  
+-fexec-charset=charset  -fextended-identifiers  
+-finput-charset=charset -fmacro-prefix-map=old=new  
+-fno-canonical-system-headers  -fpch-deps  -fpch-preprocess  
+-fpreprocessed -ftabstop=width  -ftrack-macro-expansion  
+-fwide-exec-charset=charset  -fworking-directory 
+-H  -imacros file  -include file 
+-M  -MD  -MF  -MG  -MM  -MMD  -MP  -MQ  -MT 
+-no-integrated-cpp  -P  -pthread  -remap 
+-traditional  -traditional-cpp  -trigraphs 
+-Umacro  -undef  
+-Wp,option  -Xpreprocessor option
+Assembler Options
+See Passing Options to the Assembler.
+
+-Wa,option  -Xassembler option
+Linker Options
+See Options for Linking.
+
+object-file-name  -fuse-ld=linker  -llibrary 
+-nostartfiles  -nodefaultlibs  -nostdlib  -pie  -pthread  -rdynamic 
+-s  -static -static-pie -static-libgcc  -static-libstdc++ 
+-static-libasan  -static-libtsan  -static-liblsan  -static-libubsan 
+-static-libmpx  -static-libmpxwrappers 
+-shared  -shared-libgcc  -symbolic 
+-T script  -Wl,option  -Xlinker option 
+-u symbol  -z keyword
+Directory Options
+See Options for Directory Search.
+
+-Bprefix  -Idir  -I- 
+-idirafter dir 
+-imacros file  -imultilib dir 
+-iplugindir=dir  -iprefix file 
+-iquote dir  -isysroot dir  -isystem dir 
+-iwithprefix dir  -iwithprefixbefore dir  
+-Ldir  -no-canonical-prefixes  --no-sysroot-suffix 
+-nostdinc  -nostdinc++  --sysroot=dir
+Code Generation Options
+See Options for Code Generation Conventions.
+
+-fcall-saved-reg  -fcall-used-reg 
+-ffixed-reg  -fexceptions 
+-fnon-call-exceptions  -fdelete-dead-exceptions  -funwind-tables 
+-fasynchronous-unwind-tables 
+-fno-gnu-unique 
+-finhibit-size-directive  -fno-common  -fno-ident 
+-fpcc-struct-return  -fpic  -fPIC  -fpie  -fPIE  -fno-plt 
+-fno-jump-tables 
+-frecord-gcc-switches 
+-freg-struct-return  -fshort-enums  -fshort-wchar 
+-fverbose-asm  -fpack-struct[=n]  
+-fleading-underscore  -ftls-model=model 
+-fstack-reuse=reuse_level 
+-ftrampolines  -ftrapv  -fwrapv 
+-fvisibility=[default|internal|hidden|protected] 
+-fstrict-volatile-bitfields  -fsync-libcalls
+Developer Options
+See GCC Developer Options.
+
+-dletters  -dumpspecs  -dumpmachine  -dumpversion 
+-dumpfullversion  -fchecking  -fchecking=n  -fdbg-cnt-list 
+-fdbg-cnt=counter-value-list 
+-fdisable-ipa-pass_name 
+-fdisable-rtl-pass_name 
+-fdisable-rtl-pass-name=range-list 
+-fdisable-tree-pass_name 
+-fdisable-tree-pass-name=range-list 
+-fdump-noaddr  -fdump-unnumbered  -fdump-unnumbered-links 
+-fdump-class-hierarchy[-n] 
+-fdump-final-insns[=file] 
+-fdump-ipa-all  -fdump-ipa-cgraph  -fdump-ipa-inline 
+-fdump-lang-all 
+-fdump-lang-switch 
+-fdump-lang-switch-options 
+-fdump-lang-switch-options=filename 
+-fdump-passes 
+-fdump-rtl-pass  -fdump-rtl-pass=filename 
+-fdump-statistics 
+-fdump-tree-all 
+-fdump-tree-switch 
+-fdump-tree-switch-options 
+-fdump-tree-switch-options=filename 
+-fcompare-debug[=opts]  -fcompare-debug-second 
+-fenable-kind-pass 
+-fenable-kind-pass=range-list 
+-fira-verbose=n 
+-flto-report  -flto-report-wpa  -fmem-report-wpa 
+-fmem-report  -fpre-ipa-mem-report  -fpost-ipa-mem-report 
+-fopt-info  -fopt-info-options[=file] 
+-fprofile-report 
+-frandom-seed=string  -fsched-verbose=n 
+-fsel-sched-verbose  -fsel-sched-dump-cfg  -fsel-sched-pipelining-verbose 
+-fstats  -fstack-usage  -ftime-report  -ftime-report-details 
+-fvar-tracking-assignments-toggle  -gtoggle 
+-print-file-name=library  -print-libgcc-file-name 
+-print-multi-directory  -print-multi-lib  -print-multi-os-directory 
+-print-prog-name=program  -print-search-dirs  -Q 
+-print-sysroot  -print-sysroot-headers-suffix 
+-save-temps  -save-temps=cwd  -save-temps=obj  -time[=file]
+Machine-Dependent Options
+See Machine-Dependent Options.
+
+AArch64 Options
+
+-mabi=name  -mbig-endian  -mlittle-endian 
+-mgeneral-regs-only 
+-mcmodel=tiny  -mcmodel=small  -mcmodel=large 
+-mstrict-align 
+-momit-leaf-frame-pointer 
+-mtls-dialect=desc  -mtls-dialect=traditional 
+-mtls-size=size 
+-mfix-cortex-a53-835769  -mfix-cortex-a53-843419 
+-mlow-precision-recip-sqrt  -mlow-precision-sqrt  -mlow-precision-div 
+-mpc-relative-literal-loads 
+-msign-return-address=scope 
+-march=name  -mcpu=name  -mtune=name  
+-moverride=string  -mverbose-cost-dump
+Adapteva Epiphany Options
+
+-mhalf-reg-file  -mprefer-short-insn-regs 
+-mbranch-cost=num  -mcmove  -mnops=num  -msoft-cmpsf 
+-msplit-lohi  -mpost-inc  -mpost-modify  -mstack-offset=num 
+-mround-nearest  -mlong-calls  -mshort-calls  -msmall16 
+-mfp-mode=mode  -mvect-double  -max-vect-align=num 
+-msplit-vecmove-early  -m1reg-reg
+ARC Options
+
+-mbarrel-shifter -mjli-always 
+-mcpu=cpu  -mA6  -mARC600  -mA7  -mARC700 
+-mdpfp  -mdpfp-compact  -mdpfp-fast  -mno-dpfp-lrsr 
+-mea  -mno-mpy  -mmul32x16  -mmul64  -matomic 
+-mnorm  -mspfp  -mspfp-compact  -mspfp-fast  -msimd  -msoft-float  -mswap 
+-mcrc  -mdsp-packa  -mdvbf  -mlock  -mmac-d16  -mmac-24  -mrtsc  -mswape 
+-mtelephony  -mxy  -misize  -mannotate-align  -marclinux  -marclinux_prof 
+-mlong-calls  -mmedium-calls  -msdata -mirq-ctrl-saved 
+-mrgf-banked-regs -mlpc-width=width -G num 
+-mvolatile-cache  -mtp-regno=regno 
+-malign-call  -mauto-modify-reg  -mbbit-peephole  -mno-brcc 
+-mcase-vector-pcrel  -mcompact-casesi  -mno-cond-exec  -mearly-cbranchsi 
+-mexpand-adddi  -mindexed-loads  -mlra  -mlra-priority-none 
+-mlra-priority-compact mlra-priority-noncompact  -mno-millicode 
+-mmixed-code  -mq-class  -mRcq  -mRcw  -msize-level=level 
+-mtune=cpu  -mmultcost=num 
+-munalign-prob-threshold=probability  -mmpy-option=multo 
+-mdiv-rem  -mcode-density  -mll64  -mfpu=fpu -mrf16
+ARM Options
+
+-mapcs-frame  -mno-apcs-frame 
+-mabi=name 
+-mapcs-stack-check  -mno-apcs-stack-check 
+-mapcs-reentrant  -mno-apcs-reentrant 
+-msched-prolog  -mno-sched-prolog 
+-mlittle-endian  -mbig-endian 
+-mbe8 -mbe32 
+-mfloat-abi=name 
+-mfp16-format=name
+-mthumb-interwork  -mno-thumb-interwork 
+-mcpu=name  -march=name  -mfpu=name  
+-mtune=name  -mprint-tune-info 
+-mstructure-size-boundary=n 
+-mabort-on-noreturn 
+-mlong-calls  -mno-long-calls 
+-msingle-pic-base  -mno-single-pic-base 
+-mpic-register=reg 
+-mnop-fun-dllimport 
+-mpoke-function-name 
+-mthumb  -marm  -mflip-thumb 
+-mtpcs-frame  -mtpcs-leaf-frame 
+-mcaller-super-interworking  -mcallee-super-interworking 
+-mtp=name  -mtls-dialect=dialect 
+-mword-relocations 
+-mfix-cortex-m3-ldrd 
+-munaligned-access 
+-mneon-for-64bits 
+-mslow-flash-data 
+-masm-syntax-unified 
+-mrestrict-it 
+-mverbose-cost-dump 
+-mpure-code 
+-mcmse
+AVR Options
+
+-mmcu=mcu  -mabsdata  -maccumulate-args 
+-mbranch-cost=cost 
+-mcall-prologues  -mgas-isr-prologues  -mint8 
+-mn_flash=size  -mno-interrupts 
+-mmain-is-OS_task -mrelax  -mrmw  -mstrict-X  -mtiny-stack 
+-mfract-convert-truncate 
+-mshort-calls  -nodevicelib 
+-Waddr-space-convert  -Wmisspelled-isr
+Blackfin Options
+
+-mcpu=cpu[-sirevision] 
+-msim  -momit-leaf-frame-pointer  -mno-omit-leaf-frame-pointer 
+-mspecld-anomaly  -mno-specld-anomaly  -mcsync-anomaly  -mno-csync-anomaly 
+-mlow-64k  -mno-low64k  -mstack-check-l1  -mid-shared-library 
+-mno-id-shared-library  -mshared-library-id=n 
+-mleaf-id-shared-library  -mno-leaf-id-shared-library 
+-msep-data  -mno-sep-data  -mlong-calls  -mno-long-calls 
+-mfast-fp  -minline-plt  -mmulticore  -mcorea  -mcoreb  -msdram 
+-micplb
+C6X Options
+
+-mbig-endian  -mlittle-endian  -march=cpu 
+-msim  -msdata=sdata-type
+CRIS Options
+
+-mcpu=cpu  -march=cpu  -mtune=cpu 
+-mmax-stack-frame=n  -melinux-stacksize=n 
+-metrax4  -metrax100  -mpdebug  -mcc-init  -mno-side-effects 
+-mstack-align  -mdata-align  -mconst-align 
+-m32-bit  -m16-bit  -m8-bit  -mno-prologue-epilogue  -mno-gotplt 
+-melf  -maout  -melinux  -mlinux  -sim  -sim2 
+-mmul-bug-workaround  -mno-mul-bug-workaround
+CR16 Options
+
+-mmac 
+-mcr16cplus  -mcr16c 
+-msim  -mint32  -mbit-ops
+-mdata-model=model
+Darwin Options
+
+-all_load  -allowable_client  -arch  -arch_errors_fatal 
+-arch_only  -bind_at_load  -bundle  -bundle_loader 
+-client_name  -compatibility_version  -current_version 
+-dead_strip 
+-dependency-file  -dylib_file  -dylinker_install_name 
+-dynamic  -dynamiclib  -exported_symbols_list 
+-filelist  -flat_namespace  -force_cpusubtype_ALL 
+-force_flat_namespace  -headerpad_max_install_names 
+-iframework 
+-image_base  -init  -install_name  -keep_private_externs 
+-multi_module  -multiply_defined  -multiply_defined_unused 
+-noall_load   -no_dead_strip_inits_and_terms 
+-nofixprebinding  -nomultidefs  -noprebind  -noseglinkedit 
+-pagezero_size  -prebind  -prebind_all_twolevel_modules 
+-private_bundle  -read_only_relocs  -sectalign 
+-sectobjectsymbols  -whyload  -seg1addr 
+-sectcreate  -sectobjectsymbols  -sectorder 
+-segaddr  -segs_read_only_addr  -segs_read_write_addr 
+-seg_addr_table  -seg_addr_table_filename  -seglinkedit 
+-segprot  -segs_read_only_addr  -segs_read_write_addr 
+-single_module  -static  -sub_library  -sub_umbrella 
+-twolevel_namespace  -umbrella  -undefined 
+-unexported_symbols_list  -weak_reference_mismatches 
+-whatsloaded  -F  -gused  -gfull  -mmacosx-version-min=version 
+-mkernel  -mone-byte-bool
+DEC Alpha Options
+
+-mno-fp-regs  -msoft-float 
+-mieee  -mieee-with-inexact  -mieee-conformant 
+-mfp-trap-mode=mode  -mfp-rounding-mode=mode 
+-mtrap-precision=mode  -mbuild-constants 
+-mcpu=cpu-type  -mtune=cpu-type 
+-mbwx  -mmax  -mfix  -mcix 
+-mfloat-vax  -mfloat-ieee 
+-mexplicit-relocs  -msmall-data  -mlarge-data 
+-msmall-text  -mlarge-text 
+-mmemory-latency=time
+FR30 Options
+
+-msmall-model  -mno-lsim
+FT32 Options
+
+-msim  -mlra  -mnodiv  -mft32b  -mcompress  -mnopm
+FRV Options
+
+-mgpr-32  -mgpr-64  -mfpr-32  -mfpr-64 
+-mhard-float  -msoft-float 
+-malloc-cc  -mfixed-cc  -mdword  -mno-dword 
+-mdouble  -mno-double 
+-mmedia  -mno-media  -mmuladd  -mno-muladd 
+-mfdpic  -minline-plt  -mgprel-ro  -multilib-library-pic 
+-mlinked-fp  -mlong-calls  -malign-labels 
+-mlibrary-pic  -macc-4  -macc-8 
+-mpack  -mno-pack  -mno-eflags  -mcond-move  -mno-cond-move 
+-moptimize-membar  -mno-optimize-membar 
+-mscc  -mno-scc  -mcond-exec  -mno-cond-exec 
+-mvliw-branch  -mno-vliw-branch 
+-mmulti-cond-exec  -mno-multi-cond-exec  -mnested-cond-exec 
+-mno-nested-cond-exec  -mtomcat-stats 
+-mTLS  -mtls 
+-mcpu=cpu
+GNU/Linux Options
+
+-mglibc  -muclibc  -mmusl  -mbionic  -mandroid 
+-tno-android-cc  -tno-android-ld
+H8/300 Options
+
+-mrelax  -mh  -ms  -mn  -mexr  -mno-exr  -mint32  -malign-300
+HPPA Options
+
+-march=architecture-type 
+-mcaller-copies  -mdisable-fpregs  -mdisable-indexing 
+-mfast-indirect-calls  -mgas  -mgnu-ld   -mhp-ld 
+-mfixed-range=register-range 
+-mjump-in-delay  -mlinker-opt  -mlong-calls 
+-mlong-load-store  -mno-disable-fpregs 
+-mno-disable-indexing  -mno-fast-indirect-calls  -mno-gas 
+-mno-jump-in-delay  -mno-long-load-store 
+-mno-portable-runtime  -mno-soft-float 
+-mno-space-regs  -msoft-float  -mpa-risc-1-0 
+-mpa-risc-1-1  -mpa-risc-2-0  -mportable-runtime 
+-mschedule=cpu-type  -mspace-regs  -msio  -mwsio 
+-munix=unix-std  -nolibdld  -static  -threads
+IA-64 Options
+
+-mbig-endian  -mlittle-endian  -mgnu-as  -mgnu-ld  -mno-pic 
+-mvolatile-asm-stop  -mregister-names  -msdata  -mno-sdata 
+-mconstant-gp  -mauto-pic  -mfused-madd 
+-minline-float-divide-min-latency 
+-minline-float-divide-max-throughput 
+-mno-inline-float-divide 
+-minline-int-divide-min-latency 
+-minline-int-divide-max-throughput  
+-mno-inline-int-divide 
+-minline-sqrt-min-latency  -minline-sqrt-max-throughput 
+-mno-inline-sqrt 
+-mdwarf2-asm  -mearly-stop-bits 
+-mfixed-range=register-range  -mtls-size=tls-size 
+-mtune=cpu-type  -milp32  -mlp64 
+-msched-br-data-spec  -msched-ar-data-spec  -msched-control-spec 
+-msched-br-in-data-spec  -msched-ar-in-data-spec  -msched-in-control-spec 
+-msched-spec-ldc  -msched-spec-control-ldc 
+-msched-prefer-non-data-spec-insns  -msched-prefer-non-control-spec-insns 
+-msched-stop-bits-after-every-cycle  -msched-count-spec-in-critical-path 
+-msel-sched-dont-check-control-spec  -msched-fp-mem-deps-zero-cost 
+-msched-max-memory-insns-hard-limit  -msched-max-memory-insns=max-insns
+LM32 Options
+
+-mbarrel-shift-enabled  -mdivide-enabled  -mmultiply-enabled 
+-msign-extend-enabled  -muser-enabled
+M32R/D Options
+
+-m32r2  -m32rx  -m32r 
+-mdebug 
+-malign-loops  -mno-align-loops 
+-missue-rate=number 
+-mbranch-cost=number 
+-mmodel=code-size-model-type 
+-msdata=sdata-type 
+-mno-flush-func  -mflush-func=name 
+-mno-flush-trap  -mflush-trap=number 
+-G num
+M32C Options
+
+-mcpu=cpu  -msim  -memregs=number
+M680x0 Options
+
+-march=arch  -mcpu=cpu  -mtune=tune 
+-m68000  -m68020  -m68020-40  -m68020-60  -m68030  -m68040 
+-m68060  -mcpu32  -m5200  -m5206e  -m528x  -m5307  -m5407 
+-mcfv4e  -mbitfield  -mno-bitfield  -mc68000  -mc68020 
+-mnobitfield  -mrtd  -mno-rtd  -mdiv  -mno-div  -mshort 
+-mno-short  -mhard-float  -m68881  -msoft-float  -mpcrel 
+-malign-int  -mstrict-align  -msep-data  -mno-sep-data 
+-mshared-library-id=n  -mid-shared-library  -mno-id-shared-library 
+-mxgot  -mno-xgot  -mlong-jump-table-offsets
+MCore Options
+
+-mhardlit  -mno-hardlit  -mdiv  -mno-div  -mrelax-immediates 
+-mno-relax-immediates  -mwide-bitfields  -mno-wide-bitfields 
+-m4byte-functions  -mno-4byte-functions  -mcallgraph-data 
+-mno-callgraph-data  -mslow-bytes  -mno-slow-bytes  -mno-lsim 
+-mlittle-endian  -mbig-endian  -m210  -m340  -mstack-increment
+MeP Options
+
+-mabsdiff  -mall-opts  -maverage  -mbased=n  -mbitops 
+-mc=n  -mclip  -mconfig=name  -mcop  -mcop32  -mcop64  -mivc2 
+-mdc  -mdiv  -meb  -mel  -mio-volatile  -ml  -mleadz  -mm  -mminmax 
+-mmult  -mno-opts  -mrepeat  -ms  -msatur  -msdram  -msim  -msimnovec  -mtf 
+-mtiny=n
+MicroBlaze Options
+
+-msoft-float  -mhard-float  -msmall-divides  -mcpu=cpu 
+-mmemcpy  -mxl-soft-mul  -mxl-soft-div  -mxl-barrel-shift 
+-mxl-pattern-compare  -mxl-stack-check  -mxl-gp-opt  -mno-clearbss 
+-mxl-multiply-high  -mxl-float-convert  -mxl-float-sqrt 
+-mbig-endian  -mlittle-endian  -mxl-reorder  -mxl-mode-app-model
+MIPS Options
+
+-EL  -EB  -march=arch  -mtune=arch 
+-mips1  -mips2  -mips3  -mips4  -mips32  -mips32r2  -mips32r3  -mips32r5 
+-mips32r6  -mips64  -mips64r2  -mips64r3  -mips64r5  -mips64r6 
+-mips16  -mno-mips16  -mflip-mips16 
+-minterlink-compressed  -mno-interlink-compressed 
+-minterlink-mips16  -mno-interlink-mips16 
+-mabi=abi  -mabicalls  -mno-abicalls 
+-mshared  -mno-shared  -mplt  -mno-plt  -mxgot  -mno-xgot 
+-mgp32  -mgp64  -mfp32  -mfpxx  -mfp64  -mhard-float  -msoft-float 
+-mno-float  -msingle-float  -mdouble-float 
+-modd-spreg  -mno-odd-spreg 
+-mabs=mode  -mnan=encoding 
+-mdsp  -mno-dsp  -mdspr2  -mno-dspr2 
+-mmcu  -mmno-mcu 
+-meva  -mno-eva 
+-mvirt  -mno-virt 
+-mxpa  -mno-xpa 
+-mmicromips  -mno-micromips 
+-mmsa  -mno-msa 
+-mfpu=fpu-type 
+-msmartmips  -mno-smartmips 
+-mpaired-single  -mno-paired-single  -mdmx  -mno-mdmx 
+-mips3d  -mno-mips3d  -mmt  -mno-mt  -mllsc  -mno-llsc 
+-mlong64  -mlong32  -msym32  -mno-sym32 
+-Gnum  -mlocal-sdata  -mno-local-sdata 
+-mextern-sdata  -mno-extern-sdata  -mgpopt  -mno-gopt 
+-membedded-data  -mno-embedded-data 
+-muninit-const-in-rodata  -mno-uninit-const-in-rodata 
+-mcode-readable=setting 
+-msplit-addresses  -mno-split-addresses 
+-mexplicit-relocs  -mno-explicit-relocs 
+-mcheck-zero-division  -mno-check-zero-division 
+-mdivide-traps  -mdivide-breaks 
+-mload-store-pairs  -mno-load-store-pairs 
+-mmemcpy  -mno-memcpy  -mlong-calls  -mno-long-calls 
+-mmad  -mno-mad  -mimadd  -mno-imadd  -mfused-madd  -mno-fused-madd  -nocpp 
+-mfix-24k  -mno-fix-24k 
+-mfix-r4000  -mno-fix-r4000  -mfix-r4400  -mno-fix-r4400 
+-mfix-r10000  -mno-fix-r10000  -mfix-rm7000  -mno-fix-rm7000 
+-mfix-vr4120  -mno-fix-vr4120 
+-mfix-vr4130  -mno-fix-vr4130  -mfix-sb1  -mno-fix-sb1 
+-mflush-func=func  -mno-flush-func 
+-mbranch-cost=num  -mbranch-likely  -mno-branch-likely 
+-mcompact-branches=policy 
+-mfp-exceptions  -mno-fp-exceptions 
+-mvr4130-align  -mno-vr4130-align  -msynci  -mno-synci 
+-mlxc1-sxc1 -mno-lxc1-sxc1 -mmadd4 -mno-madd4 
+-mrelax-pic-calls  -mno-relax-pic-calls  -mmcount-ra-address 
+-mframe-header-opt  -mno-frame-header-opt
+MMIX Options
+
+-mlibfuncs  -mno-libfuncs  -mepsilon  -mno-epsilon  -mabi=gnu 
+-mabi=mmixware  -mzero-extend  -mknuthdiv  -mtoplevel-symbols 
+-melf  -mbranch-predict  -mno-branch-predict  -mbase-addresses 
+-mno-base-addresses  -msingle-exit  -mno-single-exit
+MN10300 Options
+
+-mmult-bug  -mno-mult-bug 
+-mno-am33  -mam33  -mam33-2  -mam34 
+-mtune=cpu-type 
+-mreturn-pointer-on-d0 
+-mno-crt0  -mrelax  -mliw  -msetlb
+Moxie Options
+
+-meb  -mel  -mmul.x  -mno-crt0
+MSP430 Options
+
+-msim  -masm-hex  -mmcu=  -mcpu=  -mlarge  -msmall  -mrelax 
+-mwarn-mcu 
+-mcode-region=  -mdata-region= 
+-msilicon-errata=  -msilicon-errata-warn= 
+-mhwmult=  -minrt
+NDS32 Options
+
+-mbig-endian  -mlittle-endian 
+-mreduced-regs  -mfull-regs 
+-mcmov  -mno-cmov 
+-mext-perf  -mno-ext-perf 
+-mext-perf2  -mno-ext-perf2 
+-mext-string  -mno-ext-string 
+-mv3push  -mno-v3push 
+-m16bit  -mno-16bit 
+-misr-vector-size=num 
+-mcache-block-size=num 
+-march=arch 
+-mcmodel=code-model 
+-mctor-dtor  -mrelax
+Nios II Options
+
+-G num  -mgpopt=option  -mgpopt  -mno-gpopt 
+-mgprel-sec=regexp -mr0rel-sec=regexp 
+-mel  -meb 
+-mno-bypass-cache  -mbypass-cache 
+-mno-cache-volatile  -mcache-volatile 
+-mno-fast-sw-div  -mfast-sw-div 
+-mhw-mul  -mno-hw-mul  -mhw-mulx  -mno-hw-mulx  -mno-hw-div  -mhw-div 
+-mcustom-insn=N  -mno-custom-insn 
+-mcustom-fpu-cfg=name 
+-mhal  -msmallc  -msys-crt0=name  -msys-lib=name 
+-march=arch  -mbmx  -mno-bmx  -mcdx  -mno-cdx
+Nvidia PTX Options
+
+-m32  -m64  -mmainkernel  -moptimize
+PDP-11 Options
+
+-mfpu  -msoft-float  -mac0  -mno-ac0  -m40  -m45  -m10 
+-mbcopy  -mbcopy-builtin  -mint32  -mno-int16 
+-mint16  -mno-int32  -mfloat32  -mno-float64 
+-mfloat64  -mno-float32  -mabshi  -mno-abshi 
+-mbranch-expensive  -mbranch-cheap 
+-munix-asm  -mdec-asm
+picoChip Options
+
+-mae=ae_type  -mvliw-lookahead=N 
+-msymbol-as-address  -mno-inefficient-warnings
+PowerPC Options See RS/6000 and PowerPC Options.
+
+PowerPC SPE Options
+
+-mcpu=cpu-type 
+-mtune=cpu-type 
+-mmfcrf  -mno-mfcrf  -mpopcntb  -mno-popcntb 
+-mfull-toc   -mminimal-toc  -mno-fp-in-toc  -mno-sum-in-toc 
+-m32  -mxl-compat  -mno-xl-compat 
+-malign-power  -malign-natural 
+-msoft-float  -mhard-float  -mmultiple  -mno-multiple 
+-msingle-float  -mdouble-float 
+-mupdate  -mno-update 
+-mavoid-indexed-addresses  -mno-avoid-indexed-addresses 
+-mstrict-align  -mno-strict-align  -mrelocatable 
+-mno-relocatable  -mrelocatable-lib  -mno-relocatable-lib 
+-mtoc  -mno-toc  -mlittle  -mlittle-endian  -mbig  -mbig-endian 
+-msingle-pic-base 
+-mprioritize-restricted-insns=priority 
+-msched-costly-dep=dependence_type 
+-minsert-sched-nops=scheme 
+-mcall-sysv  -mcall-netbsd 
+-maix-struct-return  -msvr4-struct-return 
+-mabi=abi-type  -msecure-plt  -mbss-plt 
+-mblock-move-inline-limit=num 
+-misel  -mno-isel 
+-misel=yes  -misel=no 
+-mspe  -mno-spe 
+-mspe=yes  -mspe=no 
+-mfloat-gprs=yes  -mfloat-gprs=no  -mfloat-gprs=single  -mfloat-gprs=double 
+-mprototype  -mno-prototype 
+-msim  -mmvme  -mads  -myellowknife  -memb  -msdata 
+-msdata=opt  -mvxworks  -G num 
+-mrecip  -mrecip=opt  -mno-recip  -mrecip-precision 
+-mno-recip-precision 
+-mpointers-to-nested-functions  -mno-pointers-to-nested-functions 
+-msave-toc-indirect  -mno-save-toc-indirect 
+-mcompat-align-parm  -mno-compat-align-parm 
+-mfloat128  -mno-float128 
+-mgnu-attribute  -mno-gnu-attribute 
+-mstack-protector-guard=guard -mstack-protector-guard-reg=reg 
+-mstack-protector-guard-offset=offset
+RISC-V Options
+
+-mbranch-cost=N-instruction 
+-mplt  -mno-plt 
+-mabi=ABI-string 
+-mfdiv  -mno-fdiv 
+-mdiv  -mno-div 
+-march=ISA-string 
+-mtune=processor-string 
+-mpreferred-stack-boundary=num 
+-msmall-data-limit=N-bytes 
+-msave-restore  -mno-save-restore 
+-mstrict-align -mno-strict-align 
+-mcmodel=medlow -mcmodel=medany 
+-mexplicit-relocs  -mno-explicit-relocs 
+-mrelax -mno-relax 
+RL78 Options
+
+-msim  -mmul=none  -mmul=g13  -mmul=g14  -mallregs 
+-mcpu=g10  -mcpu=g13  -mcpu=g14  -mg10  -mg13  -mg14 
+-m64bit-doubles  -m32bit-doubles  -msave-mduc-in-interrupts
+RS/6000 and PowerPC Options
+
+-mcpu=cpu-type 
+-mtune=cpu-type 
+-mcmodel=code-model 
+-mpowerpc64 
+-maltivec  -mno-altivec 
+-mpowerpc-gpopt  -mno-powerpc-gpopt 
+-mpowerpc-gfxopt  -mno-powerpc-gfxopt 
+-mmfcrf  -mno-mfcrf  -mpopcntb  -mno-popcntb  -mpopcntd  -mno-popcntd 
+-mfprnd  -mno-fprnd 
+-mcmpb  -mno-cmpb  -mmfpgpr  -mno-mfpgpr  -mhard-dfp  -mno-hard-dfp 
+-mfull-toc   -mminimal-toc  -mno-fp-in-toc  -mno-sum-in-toc 
+-m64  -m32  -mxl-compat  -mno-xl-compat  -mpe 
+-malign-power  -malign-natural 
+-msoft-float  -mhard-float  -mmultiple  -mno-multiple 
+-msingle-float  -mdouble-float  -msimple-fpu 
+-mupdate  -mno-update 
+-mavoid-indexed-addresses  -mno-avoid-indexed-addresses 
+-mfused-madd  -mno-fused-madd  -mbit-align  -mno-bit-align 
+-mstrict-align  -mno-strict-align  -mrelocatable 
+-mno-relocatable  -mrelocatable-lib  -mno-relocatable-lib 
+-mtoc  -mno-toc  -mlittle  -mlittle-endian  -mbig  -mbig-endian 
+-mdynamic-no-pic  -maltivec  -mswdiv  -msingle-pic-base 
+-mprioritize-restricted-insns=priority 
+-msched-costly-dep=dependence_type 
+-minsert-sched-nops=scheme 
+-mcall-aixdesc  -mcall-eabi  -mcall-freebsd  
+-mcall-linux  -mcall-netbsd  -mcall-openbsd  
+-mcall-sysv  -mcall-sysv-eabi  -mcall-sysv-noeabi 
+-mtraceback=traceback_type 
+-maix-struct-return  -msvr4-struct-return 
+-mabi=abi-type  -msecure-plt  -mbss-plt 
+-mblock-move-inline-limit=num 
+-mblock-compare-inline-limit=num 
+-mblock-compare-inline-loop-limit=num 
+-mstring-compare-inline-limit=num 
+-misel  -mno-isel 
+-misel=yes  -misel=no 
+-mpaired 
+-mvrsave  -mno-vrsave 
+-mmulhw  -mno-mulhw 
+-mdlmzb  -mno-dlmzb 
+-mprototype  -mno-prototype 
+-msim  -mmvme  -mads  -myellowknife  -memb  -msdata 
+-msdata=opt  -mreadonly-in-sdata  -mvxworks  -G num 
+-mrecip  -mrecip=opt  -mno-recip  -mrecip-precision 
+-mno-recip-precision 
+-mveclibabi=type  -mfriz  -mno-friz 
+-mpointers-to-nested-functions  -mno-pointers-to-nested-functions 
+-msave-toc-indirect  -mno-save-toc-indirect 
+-mpower8-fusion  -mno-mpower8-fusion  -mpower8-vector  -mno-power8-vector 
+-mcrypto  -mno-crypto  -mhtm  -mno-htm 
+-mquad-memory  -mno-quad-memory 
+-mquad-memory-atomic  -mno-quad-memory-atomic 
+-mcompat-align-parm  -mno-compat-align-parm 
+-mfloat128  -mno-float128  -mfloat128-hardware  -mno-float128-hardware 
+-mgnu-attribute  -mno-gnu-attribute 
+-mstack-protector-guard=guard -mstack-protector-guard-reg=reg 
+-mstack-protector-guard-offset=offset
+RX Options
+
+-m64bit-doubles  -m32bit-doubles  -fpu  -nofpu
+-mcpu=
+-mbig-endian-data  -mlittle-endian-data 
+-msmall-data 
+-msim  -mno-sim
+-mas100-syntax  -mno-as100-syntax
+-mrelax
+-mmax-constant-size=
+-mint-register=
+-mpid
+-mallow-string-insns  -mno-allow-string-insns
+-mjsr
+-mno-warn-multiple-fast-interrupts
+-msave-acc-in-interrupts
+S/390 and zSeries Options
+
+-mtune=cpu-type  -march=cpu-type 
+-mhard-float  -msoft-float  -mhard-dfp  -mno-hard-dfp 
+-mlong-double-64  -mlong-double-128 
+-mbackchain  -mno-backchain  -mpacked-stack  -mno-packed-stack 
+-msmall-exec  -mno-small-exec  -mmvcle  -mno-mvcle 
+-m64  -m31  -mdebug  -mno-debug  -mesa  -mzarch 
+-mhtm  -mvx  -mzvector 
+-mtpf-trace  -mno-tpf-trace  -mfused-madd  -mno-fused-madd 
+-mwarn-framesize  -mwarn-dynamicstack  -mstack-size  -mstack-guard 
+-mhotpatch=halfwords,halfwords
+Score Options
+
+-meb  -mel 
+-mnhwloop 
+-muls 
+-mmac 
+-mscore5  -mscore5u  -mscore7  -mscore7d
+SH Options
+
+-m1  -m2  -m2e 
+-m2a-nofpu  -m2a-single-only  -m2a-single  -m2a 
+-m3  -m3e 
+-m4-nofpu  -m4-single-only  -m4-single  -m4 
+-m4a-nofpu  -m4a-single-only  -m4a-single  -m4a  -m4al 
+-mb  -ml  -mdalign  -mrelax 
+-mbigtable  -mfmovd  -mrenesas  -mno-renesas  -mnomacsave 
+-mieee  -mno-ieee  -mbitops  -misize  -minline-ic_invalidate  -mpadstruct 
+-mprefergot  -musermode  -multcost=number  -mdiv=strategy 
+-mdivsi3_libfunc=name  -mfixed-range=register-range 
+-maccumulate-outgoing-args 
+-matomic-model=atomic-model 
+-mbranch-cost=num  -mzdcbranch  -mno-zdcbranch 
+-mcbranch-force-delay-slot 
+-mfused-madd  -mno-fused-madd  -mfsca  -mno-fsca  -mfsrra  -mno-fsrra 
+-mpretend-cmove  -mtas
+Solaris 2 Options
+
+-mclear-hwcap  -mno-clear-hwcap  -mimpure-text  -mno-impure-text 
+-pthreads
+SPARC Options
+
+-mcpu=cpu-type 
+-mtune=cpu-type 
+-mcmodel=code-model 
+-mmemory-model=mem-model 
+-m32  -m64  -mapp-regs  -mno-app-regs 
+-mfaster-structs  -mno-faster-structs  -mflat  -mno-flat 
+-mfpu  -mno-fpu  -mhard-float  -msoft-float 
+-mhard-quad-float  -msoft-quad-float 
+-mstack-bias  -mno-stack-bias 
+-mstd-struct-return  -mno-std-struct-return 
+-munaligned-doubles  -mno-unaligned-doubles 
+-muser-mode  -mno-user-mode 
+-mv8plus  -mno-v8plus  -mvis  -mno-vis 
+-mvis2  -mno-vis2  -mvis3  -mno-vis3 
+-mvis4 -mno-vis4 -mvis4b -mno-vis4b 
+-mcbcond  -mno-cbcond  -mfmaf  -mno-fmaf  -mfsmuld  -mno-fsmuld  
+-mpopc  -mno-popc  -msubxc  -mno-subxc 
+-mfix-at697f  -mfix-ut699  -mfix-ut700  -mfix-gr712rc 
+-mlra  -mno-lra
+SPU Options
+
+-mwarn-reloc  -merror-reloc 
+-msafe-dma  -munsafe-dma 
+-mbranch-hints 
+-msmall-mem  -mlarge-mem  -mstdmain 
+-mfixed-range=register-range 
+-mea32  -mea64 
+-maddress-space-conversion  -mno-address-space-conversion 
+-mcache-size=cache-size 
+-matomic-updates  -mno-atomic-updates
+System V Options
+
+-Qy  -Qn  -YP,paths  -Ym,dir
+TILE-Gx Options
+
+-mcpu=CPU  -m32  -m64  -mbig-endian  -mlittle-endian 
+-mcmodel=code-model
+TILEPro Options
+
+-mcpu=cpu  -m32
+V850 Options
+
+-mlong-calls  -mno-long-calls  -mep  -mno-ep 
+-mprolog-function  -mno-prolog-function  -mspace 
+-mtda=n  -msda=n  -mzda=n 
+-mapp-regs  -mno-app-regs 
+-mdisable-callt  -mno-disable-callt 
+-mv850e2v3  -mv850e2  -mv850e1  -mv850es 
+-mv850e  -mv850  -mv850e3v5 
+-mloop 
+-mrelax 
+-mlong-jumps 
+-msoft-float 
+-mhard-float 
+-mgcc-abi 
+-mrh850-abi 
+-mbig-switch
+VAX Options
+
+-mg  -mgnu  -munix
+Visium Options
+
+-mdebug  -msim  -mfpu  -mno-fpu  -mhard-float  -msoft-float 
+-mcpu=cpu-type  -mtune=cpu-type  -msv-mode  -muser-mode
+VMS Options
+
+-mvms-return-codes  -mdebug-main=prefix  -mmalloc64 
+-mpointer-size=size
+VxWorks Options
+
+-mrtp  -non-static  -Bstatic  -Bdynamic 
+-Xbind-lazy  -Xbind-now
+x86 Options
+
+-mtune=cpu-type  -march=cpu-type 
+-mtune-ctrl=feature-list  -mdump-tune-features  -mno-default 
+-mfpmath=unit 
+-masm=dialect  -mno-fancy-math-387 
+-mno-fp-ret-in-387  -m80387  -mhard-float  -msoft-float 
+-mno-wide-multiply  -mrtd  -malign-double 
+-mpreferred-stack-boundary=num 
+-mincoming-stack-boundary=num 
+-mcld  -mcx16  -msahf  -mmovbe  -mcrc32 
+-mrecip  -mrecip=opt 
+-mvzeroupper  -mprefer-avx128 -mprefer-vector-width=opt 
+-mmmx  -msse  -msse2  -msse3  -mssse3  -msse4.1  -msse4.2  -msse4  -mavx 
+-mavx2  -mavx512f  -mavx512pf  -mavx512er  -mavx512cd  -mavx512vl 
+-mavx512bw  -mavx512dq  -mavx512ifma  -mavx512vbmi  -msha  -maes 
+-mpclmul  -mfsgsbase  -mrdrnd  -mf16c  -mfma -mpconfig -mwbnoinvd 
+-mprefetchwt1  -mclflushopt  -mclwb  -mxsavec  -mxsaves 
+-msse4a  -m3dnow  -m3dnowa  -mpopcnt  -mabm  -mbmi  -mtbm  -mfma4  -mxop 
+-madx  -mlzcnt  -mbmi2  -mfxsr  -mxsave  -mxsaveopt  -mrtm  -mlwp  -mmpx  
+-mmwaitx  -mclzero  -mpku  -mthreads -mgfni  -mvaes  
+-mshstk -mforce-indirect-call -mavx512vbmi2 
+-mvpclmulqdq -mavx512bitalg -mmovdiri -mmovdir64b -mavx512vpopcntdq 
+-mavx5124fmaps  -mavx512vnni  -mavx5124vnniw  -mprfchw  -mrdpid 
+-mrdseed  -msgx 
+-mms-bitfields  -mno-align-stringops  -minline-all-stringops 
+-minline-stringops-dynamically  -mstringop-strategy=alg 
+-mmemcpy-strategy=strategy  -mmemset-strategy=strategy 
+-mpush-args  -maccumulate-outgoing-args  -m128bit-long-double 
+-m96bit-long-double  -mlong-double-64  -mlong-double-80  -mlong-double-128 
+-mregparm=num  -msseregparm 
+-mveclibabi=type  -mvect8-ret-in-mem 
+-mpc32  -mpc64  -mpc80  -mstackrealign 
+-momit-leaf-frame-pointer  -mno-red-zone  -mno-tls-direct-seg-refs 
+-mcmodel=code-model  -mabi=name  -maddress-mode=mode 
+-m32  -m64  -mx32  -m16  -miamcu  -mlarge-data-threshold=num 
+-msse2avx  -mfentry  -mrecord-mcount  -mnop-mcount  -m8bit-idiv 
+-mavx256-split-unaligned-load  -mavx256-split-unaligned-store 
+-malign-data=type  -mstack-protector-guard=guard 
+-mstack-protector-guard-reg=reg 
+-mstack-protector-guard-offset=offset 
+-mstack-protector-guard-symbol=symbol -mmitigate-rop 
+-mgeneral-regs-only -mcall-ms2sysv-xlogues 
+-mindirect-branch=choice -mfunction-return=choice 
+-mindirect-branch-register
+x86 Windows Options
+
+-mconsole  -mcygwin  -mno-cygwin  -mdll 
+-mnop-fun-dllimport  -mthread 
+-municode  -mwin32  -mwindows  -fno-set-stack-executable
+Xstormy16 Options
+
+-msim
+Xtensa Options
+
+-mconst16  -mno-const16 
+-mfused-madd  -mno-fused-madd 
+-mforce-no-pic 
+-mserialize-volatile  -mno-serialize-volatile 
+-mtext-section-literals  -mno-text-section-literals 
+-mauto-litpools  -mno-auto-litpools 
+-mtarget-align  -mno-target-align 
+-mlongcalls  -mno-longcalls
+
+
+ld::::
+  -Ttext-segment=org
+           When creating an ELF executable, it will set the address of the first byte of the text segment.
+
+
+
+
+
 as  assembler popularly known as GAS (GNU Assembler)
 ld  linker
 gprof   profiler
