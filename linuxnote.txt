@@ -1,3 +1,25 @@
+as  assembler popularly known as GAS (GNU Assembler)
+ld  linker
+gprof   profiler
+addr2line   convert address to file and line
+ar  create, modify, and extract from archives
+c++filt demangling filter for C++ symbols
+dlltool creation of Windows dynamic-link libraries
+gold    alternative linker
+nlmconv object file conversion to a NetWare Loadable Module
+nm  list symbols in object files
+objcopy copy object files, possibly making changes
+objdump dump information about object files
+ranlib  generate indices for archives
+readelf display content of ELF files
+size    list total and section sizes
+strings list printable strings
+strip   remove symbols from an object file
+windmc  generates Windows message resources
+windres compiler for Windows resource files
+
+
+
 install php
 
 
