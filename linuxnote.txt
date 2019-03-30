@@ -1,3 +1,17 @@
+gcc set cpu type::::
+
+3.17.15 Intel 386 and AMD x86-64 Options
+These `-m' options are defined for the i386 and x86-64 family of computers:
+
+-mtune=cpu-type
+i386
+Original Intel's i386 CPU. 
+i486
+Intel's i486 CPU. (No scheduling is implemented for this chip.) 
+i586, pentium
+Intel Pentium CPU with no MMX support. 
+
+
 gcc option index:::
 (for search)
 https://gcc.gnu.org/onlinedocs/gcc/Option-Index.html
