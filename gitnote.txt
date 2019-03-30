@@ -69,8 +69,9 @@ git clone https://github.com/golang/tools.git --config "http.proxy=ssssockkkkkss
 
 git check out another remote branch not in local. 
 git fetch origin jike_v2.7:jike_v2.7
+git fetch origin jike_v2.8:jike_v2.8
 
-
+git fetch origin jike_v2.8:jike_v2.8
 
 git diff jike_v2.a  jike_v2.b  -- reg_notify.py
 
