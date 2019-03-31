@@ -1,3 +1,14 @@
+vim  中文支持
+
+
+
+set fileencodings=utf-8,gb2312,gbk,gb18030
+set termencoding=utf-8
+set encoding=prc
+
+-----
+
+
 gcc set cpu type::::
 
 3.17.15 Intel 386 and AMD x86-64 Options
