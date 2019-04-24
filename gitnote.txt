@@ -76,4 +76,8 @@ git fetch origin jike_v2.8:jike_v2.8
 git diff jike_v2.a  jike_v2.b  -- reg_notify.py
 
 
+git reset --hard xxfasfasdfasdfasdfasdf
+git push -f origin master
+
+
 
