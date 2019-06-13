@@ -1,0 +1,31 @@
+Elastic compute:
+    云服务器（Elastic Compute Service，ECS）
+    弹性伸缩（Auto Scaling)
+        - 可以监控您的集群，随时自动替换不健康的实例，节省运维成本。
+        - 可以管理您的集群，在高峰期自动增加ECS实例，在业务回落时自动减少ECS实例，节省基础设施成本。
+        - 与 SLB/RDS 紧密集成，自动管理SLB后端服务器和RDS白名单，节省操作成本。
+    容器服务Kubernetes版（Container Service for Kubernetes）
+    容器服务（Container Service）
+    容器镜像服务（Container Registry）
+    轻量应用服务器 （Simple Application Server）
+    批量计算（BatchCompute）BatchCompute广泛应用于电影动画渲染、生物数据分析、多媒体转码、金融保险分析、科学计算等领域。
+    函数计算. 函数（Function）
+    HPC（High Performance Computing，高性能计算）
+    阿里云专有宿主机（Dedicated Host，简称DDH）是指由一个租户独享物理资源的云主机。
+    阿里云弹性容器实例（Elastic Container Instance）
+
+
+    负载均衡（Server Load Balancer）
+    专有网络VPC（Virtual Private Cloud）
+    弹性公网IP（Elastic IP Address，简称EIP）
+
+
+    阿里云内容分发网络（Content Delivery Network，简称CDN）
+    云监控（CloudMonitor)
+
+
+
+
+Security groups act as a virtual firewall.
+ec2 on Hypervisor
+Amazon Machine Image (AMI).

@@ -5121,3 +5121,18 @@ To disable this message for all users, run:
 ______________________________________________________________
 
 
+AES五种加密模式（CBC、ECB、CTR、OCF、CFB）
+AES五种加密模式（CBC、ECB、CTR、OCF、CFB）
+
+
+CBC ECB CTR OCF CFB
+Block cipher mode of operation
+Most modes require a unique binary sequence, often called an initialization vector (IV).
+The IV has to be non-repeating and, for some modes, random as well. The initialization vector is used to ensure distinct ciphertexts are produced even when the same plaintext is encrypted multiple times independently with the same key.
+
+
+ For example, Virtual LANs (local area networks), or VLANs, provide greater network per- formance and improved manageability by being separated from the physical hardware. 
+
+
+ 
+

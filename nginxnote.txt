@@ -881,3 +881,52 @@ We are using ubuntu OS with 4 CPU and 8 GB RAM. I hardly see any CPU and RAM usa
  1992  sysctl -a | grep 128
  1993  sudo vim /etc/sysctl.conf 
  1994  source /etc/sysctl.conf
+
+
+
+
+set file descriptor limit.
+. 
+/etc/security/limits.conf
+
+*       soft    nproc           32768
+*       hard    nproc           32768
+*       soft    nofile           32768
+*       hard    nofile           32768
+
+*重进shell
+
+2.
+/etc/sysctl.conf
+见linux设置
+
+sudo sysctl -p
+
+3.
+nginx 设置
+
+5.
+查看系统限制
+ulimit -a
+
+查看系统文件描述符限制
+cat /proc/sys/fs/file-max
+
+查看系统最大socket数
+sudo sysctl -a | grep somaxconn
+
+
+查看端口占用
+sudo netstat  -aultpn | grep 8080 | wc -l
+sudo netstat  -aultpn | grep 8080 | grep nginx | wc -l
+sudo netstat  -aultpn | grep 8080 | grep java | wc -l
+sudo netstat  -aultpn | grep ':80 ' | wc -l
+
+查看进程文件描述符
+sudo lsof -p
+sudo lsof -p 4362,4363,4364,4365 | grep 'cn-north-1.compute.internal' | wc -l
+
+nginx设置
+worker_rlimit_nofile 65535;
+
+
