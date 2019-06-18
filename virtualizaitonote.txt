@@ -25,7 +25,21 @@ Elastic compute:
 
 
 
-
+Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it easy to run, stop, and manage Docker containers on a cluster of Amazon EC2 instances.
+Amazon Virtual Private Cloud (Amazon VPC)
 Security groups act as a virtual firewall.
 ec2 on Hypervisor
 Amazon Machine Image (AMI).
+Amazon Elastic Container Registry 
+Amazon Virtual Private Cloud (Amazon VPC)
+Amazon Elastic Container Service (Amazon ECS)
+Amazon Elastic Container Service for Kubernetes (Amazon EKS) 
+AWS Elastic Beanstalk 
+Amazon Lightsail 
+AWS ParallelCluster is an AWS-supported open source cluster management tool that helps you to deploy and manage High Performance Computing (HPC) clusters in the AWS cloud.
+The AWS Serverless Application Model (AWS SAM) a serverless application is more than just a Lambda function
+ AWS SAM is an extension of AWS CloudFormation,
+AWS Backup, you can create backup policies called backup plans. 
+Elastic Block Store (Amazon EBS) provides block level storage volumes for use with EC2 instances.
+AWS Identity and Access Management (IAM) is a web service for securely controlling access to AWS services. 
+
