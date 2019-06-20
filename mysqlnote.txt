@@ -94,3 +94,12 @@ ALTER TABLE Animal ADD CONSTRAINT UQ_Animal_AnimalTypeId UNIQUE (AnimalType_id)
 
 CAST(scene_id AS CHAR) scene_id
 
+SHOW ENGINES;
+CREATE TABLE t (i INT) ENGINE = MYISAM;
+
+
+
+
+Two-phase locking
+Two-phase locking
+https://en.wikipedia.org/wiki/Two-phase_locking
