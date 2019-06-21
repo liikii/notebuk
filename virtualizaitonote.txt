@@ -38,7 +38,7 @@ AWS Elastic Beanstalk
 Amazon Lightsail 
 AWS ParallelCluster is an AWS-supported open source cluster management tool that helps you to deploy and manage High Performance Computing (HPC) clusters in the AWS cloud.
 The AWS Serverless Application Model (AWS SAM) a serverless application is more than just a Lambda function
- AWS SAM is an extension of AWS CloudFormation,
+AWS SAM is an extension of AWS CloudFormation,
 AWS Backup, you can create backup policies called backup plans. 
 Elastic Block Store (Amazon EBS) provides block level storage volumes for use with EC2 instances.
 AWS Identity and Access Management (IAM) is a web service for securely controlling access to AWS services. 

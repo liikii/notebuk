@@ -930,3 +930,10 @@ nginx设置
 worker_rlimit_nofile 65535;
 
 
+
+
+
+15774
+
+
+sudo lsof -p 15774 | head -100
