@@ -1,3 +1,10 @@
+• DatabaseManagementSystems,Ramakrishnan 
+• FundamentalsofDatabaseSystems,Elmasri,Navathe
+• FoundationsofDatabases,Abiteboul,Hull,Vianu 
+• DataontheWeb,Abiteboul,Buneman,Suciu
+
+
+
 
 CREATE TABLE `d` (
   `nm` varchar(256) DEFAULT NULL,
