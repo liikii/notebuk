@@ -66,3 +66,15 @@ The MonetDB-related X100 project evolved into VectorWise.[23][24] Druid is a col
 
 
 DryadLINQ
+
+
+
+database books :::
+The required textbook for this course is:
+
+Database Systems: the Complete Handbook, by Hector Garcia-Molina, Jennifer Widom, and Jeffrey Ullman. Second edition. See this page for more information about the book, including where it can be purchased.
+In addition to the required textbook, the library has the following books that you might find useful if you require another explanation of a topic:
+Fundamentals of database systems by Elsmasri and Navathe.
+Database management systems by Raghu Ramakrishnan and Johannes Gehrke.
+Foundations of database systems by Abiteboul, Hull and Vianu.
+
