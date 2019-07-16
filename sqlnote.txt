@@ -4,6 +4,18 @@
 • DataontheWeb,Abiteboul,Buneman,Suciu
 
 
+• In SQL & Datalog we say what we want
+• In RA we can express how to get it
+• Every DBMS implementations converts
+• a SQL query to RA in order to execute it
+• An RA expression is called a query plan
+
+
+Relational Algebra Operators
+• Union∪,intersection∩,difference- • Selectionσ
+• Projectionπ
+• CartesianproductX,join⨝
+• (Renameρ)
 
 
 CREATE TABLE `d` (
@@ -84,4 +96,7 @@ In addition to the required textbook, the library has the following books that y
 Fundamentals of database systems by Elsmasri and Navathe.
 Database management systems by Raghu Ramakrishnan and Johannes Gehrke.
 Foundations of database systems by Abiteboul, Hull and Vianu.
+
+
+
 

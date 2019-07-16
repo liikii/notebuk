@@ -81,3 +81,61 @@ git push -f origin master
 
 
 
+
+
+作者：shede333
+主页：http://my.oschina.net/shede333 && http://blog.sina.com.cn/u/1509658847
+版权声明：原创文章，版权声明：自由转载-非商用-非衍生-保持署名 | [Creative Commons BY-NC-ND 3.0][]
+
+官网：http://brew.sh/index_zh-cn.html
+安装方式见 官网，在shell里执行如下语句，如下：
+
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+命令详解：
+
+1.先用 shell命令curl，将文件下载本地，文件名为 install，文件地址：https://raw.githubusercontent.com/Homebrew/install/master/install
+
+2.执行 ruby -e 文件install。
+
+但是 ruby命令里面的内容，是下载github上的Homebrew库，但是这个下载超级慢，怎么办？ 如果你有vpn的话，就有多远就走多远。(直接按照官网的方式下载即可)
+
+我的方法是：
+主要思路为，替换brew的镜像源。
+
+1.先把https://raw.githubusercontent.com/Homebrew/install/master/install文件下载下来(使用浏览器打开，另存为也可以)，把文件命名为install.txt
+
+接下来，修改install.txt文件：
+应该在第7行左右，(记住这里的原来的url，后面你可能需要还原回来)
+
+HOMEBREW_REPO = 'https://github.com/Homebrew/homebrew'
+改为：  
+HOMEBREW_REPO = 'git@git.coding.net:homebrew/homebrew.git'
+这里就是把Homebrew的 原始镜像 替换为别的镜像（见最下面的参考镜像） 这样就差不多，最后继续执行ruby命令(注意：shell当前路径最好为 install.txt所在路径)
+
+rm -rf /usr/local/Cellar /usr/local/.git && brew cleanup
+ruby  install.txt文件的绝对路径
+第一行的rm命令，是为了防止之前你安装Homebrew失败而残留的文件，导致这次安装失败
+ruby install.txt执行之后，安装命令行提示安装，应该会安装成功。
+安装成功后，执行以下命令：
+
+brew doctor
+这个命令是Homebrew的自我检测命令，看看有没有配置不对的地方。
+
+由于我们使用别的镜像，所以会提示镜像为认证，如果你觉得不安全，可以把镜像替换为原来的，不过替换会原始镜像，那么brew update可能会很慢，甚至是失败。
+
+下面是修改为原始镜像连接的方法（推荐改为官方URL，因为上面的临时URL将来有可能会失效）
+
+cd /usr/local && git remote set-url origin https://github.com/Homebrew/homebrew
+再执行brew doctor看看，应该就没有这个警告了。
+
+完毕！
+
+如有问题，也可私信联系我~
+
+brew的镜像：
+https://git.coding.net/homebrew/homebrew.git （coding.net）
+本镜像源只镜像了 Homebrew 托管在 Bintray 上的二进制预编译包，所以只对这些二进制包有加速功能（Homebrew 大部分情况下使用该渠道下载安装软件）
+
+refer: Homebrew有别快的源（mirror）吗？ - 程序员 - 知乎
+
+
