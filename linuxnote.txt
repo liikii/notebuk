@@ -5191,3 +5191,270 @@ https://git.coding.net/homebrew/homebrew.git （coding.net）
 本镜像源只镜像了 Homebrew 托管在 Bintray 上的二进制预编译包，所以只对这些二进制包有加速功能（Homebrew 大部分情况下使用该渠道下载安装软件）
 
 refer: Homebrew有别快的源（mirror）吗？ - 程序员 - 知乎
+
+
+
+
+ss -lt
+1. List Established Connections
+By default if we run the ss command with no further options specified it will display a list of open non-listening sockets that have established connections, so for example TCP, UDP or UNIX sockets.
+
+[root@centos7 ~]# ss | head -n 5
+Netid  State      Recv-Q Send-Q Local Address:Port      Peer Address:Port
+u_str  ESTAB      0      0       * 23740                * 23739
+u_str  ESTAB      0      0       * 23707                * 23706
+u_str  ESTAB      0      0       * 87021                * 88383
+u_str  ESTAB      0      0       * 17056                * 17112
+In the above example I have limited the output, on my server I have over 500 lines printed out by running the ss command, so you may wish to pipe it into something like less to easily read it, or otherwise append additional options on the end to only show what you’re after.
+
+2. Show Listening Sockets
+Rather than listing all sockets, we can use the -l option to specifically list the sockets that are currently listening for a connection.
+
+[root@centos7 ~]# ss -lt
+State       Recv-Q Send-Q  Local Address:Port                Peer Address:Port
+LISTEN      0      2                   *:kerberos-adm        *:*
+LISTEN      0      128                 *:sunrpc              *:*
+LISTEN      0      5                   *:kpasswd             *:*
+LISTEN      0      10       192.168.1.14:domain              *:*
+LISTEN      0      10          127.0.0.1:domain              *:*
+LISTEN      0      5       192.168.122.1:domain              *:*
+LISTEN      0      128                 *:ssh                 *:*
+In this example we have also used the -t option to only list TCP, more on this later. In future examples you will see that we will combine multiple options like this in order to quickly filter down to what we’re after.
+
+3. Show Processes
+We can print out the process or PID number that owns a socket with the -p option.
+
+[root@centos7 ~]# ss -pl
+Netid  State      Recv-Q Send-Q Local Address:Port     Peer Address:Port
+tcp    LISTEN     0      128    :::http                :::*                 users:(("httpd",pid=10522,fd=4),("httpd",pid=10521,fd=4),("httpd",pid=10520,fd=4),("httpd",pid=10519,fd=4),("httpd",pid=10518,fd=4),("httpd",pid=10516,fd=4))
+In the above example I have only listed a single result, without any further options the full output of ss prints out over 500 lines to stdout. Regardless, we can see the process ID’s of the various Apache processes that are running on this server.
+
+4. Don’t Resolve Service Names
+By default ss will only resolve port numbers as we have previously seen, for example in the line below we can see 192.168.1.14:ssh where ssh is listed as the local port.
+
+[root@centos7 ~]# ss
+Netid  State      Recv-Q Send-Q Local Address:Port    Peer Address:Port
+tcp    ESTAB      0      64     192.168.1.14:ssh      192.168.1.191:57091
+However if we specify the -n option, this resolution will not take place and we will instead see the port number rather than the service name.
+
+[root@centos7 ~]# ss -n
+Netid  State      Recv-Q Send-Q Local Address:Port    Peer Address:Port
+tcp    ESTAB      0      0      192.168.1.14:22       192.168.1.191:57091
+Note that :22 is now displayed rather than :ssh as we have disabled all name resolution of hostnames and ports. You can check the /etc/services file to see a full list of which ports map to which services.
+
+5. Resolve Numeric Address/Ports
+We can also do the opposite of this and resolve both the IP address and port number with the -r option. With this we now see the hostname of the 192.168.1.14 server listed.
+
+[root@centos7 ~]# ss -r
+Netid  State      Recv-Q Send-Q Local Address:Port         Peer Address:Port
+tcp    ESTAB      0      64     centos7.example.com:ssh    192.168.1.191:57091
+6. IPv4 Sockets
+We can use the -4 option to only display information corresponding to IPv4 sockets. In the below example we also make use of the -l option to list everything listening on an IPv4 address.
+
+[root@centos7 ~]# ss -l4
+Netid  State      Recv-Q Send-Q     Local Address:Port        Peer Address:Port
+udp    UNCONN     0      0              127.0.0.1:323         *:*
+udp    UNCONN     0      0          192.168.122.1:domain      *:*
+udp    UNCONN     0      0               *%virbr0:bootps      *:*
+udp    UNCONN     0      0                      *:bootpc      *:*
+tcp    LISTEN     0      128                    *:sunrpc      *:*
+tcp    LISTEN     0      5          192.168.122.1:domain      *:*
+tcp    LISTEN     0      128                    *:ssh         *:*
+tcp    LISTEN     0      128            127.0.0.1:ipp         *:*
+tcp    LISTEN     0      100            127.0.0.1:smtp        *:*
+7. IPv6 Sockets
+Likewise, we can use the -6 option to only display information related to IPv6 sockets. In the below example we also make use of the -l option to list everything listening on an IPv6 address.
+
+[root@centos7 ~]# ss -l6
+Netid  State      Recv-Q Send-Q     Local Address:Port          Peer Address:Port
+udp    UNCONN     0      0                     :::ipv6-icmp     :::*
+udp    UNCONN     0      0                     :::22834         :::*
+udp    UNCONN     0      0                    ::1:323           :::*
+tcp    LISTEN     0      128                   :::sunrpc        :::*
+tcp    LISTEN     0      128                   :::http          :::*
+tcp    LISTEN     0      128                   :::ssh           :::*
+tcp    LISTEN     0      128                  ::1:ipp           :::*
+tcp    LISTEN     0      100                  ::1:smtp          :::*
+8. TCP Only
+The -t option can be used to display only TCP sockets. When combined with -l to only print out listening sockets we can see everything listening on TCP.
+
+[root@centos7 ~]# ss -lt
+State      Recv-Q Send-Q      Local Address:Port       Peer Address:Port
+LISTEN     0      128                     *:sunrpc     *:*
+LISTEN     0      5           192.168.122.1:domain     *:*
+LISTEN     0      128                     *:ssh        *:*
+LISTEN     0      128             127.0.0.1:ipp        *:*
+LISTEN     0      100             127.0.0.1:smtp       *:*
+LISTEN     0      128                    :::sunrpc    :::*
+LISTEN     0      128                    :::http      :::*
+LISTEN     0      128                    :::ssh       :::*
+LISTEN     0      128                   ::1:ipp       :::*
+LISTEN     0      100                   ::1:smtp      :::*
+9. UDP Only
+The -u option can be used to display only UDP sockets. As UDP is a connection-less protocol, simply running with only the -u option will display no output. We can instead combine this with the -a or -l option to see all listening UDP sockets, as shown below.
+
+[root@centos7 ~]# ss -ul
+State       Recv-Q Send-Q  Local Address:Port       Peer Address:Port
+UNCONN      0      0                   *:mdns       *:*
+UNCONN      0      0                   *:kpasswd    *:*
+UNCONN      0      0                   *:839        *:*
+UNCONN      0      0                   *:36812      *:*
+UNCONN      0      0       192.168.122.1:domain     *:*
+UNCONN      0      0        192.168.1.14:domain     *:*
+10. Unix Sockets
+The -x option can be used to display unix domain sockets only.
+
+[root@centos7 ~]# ss -x
+Netid  State      Recv-Q Send-Q Local Address:Port           Peer Address:Port
+u_str  ESTAB      0      0      @/tmp/.X11-unix/X0 27818     * 27817
+u_str  ESTAB      0      0      @/tmp/.X11-unix/X0 26656     * 26655
+u_str  ESTAB      0      0       * 28344                     * 26607
+u_str  ESTAB      0      0       * 24704                     * 24705
+u_str  ESTAB      0      0      @/tmp/.X11-unix/X0 25195     * 24086
+u_str  ESTAB      0      0      @/tmp/dbus-CRqRiw6V 28388    * 28693
+...
+11. Display All Information
+the -a option shows all, both listening and non-listening sockets. In the case of TCP this means established connections. This option is useful for combining with others, for instance to show all UDP sockets we can add -a, as by default with just the -u option we don’t see as much information.
+
+[root@centos7 ~]# ss -u
+Recv-Q Send-Q       Local Address:Port           Peer Address:Port
+0      0             192.168.1.14:56658          129.250.35.251:ntp
+
+[root@centos7 ~]# ss -ua
+State       Recv-Q Send-Q  Local Address:Port           Peer Address:Port
+UNCONN      0      0                   *:mdns           *:*
+UNCONN      0      0           127.0.0.1:323            *:*
+ESTAB       0      0        192.168.1.14:56658          129.250.35.251:ntp
+UNCONN      0      0                   *:21014          *:*
+UNCONN      0      0                   *:60009          *:*
+UNCONN      0      0       192.168.122.1:domain         *:*
+UNCONN      0      0            *%virbr0:bootps         *:*
+UNCONN      0      0                   *:bootpc         *:*
+UNCONN      0      0                 ::1:323           :::*
+UNCONN      0      0                  :::43209         :::*
+12. Show Socket Memory Usage
+The -m option can be used to display the amount of memory that each socket is using.
+
+[root@centos7 ~]# ss -ltm
+State      Recv-Q Send-Q                Local Address:Port       Peer Address:Port
+LISTEN     0      128                               *:sunrpc     *:*
+  skmem:(r0,rb87380,t0,tb16384,f0,w0,o0,bl0)
+LISTEN     0      5                     192.168.122.1:domain     *:*
+  skmem:(r0,rb87380,t0,tb16384,f0,w0,o0,bl0)
+LISTEN     0      128                               *:ssh        *:*
+  skmem:(r0,rb87380,t0,tb16384,f0,w0,o0,bl0)
+LISTEN     0      128                       127.0.0.1:ipp        *:*
+  skmem:(r0,rb87380,t0,tb16384,f0,w0,o0,bl0)
+LISTEN     0      100                       127.0.0.1:smtp       *:*
+  skmem:(r0,rb87380,t0,tb16384,f0,w0,o0,bl0)
+13. Show Internal TCP Information
+We can request additional internal TCP information with the -i info option.
+
+[root@centos7 ~]# ss -lti
+State      Recv-Q Send-Q                Local Address:Port                        Peer Address:Port
+LISTEN     0      128                               *:sunrpc                                    *:*
+  cubic rto:1000 mss:536 cwnd:10 lastsnd:373620 lastrcv:373620 lastack:373620
+LISTEN     0      5                     192.168.122.1:domain                                    *:*
+  cubic rto:1000 mss:536 cwnd:10 lastsnd:373620 lastrcv:373620 lastack:373620
+LISTEN     0      128                               *:ssh                                       *:*
+  cubic rto:1000 mss:536 cwnd:10 segs_in:2 lastsnd:373620 lastrcv:373620 lastack:373620
+LISTEN     0      128                       127.0.0.1:ipp                                       *:*
+  cubic rto:1000 mss:536 cwnd:10 lastsnd:373620 lastrcv:373620 lastack:373620
+LISTEN     0      100                       127.0.0.1:smtp                                      *:*
+  cubic rto:1000 mss:536 cwnd:10 lastsnd:373620 lastrcv:373620 lastack:373620
+Underneath each listening socket we can see additional information. Note that the -i option does not work with UDP, if you instead specify -u instead of -t this extra information will not be present.
+
+14. Show Summary
+We can see a quick overview of the statistics with the -s option.
+
+[root@centos7 ~]# ss -s
+Total: 1253 (kernel 1721)
+TCP:   13 (estab 1, closed 2, orphaned 0, synrecv 0, timewait 0/0), ports 0
+
+Transport Total     IP        IPv6
+*   1721      -         -
+RAW     1         0         1
+UDP     9         7         2
+TCP     11        6         5
+INET    21        13        8
+FRAG    0         0         0
+This quickly allows us to see things like the total number of established connections, as well as counts of each type of socket and whether IPv4 or IPv6 is in use.
+
+15. Filter Based On State
+We can specify the state of a socket to only print out sockets in this state. For example we can specify states including established, syn-sent, syn-recv, fin-wait-1, fin-wait-2, time-wait, closed, closed-wait, last-ack, listen and closing. The below example shows all established TCP connections. To generate this I was connected to the server by SSH and just loaded a web page from Apache. We can then see that the connections to Apache quickly change to time-wait.
+
+[root@centos7 ~]# ss -t state established
+Recv-Q Send-Q               Local Address:Port           Peer Address:Port
+0      64                     192.168.1.14:ssh         192.168.1.191:57091
+0      0              ::ffff:192.168.1.14:http   ::ffff:192.168.1.191:57373
+0      0              ::ffff:192.168.1.14:http   ::ffff:192.168.1.191:57372
+
+[root@centos7 ~]# ss -t state time-wait
+Recv-Q Send-Q               Local Address:Port           Peer Address:Port
+0      0              ::ffff:192.168.1.14:http   ::ffff:192.168.1.191:57373
+0      0              ::ffff:192.168.1.14:http   ::ffff:192.168.1.191:57372
+16. Filter Based On Port Number
+Filtering can also be performed to list all ports that are less than (lt), greater than (gt), equal to (eq), not equal to (ne), less than or equal to (le), or greater than or equal to (ge).
+
+For example, the below command shows all listening ports on port number 500 or below.
+
+[root@centos7 ~]# ss -ltn sport le 500
+State       Recv-Q Send-Q    Local Address:Port      Peer Address:Port
+LISTEN      0      128                   *:111       *:*
+LISTEN      0      5         192.168.122.1:53        *:*
+LISTEN      0      128                   *:22        *:*
+LISTEN      0      100           127.0.0.1:25        *:*
+LISTEN      0      128                  :::111       :::*
+LISTEN      0      128                  :::22        :::*
+LISTEN      0      100                 ::1:25        :::*
+For comparison we can perform the opposite, and view all ports greater than 500 with ‘gt’
+
+[root@centos7 ~]# ss -ltn sport gt 500
+State       Recv-Q Send-Q    Local Address:Port       Peer Address:Port
+LISTEN      0      128           127.0.0.1:631        *:*
+LISTEN      0      128                 ::1:631        :::*
+We can also filter based on items such as source or destination port, for example below we search for TCP sockets that have a source port (sport) of ssh.
+
+[root@centos7 ~]# ss -t '( sport = :ssh )'
+State       Recv-Q Send-Q       Local Address:Port         Peer Address:Port
+ESTAB       0      64             192.168.1.14:ssh        192.168.1.191:57091
+17. Show SELinux Context
+The -Z and -z options can be used to show the SELinux security context of a socket. In the example below we also use the -t and -l options to only list listening TCP sockets, with the -Z option we can also see the SELinux contexts.
+
+[root@centos7 ~]# ss -tlZ
+State      Recv-Q Send-Q     Local Address:Port     Peer Address:Port
+LISTEN     0      128                    *:sunrpc     *:*                users:(("systemd",pid=1,proc_ctx=system_u:system_r:init_t:s0,fd=71))
+LISTEN     0      5          192.168.122.1:domain     *:*                users:(("dnsmasq",pid=1810,proc_ctx=system_u:system_r:dnsmasq_t:s0-s0:c0.c1023,fd=6))
+LISTEN     0      128                    *:ssh        *:*                users:(("sshd",pid=1173,proc_ctx=system_u:system_r:sshd_t:s0-s0:c0.c1023,fd=3))
+LISTEN     0      128            127.0.0.1:ipp        *:*                users:(("cupsd",pid=1145,proc_ctx=system_u:system_r:cupsd_t:s0-s0:c0.c1023,fd=12))
+LISTEN     0      100            127.0.0.1:smtp       *:*                users:(("master",pid=1752,proc_ctx=system_u:system_r:postfix_master_t:s0,fd=13))
+18. Display Version
+The -v option can be used to display specific version information for the ss command, in this instance we see the version of the iproute package which provides ss.
+
+[root@centos7 ~]# ss -v
+ss utility, iproute2-ss130716
+19. Print Help Documentation
+The -h option can be used to display further help regarding the ss command, it’s good to use as a quick reference if you need a short description on some of the most commonly used options. Note that the full output here has not been included for brevity.
+
+[root@centos7 ~]# ss -h
+Usage: ss [ OPTIONS ]
+20. Show Extended Information
+We can use the -e option which shows extended detailed information, as shown below we can see the extended information appended to the end of each line.
+
+[root@centos7 ~]# ss -lte
+State      Recv-Q Send-Q      Local Address:Port         Peer Address:Port
+LISTEN     0      128                     *:sunrpc       *:*                 ino:16090 sk:ffff880000100000 <->
+LISTEN     0      5           192.168.122.1:domain       *:*                 ino:23750 sk:ffff880073e70f80 <->
+LISTEN     0      128                     *:ssh          *:*                 ino:22789 sk:ffff880073e70000 <->
+LISTEN     0      128             127.0.0.1:ipp          *:*                 ino:23091 sk:ffff880073e707c0 <->
+LISTEN     0      100             127.0.0.1:smtp         *:*                 ino:24659 sk:ffff880000100f80 <->
+21. Show Timer Information
+The -o option can be used to display the timer information. This information shows us things such as the retransmission timer value, number of retransmissions that have occurred, and the number of keepalive probes that have been sent.
+
+[root@centos7 ~]# ss -to
+State       Recv-Q Send-Q         Local Address:Port             Peer Address:Port
+ESTAB       0      64              192.168.1.14:ssh              192.168.1.191:57091      timer:(on,242ms,0)
+ESTAB       0      0        ::ffff:192.168.1.14:http      ::ffff:192.168.1.191:57295      timer:(keepalive,120min,0)
+ESTAB       0      0        ::ffff:192.168.1.14:http      ::ffff:192.168.1.191:57296      timer:(keepalive,120min,0)
+
+
