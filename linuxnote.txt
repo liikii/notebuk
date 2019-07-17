@@ -5495,3 +5495,7 @@ sudo make install
 
 OpenCV_DIR="/root/opencv-3.1.0/build" luarocks install cv
 /root/opencv-3.1.0/build
+
+
+sudo apt-get remove --auto-remove python-dev
+
