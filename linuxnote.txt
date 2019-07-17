@@ -5458,3 +5458,40 @@ ESTAB       0      0        ::ffff:192.168.1.14:http      ::ffff:192.168.1.191:5
 ESTAB       0      0        ::ffff:192.168.1.14:http      ::ffff:192.168.1.191:57296      timer:(keepalive,120min,0)
 
 
+
+
+
+ICV: Downloading ippicv_linux_20151201.tgz 超时
+2018年06月27日 20:40:56 Erin987 阅读数 6200
+
+安装OpenCv 3.1的过程中要下载ippicv_linux_20151201，由于网络的原因，这个文件经常会下载失败。
+
+解决的办法是手动下载：ippicv_linux_20151201.tgz
+
+下载完后替换opencv-3.1.0/3rdparty/ippicv/downloads/linux-*目录下的同名文件，重新cmake。
+
+
+
+Building OpenCV from Source Using CMake, Using the Command Line
+Create a temporary directory, which we denote as <cmake_binary_dir>, where you want to put the generated Makefiles, project files as well the object files and output binaries.
+
+Enter the <cmake_binary_dir> and type
+
+cmake [<some optional parameters>] <path to the OpenCV source directory>
+For example
+
+cd ~/opencv
+mkdir release
+cd release
+cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local ..
+Enter the created temporary directory (<cmake_binary_dir>) and proceed with:
+
+make
+sudo make install
+
+
+
+
+
+OpenCV_DIR="/root/opencv-3.1.0/build" luarocks install cv
+/root/opencv-3.1.0/build
