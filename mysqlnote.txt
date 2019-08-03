@@ -126,3 +126,36 @@ that provide transactions on top of Hbase. As such, we believe
 that such systems should not be considered NewSQL.
 
 
+
+The centralized middleware component routes queries, coordinates transactions, as well as manages data placement, replication, and partitioning across the nodes. There is typically a
+shim layer installed on each DBMS node that communicates
+with the middleware. This component is responsible for executing queries on behalf of the middleware at its local DBMS
+instance and returning results. All together, these allow middleware products to present a single logical database to the
+application without needing to modify the underlying DBMS.
+The key advantage of using a sharding middleware is that
+they are often a drop-in replacement for an application that
+is already using an existing single-node DBMS. D
+
+
+The centralized middleware component routes queries, coordinates transactions, as well as manages data placement, replication, and partitioning across the nodes. There is typically a
+shim layer installed on each DBMS node that communicates
+with the middleware. This component is responsible for executing queries on behalf of the middleware at its local DBMS
+instance and returning results. All together, these allow middleware products to present a single logical database to the
+application without needing to modify the underlying DBMS.
+The key advantage of using a sharding middleware is that
+they are often a drop-in replacement for an application that
+is already using an existing single-node DBMS. D
+
+
+
+Previous research has shown that the legacy components of disk-oriented architectures is a significant encumbrance that prevents these traditional DBMSs from scaling up to take advantage of higher CPU core counts and larger memory capacities.
+
+
+
+Examples: AgilData Scalable Cluster 2
+[1], MariaDB MaxScale [10], ScaleArc [15], ScaleBase3
+
+
+As in most aspects of cloud computing, the largest companies are the major players in the DBaaS field due to the economies of scale. But almost all of the DBaaSs just provide a managed instance of a traditional, single-node DBMS (e.g., MySQL): notable examples include Google Cloud SQL, Microsoft Azure SQL, Rackspace Cloud Database, and Salesforce Heroku. We do not consider these to be NewSQL systems as they use the same underlying disk-oriented DBMSs based on the 1970s architectures. Some vendors, like Microsoft, retro-fitted their DBMS to provide better support for multi-tenant deployments [21].
+
+
