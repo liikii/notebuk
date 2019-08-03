@@ -103,3 +103,26 @@ CREATE TABLE t (i INT) ENGINE = MYISAM;
 Two-phase locking
 Two-phase locking
 https://en.wikipedia.org/wiki/Two-phase_locking
+
+
+
+Both authors have previously included alternative storage
+engines for existing single-node DBMSs in our categorization
+of NewSQL systems. The most common examples of these
+are replacements for MySQL’s default InnoDB storage engine
+(e.g., TokuDB, ScaleDB, Akiban, deepSQL). The advantage
+of using a new engine is that an organization can get better
+performance without having to change anything in their application and still leverage the DBMS’s existing ecosystem
+(e.g., tools, APIs). The most interesting of these was ScaleDB
+because it provided transparent sharding underneath the system without using middleware by redistributing execution between storage engines; the company, however, has since pivoted to another problem domain
+
+
+
+Managing their own storage also enables a DBMS to employ more sophisticated replication schemes than what is possible with the block-based replication scheme used in HDFS.
+In general, it allows these DBMSs to achieve better performance than other systems that are layered on top of other
+existing technologies; examples of this include the “SQL on
+Hadoop” systems like Trafodion [4] and Splice Machine [16]
+that provide transactions on top of Hbase. As such, we believe
+that such systems should not be considered NewSQL.
+
+
