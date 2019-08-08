@@ -5499,3 +5499,21 @@ OpenCV_DIR="/root/opencv-3.1.0/build" luarocks install cv
 
 sudo apt-get remove --auto-remove python-dev
 
+
+prlimit – get and set a process resource limits.
+#prlimit --pid 13134
+Display limit values for all current resources.
+
+#prlimit --pid 13134 --rss --nofile=1024:4095
+Display the limits of the RSS and set the soft and hard limits for the number of open files to 1024 and 4095, respectively.
+
+#prlimit --pid 13134 --nproc=512:
+Modify only the soft limit for the number of processes.
+
+#prlimit --pid $$ --nproc=unlimited
+Set the number of processes for both soft and ceiling values to unlimited.
+
+#prlimit --cpu=10 sort -u hugefile
+Set the soft and hard CPU time limit and run ‘sort’.
+
+
