@@ -159,3 +159,10 @@ Examples: AgilData Scalable Cluster 2
 As in most aspects of cloud computing, the largest companies are the major players in the DBaaS field due to the economies of scale. But almost all of the DBaaSs just provide a managed instance of a traditional, single-node DBMS (e.g., MySQL): notable examples include Google Cloud SQL, Microsoft Azure SQL, Rackspace Cloud Database, and Salesforce Heroku. We do not consider these to be NewSQL systems as they use the same underlying disk-oriented DBMSs based on the 1970s architectures. Some vendors, like Microsoft, retro-fitted their DBMS to provide better support for multi-tenant deployments [21].
 
 
+
+
+A query evaluation plan is a tree of relational operators and is executed by calling the operators in some (possibly interleaved) order. 
+
+
+
+
