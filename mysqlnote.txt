@@ -166,3 +166,7 @@ A query evaluation plan is a tree of relational operators and is executed by cal
 
 
 
+
+Consider the following example. Transaction T1 sets an exclusive lock on object A, T2 sets an exclusive lock on B, T1 requests an exclusive lock on B and is queued, and T2 requests an exclusive lock on A and is queued. Now, T1 is waiting for T2 to release its lock and T2 is waiting for T1 to release its lock. Such a cycle of transactions waiting for locks to be released is called a deadlock.
+
+
