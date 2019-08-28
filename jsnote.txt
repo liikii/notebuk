@@ -1,2 +1,11 @@
 js note:
 https://tc39.github.io/ecma262/
+
+
+### manifest.js  :  中间处理包
+### vendor.js  : 外部包
+### app.js  : 应用全局包
+### 400.js  : 子js
+
+
+
