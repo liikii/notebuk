@@ -174,3 +174,7 @@ Consider the following example. Transaction T1 sets an exclusive lock on object 
 A simple way to identify deadlocks is to use a timeout mechanism. If a trans- action has been waiting too long for a lock, we can a'3sume (pessimistically) that it is in a deadlock cycle and abort it. 
 
 
+
+show processlist;
+#找到锁进程，kill id ;
+kill 10543303
