@@ -2,3 +2,17 @@
 
 
 量的运筹工作者首先在 军队,然后逐步转移到政府及产 业部门进行研究, 随之产生的理 论成果主要有线性规划、整数规 划、图论、网络流、几何规划、 非线性规划、全局规划、最优控 制理论等。
+
+
+
+ approximation theory
+
+ Leonid Vitaliyevich Kantorovich
+Linear programming
+Linear programming
+
+
+Leonid Kantorovich
+John von Neumann
+
+
