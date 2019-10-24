@@ -5576,3 +5576,12 @@ net.ipv4.tcp_fin_timeout 修改系默认的 TIMEOUT 时间
 
 
 
+
+
+docker search image
+docker pull debian
+docker images
+run -it debian  /bin/bash
+
+
+
