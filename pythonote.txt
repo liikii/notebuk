@@ -12,6 +12,11 @@ sudo altinstall
 
 
 
+apt install -y python3.5-dev
+apt install -y python3.5-gdbm
+
+
+
 The documentation lacks newcomer-friendly tutorial on how to install PyNaCl. Popular GNU/Linux distros do not have all necessary dependencies and they're not listed or downloaded by pip.
 
 So, I wrote these instructions that work on fresh installation of Ubuntu 16.10. If you have e.g. removed packages or run a different (version of the) distro, you might need more or less dependencies.
