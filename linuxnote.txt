@@ -1,5 +1,26 @@
-vim  中文支持
+locale -a
+Check that you have the locales package installed. On Debian you can do that with.
 
+$ dpkg -l locales
+The last line is the important one: if it starts with ii, the package is installed, and everything is fine. If not, install it. As root, type
+
+$ aptitude install locales
+Locales: generation
+make sure that on your system an UTF-8 locale is generated. As root, type
+
+$ dpkg-reconfigure locales
+
+
+vim  中文支持
+apt install awscli
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+
+export LC_ALL=C.UTF-8
+export LANG=C.UTF-8
+export LANGUAGE=C.UTF-8 >> .bashrc
 
 
 set fileencodings=utf-8,gb2312,gbk,gb18030
@@ -5583,5 +5604,75 @@ docker pull debian
 docker images
 run -it debian  /bin/bash
 
+docker attach 
+docker start/stop
 
+
+Containers
+
+Use docker container my_command
+create — Create a container from an image.
+start — Start an existing container.
+run — Create a new container and start it.
+ls — List running containers.
+inspect — See lots of info about a container.
+logs — Print logs.
+stop — Gracefully stop running container.
+kill —Stop main process in container abruptly.
+rm— Delete a stopped container.
+
+
+Images
+Use docker image my_command
+build — Build an image.
+push — Push an image to a remote registry.
+ls — List images.
+history — See intermediate image info.
+inspect — See lots of info about an image, including the layers.
+rm — Delete an image.
+
+
+Misc
+docker version — List info about your Docker Client and Server versions.
+docker login — Log in to a Docker registry.
+docker system prune — Delete all unused containers, unused networks, and dangling images.
+
+
+
+
+brew install imagemagick
+
+# 宽度>1500的缩小至1500，高度按比例
+convert -resize "1500x>" input.png output.png
+
+# 压缩PNG图片
+convert +dither -depth 8 -colors 100 input.png output.png
+
+# 两个命令拼接
+convert -resize "1500x>" +dither -depth 8 -colors 100 input.png output.png
+
+# 给PNG图片增加alpha通道（问题图片：扩展名是PNG，但是拼接图上显示黑色）
+convert input.png png32:output.png
+
+# 批量处理当前目录下的PNG图片
+for file in *.png; do convert +dither -depth 8 -colors 100 $file ${file%%.*}.png;
+
+
+
+brew install imagemagick
+
+# 宽度>1500的缩小至1500，高度按比例
+convert -resize "1500x>" input.png output.png
+
+# 压缩PNG图片
+convert +dither -depth 8 -colors 100 input.png output.png
+
+# 两个命令拼接
+convert -resize "1500x>" +dither -depth 8 -colors 100 input.png output.png
+
+# 给PNG图片增加alpha通道（问题图片：扩展名是PNG，但是拼接图上显示黑色）
+convert input.png png32:output.png
+
+# 批量处理当前目录下的PNG图片
+for file in *.png; do convert +dither -depth 8 -colors 100 $file ${file%%.*}.png;
 
