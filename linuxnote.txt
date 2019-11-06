@@ -5676,3 +5676,13 @@ convert input.png png32:output.png
 # 批量处理当前目录下的PNG图片
 for file in *.png; do convert +dither -depth 8 -colors 100 $file ${file%%.*}.png;
 
+string 
+${var%pattern}
+${var%%pattern}
+
+${var#Pattern}          
+${var##Pattern}
+
+
+http://tldp.org/LDP/abs/html/string-manipulation.html
+
