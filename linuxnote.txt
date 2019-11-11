@@ -1,4 +1,4 @@
-locale -a
+Glocale -a
 Check that you have the locales package installed. On Debian you can do that with.
 
 $ dpkg -l locales
