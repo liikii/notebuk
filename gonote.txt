@@ -1,4 +1,18 @@
+http_proxy=127.0.0.1:5000 go get golang.org/x/tools/cmd/godoc
+http_proxy=127.0.0.1:5000 https_proxy=127.0.0.1:5000 go get golang.org/x/tools/cmd/godoc
 
+
+#!/bin/bash
+
+export http_proxy=socks5://127.0.0.1:5000 https_proxy=socks5://127.0.0.1:5000
+# export all_proxy=127.0.0.1:5000 
+# export https_proxy=127.0.0.1:5000 
+go get golang.org/x/tour
+
+
+
+go get github.com/golang/tour/gotour
+go get github.com/golang/tour/gotour
 go build
 env GOOS=windows GOARCH=amd64 go build
 env GOOS=windows GOARCH=amd64 go build github.com/mholt/caddy/caddy
@@ -6,6 +20,10 @@ env GOOS=windows GOARCH=amd64 go build github.com/mholt/caddy/caddy
 env GOOS=linux GOARCH=amd64 go build -o haha hulu.go
 env GOOS=windows GOARCH=amd64 go build -o hulu.exe hulu.go
 go build -o hulu4mac hulu.go
+
+http_proxy=127.0.0.1:5000 go get golang.org/x/tour/gotour
+
+http_proxy=127.0.0.1:5000 go get golang.org/x/tour/gotour
 
 GOOS - Target Operating System  GOARCH - Target Platform
 android arm
@@ -131,7 +149,7 @@ https://codeload.github.com/lukehoban/go-outline/zip/master
 
 10719  cp godef godef-gomod
 10720  cp gocode gocode-gomod
-
+ go get golang.org/x/tour/gotour 
 
 
 Install the Go tools
@@ -151,4 +169,5 @@ export PATH=$PATH:/usr/local/go/bin
 Note: changes made to a profile file may not apply until the next time you log into your computer. To apply the changes immediately, just run the shell commands directly or execute them from the profile using a command such as source $HOME/.profile.
 
 
-
+export {http,https,ftp}_proxy='http://127.0.0.1:5000'
+http_proxy=127.0.0.1:5000 https_proxy=127.0.0.1:5000  go get github.com/golang/tour/gotour
