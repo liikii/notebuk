@@ -1,3 +1,336 @@
+Command Line
+Find your wireless interface and bring it up:
+
+
+# ip a
+# iwconfig
+# ip link set wlan0 up
+Scan for available networks and get network details:
+
+
+$ su -l
+# iwlist scan
+Now edit /etc/network/interfaces. The required configuration is much dependent on your particular setup. See the following example to get an idea of how it works:
+
+
+# my wifi device
+allow-hotplug wlan0
+iface wlan0 inet dhcp
+        wireless-essid [ESSID]
+        wireless-mode [MODE] 
+For further information on available configuration options, see man interfaces, man wireless and /usr/share/doc/wireless-tools/README.Debian.
+
+You can now bring your interface up and down with the usual ifup and ifdown commands. If you added auto wlan0 as in the example above, the interface should be brought up automatically during boot up.
+
+Add a "non-free" component to /etc/apt/sources.list, for example:
+
+# Debian 8 "Jessie"
+deb http://deb.debian.org/debian jessie main contrib non-free
+Update the list of available packages and install the firmware-brcm80211 package:
+
+# apt-get update && apt-get install firmware-brcm80211
+As the driver may already be loaded, reinsert the module to access installed firmware:
+
+# modprobe -r brcmsmac ; modprobe brcmsmac
+
+############################################################
+apt-get update && apt-get install firmware-brcm80211
+modprobe -r brcmsmac ; modprobe brcmsmac
+/sbin/iw 
+/sbin/iwlist
+aptitude install iw
+
+
+PCI Devices
+See HowToIdentifyADevice/PCI for more information
+
+
+Module
+
+Device name(s)
+
+help page
+
+free (?)
+
+acx-mac80211
+
+Texas Instruments chipsets (ACX100/TNETW1100, ACX111/TNETW1130)
+
+acx
+
+X-(
+
+adm8211
+
+ADMtek ADM8211 chipset
+
+adm8211
+
+{OK}
+
+airo
+
+?airo
+
+?
+
+arlan
+
+?arlan
+
+?
+
+ath5k
+
+Atheros Communications chipsets (AR5210, AR5211, AR5212, AR5213, AR5414, AR2413, AR242x)
+
+ath5k
+
+{OK}
+
+ath9k
+
+Atheros Communications 802.11n chipsets
+
+ath9k
+
+{OK}
+
+atmel_pci
+
+Atmel at76c506 chipset
+
+atmel_pci
+
+X-(
+
+b43
+b43legacy
+
+Broadcom chipsets
+
+bcm43xx
+
+X-(
+
+brcm80211
+brcmsmac
+
+Broadcom chipsets (BCM4313, BCM43224, BCM43225)
+
+brcm80211
+
+X-(
+
+hostap_pci
+hostap_plx
+
+Intersil Prism 2/2.5/3 chipsets
+
+hostap
+
+{OK} / X-( 1
+
+ipw2100
+ipw2200
+
+Intel PRO/Wireless 2100
+Intel PRO/Wireless 2200
+Intel PRO/Wireless 2915
+
+ipw2200
+
+X-(
+
+iwl3945
+iwl4965
+
+Intel PRO/Wireless 3945
+Intel PRO/Wireless 4965
+
+iwlegacy
+
+X-(
+
+iwlagn
+iwlwifi
+
+Intel Wireless WiFi Link
+Intel Wireless-N
+Intel Advanced-N
+Intel Ultimate-N
+
+iwlwifi
+
+X-(
+
+mwl8k
+
+Marvell chipsets (88W8363, 88W8366, 88W8687)
+
+mwl8k
+
+X-(
+
+orinoco_nortel
+orinoco_plx
+orinoco_tmd
+
+Lucent/Agere Hermes and Intersil Prism 2/2.5/3 chipsets
+
+orinoco
+
+{OK} / X-( 2
+
+p54pci
+
+Intersil Prism54 chipsets (ISL3877, ISL3880, ISL3886, ISL3890)
+
+prism54
+
+X-(
+
+r8192_pci
+r8192e_pci
+
+Realtek RTL8192E chipset
+
+rtl819x
+
+X-(
+
+rt2400pci
+
+Ralink chipsets (RT2400/RT2460, RT2401/RT2460)
+
+rt2400pci
+
+{OK}
+
+rt2500pci
+
+Ralink RT2500/RT2560 chipset
+
+WiFi/rt2500
+
+{OK}
+
+rt2800pci
+
+Ralink chipsets (RT2760, RT2790, RT2860, RT2890, RT3060, RT3062, RT3090, RT3091, RT3092, RT3390, RT3562, RT3592, RT5390)
+
+rt2800pci
+
+X-(
+
+rt2860sta
+
+Ralink chipsets (RT2760/RT2790/RT2860/RT2890, RT3090/RT3091/RT3092)
+
+rt2860sta
+
+X-( {i}
+
+rt61pci
+
+Ralink chipsets (RT2501/2561, RT2600/RT2661)
+
+rt61pci
+
+X-(
+
+rtl8180
+
+Realtek chipsets (RTL8180, RTL8185)
+
+rtl818x
+
+{OK}
+
+r8187se
+rtl8187se
+
+Realtek RTL8187SE chipset
+
+rtl818x
+
+{OK}
+
+rtl8192ce
+
+Realtek chipsets (RTL8188CE, RTL8192CE)
+
+rtl819x
+
+X-(
+
+rtl8192de
+
+Realtek chipsets (RTL8188DE, RTL8192DE)
+
+rtl819x
+
+X-(
+
+rtl8192se
+
+Realtek chipsets (RTL8191SE, RTL8192SE)
+
+rtl819x
+
+X-(
+
+strip
+
+?strip
+
+?
+
+wavelan
+
+?wavelan
+
+?
+
+wl
+
+Broadcom chipsets (BCM4311, BCM4312, BCM4313, BCM4321, BCM4322, BCM43224, BCM43225, BCM43227, BCM43228)
+
+wl
+
+X-(
+
+Atheros Communications AR5005VL (AR5513) chipset [168c:0020]
+
+NdisWrapper
+
+{X}
+
+InProComm IPN 2120 chipset [17fe:2120]
+
+NdisWrapper
+
+{X}
+
+InProComm IPN 2220 chipset [17fe:2220]
+
+NdisWrapper
+
+{X}
+
+Marvell Libertas 88W8335 chipset [11ab:1faa]
+
+NdisWrapper
+
+{X}
+
+WavePlus WP1200 chipset [17f7:0001]
+
+############################################################
+
+
+
 Glocale -a
 Check that you have the locales package installed. On Debian you can do that with.
 
