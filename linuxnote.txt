@@ -5349,6 +5349,15 @@ echo 'a b c' | awk '1 {print $1}; 2 {print $2}; 0 {print $3}'
 
 cat tmp.txt | awk 'NR%3{printf "%s", $0;next;}1{print}'
 
+查看支持的编码
+locale -a
+locale: Cannot set LC_CTYPE to default locale: No such file or directory
+locale: Cannot set LC_MESSAGES to default locale: No such file or directory
+locale: Cannot se
+————————————————
+版权声明：本文为CSDN博主「mirabelle521」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/mirabelle521/article/details/25129175
+
 
 sudo vim /etc/default/locale 
 LANG="en_US.UTF-8"
@@ -6115,5 +6124,115 @@ IMPLEMENTATION
     Copyright (C) 2009 Free Software Foundation, Inc.
     License GPLv3+: GNU GPL version 3 or later 
 
+
+
+1732  apt search docker
+ 1733  apt search docker | grep docker
+ 1739  curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+ 1741  sudo add-apt-repository \\n   "deb [arch=amd64] https://download.docker.com/linux/debian \\n   $(lsb_release -cs) \\n   stable"
+ 1742  apt search docker| grep docker
+ 1743  sudo apt-get install docker-ce docker-ce-cli containerd.io
+ 1744  sudo docker run hello-world
+ 1745  docker
+ 1746  docker images
+ 1747  sudo docker images
+ 1750  docker
+ 1751  docker pull debian
+ 1752  sudo docker pull debian
+ 1754  docker
+ 1755  docker search debian
+ 1756  sudo docker search debian
+ 1757  sudo docker search linux
+ 1758  sudo docker search amazonlinux
+ 1760  sudo docker search python
+ 1761  docker
+ 1762  docker | grep info
+ 1763  sudo docker search 
+ 1764  sudo docker search centos/python-36-centos7
+ 1765  sudo docker search python-36-centos7
+ 1766  sudo docker search debian
+ 1767  docker pull debian
+ 1768  sudo docker pull debian
+ 1769  docker images
+ 1770  sudo docker images
+ 1776  sudo docker run -it debian  /bin/bash
+ 1778  docker ps
+ 1779  sudo docker ps
+ 1780  sudo docker ps -a
+ 1781  docker build
+ 1795  docker build 
+ 1796  docker build  --help
+ 1817  docker images
+ 1818  sudo docker images
+ 1820  docker 
+ 1821  docker ps -a
+ 1822  docker ps a
+ 1823  docker ps
+ 1824  sudo docker ps -a
+ 1825  docker kill 68780630e1e8
+ 1826  sudo docker kill 68780630e1e8
+ 1857  docker images
+ 1858  sudo docker images
+ 1859  docker 
+ 1860  docker tag --help
+ 1862  docker images
+ 1863  sudo docker images
+ 1864  docker tag --help
+ 1865  docker tag 6e206519d273 cim36
+ 1866  sudo docker tag 6e206519d273 cim36
+ 1867  docker images
+ 1868  sudo docker images
+ 1869  sudo docker tag cim36 cim:361
+ 1870  sudo docker images
+ 1871  docker tag cim:361 031554972633.dkr.ecr.cn-north-1.amazonaws.com.cn/cimpro:361
+ 1872  sudo docker tag cim:361 031554972633.dkr.ecr.cn-north-1.amazonaws.com.cn/cimpro:361
+ 1873  sudo docker images
+ 1874  docker push 031554972633.dkr.ecr.cn-north-1.amazonaws.com.cn/cimpro:361
+ 1875  sudo docker push 031554972633.dkr.ecr.cn-north-1.amazonaws.com.cn/cimpro:361
+ 1882  sudo docker push 031554972633.dkr.ecr.cn-north-1.amazonaws.com.cn/cimpro:361
+ 1885  sudo docker push 031554972633.dkr.ecr.cn-north-1.amazonaws.com.cn/cimpro:361
+ 1891  sudo docker push 031554972633.dkr.ecr.cn-north-1.amazonaws.com.cn/cimpro:361
+ 1892  docker push 031554972633.dkr.ecr.cn-north-1.amazonaws.com.cn/cimpro:361
+ 2161  docker images
+ 2162  sudo docker images
+ 2189  history | grep docker
+ 2190  history | grep docker | grep bash
+ 2191  docker ps -a
+ 2192  sudo docker ps -a
+ 2193  docker reattach f095aa8a415e
+ 2194  docker attach f095aa8a415e
+ 2195  sudo docker attach f095aa8a415e
+ 2196  sudo docker start f095aa8a415e
+ 2197  sudo docker start 68780630e1e8
+ 2198  sudo docker ps -a
+ 2199  sudo docker attach 68780630e1e8
+ 2203  sudo docker ps -a
+ 2204  sudo docker stop 68780630e1e8
+ 2209  sudo docker ps -a
+ 2210  sudo docker run -it 68780630e1e8 /bin/bash
+ 2211  sudo docker run -it 6e6196be77fd /bin/bash
+ 2212  sudo docker ps
+ 2213  sudo docker ps -a
+ 2214  docker run -it -d 6e6196be77fd /bin/bash
+ 2215  sudo docker run -it -d 6e6196be77fd /bin/bash
+ 2216  sudo docker ls
+ 2217  sudo docker contain ls
+ 2218  sudo docker container ls
+ 2219  sudo docker container ls -a
+ 2220  sudo docker ps -a
+ 2221  sudo docker run -it 68780630e1e8 /bin/sh
+ 2222  sudo docker attach 68780630e1e8
+ 2223  sudo docker start 68780630e1e8
+ 2224  sudo docker attach 68780630e1e8 
+ 2226  sudo docker ps -a
+ 2227  sudo docker stop 68780630e1e8
+ 2229  sudo docker start 68780630e1e8
+ 2230  sudo docker ps -a
+ 2231  docker exec -it 68780630e1e8 /bin/bash
+ 2232  sudo docker exec -it 68780630e1e8 /bin/bash
+ 2240  sudo docker exec -it 68780630e1e8 /bin/bash
+ 2288* history| grep docker
+ 2292* history| grep docker
+➜  ~ 
 
 
