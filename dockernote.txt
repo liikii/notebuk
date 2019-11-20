@@ -1,0 +1,15 @@
+docker images
+list images
+list container
+
+build imgages
+run iamges
+
+rm contain
+rm images
+
+
+attach container
+
+start container
+stop container
