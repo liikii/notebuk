@@ -1,0 +1,235 @@
+继承中的特点
+有public, protected, private三种继承方式，它们相应地改变了基类成员的访问属性。
+
+1.public 继承：基类 public 成员，protected 成员，private 成员的访问属性在派生类中分别变成：public, protected, private
+
+2.protected 继承：基类 public 成员，protected 成员，private 成员的访问属性在派生类中分别变成：protected, protected, private
+
+3.private 继承：基类 public 成员，protected 成员，private 成员的访问属性在派生类中分别变成：private, private, private
+
+但无论哪种继承方式，上面两点都没有改变：
+
+1.private 成员只能被本类成员（类内）和友元访问，不能被派生类访问；
+
+2.protected 成员可以被派生类访问。
+
+
+public:
+  int a;
+  B(int i){
+    A();
+    a = i;
+  }
+  void fun(){
+    cout << a << endl;       //正确，public成员。
+    cout << a1 << endl;       //正确，基类的public成员，在派生类中变成了protected，可以被派生类访问。
+    cout << a2 << endl;       //正确，基类的protected成员，在派生类中还是protected，可以被派生类访问。
+    cout << a3 << endl;       //错误，基类的private成员不能被派生类访问。
+  }
+};
+int main(){
+  B b(10);
+  cout << b.a << endl;       //正确。public成员
+  cout << b.a1 << endl;      //错误，protected成员不能在类外访问。
+  cout << b.a2 << endl;      //错误，protected成员不能在类外访问。
+  cout << b.a3 << endl;      //错误，private成员不能在类外访问。
+  system("pause");
+  return 0;
+}
+
+
+
+class B : private A{
+public:
+  int a;
+  B(int i){
+    A();
+    a = i;
+  }
+  void fun(){
+    cout << a << endl;       //正确，public成员。
+    cout << a1 << endl;       //正确，基类public成员,在派生类中变成了private,可以被派生类访问。
+    cout << a2 << endl;       //正确，基类的protected成员，在派生类中变成了private,可以被派生类访问。
+    cout << a3 << endl;       //错误，基类的private成员不能被派生类访问。
+  }
+};
+int main(){
+  B b(10);
+  cout << b.a << endl;       //正确。public成员
+  cout << b.a1 << endl;      //错误，private成员不能在类外访问。
+  cout << b.a2 << endl;      //错误, private成员不能在类外访问。
+  cout << b.a3 << endl;      //错误，private成员不能在类外访问。
+  system("pause");
+  return 0;
+}
+
+
+类的构造函数
+类的析构函数
+
+
+
+
+
+拷贝构造函数是一种特殊的构造函数，它在创建对象时，是使用同一类中之前创建的对象来初始化新创建的对象。拷贝构造函数通常用于：
+
+通过使用另一个同类型的对象来初始化新创建的对象。
+
+复制对象把它作为参数传递给函数。
+
+复制对象，并从函数返回这个对象。
+
+
+友元   类的动态函数. 同义反复.
+
+
+
+inline 函数 
+引入内联函数的目的是为了解决程序中函数调用的效率问题，这么说吧，程序在编译器编译的时候，编译器将程序中出现的内联函数的调用表达式用内联函数的函数体进行替换，而对于其他的函数，都是在运行时候才被替代。这其实就是个空间代价换时间的i节省
+
+
+
+一个指向 C++ 类的指针与指向结构的指针类似，访问指向类的指针的成员，需要使用成员访问运算符 ->，就像访问指向结构的指针一样。与所有的指针一样，您必须在使用指针之前，对指针进行初始化。
+
+下面的实例有助于更好地理解指向类的指针的概念：
+
+
+类的优点是能将“数据”（数据成员）和“操作”（函数成员）封装起来，大大提高程序的可维护性和扩展性。
+
+对于非静态数据成员，每个对象应持有自己独立的数据，因此不同对象的数据成员应存储在不同的内存区域中，一般存储在堆栈区。
+
+对于静态数据成员，它不属于类的某个对象，存储在全局变量区。
+
+函数成员是对数据进行的操作，即使数据源不同，数据操作方式是相同的，因此没有必要为每个对象单独开辟内存空间来存储函数成员，同一个类的不同对象的函数成员地址是完全相同的。
+
+非静态成员的储存方式
+类的所有非静态数据成员以连续存储的方式存储在内存中，如下图所示。我们可以将一个对象看作一个存储了不同类型数据的”数组”，该”数组”的首地址是对象本身的地址（即this指针）。对象的数据成员是根据this指针以及该数据成员与this的偏移量来获取的。
+————————————————
+版权声明：本文为CSDN博主「zengjinle」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/zengjinle/article/details/52293827
+
+
+我们通过以下例子来加深理解。假设我们定义了一个AClass类，它包含两个私有数据成员a和b，分别是int和char类型。此外，还定义了一个公有函数成员setParams，对这两个数据成员进行赋值。
+
+class AClass {
+private:
+    int a;
+    char b; 
+public:
+    void setParams(int a, char b) {
+        this->a = a;
+        this->b = b;
+    }
+}; 
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+测试代码如下：
+
+AClass obj;
+void *pObj = &obj;
+int *pA = (int*)((char*)pObj + 0); // obj.a的地址
+char *pB = (char*)pObj + sizeof(int); // obj.b的地址
+
+obj.setParams(1,'a');
+cout << *pA << ',' << *pB << endl; // 输出1,a
+
+obj.setParams(2,'b');
+cout << *pA << ',' << *pB << endl; // 输出2,b
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+输出结果与setParams的实参对应，验证了数据成员的存储方式。
+
+上述例子说明了一个事实：类的私有（或保护）成员并非不可访问！把类的成员设置为private（或protected）的用途仅仅是提醒编译器在编译的时候不能通过obj.a或pObj->a的方式来访问类的私有（或保护）成员。但不排除可以通过别的方式读取或修改类的私有（或保护）成员。当然，类的设计初衷是实现数据封装、访问限制等功能，通过上述例子的方式访问类的私有成员是不安全的，也是不推荐的，上述例子仅用于说明数据成员在内存中的存储方式。
+
+关于对象的存储空间大小问题
+既然对象是由它的非静态数据成员构成的，理应对象的存储空间大小等于各个数据成员的存储空间总和。然而，这这两者往往是不相等的。对象的存储空间大小还与以下因素有关：
+1. 虚函数
+2. 虚继承
+3. 空类
+4. Data alignment
+
+含有虚函数的类多一个虚函数指针__vptr，因此存储空间应多出sizeof(__vptr)。
+
+虚基类往往多一个指向基类对象的指针，因此存储空间也应多出sizeof((void*)0)。
+
+空类是指没有任何数据成员的类，为了标识它的不同对象，编译器往往会给空类对象分配1个字节的内存空间。有趣的是，继承自空类的空类，编译器也往往只给它分配1个字节的空间，而不是2个字节，以避免空间的浪费；继承自空类的非空类，编译器往往会忽略空类1个字节的空间，只计算非空类自身数据成员所占的空间。
+
+Data alignment是指编译器会在数据成员之间自动填充一些字节，以保证数据成员字节对其。我们知道，对象的数据成员是根据this指针以及该数据成员与this指针的偏移量来获取的。CPU在读取内存时，往往不是只读取一个内存单元的数据，而是一片。例如，32位机器往往一次读取4个内存单元数据；在64位机器往往一次读取8个内存单元数据。如果数据成员与this的偏移量是4或8的整数倍，往往能提高内存读取性能。Data alignment的目的是在数据成员之间填充一些字节，使得每个数据成员与this的偏移量均是4（32位机器）或8（64位机器）的整数倍。
+
+例如：
+
+class A {
+    int a;
+    char b;
+};
+
+class B {
+    char b;
+    int a;
+};
+1
+2
+3
+4
+5
+6
+7
+8
+9
+类A和B的数据成员完全相同，但它们的存储空间确是不同的。
+
+在32位机器上，对于类A，第一个数据成员a与this的偏移是0，是4的整数倍，不必填充；第二个数据成员b与this的偏移是4，也是4的整数倍，不必填充。因此sizeof(A) == sizeof(int) + sizeof(char)。
+
+对于类B，第一个数据成员b与this的偏移是0，是4的整数倍，不必填充；第二个数据成员a与this的偏移是1，不是4的整数倍，因此编译器会在两个数据成员之间填充3个字节的数据，以保证第二个数据成员a与this的偏移是4。因此sizeof(B) == sizeof(int) + sizeof(char) + 3。
+
+函数成员
+我们可以通俗地认为，函数成员在编译完成后都会转换为一个C风格的函数。例如，对于非静态的函数成员，如上例中的AClass::setParams(int a,char b)在编译后会转换为以下函数
+
+void AClass::setParams(AClass *this, int a, int b);
+1
+其中，函数的第一个形参实际上就是对象的this指针，指向对象的内存地址。每个非静态成员都隐含this这一参数，this指针是隐式传递到函数中去的。对于大多数编译器而言，this指针的传递方式与其他参数不同，this指针往往是通过寄存器来传递的。
+
+对于非静态成员函数，它属于类不属于某个对象，因此调用静态成员函数时不需要传递this指针，编译后静态成员函数的形参个数不变。
+
+
+————————————————
+版权声明：本文为CSDN博主「zengjinle」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/zengjinle/article/details/52293827
+
+
+
+
+The problem with object-oriented languages is they've got all this implicit environment that they carry around with them. You wanted a banana but what you got was a gorilla holding the banana and the entire jungle.
+
+
+
+
+I find OOP technically unsound. It attempts to decompose the world in terms of interfaces that vary on a single type. To deal with the real problems you need multisorted algebras — families of interfaces that span multiple types. I find OOP philosophically unsound. It claims that everything is an object. Even if it is true it is not very interesting — saying that everything is an object is saying nothing at all.
+
+
+
+I find OOP technically unsound. It attempts to decompose the world in terms of interfaces that vary on a single type. To deal with the real problems you need multisorted algebras — families of interfaces that span multiple types. I find OOP philosophically unsound. It claims that everything is an object. Even if it is true it is not very interesting — saying that everything is an object is saying nothing at all.
+
+
+Paul Graham has suggested that OOP's popularity within large companies is due to "large (and frequently changing) groups of mediocre programmers". According to Graham, the discipline imposed by OOP prevents any one programmer from "doing too much damage".
+
+
+Rob Pike, a programmer involved in the creation of UTF-8 and Go, has called object-oriented programming "the Roman numerals of computing"[51] and has said that OOP languages frequently shift the focus from data structures and algorithms to types.[52] Furthermore, he cites an instance of a Java professor whose "idiomatic" solution to a problem was to create six new classes, rather than to simply use a lookup table.[53]
+
+
