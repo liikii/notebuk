@@ -1,3 +1,26 @@
+cat req.json| grep update_adgroup | awk -F':' '{printf "%s, ", $1}'
+cat req.json| grep update_adgroup | awk -F':' '{printf "%s, ", $1}'
+
+docker run -it 0693bddeb07a /bin/bash
+dd ENV LANG=C.UTF-8 to Dockerfile #202
+0693bddeb07a
+ 0693bddeb07a
+
+ENV LANG=C.UTF-8
+
+e8edff3e07f0
+
+docker run -p 8888:8080 5a7792165956
+docker run -it 5a7792165956 /bin/bash
+
+RUN /bin/bash -c 'source $HOME/.bashrc; \
+
+5a7792165956
+
+ 5a7792165956
+
+ 
+
 docker rmi 49b71ef96923
 
 Command Line
