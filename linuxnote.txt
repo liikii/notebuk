@@ -1,3 +1,50 @@
+git config --global http.lowSpeedTime 600
+git config --global http.lowSpeedLimit 1000
+git config --global http.lowSpeedTime 600ddddd
+
+// 设置当前代理为 http://127.0.0.1:1080 或 socket5://127.0.0.1:1080
+
+git config --global http.proxy 'http://127.0.0.1:1080'
+
+git config --global https.proxy 'http://127.0.0.1:1080'
+
+git config --global http.proxy 'socks5://127.0.0.1:1080'
+
+git config --global https.proxy 'socks5://127.0.0.1:1080' /
+
+/ 删除代理
+
+git config --global --unset https.proxy
+————————————————
+版权声明：本文为CSDN博主「one-Cf」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/qq_29364417/article/details/85940097
+
+
+
+
+Accept all dependencies suggested by the system.
+
+# Next you have toconfigure the locales, type in the Terminal:
+
+sudo gedit /etc/locale.gen
+
+and remove the“#”from the locale you want to use(don't forget to save). For Chinese language use one of the“zh_”locales.
+
+Now type in the Terminal:
+
+sudo locale-gen
+
+#Restartcomputer and at the Login windowchoose Chinese language.
+
+Note:
+
+作者：QT4CN
+链接：https://www.jianshu.com/p/d3395f9fccd0
+来源：简书
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
+
+
 cat req.json| grep update_adgroup | awk -F':' '{printf "%s, ", $1}'
 cat req.json| grep update_adgroup | awk -F':' '{printf "%s, ", $1}'
 
