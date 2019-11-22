@@ -1,3 +1,7 @@
+10123* git remote add awscode https://git-codecommit.us-west-2.amazonaws.com/v1/repos/ai-xj-python-api
+10127* git commit -am 'up '
+
+
 git init
 git add filename
 git commit -am 'msg'
