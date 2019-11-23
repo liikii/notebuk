@@ -1,3 +1,69 @@
+
+ Debian静态IP地址和DNS
+
+Debian静态IP地址和DNS
+
+一、配置文件及路径
+
+/etc/network/interfaces
+
+
+二、IP地址
+1. DHCP的IP配置如下
+
+# The primary network interface
+allow-hotplug eth0
+iface eth0 inet dhcp
+
+
+2. 静态的IP配置示例如下
+
+allow-hotplug eth0
+iface eth0 inet static
+address 192.168.11.100
+netmask 255.255.255.0
+gateway 192.168.11.1
+
+
+三、关于DNS配置
+1.DNS配置文件地址
+
+/etc/resolv.conf
+
+添加实际的dns地址：
+
+nameserver 8.8.8.8
+
+有多个就添加多行。
+
+2.如果安装了resolvconf
+接着在gateway的下面一行添加（注意是/etc/network/interfaces这个文件）
+
+dns-nameservers 8.8.8.8
+
+
+四、查看使用中的DNS配置
+1. dig命令
+1.1 安装dig
+
+sudo apt-get install dnsutils
+
+1.2 执行dig
+
+;; Query time: 2 msec
+;; SERVER: 127.0.1.1#53(127.0.1.1)
+;; WHEN: Mon Oct 23 11:52:23 CST 2017
+;; MSG SIZE  rcvd: 239
+
+SERVER：这一行就是配置生效的DNS地址
+
+五、网卡重启
+
+systemctl restart networking
+
+
+
+
 On Debian 9, the traditional “rc.local” has been deprecated. For traditional Linux users and administrators, there is a way to get it back using SystemD. See the procedure below :
 
 1. Edit the non-existing file “rc-local.service” :
