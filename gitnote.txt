@@ -1,3 +1,87 @@
+
+
+and remembers your passphrase.
+Generating a new SSH key
+
+    Open Terminal.
+
+    Paste the text below, substituting in your GitHub email address.
+
+    $ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+
+    This creates a new ssh key, using the provided email as a label.
+
+    > Generating public/private rsa key pair.
+
+    When you're prompted to "Enter a file in which to save the key," press Enter. This accepts the default file location.
+
+    > Enter a file in which to save the key (/home/you/.ssh/id_rsa): [Press enter]
+
+    At the prompt, type a secure passphrase. For more information, see "Working with SSH key passphrases".
+
+    > Enter passphrase (empty for no passphrase): [Type a passphrase]
+    > Enter same passphrase again: [Type passphrase again]
+
+Adding your SSH key to the ssh-agent
+
+Before adding a new SSH key to the ssh-agent to manage your keys, you should have checked for existing SSH keys and generated a new SSH key.
+
+    Start the ssh-agent in the background.
+
+    $ eval "$(ssh-agent -s)"
+    > Agent pid 59566
+
+    Add your SSH private key to the ssh-agent. If you created your key with a different name, or if you are adding an existing key that has a different name, replace id_rsa in the command with the name of your private key file.
+
+    $ ssh-add ~/.ssh/id_rsa
+
+
+
+ssh config git
+4，修改配置文件
+
+若.ssh目录(就是私钥所在的文件夹)下无config文件，那么创建
+
+touch config
+
+在config文件添加以下内容
+
+    # gitlab
+    Host github.com
+    Port 22
+    HostName github.com
+    PreferredAuthentications publickey
+    IdentityFile C:/Users/xiaohaozi/.ssh/github-rsa
+    User xiaohaozi
+     
+    # smartgit
+    Host smartgit
+    HostName smartgit
+    PreferredAuthentications publickey
+    IdentityFile C:/Users/xiaohaozi/.ssh/id_rsa
+    User xiaohaozi
+
+    # 配置文件参数
+    # Host : Host可以看作是一个你要识别的模式，对识别的模式，进行配置对应的的主机名和ssh文件（可以直接填写ip地址）
+    # HostName : 要登录主机的主机名（建议与Host一致）
+    # User : 登录名（如gitlab的username）
+    # IdentityFile : 指明上面User对应的identityFile路径
+    # Port: 端口号（如果不是默认22号端口则需要指定）
+————————————————
+版权声明：本文为CSDN博主「小號子」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/hao495430759/article/details/80673568
+
+5.测试
+
+$ ssh -T git@github.com
+
+ 输出
+Welcome to GitLab, your name!
+则说明成功了。
+
+也可以在自己的github上创建一个project之后，再git bash中gitc clone 一下进行测试。
+
+
 10123* git remote add awscode https://git-codecommit.us-west-2.amazonaws.com/v1/repos/ai-xj-python-api
 10127* git commit -am 'up '
 

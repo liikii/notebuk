@@ -1,3 +1,4 @@
+
 --------------------
 --------------------
 
@@ -15,6 +16,357 @@ cp profile .bashrc, author to new old user.
 
 --------------------
 --------------------
+
+
+ Debian静态IP地址和DNS
+
+Debian静态IP地址和DNS
+
+一、配置文件及路径
+
+/etc/network/interfaces
+
+
+二、IP地址
+1. DHCP的IP配置如下
+
+# The primary network interface
+allow-hotplug eth0
+iface eth0 inet dhcp
+
+
+2. 静态的IP配置示例如下
+
+allow-hotplug eth0
+iface eth0 inet static
+address 192.168.11.100
+netmask 255.255.255.0
+gateway 192.168.11.1
+
+
+三、关于DNS配置
+1.DNS配置文件地址
+
+/etc/resolv.conf
+
+添加实际的dns地址：
+
+nameserver 8.8.8.8
+
+有多个就添加多行。
+
+2.如果安装了resolvconf
+接着在gateway的下面一行添加（注意是/etc/network/interfaces这个文件）
+
+dns-nameservers 8.8.8.8
+
+
+四、查看使用中的DNS配置
+1. dig命令
+1.1 安装dig
+
+sudo apt-get install dnsutils
+
+1.2 执行dig
+
+;; Query time: 2 msec
+;; SERVER: 127.0.1.1#53(127.0.1.1)
+;; WHEN: Mon Oct 23 11:52:23 CST 2017
+;; MSG SIZE  rcvd: 239
+
+SERVER：这一行就是配置生效的DNS地址
+
+五、网卡重启
+
+systemctl restart networking
+
+
+
+
+On Debian 9, the traditional “rc.local” has been deprecated. For traditional Linux users and administrators, there is a way to get it back using SystemD. See the procedure below :
+
+1. Edit the non-existing file “rc-local.service” :
+Command
+Shell
+vi /etc/systemd/system/rc-local.service
+1
+	
+vi /etc/systemd/system/rc-local.service
+
+1.1. Add the following content to “/etc/systemd/system/rc-local.service” :
+Configuration
+Shell
+[Unit]
+Description=/etc/rc.local
+ConditionPathExists=/etc/rc.local
+
+[Service]
+Type=forking
+ExecStart=/etc/rc.local start
+TimeoutSec=0
+StandardOutput=tty
+RemainAfterExit=yes
+SysVStartPriority=99
+
+[Install]
+WantedBy=multi-user.target
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+	
+[Unit]
+Description=/etc/rc.local
+ConditionPathExists=/etc/rc.local
+ 
+[Service]
+Type=forking
+ExecStart=/etc/rc.local start
+TimeoutSec=0
+StandardOutput=tty
+RemainAfterExit=yes
+SysVStartPriority=99
+ 
+[Install]
+WantedBy=multi-user.target
+
+2. Edit the “rc.local” file :
+Command
+Shell
+vi /etc/rc.local
+1
+	
+vi /etc/rc.local
+
+ 
+
+2.1. Append the generic content below and save the file :
+Configuration
+Shell
+#!/bin/sh -e
+#
+# rc.local
+#
+# This script is executed at the end of each multiuser runlevel.
+# Make sure that the script will "exit 0" on success or any other
+# value on error.
+#
+# In order to enable or disable this script just change the execution
+# bits.
+#
+# By default this script does nothing.
+
+exit 0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+	
+#!/bin/sh -e
+#
+# rc.local
+#
+# This script is executed at the end of each multiuser runlevel.
+# Make sure that the script will "exit 0" on success or any other
+# value on error.
+#
+# In order to enable or disable this script just change the execution
+# bits.
+#
+# By default this script does nothing.
+ 
+exit 0
+
+3. Change permissions :
+Command
+Shell
+chmod +x /etc/rc.local
+1
+	
+chmod +x /etc/rc.local
+
+4. Enable the “rc-local” script on boot :
+Command
+Shell
+systemctl enable rc-local
+1
+	
+systemctl enable rc-local
+
+5. Start the “rc-local” script :
+Command
+Shell
+systemctl start rc-local.service
+1
+	
+systemctl start rc-local.service
+
+6. Check if any error occurred while starting the service :
+Command
+Shell
+systemctl status rc-local.service
+1
+	
+systemctl status rc-local.service
+
+You may now append anything you’d like to the traditional “rc.local”.
+
+    nohup
+    使用&命令后，作业被提交到后台运行，当前控制台没有被占用，但是一但把当前控制台关掉(退出帐户时)，作业就会停止运行。nohup命令可以在你退出帐户之后继续运行相应的进程。nohup就是不挂起的意思( no hang up)。该命令的一般形式为：
+
+nohup command &
+
+    1
+
+如果使用nohup命令提交作业，那么在缺省情况下该作业的所有输出都被重定向到一个名为nohup.out的文件中，除非另外指定了输出文件：
+
+nohup command > myout.file 2>&1 &
+————————————————
+版权声明：本文为CSDN博主「liuyanfeier」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/liuyanfeier/article/details/62422742
+
+
+2、方法二，添加一个Ubuntu的开机启动服务。（此我设置的NN为95）
+如果要添加为开机启动执行的脚本文件，
+可先将脚本复制或者软连接到/etc/init.d/目录下，
+然后用：update-rc.d xxx defaults NN命令(NN为启动顺序)，
+将脚本添加到初始化执行的队列中去。
+注意如果脚本需要用到网络，则NN需设置一个比较大的数字，如99。
+1) 将你的启动脚本复制到 /etc/init.d目录下
+以下假设你的脚本文件名为 test。
+2) 设置脚本文件的权限
+
+ $ sudo chmod 755 /etc/init.d/test
+
+    1
+
+3) 执行如下命令将脚本放到启动脚本中去：
+
+ $ cd /etc/init.d
+ $ sudo update-rc.d test defaults 95
+
+    1
+    2
+
+注：其中数字95是脚本启动的顺序号，按照自己的需要相应修改即可。在你有多个启动脚本，而它们之间又有先后启动的依赖关系时你就知道这个数字的具体作用了。该命令的输出信息参考如下：
+
+update-rc.d: warning: /etc/init.d/test missing LSB information
+update-rc.d: see <http://wiki.debian.org/LSBInitScripts>
+  Adding system startup for /etc/init.d/test ...
+    /etc/rc0.d/K95test -> ../init.d/test
+    /etc/rc1.d/K95test -> ../init.d/test
+    /etc/rc6.d/K95test -> ../init.d/test
+    /etc/rc2.d/S95test -> ../init.d/test
+    /etc/rc3.d/S95test -> ../init.d/test
+    /etc/rc4.d/S95test -> ../init.d/test
+    /etc/rc5.d/S95test -> ../init.d/test
+
+    1
+    2
+    3
+    4
+    5
+    6
+    7
+    8
+    9
+    10
+
+卸载启动脚本的方法：
+
+$ cd /etc/init.d
+$ sudo update-rc.d -f test remove
+
+    1
+    2
+
+命令输出的信息参考如下：
+
+Removing any system startup links for /etc/init.d/test ...
+    /etc/rc0.d/K95test
+    /etc/rc1.d/K95test
+    /etc/rc2.d/S95test
+    /etc/rc3.d/S95test
+    /etc/rc4.d/S95test
+    /etc/rc5.d/S95test
+    /etc/rc6.d/K95test
+
+
+ian:~# subl .bashrc 
+root@debian:~# source .bashrc 
+locale-gen in /sbin
+root@debian:~# locale
+locale      localectl   localedef   locale-gen  
+root@debian:~# /sbin/dpkg-reconfigure locales
+Generating locales (this might take a while)...
+
+
+git config --global http.lowSpeedTime 600
+git config --global http.lowSpeedLimit 1000
+git config --global http.lowSpeedTime 600ddddd
+
+// 设置当前代理为 http://127.0.0.1:1080 或 socket5://127.0.0.1:1080
+
+git config --global http.proxy 'http://127.0.0.1:1080'
+
+git config --global https.proxy 'http://127.0.0.1:1080'
+
+git config --global http.proxy 'socks5://127.0.0.1:1080'
+
+git config --global https.proxy 'socks5://127.0.0.1:1080' /
+
+/ 删除代理
+
+git config --global --unset https.proxy
+————————————————
+版权声明：本文为CSDN博主「one-Cf」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/qq_29364417/article/details/85940097
+
+
+
+
+Accept all dependencies suggested by the system.
+
+# Next you have toconfigure the locales, type in the Terminal:
+
+sudo gedit /etc/locale.gen
+
+and remove the“#”from the locale you want to use(don't forget to save). For Chinese language use one of the“zh_”locales.
+
+Now type in the Terminal:
+
+sudo locale-gen
+
+#Restartcomputer and at the Login windowchoose Chinese language.
+
+Note:
+
+作者：QT4CN
+链接：https://www.jianshu.com/p/d3395f9fccd0
+来源：简书
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
+
 
 
 cat req.json| grep update_adgroup | awk -F':' '{printf "%s, ", $1}'
