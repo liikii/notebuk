@@ -1,3 +1,18 @@
+You can create an SSH tunnel manually with:
+
+ssh -L 33060:localhost:3306 user@remotehost
+
+While this ssh session is open, connections to your port 33060 will be forwarded to (the standard mysql server) port 3306 on the remote server.
+
+Then any mysql client can connect to the mysql server running on 'remotehost', e.g.:
+
+mysql -P 33060 -h 127.0.0.1 -u mysqluser -p
+
+I've used this method to connect emma to a mysql server running privately (not accessible externally) on another machine before. Unfortunately, with this method, you have to establish the tunnel manually before emma's stored server connection will work
+
+
+
+
 
  Debian静态IP地址和DNS
 
