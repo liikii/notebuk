@@ -14,6 +14,25 @@ I've used this method to connect emma to a mysql server running privately (not a
 
 
 
+--------------------
+--------------------
+
+linux repeat into the login page. 
+resolved:
+ctrl + alt + f4|f5|f6
+vim .bashrc 
+export PATH=$PATH:/bin:/usr/bin:/sbin
+startx
+users
+unlock 
+new admin user
+cp profile .bashrc, author to new old user.
+
+
+--------------------
+--------------------
+
+
  Debian静态IP地址和DNS
 
 Debian静态IP地址和DNS
@@ -361,6 +380,7 @@ Note:
 链接：https://www.jianshu.com/p/d3395f9fccd0
 来源：简书
 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
 
 
 
