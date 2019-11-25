@@ -1,3 +1,22 @@
+--------------------
+--------------------
+
+linux repeat into the login page. 
+resolved:
+ctrl + alt + f4|f5|f6
+vim .bashrc 
+export PATH=$PATH:/bin:/usr/bin:/sbin
+startx
+users
+unlock 
+new admin user
+cp profile .bashrc, author to new old user.
+
+
+--------------------
+--------------------
+
+
 cat req.json| grep update_adgroup | awk -F':' '{printf "%s, ", $1}'
 cat req.json| grep update_adgroup | awk -F':' '{printf "%s, ", $1}'
 
