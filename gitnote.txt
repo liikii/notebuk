@@ -1,3 +1,6 @@
+git diff jike_v3.8 --numstat
+
+
 
 when conflict with the oneline vision.
 git reset --hard commithash
