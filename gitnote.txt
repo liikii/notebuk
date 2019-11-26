@@ -1,4 +1,9 @@
 
+when conflict with the oneline vision.
+git reset --hard commithash
+git pull 
+
+
 
 and remembers your passphrase.
 Generating a new SSH key
