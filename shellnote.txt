@@ -6,6 +6,28 @@ sudo apt-get dist-upgrade  # Installs updates (new ones)
 
 
 
+
+First, get file name without the path:
+
+filename=$(basename -- "$fullfile")
+extension="${filename##*.}"
+filename="${filename%.*}"
+Alternatively, you can focus on the last '/' of the path instead of the '.' which should work even if you have unpredictable file extensions:
+
+filename="${fullfile##*/}"
+
+
+First, get file name without the path:
+
+filename=$(basename -- "$fullfile")
+extension="${filename##*.}"
+filename="${filename%.*}"
+Alternatively, you can focus on the last '/' of the path instead of the '.' which should work even if you have unpredictable file extensions:
+
+filename="${fullfile##*/}"
+
+
+
 systemctl disable supervisor.service 
 
 cat tmp.txt | sed -E '/^[^>]/ d' | cut -d ' ' -f2-
