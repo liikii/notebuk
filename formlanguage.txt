@@ -1,0 +1,63 @@
+
+正规式  递归构造
+
+正则无法
+
+终结符，通俗的说就是不能单独出现在推导式左边的符号，也就是说终结符不能再进行 推导。
+不是终结符的都是非终结符。非终结符可理解为一个可拆分元素，而终结符是不可拆 分的最小元素。
+
+
+个人总结，终结符是：关键字，数字，常量，通俗讲，已经明确知道其代表的含义的。比如，for循环中的，for这个单词，是关键字，已经明确知道其含义，for就是一个终结符。类似"("等，都是不可再推导分析，并且已经明确知道含义。
+
+
+不知道你说的是哪方面的问题。从终结符与非终结符这两个术语上来看，应该是编译原理的内容吧。在编译原理的上下文无关文法中，终结符可以简单地理解为「推导到这里就终结了」，也就是说不能再继续通过生成式向下推倒的元素就是终结符。一般就是实质上的字符。比如  T->abc。T推导为串abc后已经得到了实质上的字符，不用在向下推导了。反过来能够继续推导下去的符号就是非终结符。比如上文中的T他代表的是不确定的某种特征的串，可以通过生成式被替换成其他的串。所以叫做非终结符。
+
+作者：知乎用户
+链接：https://www.zhihu.com/question/20131215/answer/15210544
+来源：知乎
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+Terminals
+A terminal is a symbol which does not appear on the left-hand side of any production. A grammar contains a set of terminal symbols (tokens) such as the plus sign, +, the times sign, *, and other tokens defined by the lexical analyzer such as Identifiers
+ Nonterminals
+Nonterminals are the non-leaf nodes in a parse tree. In the Expression grammar, E, T, and F are nonteminals. Sometimes nonterminals are enclosed bewteen angle brackets to distinguish them from terminals.
+
+
+In linguistics, grammar (from Ancient Greek γραμματική) is the set of structural rules governing the composition of clauses, phrases and words in a natural language. 
+
+
+A finite set {\displaystyle N}N of nonterminal symbols.
+A finite set {\displaystyle \Sigma }\Sigma  of terminal symbols that is disjoint from {\displaystyle N}N.
+A finite set {\displaystyle P}P of production rules, each rule of the form
+
+
+alphabet Σ: nonempty, finite set of symbols
+word: a finite string x1 . . . xn of symbols.
+length of a word |w|: number of symbols of a word w
+(example: |abbaca| = 6)
+empty word : the word of length 0
+Σ
+∗
+is the set of all words over Σ
+Σ
++ is the set of all nonempty words over Σ (Σ
++ = Σ
+∗ \ {})
+
+
+prefix: w is a prefix of v iff there exists a word u ∈ Σ
+∗ with
+v = wu.
+
+
+
+Controversy over Cantor's theory
+
+Controversy over Cantor's theory
+
+
+formal language 
+蒋宗礼
+
+Design and Analysis of Algorithms
+
+
