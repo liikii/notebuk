@@ -6655,4 +6655,8 @@ IMPLEMENTATION
 
 Elastic Sky X
 
+https://en.wikipedia.org/wiki/VMware_ESXi
+https://en.wikipedia.org/wiki/VMware_ESXi
 
+Microkernel
+Microkernel
