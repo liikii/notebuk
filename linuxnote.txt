@@ -6660,3 +6660,42 @@ https://en.wikipedia.org/wiki/VMware_ESXi
 
 Microkernel
 Microkernel
+
+
+
+
+
+history | grep docker
+444  docker run -p 8888:8080 c86d94c8bb65
+449  docker images
+450  docker tag c86d94c8bb65 registry.cn-zhangjiakou.aliyuncs.com/bilintest/test1:0.2
+451  docker images
+452  docker push  registry.cn-zhangjiakou.aliyuncs.com/bilintest/test1:0.2
+467  docker build -f Dockerfile .
+468  docker run -p 8888:8080 1076fd5ea327
+469  docker images
+472  docker tag 1076fd5ea327 registry.cn-zhangjiakou.aliyuncs.com/bilintest/test1:0.3
+473  docker images
+474  docker push registry.cn-zhangjiakou.aliyuncs.com/bilintest/test1:0.3
+483   sudo docker login --username=v-2207320505852-6 registry.cn-zhangjiakou.aliyuncs.com
+484  docker images
+485  docker tag 5d5e25472b5f registry.cn-zhangjiakou.aliyuncs.com/bilintest/test1:0.1
+486  docker images
+487  docker push  registry.cn-zhangjiakou.aliyuncs.com/bilintest/test1:0.1
+489  docker images
+491  docker ps
+492  docker ps -a
+493  docker images
+494  docker ps
+495  history | grep docker
+496  docker ps
+497  docker stop 2afd9bddc382
+498  docker ps
+499  docker stop 2e66eed1867a
+503  docker images
+504  history | grep docker
+505  docker images
+506  docker run -p 8888:8080 c87b2ee5b5ad
+507  history | grep docker
+
+
