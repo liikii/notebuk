@@ -178,3 +178,23 @@ A simple way to identify deadlocks is to use a timeout mechanism. If a trans- ac
 show processlist;
 #找到锁进程，kill id ;
 kill 10543303
+
+
+
+CREATE USER 'root'@'192.168.1.125' IDENTIFIED BY 'root';
+GRANT ALL ON *.* TO 'root'@'192.168.1.125';
+FLUSH PRIVILEGES;
+
+
+CREATE USER 'root'@'192.168.1.125' IDENTIFIED BY 'root';
+GRANT ALL ON *.* TO 'root'@'192.168.1.125';
+FLUSH PRIVILEGES;
+
+
+
+ REVOKE ALL PRIVILEGES, GRANT OPTION FROM 'root'@'%';
+ DROP USER 'root'@'%';
+
+
+
+SELECT * FROM mysql.user;
