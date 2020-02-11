@@ -6698,4 +6698,9 @@ history | grep docker
 506  docker run -p 8888:8080 c87b2ee5b5ad
 507  history | grep docker
 
+192.168.17.24
+
+docker tag c87b2ee5b5ad registry.cn-zhangjiakou.aliyuncs.com/bilintest/test1:0.4
+
+docker push registry.cn-zhangjiakou.aliyuncs.com/bilintest/test1:0.4
 
