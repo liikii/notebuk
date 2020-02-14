@@ -24,3 +24,30 @@ region = cn-north-1
 aws --profile dyrs s3 ls s3://data.dyrs-lbadvsior.com/credentials/secret_keys/
 
 
+
+
+Most of the answers on the this one are from around 2014, so I thought of adding some fresh perspective. To set the context right, it’s 2017, so I’m assuming, when you say developing a web application you’re talking about developing a REST backend. Your front-end will most likely(if not then you’re doing something seriously wrong) be React or Angular. So the question boils down to which language should be a better choice to develop REST endpoints.
+
+Now we’re talking….
+
+The answer is Python.
+
+So why not Java. Well though Java has some micro frameworks, it’s more likely that an enterprise will choose the safer route with Spring. While Spring brings more and more to the table with every successive iterations it’s increasingly snowballing into a giant blob of layers of wrapper around core functionalities. Spring is awesome when things go right, but when they don’t, well…..
+
+Java build cycles using Jenkins take longer and their deployment on Docker containers take even longer, assuming you’ve a continuous integration pipeline set up(you don’t….like seriously!!!)
+
+It gets worse, integrating your data science pipeline on a Java stack is a nightmare. You could get around that problem using Scala which is power packed with a whole bunch of ML libraries and toolsets, and runs on the jvm, but that still isn’t clean and elegant.
+
+Java is verbose, sprint cycles even in large enterprises today demand faster production cycles, not an easy task at all.
+
+Bottomline, Java’s is too much of an excess baggage for 2017.
+
+Enter Python….drum roll…….
+
+Choose between Falcon, Flask or Bottle.. they’re all minimalistic frameworks and does just what you want them to do. Ofcourse you could use Django or rather jump off the roof….Django’s as useless as Ruby on Rails.
+
+Integrating with the data science pipeline, well Pandas and SciKit learn are industry leaders. Faster build cycles, faster deployments, faster everything….
+
+Still not sold, well Python lends itself much easier to functional programming over OOP, which is a visible direction the industry is slowly moving towards.
+
+One small caveat, don’t for a moment think Python is simpler than Java, it’s not. Never was.
