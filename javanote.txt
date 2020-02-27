@@ -114,6 +114,15 @@ dependency injection types:
 
 
 
+<mirror>
+  <id>alimaven</id>
+  <name>aliyun maven</name>
+  <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+  <mirrorOf>central</mirrorOf>        
+</mirror>
+
+mvn archetype:generate -DgroupId=company -DartifactId=app -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
 
 
 
