@@ -188,4 +188,8 @@ mvn compile
     </build>
 
 
+
+
+java的注解实现:
+java有个检查口, 然后在写好检查, 他们会运行. 
     
