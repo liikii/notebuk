@@ -193,3 +193,13 @@ mvn compile
 java的注解实现:
 java有个检查口, 然后在写好检查, 他们会运行. 
     
+
+那么编译时如何获取注解信息呢？
+其实，编译时 Annotation 指 @Retention 为 CLASS 的 Annotation，是由 APT(Annotation Processing Tool) 自动解析的。APT在编译时根据resources资源文件夹下的META-INF/services/javax.annotation.processing.Processor自动查找所有继承自 AbstractProcessor 的类，然后调用他们的 process 方法去处理。
+
+作者：沉思的Panda
+链接：https://www.jianshu.com/p/6e5716b16a46
+来源：简书
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
+
