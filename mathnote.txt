@@ -131,5 +131,7 @@ John von Neumann
 fundamental theorem of galois theory proof
 
 
+Dummit and Foote Text Book: Abstract algebra, by Dummit and Foote
+
 
 
