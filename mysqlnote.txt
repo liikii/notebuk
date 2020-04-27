@@ -194,6 +194,16 @@ FLUSH PRIVILEGES;
 
  REVOKE ALL PRIVILEGES, GRANT OPTION FROM 'root'@'%';
  DROP USER 'root'@'%';
+UPDATE Reservations r JOIN Train t ON (r.Train = t.TrainID)
+SET t.Capacity = t.Capacity + r.NoSeats
+WHERE r.ReservationID = ?;
+
+
+UPDATE Reservations r JOIN Train t ON (r.Train = t.TrainID)
+SET t.Capacity = t.Capacity + r.NoSeats
+WHERE r.ReservationID = ?;
+
+
 
 
 
