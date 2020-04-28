@@ -248,3 +248,9 @@ natural sciences and technology
 
 
 
+https://docs.microsoft.com/en-us/cpp/cpp/cpp-language-reference?view=vs-2019
+
+The C Book — Table of Contents
+This is the online version of The C Book, second edition by Mike Banahan, Declan Brady and Mark Doran, originally published by Addison Wesley in 1991. This version is made freely available.
+
+
