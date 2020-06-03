@@ -939,4 +939,7 @@ worker_rlimit_nofile 65535;
 sudo lsof -p 15774 | head -100
 
 
+ 1968  sudo nginx -t
+ 1969  sudo service nginx reload
+ 
 
