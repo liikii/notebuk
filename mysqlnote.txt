@@ -209,3 +209,14 @@ WHERE r.ReservationID = ?;
 
 update hx_shop a left join hx_brand b on a.shopname = b.brand set a.shoppic = concat('https://static.lbadvisor.com/img/HXH', b.logo) where a.note = '05312020'
 SELECT * FROM mysql.user;
+
+
+
+
+$ mysql -u root -p -e "SET GLOBAL sql_mode = 'NO_ENGINE_SUBSTITUTION';" 
+You can set other values for sql_mode as well. See sysvar sql_mode in the MySQL Documentation for a list.
+
+Then, you can verify that the mode is set by running the following:
+
+$ mysql -u root -p -e "SELECT @@GLOBAL.sql_mode;"
+

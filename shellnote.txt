@@ -283,3 +283,28 @@ server {
     fastcgi_param   SCRIPT_FILENAME    $document_root$fastcgi_script_name;
     fastcgi_param   SCRIPT_NAME        $fastcgi_script_name;
   }
+
+
+install Open Web Analytics
+
+1.
+Required php.ini Directives
+Certain PHP configuration settings create problems for OWA installations. The following is a list of INI settings that should be avoided:
+
+1.
+OWA requires MySQL 4.1 or later.
+
+At this time, OWA requires that MySQL's "strict mode" be disabled.
+
+''safe mode'' directive must be set to "off'.
+1544811256
+
+
+91FA4AD5
+
+
+install nginx
+  225  wget https://nginx.org/keys/nginx_signing.key
+  226  apt-key add nginx_signing.key
+  228  apt search nginx
+  229  apt install nginx
