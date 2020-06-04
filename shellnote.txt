@@ -219,3 +219,29 @@ If $substring matches front end of $string, substitute $replacement for $substri
 
 ${string/%substring/replacement}
 If $substring matches back end of $string, substitute $replacement for $substring.
+
+
+node js install
+
+  502  wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+  503  cat /tmp/linux_signing_key.pub 
+  504  cat /tmp/linux_signing_key.pub  |  sudo apt-key add -
+  505  curl -sL https://deb.nodesource.com/setup_14.x | bash -
+  506  g++
+  507  sudo apt-get install -y nodejs
+  508  ls
+  509  ls
+  510  node
+
+
+    502  wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+  503  cat /tmp/linux_signing_key.pub 
+  504  cat /tmp/linux_signing_key.pub  |  sudo apt-key add -
+  505  curl -sL https://deb.nodesource.com/setup_14.x | bash -
+  506  g++
+  507  sudo apt-get install -y nodejs
+  508  ls
+  509  ls
+  510  node
+node js install
+-------
