@@ -8,4 +8,31 @@ https://tc39.github.io/ecma262/
 ### 400.js  : 子js
 
 
+node 设置淘宝源
+root@debian:~# 
+root@debian:~# npm install puppeteer
+[..................] - rollbackFailedOptional: verb npm-session e0624edf2e6b38e6
+
+root@debian:~# 
+root@debian:~# npm config set registry https://registry.npm.taobao.org --global
+root@debian:~# npm config set disturl https://npm.taobao.org/dist --global
+
+
+
+root@debian:~# 
+root@debian:~# npm install puppeteer
+
+> puppeteer@3.3.0 install /root/node_modules/puppeteer
+> node install.js
+
+Downloading Chromium r756035 - 125.2 Mb [====================] 100% 0.0s 
+Chromium (756035) downloaded to /root/node_modules/puppeteer/.local-chromium/linux-756035
+npm WARN ws@7.3.0 requires a peer of bufferutil@^4.0.1 but none is installed. You must install peer dependencies yourself.
+npm WARN ws@7.3.0 requires a peer of utf-8-validate@^5.0.2 but none is installed. You must install peer dependencies yourself.
+npm WARN root@1.0.0 No description
+npm WARN root@1.0.0 No repository field.
+
++ puppeteer@3.3.0
+updated 1 package in 115.557s
+
 
