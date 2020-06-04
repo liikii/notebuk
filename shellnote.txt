@@ -245,3 +245,41 @@ node js install
   510  node
 node js install
 -------
+
+
+
+php nginx
+
+ps -aux | grep nginx
+
+
+sed -i 's/listen.owner = www-data/listen.owner = nginx/g' /etc/php/7.0/fpm/pool.d/www.conf
+sed -i 's/listen.group = www-data/listen.group = nginx/g' /etc/php/7.0/fpm/pool.d/www.conf
+
+sed -i 's/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/g' /etc/php/7.0/fpm/php.ini
+
+systemctl restart php7.0-fpm.service
+
+server {
+    listen         80 default_server;
+    listen         [::]:80 default_server;
+    server_name    example.com www.example.com;
+    root           /var/www/example.com;
+    index          index.html;
+
+  location ~* \.php$ {
+    fastcgi_pass unix:/run/php/php7.0-fpm.sock;
+    include         fastcgi_params;
+    fastcgi_param   SCRIPT_FILENAME    $document_root$fastcgi_script_name;
+    fastcgi_param   SCRIPT_NAME        $fastcgi_script_name;
+  }
+}
+
+ location ~* \.php$ {
+    if ($uri !~ "^/uploads/") {
+        fastcgi_pass unix:/run/php/php7.0-fpm.sock;
+        }
+    include         fastcgi_params;
+    fastcgi_param   SCRIPT_FILENAME    $document_root$fastcgi_script_name;
+    fastcgi_param   SCRIPT_NAME        $fastcgi_script_name;
+  }
