@@ -204,7 +204,8 @@ SET t.Capacity = t.Capacity + r.NoSeats
 WHERE r.ReservationID = ?;
 
 
+ a left join hx_brand b on a.shopname = b.brand
 
 
-
+update hx_shop a left join hx_brand b on a.shopname = b.brand set a.shoppic = concat('https://static.lbadvisor.com/img/HXH', b.logo) where a.note = '05312020'
 SELECT * FROM mysql.user;
