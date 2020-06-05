@@ -304,7 +304,13 @@ At this time, OWA requires that MySQL's "strict mode" be disabled.
 
 
 install nginx
-  225  wget https://nginx.org/keys/nginx_signing.key
-  226  apt-key add nginx_signing.key
-  228  apt search nginx
-  229  apt install nginx
+225  wget https://nginx.org/keys/nginx_signing.key
+226  apt-key add nginx_signing.key
+228  apt search nginx
+229  apt install nginx
+
+
+232  systemctl status nginx
+233  systemctl start nginx
+234  systemctl status nginx
+
