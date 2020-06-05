@@ -220,3 +220,19 @@ Then, you can verify that the mode is set by running the following:
 
 $ mysql -u root -p -e "SELECT @@GLOBAL.sql_mode;"
 
+
+INSERT INTO table2
+SELECT * FROM table1
+WHERE condition;
+
+
+INSERT INTO table2
+SELECT * FROM table1
+WHERE condition;
+
+
+INSERT INTO table2
+SELECT * FROM table1
+WHERE condition;
+
+
