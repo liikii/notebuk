@@ -943,3 +943,17 @@ sudo lsof -p 15774 | head -100
  1969  sudo service nginx reload
  
 
+
+
+gzip on;
+gzip_types   text/plain text/css application/xml application/javascript application/json;
+gzip_min_length 1000;
+
+
+
+gzip on;
+gzip_types   text/plain text/css application/xml application/javascript application/json;
+gzip_min_length 1000;
+
+
+
