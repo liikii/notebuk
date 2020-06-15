@@ -6704,3 +6704,22 @@ docker tag c87b2ee5b5ad registry.cn-zhangjiakou.aliyuncs.com/bilintest/test1:0.4
 
 docker push registry.cn-zhangjiakou.aliyuncs.com/bilintest/test1:0.4
 
+
+
+python3.7 can't import ssl
+python3.7 can't import ssl
+brew switch openssl 1.0.2s
+brew switch openssl 1.0.2s
+
+
+brew如何利用switch命令切换本地软件版本
+brew switch <包名> <版本号>
+
+
+
+go切换brew switch go 1.11清理旧版本brew cleanup go
+go切换brew switch go 1.11清理旧版本brew cleanup go
+
+
+brew switch python 3.6.5_1 如果需要切换回 Python3.7 同理 brew switch python 3.7.0 
+brew switch python 3.6.5_1 如果需要切换回 Python3.7 同理 brew switch python 3.7.0 
