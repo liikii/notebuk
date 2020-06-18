@@ -239,6 +239,7 @@ WHERE condition;
 INSERT INTO table2 SELECT * FROM table1
 
 
-
-
+swap column value.
+UPDATE swap_test
+   SET x=(@temp:=x), x = y, y = @temp
 

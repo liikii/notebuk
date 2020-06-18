@@ -6723,3 +6723,8 @@ go切换brew switch go 1.11清理旧版本brew cleanup go
 
 brew switch python 3.6.5_1 如果需要切换回 Python3.7 同理 brew switch python 3.7.0 
 brew switch python 3.6.5_1 如果需要切换回 Python3.7 同理 brew switch python 3.7.0 
+
+
+
+command1 2>&1 
+command1 2>&1 
