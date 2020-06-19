@@ -6728,3 +6728,9 @@ brew switch python 3.6.5_1 如果需要切换回 Python3.7 同理 brew switch py
 
 command1 2>&1 
 command1 2>&1 
+
+
+only print head::::
+curl --head -k https://video
+curl --head -k https://video
+
