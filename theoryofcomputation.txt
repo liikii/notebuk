@@ -1,0 +1,153 @@
+2.882
+System Design and Analysis based on AD and Complexity Theories (Spring 2005)
+Graduate
+6.001
+Structure and Interpretation of Computer Programs (Spring 2005)
+Undergraduate
+6.006
+Introduction to Algorithms (Spring 2008)
+Undergraduate
+6.034
+Artificial Intelligence (Spring 2005)
+Undergraduate
+6.034
+Artificial Intelligence (Fall 2010)
+Undergraduate
+6.045J
+Automata, Computability, and Complexity (Spring 2011)
+Undergraduate
+6.050J
+Information and Entropy (Spring 2008)
+Undergraduate
+6.080
+Great Ideas in Theoretical Computer Science (Spring 2008)
+Undergraduate
+6.189
+Multicore Programming Primer (January IAP 2007)
+Undergraduate
+6.231
+Dynamic Programming and Stochastic Control (Fall 2015)
+Graduate
+6.241J
+Dynamic Systems and Control (Spring 2011)
+Graduate
+6.243J
+Dynamics of Nonlinear Systems (Fall 2003)
+Graduate
+6.245
+Multivariable Control Systems (Spring 2004)
+Graduate
+6.252J
+Nonlinear Programming (Spring 2003)
+Graduate
+6.441
+Information Theory (Spring 2010)
+Graduate
+6.441
+Information Theory (Spring 2016)
+Graduate
+6.823
+Computer System Architecture (Fall 2005)
+Graduate
+6.826
+Principles of Computer Systems (Spring 2002)
+Graduate
+6.827
+Multithreaded Parallelism: Languages and Compilers (Fall 2002)
+Graduate
+6.844
+Computability Theory of and with Scheme (Spring 2003)
+Graduate
+6.845
+Quantum Complexity Theory (Fall 2010)
+Graduate
+6.852J
+Distributed Algorithms (Fall 2009)
+Graduate
+6.854J
+Advanced Algorithms (Fall 2008)
+Graduate
+6.863J
+Natural Language and the Computer Representation of Knowledge (Spring 2003)
+Graduate
+6.864
+Advanced Natural Language Processing (Fall 2005)
+Graduate
+6.875
+Cryptography and Cryptanalysis (Spring 2005)
+Graduate
+6.876J
+Advanced Topics in Cryptography (Spring 2003)
+Graduate
+6.883
+Pervasive Human Centric Computing (SMA 5508) (Spring 2006)
+Graduate
+6.890
+Algorithmic Lower Bounds: Fun with Hardness Proofs (Fall 2014)
+Graduate
+6.892
+Computational Models of Discourse (Spring 2004)
+Graduate
+6.895
+Theory of Parallel Systems (SMA 5509) (Fall 2003)
+Graduate
+6.895
+Essential Coding Theory (Fall 2004)
+Graduate
+6.896
+Theory of Parallel Hardware (SMA 5511) (Spring 2004)
+Graduate
+6.897
+Selected Topics in Cryptography (Spring 2004)
+Graduate
+6.911
+Transcribing Prosodic Structure of Spoken Utterances with ToBI (January IAP 2006)
+Undergraduate
+7.349
+Biological Computing: At the Crossroads of Engineering and Science (Spring 2005)
+Undergraduate
+18.337J
+Parallel Computing (Fall 2011)
+Graduate
+18.404J
+Theory of Computation (Fall 2006)
+Graduate
+18.405J
+Advanced Complexity Theory (Spring 2016)
+Graduate
+18.409
+Behavior of Algorithms (Spring 2002)
+Graduate
+18.409
+Topics in Theoretical Computer Science: An Algorithmist's Toolkit (Fall 2009)
+Graduate
+18.409
+Algorithmic Aspects of Machine Learning (Spring 2015)
+Graduate
+18.413
+Error-Correcting Codes Laboratory (Spring 2004)
+Undergraduate
+18.433
+Combinatorial Optimization (Fall 2003)
+Undergraduate
+18.435J
+Quantum Computation (Fall 2003)
+Graduate
+18.996
+Topics in Theoretical Computer Science : Internet Research Problems (Spring 2002)
+Graduate
+18.997
+Topics in Combinatorial Optimization (Spring 2004)
+Graduate
+20.180
+Biological Engineering Programming (Spring 2006)
+Undergraduate
+24.242
+Logic II (Spring 2004)
+Undergraduate
+MAS.865J
+Quantum Information Science (Spring 2006)
+Graduate
+MAS.963
+Out of Context: A Course on Computer Systems That Adapt To, and Learn From, Context (Fall 2001)
+Graduate
