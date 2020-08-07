@@ -98,3 +98,32 @@ multiply A backreference
 
 
 -----------------------------------------------------------------------------------
+
+
+Modes
+The mode of an image defines the type and depth of a pixel in the image. Each pixel uses the full range of the bit depth. So a 1-bit pixel has a range of 0-1, an 8-bit pixel has a range of 0-255 and so on. The current release supports the following standard modes:
+
+1 (1-bit pixels, black and white, stored with one pixel per byte)
+
+L (8-bit pixels, black and white)
+
+P (8-bit pixels, mapped to any other mode using a color palette)
+
+RGB (3x8-bit pixels, true color)
+
+RGBA (4x8-bit pixels, true color with transparency mask)
+
+CMYK (4x8-bit pixels, color separation)
+
+YCbCr (3x8-bit pixels, color video format)
+
+Note that this refers to the JPEG, and not the ITU-R BT.2020, standard
+
+LAB (3x8-bit pixels, the L*a*b color space)
+
+HSV (3x8-bit pixels, Hue, Saturation, Value color space)
+
+I (32-bit signed integer pixels)
+
+F (32-bit floating point pixels)
+
