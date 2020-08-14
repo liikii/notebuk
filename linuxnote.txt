@@ -6734,3 +6734,18 @@ only print head::::
 curl --head -k https://video
 curl --head -k https://video
 
+
+
+homebrew
+清华brew源(基础)
+git -C "$(brew --repo homebrew/core)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git
+git -C "$(brew --repo homebrew/cask)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-cask.git
+brew update
+
+清华brew二进制预编译包源（bash）
+echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles' >> ~/.bash_profile
+source ~/.bash_profile
+
+清华brew二进制预编译包源（zsh，如果使用zsh则 .bash_profile 换成 .zshrc）
+echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles' >> ~/.zshrc
+source ~/.zshrc
