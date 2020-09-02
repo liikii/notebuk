@@ -6749,3 +6749,19 @@ source ~/.bash_profile
 清华brew二进制预编译包源（zsh，如果使用zsh则 .bash_profile 换成 .zshrc）
 echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles' >> ~/.zshrc
 source ~/.zshrc
+
+
+ffmpeg include
+Go back to simpler includes, like:
+
+#include "avcodec.h"
+When using gcc or clang or whatever compiler, to compiler add the include directories using notation like:
+
+gcc tutorial01.c -o tut -I/opt/local/include -lavformat -lavcodec -lz -lavutil -lm
+(I admit, I do not know if those are the correct -l params, but the general principle applies. Use
+
+-I/path/to/dir
+to add an include directory path.)
+and so on.
+
+
