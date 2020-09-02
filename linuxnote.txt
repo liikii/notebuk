@@ -6765,3 +6765,104 @@ to add an include directory path.)
 and so on.
 
 
+
+
+Quickie Intro to GCC
+gcc is your friendly Gnu C compiler and g++ is the C++ compiler. This document serves as a very simple bunch of hints to start using gcc, and is not meant to be clear or concise : experiment yourself to figure it out (no fun (especially for me) if I tell you *everything*).
+
+Compiling simple programs
+Say you have a file hello.c as follows :
+
+#include 
+
+void main ()
+{
+    printf("hello");
+}
+You can compile and run it from the unix prompt as follows :
+    % gcc hello.c
+This creates an executable called "a.out". You can run it by typing
+    % ./a.out
+at the prompt. a.out is the default name for an executable. Use the "-o" option to change the name :
+    % gcc -o hello hello.c
+creates an executable called "hello".
+Include Directories
+Sometimes the header files that you write are not in the same directory as the .c file that #include's it. E.g. you have a structure in a file "foo.h" that resides in /homes/me/include. If I want to include that file in hello.c I can do the following :
+add
+ #include < foo.h >
+to hello.c
+compile with the -I option :
+    % gcc -o hello hello.c -I/homes/me/include
+This basically tells gcc to look for #include's in /homes/me/include in addition to other directories you specify with -I
+Other options
+Warnings : -Wall turns on most warnings. man gcc for more options.
+Debugging : if you intend to use the debugger (gdb), also use the -g option
+Optimizations : -O or -O2
+Compiling multiple files
+Basic idea : compile each .c file into a .o file, then compile the .o files (along with any libraries) into an executable. One of these .c files obviously has to define the main function, or else the linker will gag.
+
+E.g. Suppose we have main.c, foo.c and bar.c and want to create an executable fubar, and suppose further that we need the math library:
+
+    % gcc -c foo.c
+    % gcc -c main.c
+    % gcc -c bar.c
+    % gcc -o fubar foo.o main.o bar.o -lm
+The first three commands generate foo.o, main.o and bar.o respectively. The last line links them together along with the math library.
+Libraries
+Specify library paths with the -L option. e.g. -L/usr/lib tells gcc to look for libraries in /usr/lib. As with includes, you can add as many -L's as necessary. Specify which libraries to link with -l
+Emacs Support
+Tired of finding the line an error occurred on when compiling your C code? As with everything else in UNIX, there is good support for compiling and fixing errors in Emacs. To use this, simply type meta-x compile in Emacs. Then enter the gcc or make commandline you would normally use. Emacs will create a new window and execute the command in that window. When there are compilation errors, Emacs can help you go straight to them. In Emacs under X, middle-click on the error message. In Emacs under text mode, type ctrl-x ` (ctrl-x backquote) to go to successive erroneous lines.
+cse451-TA@cs.washington.edu
+
+
+
+
+
+Quickie Intro to GCC
+gcc is your friendly Gnu C compiler and g++ is the C++ compiler. This document serves as a very simple bunch of hints to start using gcc, and is not meant to be clear or concise : experiment yourself to figure it out (no fun (especially for me) if I tell you *everything*).
+
+Compiling simple programs
+Say you have a file hello.c as follows :
+
+#include 
+
+void main ()
+{
+    printf("hello");
+}
+You can compile and run it from the unix prompt as follows :
+    % gcc hello.c
+This creates an executable called "a.out". You can run it by typing
+    % ./a.out
+at the prompt. a.out is the default name for an executable. Use the "-o" option to change the name :
+    % gcc -o hello hello.c
+creates an executable called "hello".
+Include Directories
+Sometimes the header files that you write are not in the same directory as the .c file that #include's it. E.g. you have a structure in a file "foo.h" that resides in /homes/me/include. If I want to include that file in hello.c I can do the following :
+add
+ #include < foo.h >
+to hello.c
+compile with the -I option :
+    % gcc -o hello hello.c -I/homes/me/include
+This basically tells gcc to look for #include's in /homes/me/include in addition to other directories you specify with -I
+Other options
+Warnings : -Wall turns on most warnings. man gcc for more options.
+Debugging : if you intend to use the debugger (gdb), also use the -g option
+Optimizations : -O or -O2
+Compiling multiple files
+Basic idea : compile each .c file into a .o file, then compile the .o files (along with any libraries) into an executable. One of these .c files obviously has to define the main function, or else the linker will gag.
+
+E.g. Suppose we have main.c, foo.c and bar.c and want to create an executable fubar, and suppose further that we need the math library:
+
+    % gcc -c foo.c
+    % gcc -c main.c
+    % gcc -c bar.c
+    % gcc -o fubar foo.o main.o bar.o -lm
+The first three commands generate foo.o, main.o and bar.o respectively. The last line links them together along with the math library.
+Libraries
+Specify library paths with the -L option. e.g. -L/usr/lib tells gcc to look for libraries in /usr/lib. As with includes, you can add as many -L's as necessary. Specify which libraries to link with -l
+Emacs Support
+Tired of finding the line an error occurred on when compiling your C code? As with everything else in UNIX, there is good support for compiling and fixing errors in Emacs. To use this, simply type meta-x compile in Emacs. Then enter the gcc or make commandline you would normally use. Emacs will create a new window and execute the command in that window. When there are compilation errors, Emacs can help you go straight to them. In Emacs under X, middle-click on the error message. In Emacs under text mode, type ctrl-x ` (ctrl-x backquote) to go to successive erroneous lines.
+cse451-TA@cs.washington.edu
+
+
